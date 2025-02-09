@@ -1,0 +1,109 @@
+.curriculumSection {
+  background-color: #fff;
+  padding: 70px 80px;
+  width: 100%;
+}
+
+.curriculumContainer {
+  max-width: 1135px;
+  margin: 0 auto;
+}
+
+.curriculumTitle {
+  color: #323b4b;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.curriculumDescription {
+  color: #4e5d78;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.curriculumContent {
+  display: flex;
+  gap: 90px;
+}
+
+.curriculumImage {
+  width: 553px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
+  width: 515px;
+}
+
+.curriculumFeature {
+  display: flex;
+  gap: 20px;
+}
+
+.featureIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+}
+
+.featureContent {
+  flex: 1;
+}
+
+.featureTitle {
+  color: #323b4b;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.featureDescription {
+  color: #8a94a6;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.featureDivider {
+  height: 1px;
+  background-color: #e7e7e9;
+  margin: 38px 0;
+}
+
+.seeDetailsButton {
+  align-self: stretch;
+  border-radius: 12px;
+  background-color: #3b82f6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+  .curriculumSection {
+    padding: 40px 20px;
+  }
+
+  .curriculumContent {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .curriculumImage,
+  .featuresContainer {
+    width: 100%;
+    max-width: 553px;
+    margin: 0 auto;
+  }
+}

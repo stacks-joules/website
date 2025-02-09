@@ -1,0 +1,46 @@
+.missionSection {
+  background-color: #fff;
+  padding: 80px;
+  width: 100%;
+}
+
+.missionContainer {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.missionTitle {
+  color: #323b4b;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.missionText {
+  color: #020115;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 64px;
+}
+
+.readMoreButton {
+  border-radius: 12px;
+  background-color: #3b82f6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .missionSection {
+    padding: 40px 20px;
+  }
+
+  .missionText {
+    margin-bottom: 40px;
+  }
+}

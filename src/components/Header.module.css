@@ -1,0 +1,132 @@
+.header {
+  display: flex;
+  width: 100%;
+  padding: 80px;
+  background-color: #fff;
+}
+
+.headerContent {
+  display: flex;
+  gap: 40px 150px;
+  flex-wrap: wrap;
+}
+
+.headerText {
+  flex-grow: 1;
+  min-width: 240px;
+  max-width: 406px;
+}
+
+.welcomeText {
+  color: #3b82f6;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.brandName {
+  font-size: 122px;
+  color: #141125;
+  font-weight: 900;
+}
+
+.stacks {
+  text-transform: uppercase;
+}
+
+.plus {
+  color: #cbd4e3;
+  font-size: 130px;
+  font-weight: 600;
+  margin-top: -74px;
+}
+
+.joules {
+  text-transform: uppercase;
+  margin: 0 12px;
+}
+
+.headerDescription {
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 44px;
+}
+
+.ctaContainer {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+  margin-top: 44px;
+}
+
+.primaryButton {
+  border-radius: 12px;
+  background-color: #3b82f6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.secondaryCta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #377dff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.headerImage {
+  flex-grow: 1;
+  min-width: 240px;
+  max-width: 477px;
+}
+
+.imagePlaceholder {
+  border-radius: 20px;
+  background-color: #c1c7d0;
+  height: 396px;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .headerText,
+  .headerImage {
+    max-width: 100%;
+  }
+
+  .brandName {
+    font-size: 40px;
+  }
+
+  .plus {
+    font-size: 40px;
+    margin-top: 0;
+  }
+
+  .joules {
+    margin-right: 10px;
+    font-size: 40px;
+  }
+
+  .headerDescription {
+    margin-top: 40px;
+  }
+
+  .ctaContainer {
+    margin-top: 40px;
+  }
+}
