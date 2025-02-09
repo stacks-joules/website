@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Navigation } from '../../components/Navigation';
 import { Header } from '../../components/Header';
 import { FeatureSection } from '../../components/FeatureSection';
@@ -22,4 +22,5 @@ const LandingPage: React.FC = () => {
   );
 };
 
+export const Head = () => <title>Stacks & Joules</title>;
 export default LandingPage;

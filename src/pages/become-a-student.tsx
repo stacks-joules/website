@@ -1,14 +1,12 @@
 import React from 'react';
-import { Navigation } from '../../components/Navigation';
-import { Header } from '../../components/Header';
-import { ProjectLearning } from '../../components/ProjectLearning';
-import { ContactSection } from '../../components/ContactSection';
+import { Navigation } from '../components/Navigation';
+import { ProjectLearning } from '../components/ProjectLearning';
+import { ContactSection } from '../components/ContactSection';
 
 const BecomeAStudent: React.FC = () => {
   return (
     <div>
       <Navigation />
-      <Header />
       <ProjectLearning
         headingText="Become a Student"
         descriptionText="Join our community of students and learn to code building automation controls."
