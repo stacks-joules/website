@@ -1,0 +1,66 @@
+.curriculumDetails {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+.curriculumTitle {
+  color: #141125;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 46px;
+  font: 900 72px Inter, sans-serif;
+}
+
+.focusAreas {
+  display: flex;
+  margin-top: 46px;
+  width: 509px;
+  max-width: 100%;
+  align-items: start;
+  gap: 40px 100px;
+  color: #000;
+  text-transform: uppercase;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font: 900 16px Satoshi, sans-serif;
+}
+
+.curriculumContent {
+  display: flex;
+  margin-top: 85px;
+  width: 100%;
+  max-width: 1200px;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.sectionDivider {
+  min-height: 0;
+  margin-top: 95px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 991px) {
+  .curriculumTitle {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 40px;
+  }
+
+  .focusAreas {
+    margin-top: 40px;
+  }
+
+  .curriculumContent {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .sectionDivider {
+    margin-top: 40px;
+  }
+}

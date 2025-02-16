@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ProjectLearning.module.css';
+import * as styles from './ProjectLearning.module.css';
 
 interface ProjectLearningProps {
   headingText: string;
