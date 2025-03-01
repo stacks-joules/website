@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './EmployerPartnerships.module.css';
+import * as styles from './EmploymentPartnerships.module.css';
 import Logo from './Logo';
 
 interface EmployerPartnershipsProps {}

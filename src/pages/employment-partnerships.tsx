@@ -1,14 +1,12 @@
 import React from 'react';
-import { Navigation } from '../components/Navigation';
-import { EmploymentPartnerships } from '../components/EmploymentPartnerships';
-import { ContactSection } from '../components/ContactSection';
+import EmploymentPartnerships from '../components/EmploymentPartnerships';
+import Layout from '../components/Layout';
 
 const BecomeAStudent: React.FC = () => {
   return (
-    <div>
-      <Navigation />
+    <Layout>
       <EmploymentPartnerships />
-    </div>
+    </Layout>
   );
 };
 
