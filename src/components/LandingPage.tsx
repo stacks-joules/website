@@ -5,7 +5,6 @@ import { FeatureSection } from './FeatureSection';
 import { MissionSection } from './MissionSection';
 import { CurriculumSection } from './CurriculumSection';
 import { NewsletterSignup } from './NewsletterSignup';
-import { ContactSection } from './ContactSection';
 import * as styles from './LandingPage.module.css';
 
 const LandingPage: React.FC = () => {

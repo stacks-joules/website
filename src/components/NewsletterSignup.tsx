@@ -14,11 +14,10 @@ export const NewsletterSignup: React.FC = () => {
   return (
     <section className={styles.newsletterSection}>
       <div className={styles.newsletterContainer}>
-        <h2 className={styles.newsletterTitle}>
-          <span className={styles.highlightText}>Stay In Touch</span>
-          <br />
+        <div className={styles.highlightText}>Stay In Touch</div>
+        <div className={styles.newsletterTitle}>
           Keep Up With Stacks & Joules
-        </h2>
+        </div>
         <p className={styles.newsletterDescription}>
           An every-so-often email recapping the efforts of the Stacks + Joules
           team.

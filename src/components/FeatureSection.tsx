@@ -1,4 +1,5 @@
 import React from 'react';
+import NavLink from './NavLink';
 import * as styles from './FeatureSection.module.css';
 
 interface FeatureCardProps {
@@ -33,22 +34,28 @@ export const FeatureSection: React.FC = () => {
     <section className={styles.featureSection}>
       <h2 className={styles.featureSectionTitle}>I Want to</h2>
       <div className={styles.featureCardContainer}>
-        <FeatureCard
-          icon={<div className={styles.iconPlaceholder} />}
-          title="Become A Student"
-          buttonText="Explore our Curriculum"
-        />
-        <FeatureCard
-          icon={<div className={styles.iconPlaceholder} />}
-          title="Hire The Best"
-          buttonText="Employment Partnerships"
-          isPrimary
-        />
-        <FeatureCard
-          icon={<div className={styles.iconPlaceholder} />}
-          title="Support Our Cause"
-          buttonText="Make a Donation"
-        />
+        <NavLink to="/become-a-student">
+          <FeatureCard
+            icon={<div className={styles.iconPlaceholder} />}
+            title="Become A Student"
+            buttonText="Explore our Curriculum"
+          />
+        </NavLink>
+        <NavLink to="/employment-partnerships">
+          <FeatureCard
+            icon={<div className={styles.iconPlaceholder} />}
+            title="Hire The Best"
+            buttonText="Employment Partnerships"
+            isPrimary
+          />
+        </NavLink>
+        <NavLink to="/donate">
+          <FeatureCard
+            icon={<div className={styles.iconPlaceholder} />}
+            title="Support Our Cause"
+            buttonText="Make a Donation"
+          />
+        </NavLink>
       </div>
     </section>
   );

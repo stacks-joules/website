@@ -7,7 +7,12 @@ interface ContactInfo {
   phone: string;
 }
 
-const ContactLocation: React.FC<ContactInfo> = ({ name, address, phone }) => (
+const ContactLocation: React.FC<ContactInfo> = ({
+  name,
+  street,
+  state,
+  phone,
+}) => (
   <div className={styles.contactInfo}>
     <h3 className={styles.locationName}>{name}</h3>
     <div className={styles.locationDetails}>
@@ -16,7 +21,10 @@ const ContactLocation: React.FC<ContactInfo> = ({ name, address, phone }) => (
         alt="Location icon"
         className={styles.icon}
       />
-      <p>{address}</p>
+      <div className={styles.locationDetailsColumn}>
+        <div>{street}</div>
+        <div>{state}</div>
+      </div>
     </div>
     <div className={styles.locationDetails}>
       <img
@@ -24,7 +32,7 @@ const ContactLocation: React.FC<ContactInfo> = ({ name, address, phone }) => (
         alt="Phone icon"
         className={styles.icon}
       />
-      <p>{phone}</p>
+      <div>{phone}</div>
     </div>
   </div>
 );
@@ -58,7 +66,7 @@ export const ContactSection: React.FC = () => {
     <section className={styles.contactSection}>
       <div className={styles.contactContent}>
         <div className={styles.leftContent}>
-          <h2 className={styles.contactTitle}>Level Up at Stacks & Joules</h2>
+          <div className={styles.contactTitle}>Level Up at Stacks & Joules</div>
           <p className={styles.contactDescription}>
             Have questions about our program or want to become a student? Get in
             touch!
@@ -70,77 +78,81 @@ export const ContactSection: React.FC = () => {
           <div className={styles.locationContainer}>
             <ContactLocation
               name="Union Square"
-              address="100 New York St New York, NY 10001"
+              street="100 New York St"
+              state="New York, NY 10001"
               phone="+1 917 555 5555"
             />
             <ContactLocation
               name="Lower East Side"
-              address="100 Los Angeles St Los Angeles, CA 90210"
+              street="100 Los Angeles"
+              state="St Los Angeles, CA 90210"
               phone="+1 310 555 5555"
             />
           </div>
         </div>
-        <form className={styles.contactForm} onSubmit={handleSubmit}>
-          <h2 className={styles.formTitle}>Get in touch</h2>
-          <div className={styles.formRow}>
+        <div className={styles.rightContent}>
+          <form className={styles.contactForm} onSubmit={handleSubmit}>
+            <h2 className={styles.formTitle}>Get in touch</h2>
+            <div className={styles.formRow}>
+              <div className={styles.formGroup}>
+                <label htmlFor="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
             <div className={styles.formGroup}>
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="email">Email Address</label>
               <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
                 onChange={handleChange}
                 required
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="lastName">Last Name</label>
+              <label htmlFor="phone">Phone Number</label>
               <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
                 onChange={handleChange}
-                required
               />
             </div>
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="phone">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <button type="submit" className={styles.submitButton}>
-            Submit
-          </button>
-        </form>
+            <div className={styles.formGroup}>
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className={styles.submitButton}>
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );

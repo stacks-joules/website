@@ -21,6 +21,7 @@ export const MissionSection: React.FC = () => {
         </p>
         <button className={styles.readMoreButton}>Read more</button>
       </div>
+      <span className={styles.missionDivider}></span>
     </section>
   );
 };

@@ -5,7 +5,7 @@ import TeamSection from '../components/TeamSection';
 const Team: React.FC = () => {
   return (
     <Layout>
-      <Team />
+      <TeamSection />
     </Layout>
   );
 };

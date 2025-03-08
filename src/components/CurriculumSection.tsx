@@ -1,4 +1,5 @@
 import React from 'react';
+import NavLink from './NavLink';
 import * as styles from './CurriculumSection.module.css';
 
 interface CurriculumFeatureProps {
@@ -16,7 +17,7 @@ const CurriculumFeature: React.FC<CurriculumFeatureProps> = ({
     <div className={styles.curriculumFeature}>
       <div className={styles.featureIcon}>{icon}</div>
       <div className={styles.featureContent}>
-        <h3 className={styles.featureTitle}>{title}</h3>
+        <div className={styles.featureTitle}>{title}</div>
         <p className={styles.featureDescription}>{description}</p>
       </div>
     </div>
@@ -50,9 +51,9 @@ export const CurriculumSection: React.FC = () => {
   return (
     <section className={styles.curriculumSection}>
       <div className={styles.curriculumContainer}>
-        <h2 className={styles.curriculumTitle}>
+        <div className={styles.curriculumTitle}>
           The Curriculum & The Classroom
-        </h2>
+        </div>
         <p className={styles.curriculumDescription}>
           We have developed our practical curriculum through continuous
           collaboration with BELLEDS Technologies based at <strong>MIT</strong>{' '}
@@ -60,11 +61,13 @@ export const CurriculumSection: React.FC = () => {
           Haute, Indiana.
         </p>
         <div className={styles.curriculumContent}>
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/461123ab0beb2912491992687095be5d92a802e9f4b826b470560c273b771626?placeholderIfAbsent=true&apiKey=cc44f98401e848c18ff1a7327392e464"
-            alt="Curriculum illustration"
-            className={styles.curriculumImage}
-          />
+          <div className={styles.curriculumImageContainer}>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/461123ab0beb2912491992687095be5d92a802e9f4b826b470560c273b771626?placeholderIfAbsent=true&apiKey=cc44f98401e848c18ff1a7327392e464"
+              alt="Curriculum illustration"
+              className={styles.curriculumImage}
+            />
+          </div>
           <div className={styles.featuresContainer}>
             {features.map((feature, index) => (
               <React.Fragment key={index}>
@@ -74,7 +77,9 @@ export const CurriculumSection: React.FC = () => {
                 )}
               </React.Fragment>
             ))}
-            <button className={styles.seeDetailsButton}>See Details</button>
+            <NavLink to="/curriculum">
+              <button className={styles.seeDetailsButton}>See Details</button>
+            </NavLink>
           </div>
         </div>
       </div>
