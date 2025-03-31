@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["dom", "esnext"],
-    "jsx": "react-jsx",
+    "target": "es6",
     "module": "esnext",
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
     "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/static/*": ["./static/*"]
-    },
-    "types": ["node", "@testing-library/jest-dom"]
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@types/*": ["src/types/*"],
+      "@assets/*": ["src/assets/*"]
+    }
   },
-  "exclude": ["node_modules"],
-  "include": ["./src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "public", ".cache"]
 }

@@ -1,0 +1,137 @@
+.featureBlock {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 80px;
+  background: radial-gradient(
+    ellipse at center bottom,
+    #270c43 0%,
+    rgba(14, 8, 36, 0) 100%
+  );
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.darkTheme {
+  background-color: #0a0b0d;
+  color: #f5f0eb;
+}
+/* By default, content is on the left, image on the right */
+.content {
+  flex: 0 1 auto; /* Don't grow, can shrink, use auto basis */
+  min-width: 300px;
+  justify-content: left;
+  max-width: 540px;
+  order: 1; /* Content first */
+}
+
+.imageContainer {
+  flex: 0 1 auto; /* Don't grow, can shrink, use auto basis */
+  min-width: 300px;
+  max-width: 581px; /* Match the image width */
+  order: 2; /* Image second */
+}
+
+/* When image should be on the left */
+.imageLeft .content {
+  order: 2; /* Content second */
+}
+
+.imageLeft .imageContainer {
+  order: 1; /* Image first */
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: left;
+}
+
+.textBlock {
+  width: 540px;
+}
+
+.title {
+  font-family: 'Montagu Slab', serif;
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #f5f0eb;
+}
+
+.description {
+  color: #fff;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Body Large */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  letter-spacing: 0.1px;
+  margin-bottom: 32px;
+  white-space: pre-line; /* Add this line to preserve line breaks */
+}
+
+.button {
+  width: auto;
+  display: inline-block;
+  padding: 12px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: var(--White, #fff);
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Caption */
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button:hover {
+  border-radius: 40px;
+  background: var(--White, #fff);
+}
+
+.image {
+  width: 100%; /* Make image take full width of container */
+  max-width: 581px;
+  height: auto;
+  border-radius: 12px;
+  color: #fd3abb;
+  border: 3.229px solid #000;
+  margin-top: -7px;
+  box-shadow: 10px 10px;
+}
+
+@media (max-width: 768px) {
+  .featureBlock {
+    flex-direction: column;
+  }
+
+  /* On mobile, always show image first, then content */
+  .content {
+    order: 2;
+    text-align: center;
+  }
+
+  .imageContainer {
+    order: 1;
+  }
+
+  /* Override the imageLeft class on mobile */
+  .imageLeft .content,
+  .imageLeft .imageContainer {
+    order: unset;
+  }
+}

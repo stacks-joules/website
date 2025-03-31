@@ -1,35 +1,64 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as styles from './Navigation.module.css';
 import NavLink from './NavLink';
+import wrenchboltLogo from '../assets/images/wrenchbolt.svg';
 
 export const Navigation: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Handle scroll events
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      console.log('isScrolled', isScrolled);
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener(`scroll`, handleScroll);
+
+    // Clean up
+    return () => {
+      window.removeEventListener(`scroll`, handleScroll);
+    };
+  }, [scrolled]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className={styles.desktopNavigation}>
+    <nav
+      className={`${styles.desktopNavigation} ${
+        scrolled ? styles.scrolled : ``
+      }`}
+    >
       <div className={styles.navContainer}>
         <div className={styles.leftNav}>
+          <NavLink to="/" className={styles.wrenchboltLogo}>
+            <img
+              loading="lazy"
+              src={wrenchboltLogo}
+              className={styles.logo}
+              alt="Stacks + Joules Logo"
+            />
+          </NavLink>
+
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/team">Meet the Team</NavLink>
+          <NavLink to="/curriculum">Curriculum</NavLink>
           <NavLink to="/become-a-student">Become A Student</NavLink>
           <NavLink to="/employment-partnerships">
             Employment Partnerships
           </NavLink>
+          <NavLink to="/support-mentors">Support/Mentor</NavLink>
         </div>
-        <NavLink to="/">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/90e984dccac0dee21d06cb24bdc8c9c524f08b8b626d50fa86a7c0941d0973ef?placeholderIfAbsent=true&apiKey=cc44f98401e848c18ff1a7327392e464"
-            className={styles.logo}
-            alt="Stacks + Joules logo"
-          />
-        </NavLink>
         <div className={styles.rightNav}>
-          <NavLink to="/curriculum">Curriculum</NavLink>
-          <NavLink to="/team">Meet the Team</NavLink>
-          <NavLink to="/donate">Donate</NavLink>
+          <NavLink to="/donate" className={styles.donateButton}>
+            Donate
+          </NavLink>
         </div>
         <div className={styles.hamburger} onClick={toggleMenu}>
           <span></span>
@@ -47,7 +76,9 @@ export const Navigation: React.FC = () => {
           </NavLink>
           <NavLink to="/curriculum">Curriculum</NavLink>
           <NavLink to="/team">Meet the Team</NavLink>
-          <NavLink to="/donate">Donate</NavLink>
+          <NavLink to="/donate" className={styles.donateButton}>
+            Donate
+          </NavLink>
         </div>
       </div>
     </nav>

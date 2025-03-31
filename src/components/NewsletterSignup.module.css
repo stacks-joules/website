@@ -8,18 +8,21 @@
 .newsletterContainer {
   margin: 0 auto;
   padding: 80px;
-  background-color: #ecf2fc;
-  border-radius: 40px;
+
   text-align: center;
 }
 
 .newsletterTitle {
-  font-family: 'Inter', sans-serif;
-  color: #323b4b;
-  font-size: 48px;
+  color: var(--Gary-900, #151515);
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Headline 2 */
+  font-family: 'Montagu Slab';
+  font-size: 38px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 16px;
+  line-height: 110%; /* 41.8px */
+  letter-spacing: -0.76px;
+  text-transform: uppercase;
 }
 
 .highlightText {
@@ -32,13 +35,22 @@
 }
 
 .newsletterDescription {
-  color: #4e5d78;
+  color: var(--Gary-900, #151515);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Inter/Text Large 18/Regular */
+  font-family: Inter;
   font-size: 18px;
-  margin-bottom: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
 }
 
 .newsletterForm {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   max-width: 581px;
   margin: 0 auto;
   background-color: #fff;
@@ -46,12 +58,25 @@
   padding: 8px;
 }
 
+.emailInputLabel {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #151515;
+  margin-bottom: 8px;
+  float: left;
+}
+
 .emailInput {
-  flex-grow: 1;
-  border: none;
-  padding: 0 22px;
   font-size: 14px;
   color: #4e5d78;
+  border-radius: 12px;
+  border: 1px solid #d0d0d0;
+  background: var(--White, #fff);
+  width: 125%;
+  font-weight: 600;
+  padding: 14px 24px 14px;
+  line-height: 120%;
 }
 
 .emailInput::placeholder {
@@ -59,15 +84,21 @@
 }
 
 .submitButton {
-  background-color: #377dff;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 18px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  min-width: 207px;
+  border-radius: 40px;
+  background: var(--Gary-900, #151515);
+  padding: 15px 24px;
+  color: var(--White, #fff);
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Caption */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  height: 100%;
+  align-self: flex-end;
+
+  margin-left: 16px;
 }
 
 @media (max-width: 991px) {

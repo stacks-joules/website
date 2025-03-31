@@ -92,11 +92,12 @@ export const ContactSection: React.FC = () => {
         </div>
         <div className={styles.rightContent}>
           <form className={styles.contactForm} onSubmit={handleSubmit}>
-            <h2 className={styles.formTitle}>Get in touch</h2>
+            <div className={styles.formTitle}>Get in touch</div>
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
                 <label htmlFor="firstName">First Name</label>
                 <input
+                  className={styles.nameField}
                   type="text"
                   id="firstName"
                   name="firstName"
@@ -108,6 +109,7 @@ export const ContactSection: React.FC = () => {
               <div className={styles.formGroup}>
                 <label htmlFor="lastName">Last Name</label>
                 <input
+                  className={styles.nameField}
                   type="text"
                   id="lastName"
                   name="lastName"

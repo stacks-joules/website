@@ -1,0 +1,74 @@
+.logoArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  background-image: url('../assets/images/background-pink.png');
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 242px;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  /* Add space between the logos */
+}
+
+.title img {
+  font-weight: 900;
+  font-style: italic;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Style specifically for the main logos */
+.logoImage {
+  max-width: 90%; /* Adjust as needed */
+}
+
+/* Style specifically for the plus logo */
+.plusLogo {
+  position: absolute;
+  max-width: 8%; /* Make the plus smaller */
+  margin: 0 10px 0px 25px; /* Add some margin on both sides */
+}
+
+/* Add a semi-transparent overlay to improve logo visibility if needed */
+.logoArea::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .logoImage {
+    max-width: 40%;
+  }
+
+  .plusLogo {
+    max-width: 15%;
+  }
+}

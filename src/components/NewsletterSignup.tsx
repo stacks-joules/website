@@ -14,25 +14,27 @@ export const NewsletterSignup: React.FC = () => {
   return (
     <section className={styles.newsletterSection}>
       <div className={styles.newsletterContainer}>
-        <div className={styles.highlightText}>Stay In Touch</div>
-        <div className={styles.newsletterTitle}>
-          Keep Up With Stacks & Joules
-        </div>
+        <div className={styles.newsletterTitle}>Get The Newsletter</div>
         <p className={styles.newsletterDescription}>
           An every-so-often email recapping the efforts of the Stacks + Joules
           team.
         </p>
         <form onSubmit={handleSubmit} className={styles.newsletterForm}>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email address"
-            className={styles.emailInput}
-            required
-          />
+          <div className={styles.newsletterFormContent}>
+            <label className={styles.emailInputLabel} htmlFor="email">
+              Email Address
+            </label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="emai@gmail.com"
+              className={styles.emailInput}
+              required
+            />
+          </div>
           <button type="submit" className={styles.submitButton}>
-            Light it up!
+            Submit
           </button>
         </form>
       </div>
