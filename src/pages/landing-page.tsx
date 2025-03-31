@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { FeatureBlock } from '../components/FeatureBlock';
 import { CardContainer } from '../components/CardContainer';
+import { NewsletterSignup } from '../components/NewsletterSignup';
 import * as styles from '../components/LandingPage.module.css';
 
 import StudentImage from '../assets/images/student-photo-1.png';
@@ -32,6 +33,7 @@ const LandingPage: React.FC = () => {
           textOrientation="right"
           theme="dark"
         />
+        <NewsletterSignup />
       </Layout>
     </div>
   );
@@ -42,4 +44,4 @@ export default LandingPage;
 // import { FeatureSection } from '../components/FeatureSection';
 // import { MissionSection } from '../components/MissionSection';
 // import { CurriculumSection } from '../components/CurriculumSection';
-import { NewsletterSignup } from '../components/NewsletterSignup';
+// import { NewsletterSignup } from '../components/NewsletterSignup';

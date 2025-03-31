@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import * as styles from './NewsletterSignup.module.css';
 
 export const NewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(``);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle newsletter signup logic here
-    console.log('Newsletter signup for:', email);
-    setEmail('');
+    console.log(`Newsletter signup for:`, email);
+    setEmail(``);
   };
 
   return (
