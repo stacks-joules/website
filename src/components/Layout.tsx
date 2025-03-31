@@ -6,14 +6,14 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
+    <>
       <LogoArea />
       <Navigation />
       <main>{children}</main>
       <ContactSection />
-    </div>
+    </>
   );
 };
 
