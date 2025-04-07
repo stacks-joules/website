@@ -2,10 +2,12 @@
   padding: 20px 80px;
   background-color: #0a0b0d;
   min-width: 320px;
-  overflow: hidden;
   position: relative;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.4);
   border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navContainer {
