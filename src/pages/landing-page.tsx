@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 import { FeatureBlock } from '../components/FeatureBlock';
 import { CardContainer } from '../components/CardContainer';
 import { NewsletterSignup } from '../components/NewsletterSignup';

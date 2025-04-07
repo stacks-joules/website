@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navigation } from './Navigation';
-import { ContactSection } from './ContactSection';
-import { LogoArea } from './LogoArea';
+import { Navigation } from '../Navigation';
+import { ContactSection } from '../ContactSection';
+import { LogoArea } from '../LogoArea';
 interface LayoutProps {
   children: React.ReactNode;
 }

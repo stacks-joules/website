@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProjectLearning } from '../components/ProjectLearning';
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 
 const BecomeAStudent: React.FC = () => {
   return (

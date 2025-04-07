@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import * as styles from './ContactSection.module.css';
+import { Logo } from './LogoArea';
+import Cityscape from '../assets/images/contact-image.png';
 
 interface ContactInfo {
   name: string;
@@ -66,27 +68,22 @@ export const ContactSection: React.FC = () => {
     <section className={styles.contactSection}>
       <div className={styles.contactContent}>
         <div className={styles.leftContent}>
-          <div className={styles.contactTitle}>Level Up at Stacks & Joules</div>
+          <div className={styles.contactTitle}>
+            <Logo />
+          </div>
           <p className={styles.contactDescription}>
             Have questions about our program or want to become a student? Get in
             touch!
           </p>
           <div className={styles.imageContainer}>
-            <div className={styles.imagePlaceholder} />
-            <div className={styles.iconOverlay} />
+            <img src={Cityscape} alt="Cityscape" />
           </div>
           <div className={styles.locationContainer}>
             <ContactLocation
-              name="Union Square"
-              street="100 New York St"
+              name="New York"
+              street="175 WEST 93RD STREET #3K"
               state="New York, NY 10001"
               phone="+1 917 555 5555"
-            />
-            <ContactLocation
-              name="Lower East Side"
-              street="100 Los Angeles"
-              state="St Los Angeles, CA 90210"
-              phone="+1 310 555 5555"
             />
           </div>
         </div>
@@ -104,6 +101,7 @@ export const ContactSection: React.FC = () => {
                   value={formData.firstName}
                   onChange={handleChange}
                   required
+                  placeholder="First Name"
                 />
               </div>
               <div className={styles.formGroup}>
@@ -116,6 +114,7 @@ export const ContactSection: React.FC = () => {
                   value={formData.lastName}
                   onChange={handleChange}
                   required
+                  placeholder="Last Name"
                 />
               </div>
             </div>
@@ -128,6 +127,7 @@ export const ContactSection: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                placeholder="Email Address"
               />
             </div>
             <div className={styles.formGroup}>
@@ -138,6 +138,7 @@ export const ContactSection: React.FC = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
+                placeholder="Phone Number"
               />
             </div>
             <div className={styles.formGroup}>
@@ -148,6 +149,7 @@ export const ContactSection: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                placeholder="Message"
               ></textarea>
             </div>
             <button type="submit" className={styles.submitButton}>

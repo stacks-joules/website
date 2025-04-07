@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Layout from './Layout';
+import Layout from './layout/Layout';
 import { Header } from './Header';
 import { FeatureSection } from './FeatureSection';
 import { MissionSection } from './MissionSection';
