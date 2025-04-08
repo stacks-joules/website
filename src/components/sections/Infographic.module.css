@@ -1,0 +1,62 @@
+.infographicContainer {
+  width: 100%;
+  padding: 40px 80px 0px 80px;
+  box-sizing: border-box;
+}
+
+.infographicContent {
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #8c8c8c;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 80px;
+}
+
+.infographicTitle {
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.infographicCardContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.infographicCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.infographicCardStat {
+  color: #000;
+  font-family: 'Montagu Slab';
+  font-size: 96px;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+
+.infographicCardStat span {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.infographicCardTitle {
+  color: #000;
+  font-family: 'Inter';
+  text-transform: uppercase;
+}
