@@ -1,7 +1,8 @@
 import React from 'react';
-import { Navigation } from '../Navigation';
+import { Navigation } from './Navigation';
 import { ContactSection } from '../ContactSection';
-import { LogoArea } from '../LogoArea';
+import { Header } from './Header';
+import { Footer } from './Footer';
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -9,10 +10,11 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <LogoArea />
+      <Header />
       <Navigation />
       <main>{children}</main>
       <ContactSection />
+      <Footer />
     </>
   );
 };

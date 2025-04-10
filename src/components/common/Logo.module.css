@@ -1,0 +1,28 @@
+.logo {
+  position: relative;
+  max-width: 90%;
+  width: auto;
+}
+
+.logo img {
+  font-weight: 900;
+  font-style: italic;
+  object-fit: contain;
+}
+
+/* Style specifically for the main logos */
+.logoImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Style specifically for the plus logo */
+.plusLogo {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  max-width: 9%;
+  pointer-events: none;
+}

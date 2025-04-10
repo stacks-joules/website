@@ -1,9 +1,12 @@
 .card {
   width: 411px;
+}
+
+.card .border {
   border-top: 0.5px solid #8c8c8c;
 }
 
-.cardHeader h3 {
+.card .cardHeader h3 {
   font-family: 'Inter';
   color: var(--Black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
@@ -45,7 +48,6 @@
   text-transform: uppercase;
   background-color: #fff;
   border-radius: 40px;
-  border: 1px solid #000;
 }
 
 .button a {

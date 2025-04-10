@@ -1,6 +1,12 @@
 .cardContainer {
   padding: 80px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardContainerContent {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }

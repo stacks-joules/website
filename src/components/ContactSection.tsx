@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as styles from './ContactSection.module.css';
-import { Logo } from './LogoArea';
+import { Logo } from './common/Logo';
 import Cityscape from '../assets/images/contact-image.png';
 
 interface ContactInfo {

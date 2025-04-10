@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as styles from './Navigation.module.css';
-import NavLink from './NavLink';
-import wrenchboltLogo from '../assets/images/wrenchbolt.svg';
+import NavLink from '../NavLink';
+import wrenchboltLogo from '../../assets/images/wrenchbolt.svg';
 
 export const Navigation: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
