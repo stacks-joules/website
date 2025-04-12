@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as styles from './AccordionBlock.module.css';
+import { ImagePanel } from '../panels/ImagePanel';
 
 interface AccordionBlockProps {
   title: string;
@@ -51,9 +52,7 @@ export const AccordionBlock: React.FC<FeatureBlockProps> = ({
       <div className={styles.horizontalRule}></div>
       <h2 className={styles.accordionTitle}>{title}</h2>
       <div className={styles.accordionContainer}>
-        <div className={styles.imageContainer}>
-          <img src={imageSrc} alt={imageAlt} className={styles.image} />
-        </div>
+        <ImagePanel imageSrc={imageSrc} imageAlt={imageAlt} />
         <div className={styles.accordionItems}>
           {accordionItems.map((item) => (
             <AccordionItem

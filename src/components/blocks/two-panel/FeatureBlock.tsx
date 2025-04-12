@@ -1,5 +1,7 @@
 import React from 'react';
 import * as styles from './FeatureBlock.module.css';
+import { TextPanel } from '../panels/TextPanel';
+import { ImagePanel } from '../panels/ImagePanel';
 
 interface FeatureBlockProps {
   title: string;
@@ -32,29 +34,14 @@ export const FeatureBlock: React.FC<FeatureBlockProps> = ({
         imageOnLeft ? styles.imageLeft : ''
       } ${themeClass}`}
     >
-      <div
-        className={`${styles.content} ${
-          styles[
-            `align${
-              textOrientation.charAt(0).toUpperCase() + textOrientation.slice(1)
-            }`
-          ]
-        }`}
-      >
-        <h2 className={styles.title}>{title}</h2>
-        <p className={styles.description}>{description}</p>
-
-        {/* Render button only if buttonText is provided */}
-        {buttonText && (
-          <a href={buttonLink} className={styles.button}>
-            {buttonText}
-          </a>
-        )}
-      </div>
-
-      <div className={styles.imageContainer}>
-        <img src={imageSrc} alt={imageAlt} className={styles.image} />
-      </div>
+      <TextPanel
+        title={title}
+        description={description}
+        buttonText={buttonText}
+        buttonLink={buttonLink}
+        textOrientation={textOrientation}
+      />
+      <ImagePanel imageSrc={imageSrc} imageAlt={imageAlt} />
     </div>
   );
 };
