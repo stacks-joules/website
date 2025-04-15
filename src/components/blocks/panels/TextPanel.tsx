@@ -15,7 +15,7 @@ export const TextPanel: React.FC<TextPanelProps> = ({
   description,
   buttonText,
   buttonLink,
-  textOrientation,
+  textOrientation = `right`,
 }) => {
   return (
     <div

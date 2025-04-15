@@ -14,7 +14,11 @@ export const ImagePanel: React.FC<ImagePanelProps> = ({
 }) => {
   return (
     <div className={styles.imageContainer}>
-      <img src={imageSrc} alt={imageAlt} className={styles.image} />
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        className={`${styles.image} ${dropShadow ? styles.dropShadow : ''}`}
+      />
     </div>
   );
 };

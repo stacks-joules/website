@@ -26,3 +26,7 @@
   max-width: 9%;
   pointer-events: none;
 }
+
+.center {
+  margin: 0 auto;
+}

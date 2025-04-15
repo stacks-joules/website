@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as styles from './AccordionBlock.module.css';
 import { ImagePanel } from '../panels/ImagePanel';
 import { AccordionPanel } from '../panels/AccordionPanel';
+import { Container } from '../../layout/Container';
 
 interface AccordionBlockProps {
   title: string;
@@ -9,12 +10,10 @@ interface AccordionBlockProps {
   imageSrc: string;
   imageAlt: string;
   buttonText?: string; // Optional button text
-  buttonLink?: string; // Optional button link
-  textOrientation?: 'left' | 'right' | 'center'; // Optional text orientation with default
-  theme?: 'dark' | 'light';
+  accordionItems: [];
 }
 
-export const AccordionBlock: React.FC<FeatureBlockProps> = ({
+export const AccordionBlock: React.FC<AccordionBlockProps> = ({
   title,
   imageSrc,
   imageAlt,
@@ -22,12 +21,14 @@ export const AccordionBlock: React.FC<FeatureBlockProps> = ({
 }) => {
   return (
     <div className={styles.accordionBlock}>
-      <div className={styles.horizontalRule}></div>
-      <h2 className={styles.accordionTitle}>{title}</h2>
-      <div className={styles.accordionContainer}>
-        <ImagePanel imageSrc={imageSrc} imageAlt={imageAlt} />
-        <AccordionPanel accordionItems={accordionItems} />
-      </div>
+      <Container>
+        <div className={styles.horizontalRule}></div>
+        <h2 className={styles.accordionTitle}>{title}</h2>
+        <div className={styles.accordionContainer}>
+          <ImagePanel imageSrc={imageSrc} imageAlt={imageAlt} />
+          <AccordionPanel accordionItems={accordionItems} />
+        </div>
+      </Container>
     </div>
   );
 };

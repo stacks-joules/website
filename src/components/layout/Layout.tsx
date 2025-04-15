@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigation } from './Navigation';
-import { ContactSection } from '../ContactSection';
+import { ContactSection } from '../sections/ContactSection';
 import { Header } from './Header';
 import { Footer } from './Footer';
 interface LayoutProps {

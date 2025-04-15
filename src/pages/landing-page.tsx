@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout';
 import { FeatureBlock } from '../components/blocks/two-panel/FeatureBlock';
 import { CardContainer } from '../components/blocks/card-section/CardContainer';
 import { Infographic } from '../components/sections/Infographic';
-import { NewsletterSignup } from '../components/NewsletterSignup';
+import { NewsletterSignup } from '../components/sections/NewsletterSignup';
 import * as styles from '../components/LandingPage.module.css';
 import { Card } from '../components/blocks/card-section/Card';
 import StudentImage from '../assets/images/student-photo-1.png';
@@ -15,6 +15,10 @@ import CurriculumImage1 from '../assets/images/curriculum-image-1.png';
 import CurriculumImage2 from '../assets/images/curriculum-image-2.png';
 import CurriculumImage3 from '../assets/images/curriculum-image-3.png';
 import CurriculumImage4 from '../assets/images/curriculum-image-4.png';
+
+import { ImagePanel } from '@components/blocks/panels/ImagePanel';
+import { TextPanel } from '@components/blocks/panels/TextPanel';
+import { Block } from '@components/blocks/block/Block';
 const LandingPage: React.FC = () => {
   const cards = [
     {
@@ -75,31 +79,35 @@ const LandingPage: React.FC = () => {
   return (
     <div className={styles.landingPage}>
       <Layout>
-        <FeatureBlock
-          title="Learn To Light It Up!"
-          description="Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming."
-          imageSrc={StudentImage}
-          imageAlt="Placeholder"
-          buttonText="Become A Student"
-          buttonLink="/become-a-student"
-          textOrientation="left"
-          theme="dark"
-        />
+        <Block variation="dark">
+          <TextPanel
+            title="Learn To Light It Up!"
+            description="Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming."
+            buttonText="Become A Student"
+            buttonLink="/become-a-student"
+          />
+          <ImagePanel
+            imageSrc={StudentImage}
+            imageAlt="Students examining an hvac component."
+            dropShadow
+          />
+        </Block>
         <CardContainer>
           {cards.map((card) => (
             <Card key={card.headerText} {...card} />
           ))}
         </CardContainer>
-        <FeatureBlock
-          title="Our Mission"
-          description={`Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming. 
-      
-        We are a 501(c)(3) nonprofit organization focused on project-based learning in computer programming and wireless network management for young people.`}
-          imageSrc={TeamImage}
-          imageAlt="Placeholder"
-          textOrientation="right"
-          theme="dark"
-        />
+        <Block variation="dark">
+          <ImagePanel
+            imageSrc={TeamImage}
+            imageAlt="Staff and students posing for a photo."
+            dropShadow
+          />
+          <TextPanel
+            title="Our Mission"
+            description="Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming."
+          />
+        </Block>
         <Infographic
           title="↳ Student Success"
           cards={[

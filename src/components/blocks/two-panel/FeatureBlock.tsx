@@ -2,6 +2,7 @@ import React from 'react';
 import * as styles from './FeatureBlock.module.css';
 import { TextPanel } from '../panels/TextPanel';
 import { ImagePanel } from '../panels/ImagePanel';
+import { Container } from '../../layout/Container';
 
 interface FeatureBlockProps {
   title: string;
@@ -34,14 +35,16 @@ export const FeatureBlock: React.FC<FeatureBlockProps> = ({
         imageOnLeft ? styles.imageLeft : ''
       } ${themeClass}`}
     >
-      <TextPanel
-        title={title}
-        description={description}
-        buttonText={buttonText}
-        buttonLink={buttonLink}
-        textOrientation={textOrientation}
-      />
-      <ImagePanel imageSrc={imageSrc} imageAlt={imageAlt} />
+      <Container>
+        <TextPanel
+          title={title}
+          description={description}
+          buttonText={buttonText}
+          buttonLink={buttonLink}
+          textOrientation={textOrientation}
+        />
+        <ImagePanel imageSrc={imageSrc} imageAlt={imageAlt} />
+      </Container>
     </div>
   );
 };

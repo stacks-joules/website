@@ -1,7 +1,8 @@
 .imageContainer {
   flex: 0 1 auto; /* Don't grow, can shrink, use auto basis */
   min-width: 300px;
-  max-width: 581px; /* Match the image width */
+  max-width: 560px; /* Match the image width */
+  width: 47%;
 }
 
 .image {
@@ -9,8 +10,28 @@
   max-width: 581px;
   height: auto;
   border-radius: 12px;
+}
+.dropShadow {
   color: #fd3abb;
-  border: px solid #000;
+  border: 1px solid #000;
   margin-top: -7px;
   box-shadow: 10px 10px;
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    width: 100%;
+    order: 0;
+    justify-content: center;
+  }
+  .image {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+  .dropShadow {
+    border: None;
+    margin-top: -7px;
+    box-shadow: 0px 0px;
+  }
 }

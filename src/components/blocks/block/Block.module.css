@@ -1,0 +1,40 @@
+.block {
+  gap: 40px;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 80px;
+  color: #151515;
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.lightTheme {
+  background-color: #f6f6f6;
+  color: var(--gray-900);
+}
+
+.darkTheme {
+  background-color: #0a0b0d;
+  color: #f5f0eb;
+  background: radial-gradient(
+    ellipse at left bottom,
+    #270c43 0%,
+    rgba(14, 8, 36, 0) 100%
+  );
+  background-color: #0a0b0d;
+}
+
+.innerBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .block {
+    padding: 0px;
+    min-width: 392px;
+  }
+  .innerBlock {
+    flex-direction: column;
+  }
+}

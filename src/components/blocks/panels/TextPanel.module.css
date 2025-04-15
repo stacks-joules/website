@@ -1,57 +1,10 @@
-.featureBlock {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 80px;
-  background: radial-gradient(
-    ellipse at center bottom,
-    #270c43 0%,
-    rgba(14, 8, 36, 0) 100%
-  );
-  width: 100%; /* Ensure the container takes full width */
-}
-
-.darkTheme {
-  background-color: #0a0b0d;
-  color: #f5f0eb;
-}
 /* By default, content is on the left, image on the right */
 .content {
   flex: 0 1 auto; /* Don't grow, can shrink, use auto basis */
   min-width: 300px;
   justify-content: left;
-  max-width: 540px;
-  order: 1; /* Content first */
-}
-
-.imageContainer {
-  flex: 0 1 auto; /* Don't grow, can shrink, use auto basis */
-  min-width: 300px;
-  max-width: 581px; /* Match the image width */
-  order: 2; /* Image second */
-}
-
-/* When image should be on the left */
-.imageLeft .content {
-  order: 2; /* Content second */
-}
-
-.imageLeft .imageContainer {
-  order: 1; /* Image first */
-}
-
-.alignLeft {
-  text-align: left;
-}
-
-.alignRight {
-  text-align: left;
-}
-
-.textBlock {
-  width: 540px;
+  max-width: 560px;
+  width: 47%;
 }
 
 .title {
@@ -61,8 +14,8 @@
   line-height: 100%;
   text-transform: uppercase;
   margin-bottom: 16px;
-  color: #f5f0eb;
 }
+
 .button {
   width: auto;
   display: inline-block;
@@ -86,4 +39,17 @@
 .button:hover {
   border-radius: 40px;
   background: var(--White, #fff);
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    order: 1;
+    padding: 40px 20px;
+  }
+  .title {
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }

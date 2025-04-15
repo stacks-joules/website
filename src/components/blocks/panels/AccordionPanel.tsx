@@ -39,7 +39,7 @@ export const AccordionPanel: React.FC<AccordianPanelProps> = ({
   accordionItems,
 }) => {
   return (
-    <div className={styles.accordionItems}>
+    <div className={styles.content}>
       {accordionItems.map((item) => (
         <AccordionItem
           key={item.title}

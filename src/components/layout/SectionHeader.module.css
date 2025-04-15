@@ -9,3 +9,9 @@
   padding: 32px 80px;
   position: sticky;
 }
+
+@media (max-width: 768px) {
+  .sectionHeader {
+    padding: 32px 20px;
+  }
+}
