@@ -1,10 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import { FeatureBlock } from '../components/blocks/two-panel/FeatureBlock';
 import { CardContainer } from '../components/blocks/card-section/CardContainer';
 import { Infographic } from '../components/sections/Infographic';
 import { NewsletterSignup } from '../components/sections/NewsletterSignup';
-import * as styles from '../components/LandingPage.module.css';
 import { Card } from '../components/blocks/card-section/Card';
 import StudentImage from '../assets/images/student-photo-1.png';
 import TeamImage from '../assets/images/team.png';
@@ -19,6 +17,7 @@ import CurriculumImage4 from '../assets/images/curriculum-image-4.png';
 import { ImagePanel } from '@components/blocks/panels/ImagePanel';
 import { TextPanel } from '@components/blocks/panels/TextPanel';
 import { Block } from '@components/blocks/block/Block';
+
 const LandingPage: React.FC = () => {
   const cards = [
     {
@@ -77,7 +76,7 @@ const LandingPage: React.FC = () => {
     },
   ];
   return (
-    <div className={styles.landingPage}>
+    <div>
       <Layout>
         <Block variation="dark">
           <TextPanel
@@ -111,10 +110,30 @@ const LandingPage: React.FC = () => {
         <Infographic
           title="↳ Student Success"
           cards={[
-            { title: `Complete Training`, number: `89`, symbol: `%` },
-            { title: `Candidates Employed`, number: `98`, symbol: `%` },
-            { title: `Average Pay Rate`, number: `28`, symbol: `$` },
-            { title: `In Green Tech`, number: `76`, symbol: `%` },
+            {
+              title: `Complete Training`,
+              number: `89`,
+              symbol: `%`,
+              border: false,
+            },
+            {
+              title: `Candidates Employed`,
+              number: `98`,
+              symbol: `%`,
+              border: false,
+            },
+            {
+              title: `Average Pay Rate`,
+              number: `28`,
+              symbol: `$`,
+              border: false,
+            },
+            {
+              title: `In Green Tech`,
+              number: `76`,
+              symbol: `%`,
+              border: false,
+            },
           ]}
         />
 

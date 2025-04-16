@@ -4,9 +4,9 @@ import * as styles from './Card.module.css';
 
 interface CardProps {
   border?: boolean;
-  headerText: string;
-  imageSrc: string;
-  imageAlt: string;
+  headerText?: string;
+  imageSrc?: string;
+  imageAlt?: string;
   contentTitle?: string;
   content: string;
   buttonText?: string;
@@ -26,8 +26,8 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div className={styles.card + ' ' + (border && styles.border)}>
       <div className={styles.cardHeader}>
-        <h3>{headerText}</h3>
-        <img src={imageSrc} alt={imageAlt} />
+        {headerText && <h3>{headerText}</h3>}
+        {imageSrc && <img src={imageSrc} alt={imageAlt} />}
         {contentTitle && (
           <div className={styles.cardContentTitle}>{contentTitle}</div>
         )}
