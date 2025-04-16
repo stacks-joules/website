@@ -1,9 +1,7 @@
 .card {
   width: 411px;
-}
 
-.card .border {
-  border-top: 0.5px solid #8c8c8c;
+  border-top: 1px solid #000;
 }
 
 .card .cardHeader h3 {
@@ -32,13 +30,11 @@
 }
 
 .button {
-  display: flex;
-
-  padding: 12px 24px;
+  background-color: #fff;
   align-items: center;
-  gap: 10px;
   color: var(--Black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
+  padding: 12px 24px;
   /* Caption */
   font-family: Inter;
   font-size: 14px;
@@ -46,10 +42,10 @@
   font-weight: 600;
   line-height: 120%; /* 16.8px */
   text-transform: uppercase;
-  background-color: #fff;
   border-radius: 40px;
 }
 
 .button a {
   text-decoration: none;
+  border: none;
 }

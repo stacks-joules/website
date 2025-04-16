@@ -8,7 +8,11 @@ interface CardContainerProps {
   children: React.ReactNode;
 }
 
-export const CardContainer: React.FC = ({ title, description, children }) => {
+export const CardContainer: React.FC<CardContainerProps> = ({
+  title,
+  description,
+  children,
+}) => {
   return (
     <div className={styles.cardContainer}>
       <Container>

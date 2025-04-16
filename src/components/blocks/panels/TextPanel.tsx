@@ -2,7 +2,9 @@ import React from 'react';
 import * as styles from './TextPanel.module.css';
 
 interface TextPanelProps {
-  title: string;
+  caption?: string;
+  title?: string;
+  smallTitle?: string;
   description: React.ReactNode;
   buttonText?: string; // Optional button text
   buttonLink?: string; // Optional button link
@@ -11,23 +13,18 @@ interface TextPanelProps {
 }
 
 export const TextPanel: React.FC<TextPanelProps> = ({
+  caption,
   title,
+  smallTitle,
   description,
   buttonText,
   buttonLink,
-  textOrientation = `right`,
 }) => {
   return (
-    <div
-      className={`${styles.content} ${
-        styles[
-          `align${
-            textOrientation.charAt(0).toUpperCase() + textOrientation.slice(1)
-          }`
-        ]
-      }`}
-    >
-      <h2 className={styles.title}>{title}</h2>
+    <div className={`${styles.content}`}>
+      {caption && <h3>{caption}</h3>}
+      {smallTitle && <h2 className={styles.smallTitle}>{smallTitle}</h2>}
+      {title && <h1 className={styles.title}>{title}</h1>}
       <p className={styles.description}>{description}</p>
 
       {/* Render button only if buttonText is provided */}

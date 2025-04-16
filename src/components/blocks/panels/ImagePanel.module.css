@@ -29,6 +29,9 @@
     margin: 0 auto;
     border-radius: 0;
   }
+  .image img {
+    object-fit: cover;
+  }
   .dropShadow {
     border: None;
     margin-top: -7px;

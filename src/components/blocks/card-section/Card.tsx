@@ -33,13 +33,9 @@ export const Card: React.FC<CardProps> = ({
         )}
         <div className={styles.cardContent}>{content}</div>
         {buttonText && (
-          <div className={styles.buttonContainer}>
-            <div className={styles.button}>
-              <Link to={buttonLink} style={{ textDecoration: 'none' }}>
-                <button className={styles.button}>{buttonText}</button>
-              </Link>
-            </div>
-          </div>
+          <Link to={buttonLink} style={{ textDecoration: 'none' }}>
+            <button className={styles.button}>{buttonText}</button>
+          </Link>
         )}
       </div>
     </div>

@@ -11,19 +11,31 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-primary);
+h1 {
+  font-family: 'Montagu Slab', serif;
   font-weight: 700;
-  .infographicTitle {
-    color: #000;
-    font-feature-settings: 'liga' off, 'clig' off;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.2;
-  }
+  line-height: 100%;
+  text-transform: uppercase;
+  font-size: 62px;
+}
+
+h2 {
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: 'Montagu Slab';
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.76px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+  text-transform: uppercase;
 }

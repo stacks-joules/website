@@ -7,15 +7,6 @@
   width: 47%;
 }
 
-.title {
-  font-family: 'Montagu Slab', serif;
-  font-size: 62px;
-  font-weight: 700;
-  line-height: 100%;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
 .button {
   width: auto;
   display: inline-block;

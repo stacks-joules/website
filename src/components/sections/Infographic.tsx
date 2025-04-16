@@ -1,6 +1,7 @@
 import React from 'react';
 import * as styles from './Infographic.module.css';
 import { Container } from '../layout/Container';
+import { Block } from '../blocks/block/Block';
 interface InfographicProps {
   title: string;
   cards: [];
@@ -24,21 +25,23 @@ export const InfographicCard: React.FC<InfographicCardProps> = ({
 
 export const Infographic: React.FC<InfographicProps> = ({ title, cards }) => {
   return (
-    <section>
-      <Container>
-        <div className={styles.infographicContainer}>
-          <div className={styles.infographicContent}>
-            <div className={styles.infographicTitle}>
-              <div>{title}</div>
-            </div>
-            <div className={styles.infographicCardContainer}>
-              {cards.map((card) => (
-                <InfographicCard key={card.title} {...card} />
-              ))}
+    <Block variation="light">
+      <section>
+        <Container>
+          <div className={styles.infographicContainer}>
+            <div className={styles.infographicContent}>
+              <div className={styles.infographicTitle}>
+                <div>{title}</div>
+              </div>
+              <div className={styles.infographicCardContainer}>
+                {cards.map((card) => (
+                  <InfographicCard key={card.title} {...card} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </Block>
   );
 };
