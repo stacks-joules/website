@@ -24,20 +24,38 @@ export const Card: React.FC<CardProps> = ({
   buttonLink,
 }) => {
   return (
-    <div className={styles.card + ' ' + (border && styles.border)}>
-      <div className={styles.cardHeader}>
-        {headerText && <h3>{headerText}</h3>}
-        {imageSrc && <img src={imageSrc} alt={imageAlt} />}
+    <div
+      className={`${styles.card} ${border ? styles.border : ''} ${
+        headerText ? '' : styles.noHeader
+      }`}
+    >
+      {headerText && (
+        <div className={styles.cardHeader}>
+          {headerText && <div className={styles.headerText}>{headerText}</div>}
+        </div>
+      )}
+
+      {imageSrc && (
+        <div className={styles.imageContainer}>
+          <img src={imageSrc} alt={imageAlt} />
+        </div>
+      )}
+
+      <div className={styles.contentContainer}>
         {contentTitle && (
           <div className={styles.cardContentTitle}>{contentTitle}</div>
         )}
+
         <div className={styles.cardContent}>{content}</div>
-        {buttonText && (
+      </div>
+
+      {buttonText && (
+        <div className={styles.buttonContainer}>
           <Link to={buttonLink} style={{ textDecoration: 'none' }}>
             <button className={styles.button}>{buttonText}</button>
           </Link>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

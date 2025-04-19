@@ -91,11 +91,13 @@ const LandingPage: React.FC = () => {
             dropShadow
           />
         </Block>
-        <CardContainer>
-          {cards.map((card) => (
-            <Card key={card.headerText} {...card} />
-          ))}
-        </CardContainer>
+        <Block variation="light">
+          <CardContainer>
+            {cards.map((card) => (
+              <Card key={card.headerText} {...card} />
+            ))}
+          </CardContainer>
+        </Block>
         <Block variation="dark">
           <ImagePanel
             imageSrc={TeamImage}
@@ -136,15 +138,16 @@ const LandingPage: React.FC = () => {
             },
           ]}
         />
-
-        <CardContainer
-          title="↳ Curriculum"
-          description="We have developed our practical curriculum through continuous collaboration with BELLEDS Technologies based at MIT and Rose-Hulman Institute of Technology in Terra Haute, Indiana."
-        >
-          {curriculumCards.map((card) => (
-            <Card key={card.headerText} {...card} />
-          ))}
-        </CardContainer>
+        <Block variation="light">
+          <CardContainer
+            title="↳ Curriculum"
+            description="We have developed our practical curriculum through continuous collaboration with BELLEDS Technologies based at MIT and Rose-Hulman Institute of Technology in Terra Haute, Indiana."
+          >
+            {curriculumCards.map((card) => (
+              <Card key={card.headerText} {...card} />
+            ))}
+          </CardContainer>
+        </Block>
 
         <NewsletterSignup />
       </Layout>
