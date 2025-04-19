@@ -1,6 +1,8 @@
 .infographicContainer {
   width: 100%;
   box-sizing: border-box;
+  padding-top: 80px;
+  padding-bottom: 24px;
 }
 
 .infographicContent {

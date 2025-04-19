@@ -138,7 +138,7 @@ const LandingPage: React.FC = () => {
             },
           ]}
         />
-        <Block variation="light">
+        <Block variation="light" paddingY="0px">
           <CardContainer
             title="↳ Curriculum"
             description="We have developed our practical curriculum through continuous collaboration with BELLEDS Technologies based at MIT and Rose-Hulman Institute of Technology in Terra Haute, Indiana."

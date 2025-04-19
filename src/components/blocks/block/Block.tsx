@@ -11,9 +11,14 @@ const themes = {
 interface BlockProps {
   children: React.ReactNode;
   variation?: 'light' | 'dark' | undefined;
+  paddingY?: string;
 }
 
-export const Block: React.FC<BlockProps> = ({ children, variation }) => {
+export const Block: React.FC<BlockProps> = ({
+  children,
+  variation,
+  paddingY = `80px`,
+}) => {
   const themeClass = variation ? themes[variation] : ``;
 
   // Check if children is an array and has less than 2 items
@@ -21,7 +26,10 @@ export const Block: React.FC<BlockProps> = ({ children, variation }) => {
   const hasSingleChild = childrenArray.length < 2;
 
   return (
-    <div className={`${styles.block} ${styles[themeClass]}`}>
+    <div
+      className={`${styles.block} ${styles[themeClass]}`}
+      style={{ paddingTop: paddingY, paddingBottom: paddingY }}
+    >
       <Container>
         {/* Set flex direction based on number of children */}
         {hasSingleChild ? (

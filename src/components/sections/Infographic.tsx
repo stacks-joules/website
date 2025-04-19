@@ -25,7 +25,7 @@ export const InfographicCard: React.FC<InfographicCardProps> = ({
 
 export const Infographic: React.FC<InfographicProps> = ({ title, cards }) => {
   return (
-    <Block variation="light">
+    <Block variation="light" paddingY="0px">
       <section>
         <Container>
           <div className={styles.infographicContainer}>

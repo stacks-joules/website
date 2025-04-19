@@ -16,8 +16,8 @@ export const CardContainer: React.FC<CardContainerProps> = ({
   return (
     <div className={styles.cardContainer}>
       <Container>
-        {title && <h2>{title}</h2>}
-        {description && <div>{description}</div>}
+        {title && <div className={styles.title}>{title}</div>}
+        {description && <div className={styles.description}>{description}</div>}
         <div className={styles.cardContainerContent}>{children}</div>
       </Container>
     </div>
