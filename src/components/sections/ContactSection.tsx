@@ -75,9 +75,9 @@ export const ContactSection: React.FC = () => {
       // This fetch is just to provide better UX with state updates
       await fetch(`/`, {
         method: `POST`,
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 'Content-Type': `application/x-www-form-urlencoded` },
         body: new URLSearchParams({
-          'form-name': 'contact',
+          'form-name': `contact`,
           ...formData,
         }).toString(),
       });
@@ -129,6 +129,7 @@ export const ContactSection: React.FC = () => {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              netlify
             >
               {/* Hidden fields for Netlify */}
               <input type="hidden" name="form-name" value="contact" />
