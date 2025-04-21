@@ -12,7 +12,6 @@ export const Navigation: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
-      console.log('isScrolled', isScrolled);
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
       }

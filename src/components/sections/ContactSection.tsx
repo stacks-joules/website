@@ -50,6 +50,12 @@ export const ContactSection: React.FC = () => {
     message: ``,
   });
 
+  const [formState, setFormState] = useState({
+    submitting: false,
+    success: false,
+    error: false,
+  });
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -60,10 +66,35 @@ export const ContactSection: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(`Form submitted:`, formData);
+    setFormState({ submitting: true, success: false, error: false });
+
+    try {
+      // The form will be handled by Netlify's form handling
+      // This fetch is just to provide better UX with state updates
+      await fetch(`/`, {
+        method: `POST`,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          ...formData,
+        }).toString(),
+      });
+
+      // Reset form and show success
+      setFormData({
+        firstName: ``,
+        lastName: ``,
+        email: ``,
+        phone: ``,
+        message: ``,
+      });
+      setFormState({ submitting: false, success: true, error: false });
+    } catch (error) {
+      console.error(`Error submitting form:`, error);
+      setFormState({ submitting: false, success: false, error: true });
+    }
   };
 
   return (
@@ -91,8 +122,34 @@ export const ContactSection: React.FC = () => {
             </div>
           </div>
           <div className={styles.rightContent}>
-            <form className={styles.contactForm} onSubmit={handleSubmit}>
+            <form
+              className={styles.contactForm}
+              onSubmit={handleSubmit}
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              {/* Hidden fields for Netlify */}
+              <input type="hidden" name="form-name" value="contact" />
+              <div hidden>
+                <input name="bot-field" />
+              </div>
+
               <div className={styles.formTitle}>Get in touch</div>
+
+              {formState.success && (
+                <div className={styles.successMessage}>
+                  Thank you for your message! We will get back to you soon.
+                </div>
+              )}
+
+              {formState.error && (
+                <div className={styles.errorMessage}>
+                  There was an error submitting the form. Please try again.
+                </div>
+              )}
+
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label htmlFor="firstName">First Name</label>
@@ -155,8 +212,12 @@ export const ContactSection: React.FC = () => {
                   placeholder="Message"
                 ></textarea>
               </div>
-              <button type="submit" className={styles.submitButton}>
-                Submit
+              <button
+                type="submit"
+                className={styles.submitButton}
+                disabled={formState.submitting}
+              >
+                {formState.submitting ? `Submitting...` : `Submit`}
               </button>
             </form>
           </div>
