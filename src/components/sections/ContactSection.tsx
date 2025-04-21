@@ -3,6 +3,7 @@ import * as styles from './ContactSection.module.css';
 import { Logo } from '../common/Logo';
 import Cityscape from '../../assets/images/contact-image.png';
 import { Container } from '../layout/Container';
+import { Modal } from '../common/Modal';
 
 interface ContactInfo {
   name: string;
@@ -55,6 +56,7 @@ export const ContactSection: React.FC = () => {
     success: false,
     error: false,
   });
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -90,6 +92,7 @@ export const ContactSection: React.FC = () => {
         phone: ``,
         message: ``,
       });
+      setModalOpen(true);
       setFormState({ submitting: false, success: true, error: false });
     } catch (error) {
       console.error(`Error submitting form:`, error);
@@ -129,7 +132,6 @@ export const ContactSection: React.FC = () => {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
-              netlify
             >
               {/* Hidden fields for Netlify */}
               <input type="hidden" name="form-name" value="contact" />
@@ -224,6 +226,13 @@ export const ContactSection: React.FC = () => {
           </div>
         </div>
       </Container>
+      <Modal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        title="Thanks for reaching out!"
+      >
+        <p>We will get back to you soon.</p>
+      </Modal>
     </section>
   );
 };

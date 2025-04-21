@@ -51,17 +51,17 @@
   flex-direction: row;
   justify-content: space-between;
 
-  max-width: 581px;
+  max-width: 635px;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 40px;
-  padding: 8px;
 }
 
 .emailInputLabel {
   font-family: 'Inter', sans-serif;
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: 600;
   color: #151515;
   margin-bottom: 8px;
   float: left;
@@ -69,12 +69,13 @@
 
 .emailInput {
   font-size: 14px;
-  color: #4e5d78;
+  font-family: 'Manrope', sans-serif;
+  color: #57595b;
   border-radius: 12px;
   border: 1px solid #d0d0d0;
   background: var(--White, #fff);
-  width: 125%;
-  font-weight: 600;
+  width: 145%;
+  font-weight: 300;
   padding: 14px 24px 14px;
   line-height: 120%;
 }

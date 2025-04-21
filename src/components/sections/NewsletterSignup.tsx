@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import * as styles from './NewsletterSignup.module.css';
 import { Container } from '../layout/Container';
-
+import { Modal } from '../common/Modal';
 export const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState(``);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle newsletter signup logic here
     console.log(`Newsletter signup for:`, email);
+    setIsModalOpen(true);
     setEmail(``);
   };
 
@@ -21,7 +23,14 @@ export const NewsletterSignup: React.FC = () => {
             An every-so-often email recapping the efforts of the Stacks + Joules
             team.
           </p>
-          <form onSubmit={handleSubmit} className={styles.newsletterForm}>
+          <form
+            onSubmit={handleSubmit}
+            className={styles.newsletterForm}
+            name="newsletter-signup"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="newsletter" />
             <div className={styles.newsletterFormContent}>
               <label className={styles.emailInputLabel} htmlFor="email">
                 Email Address
@@ -30,7 +39,7 @@ export const NewsletterSignup: React.FC = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="emai@gmail.com"
+                placeholder="email@gmail.com"
                 className={styles.emailInput}
                 required
               />
@@ -41,6 +50,16 @@ export const NewsletterSignup: React.FC = () => {
           </form>
         </div>
       </Container>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Thank you for signing up!"
+      >
+        <p>
+          You will receive an email shortly with the latest news and updates
+          from the Stacks + Joules team.
+        </p>
+      </Modal>
     </section>
   );
 };
