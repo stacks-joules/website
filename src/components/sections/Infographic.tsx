@@ -2,6 +2,13 @@ import React from 'react';
 import * as styles from './Infographic.module.css';
 import { Container } from '../layout/Container';
 import { Block } from '../blocks/block/Block';
+
+interface InfographicCardProps {
+  title: string;
+  number: string;
+  symbol: string;
+}
+
 interface InfographicProps {
   title: string;
   cards: [];

@@ -6,8 +6,9 @@ import { Container } from '../layout/Container';
 
 interface ContactInfo {
   name: string;
-  address: string;
   phone: string;
+  street: string;
+  state: string;
 }
 
 const ContactLocation: React.FC<ContactInfo> = ({
@@ -42,11 +43,11 @@ const ContactLocation: React.FC<ContactInfo> = ({
 
 export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: '',
+    firstName: ``,
+    lastName: ``,
+    email: ``,
+    phone: ``,
+    message: ``,
   });
 
   const handleChange = (
@@ -62,7 +63,7 @@ export const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    console.log(`Form submitted:`, formData);
   };
 
   return (

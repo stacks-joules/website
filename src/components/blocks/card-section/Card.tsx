@@ -25,8 +25,8 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`${styles.card} ${border ? styles.border : ''} ${
-        headerText ? '' : styles.noHeader
+      className={`${styles.card} ${border ? styles.border : ``} ${
+        headerText ? `` : styles.noHeader
       }`}
     >
       {headerText && (
@@ -51,7 +51,7 @@ export const Card: React.FC<CardProps> = ({
 
       {buttonText && (
         <div className={styles.buttonContainer}>
-          <Link to={buttonLink} style={{ textDecoration: 'none' }}>
+          <Link to={buttonLink ?? ``} style={{ textDecoration: `none` }}>
             <button className={styles.button}>{buttonText}</button>
           </Link>
         </div>
