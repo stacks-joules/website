@@ -14,12 +14,12 @@ export const NewsletterSignup: React.FC = () => {
 
     // Create form data object for submission
     const formData = new FormData(e.target as HTMLFormElement);
-    
+
     // Using fetch to submit the form data
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as any).toString()
+      body: new URLSearchParams(formData as any).toString(),
     })
       .then(() => {
         console.log('Form successfully submitted');
@@ -61,7 +61,7 @@ export const NewsletterSignup: React.FC = () => {
               </label>
               <input
                 type="email"
-                name="email" {/* Make sure name attribute matches the hidden form */}
+                name="newsletter-email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="email@gmail.com"
@@ -69,8 +69,8 @@ export const NewsletterSignup: React.FC = () => {
                 required
               />
             </div>
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className={styles.submitButton}
               disabled={isSubmitting}
             >
