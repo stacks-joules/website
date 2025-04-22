@@ -31,7 +31,7 @@ export const NewsletterSignup: React.FC = () => {
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="newsletter" />
+            <input type="hidden" name="form-name" value="newsletter-signup" />
             <div hidden>
               <input name="bot-field" />
             </div>
