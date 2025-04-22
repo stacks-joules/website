@@ -2,16 +2,36 @@ import React, { useState } from 'react';
 import * as styles from './NewsletterSignup.module.css';
 import { Container } from '../layout/Container';
 import { Modal } from '../common/Modal';
+
 export const NewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState(``);
+  const [email, setEmail] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter signup logic here
-    console.log(`Newsletter signup for:`, email);
-    setIsModalOpen(true);
-    setEmail(``);
+    setIsSubmitting(true);
+
+    // Create form data object for submission
+    const formData = new FormData(e.target as HTMLFormElement);
+    
+    // Using fetch to submit the form data
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString()
+    })
+      .then(() => {
+        console.log('Form successfully submitted');
+        setIsModalOpen(true);
+        setEmail('');
+      })
+      .catch((error) => {
+        console.error('Form submission error:', error);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -41,6 +61,7 @@ export const NewsletterSignup: React.FC = () => {
               </label>
               <input
                 type="email"
+                name="email" {/* Make sure name attribute matches the hidden form */}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="email@gmail.com"
@@ -48,8 +69,12 @@ export const NewsletterSignup: React.FC = () => {
                 required
               />
             </div>
-            <button type="submit" className={styles.submitButton}>
-              Submit
+            <button 
+              type="submit" 
+              className={styles.submitButton}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
           </form>
         </div>
