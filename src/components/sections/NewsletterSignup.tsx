@@ -27,10 +27,14 @@ export const NewsletterSignup: React.FC = () => {
             onSubmit={handleSubmit}
             className={styles.newsletterForm}
             name="newsletter-signup"
+            method="POST"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="newsletter" />
+            <div hidden>
+              <input name="bot-field" />
+            </div>
             <div className={styles.newsletterFormContent}>
               <label className={styles.emailInputLabel} htmlFor="email">
                 Email Address
