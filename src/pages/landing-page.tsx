@@ -156,8 +156,3 @@ const LandingPage: React.FC = () => {
 };
 
 export default LandingPage;
-// import { Header } from '../components/Header';
-// import { FeatureSection } from '../components/FeatureSection';
-// import { MissionSection } from '../components/MissionSection';
-// import { CurriculumSection } from '../components/CurriculumSection';
-// import { NewsletterSignup } from '../components/NewsletterSignup';

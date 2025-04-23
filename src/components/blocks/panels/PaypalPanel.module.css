@@ -1,0 +1,17 @@
+.content {
+  flex: 0 1 auto; /* Don't grow, can shrink, use auto basis */
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  max-width: 560px;
+  width: 47%;
+}
+
+.wrenchbolt {
+  width: 100px;
+  height: 100px;
+  filter: invert(0%) sepia(7%) saturate(5100%) hue-rotate(16deg) brightness(0%)
+    contrast(84%);
+}
