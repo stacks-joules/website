@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as styles from './Logo.module.css';
 import StacksLogo from '../../assets/images/stacks-logo.png';
 import PlusLogo from '../../assets/images/plus-logo.svg';

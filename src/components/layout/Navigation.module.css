@@ -44,8 +44,8 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 21px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   z-index: 10;
 }
@@ -54,7 +54,7 @@
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #3b82f6;
+  background-color: #ffffff;
   border-radius: 3px;
 }
 
@@ -77,25 +77,31 @@
 .mobileMenu {
   display: none;
   position: fixed;
-  width: 33%;
-  top: 60px;
-  height: 0;
+  top: 0;
   right: 0;
+  left: 0;
+  bottom: 0;
+  height: 0;
   background-color: #0a0b0d;
   flex-direction: column;
-  align-items: center;
-  padding: 1rem;
+  align-items: left;
+  padding: 20px;
+  box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 20;
-  border-top: 1px solid #eee;
   transition: height 0.3s ease-in-out;
 }
+.closeMenu {
+  padding: 14px 6px 28px 6px;
+}
 
-.mobileMenu a {
-  display: block;
-  margin: 0.5rem 0;
-  width: 100%;
-  text-align: center;
+.horizontalLine {
+  margin: 0 -20px;
+  border-bottom: 1px solid #eeeeeebe;
+}
+.closeMenu img {
+  width: 24px;
+  height: 24px;
 }
 
 .menuOpen {
@@ -104,17 +110,23 @@
 }
 
 /* Style for the donate button */
-.donateButton {
-  background-color: #fd3abb;
-  color: #151515 !important;
+.button {
+  background-color: #fff !important;
+  font-family: 'Inter', sans-serif !important;
   padding: 15px 24px !important;
   border-radius: 40px;
-  font-weight: 600;
+  font-weight: 100;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
+  text-align: center !important;
+  margin-bottom: 16px;
+  color: #151515 !important;
 }
-
-.donateButton:hover {
+.donate {
+  background-color: #fd3abb !important;
+  color: #151515 !important;
+}
+.donate:hover {
   background-color: #e535a7;
 }
 
@@ -125,13 +137,23 @@
 }
 
 @media (max-width: 768px) {
+  .desktopNavigation {
+    padding: 0px;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
   .navContainer {
-    flex-wrap: wrap;
-    justify-content: space-between;
+    position: absolute;
   }
 
   .hamburger {
     display: flex;
+    position: fixed;
+    top: 32px;
+    left: 24px;
   }
 
   .navLinks {
@@ -159,5 +181,16 @@
     width: 100%;
     margin: 0;
     padding: 0.5rem 0;
+  }
+
+  .closeMenu {
+    color: #fff;
+  }
+
+  .buttonContainer {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }

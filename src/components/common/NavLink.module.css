@@ -32,3 +32,20 @@
 a.wrenchboltLogo:after {
   display: none !important;
 }
+
+@media (max-width: 768px) {
+  .navLink {
+    text-align: left;
+    font-family: 'Montagu Slab', serif;
+    padding: 32px 0;
+
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'Montagu Slab';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 24.2px */
+    letter-spacing: -0.44px;
+    text-transform: uppercase;
+  }
+}

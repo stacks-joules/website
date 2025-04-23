@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import * as styles from './Navigation.module.css';
-import NavLink from '../NavLink';
+import NavLink from '../common/NavLink';
 import wrenchboltLogo from '../../assets/images/wrenchbolt.svg';
+import backArrow from '../../assets/images/back-arrow.svg';
 import { Container } from './Container';
 
 export const Navigation: React.FC = () => {
@@ -57,29 +58,46 @@ export const Navigation: React.FC = () => {
             <NavLink to="/support-mentors">Support/Mentor</NavLink>
           </div>
           <div className={styles.rightNav}>
-            <NavLink to="/donate" className={styles.donateButton}>
+            <NavLink
+              to="/donate"
+              className={`${styles.button} ${styles.donate}`}
+            >
               Donate
             </NavLink>
           </div>
-          <div className={styles.hamburger} onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        </div>
 
-          {/* Mobile menu that appears when hamburger is clicked */}
-          <div
-            className={`${styles.mobileMenu} ${
-              menuOpen ? styles.menuOpen : ''
-            }`}
-          >
-            <NavLink to="/become-a-student">Become A Student</NavLink>
-            <NavLink to="/employment-partnerships">
-              Employment Partnerships
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Mobile menu that appears when hamburger is clicked */}
+        <div
+          className={`${styles.mobileMenu} ${menuOpen ? styles.menuOpen : ``}`}
+        >
+          <div className={styles.closeMenu} onClick={toggleMenu}>
+            <img src={backArrow} alt="Back" />
+          </div>
+          <div className={styles.horizontalLine} />
+          <div onClick={() => setMenuOpen(false)}>
+            <NavLink to="/">Home</NavLink>
+          </div>
+          <NavLink to="/team">The Team</NavLink>
+          <NavLink to="/curriculum">Curriculum</NavLink>
+          <NavLink to="/become-a-student">Become A Student</NavLink>
+          <NavLink to="/employment-partnerships">
+            Employment Partnerships
+          </NavLink>
+          <div className={styles.buttonContainer}>
+            <NavLink to="/donate" className={styles.button}>
+              Become a Student
             </NavLink>
-            <NavLink to="/curriculum">Curriculum</NavLink>
-            <NavLink to="/team">Meet the Team</NavLink>
-            <NavLink to="/donate" className={styles.donateButton}>
+            <NavLink
+              to="/donate"
+              className={`${styles.button} ${styles.donate}`}
+            >
               Donate
             </NavLink>
           </div>

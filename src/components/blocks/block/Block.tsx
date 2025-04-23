@@ -35,7 +35,7 @@ export const Block: React.FC<BlockProps> = ({
         {hasSingleChild ? (
           <div
             className={styles.innerBlock}
-            style={{ flexDirection: 'column' }}
+            style={{ flexDirection: `column` }}
           >
             {children}
           </div>

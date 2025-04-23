@@ -10,7 +10,7 @@ interface NeuroNoiseBackgroundProps {
 
 export const NeuroNoiseBackground = ({
   children,
-  height = 200,
+  height = '100%',
   width = '100%',
   fallbackImage = 'https://example.com/fallback-bg.jpg',
   fallbackColor = '#151515',
@@ -326,6 +326,7 @@ export const NeuroNoiseBackground = ({
       className="neuro-background-container"
       style={{
         position: 'relative',
+        height,
         // Apply fallback background image or gradient if WebGL failed
         ...(webGLFailed && {
           backgroundImage: fallbackImage
