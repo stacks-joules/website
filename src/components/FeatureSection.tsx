@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLink from './NavLink';
+import NavLink from './common/NavLink';
 import * as styles from './FeatureSection.module.css';
 
 interface FeatureCardProps {

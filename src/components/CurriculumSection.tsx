@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLink from './NavLink';
+import NavLink from './common/NavLink';
 import * as styles from './CurriculumSection.module.css';
 
 interface CurriculumFeatureProps {

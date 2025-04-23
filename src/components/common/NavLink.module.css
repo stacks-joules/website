@@ -1,0 +1,34 @@
+.navLink {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.navLink:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 5px;
+  display: block;
+  left: 0;
+  bottom: 0;
+  background-color: #fd3abb;
+}
+
+.navLink:hover:after {
+  width: 100%;
+}
+
+/* Don't show the underline for the donate button or logo */
+.donateButton:after,
+a.wrenchboltLogo:after {
+  display: none !important;
+}
