@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import * as styles from './ContactSection.module.css';
 import { Logo } from '../common/Logo';
 import Cityscape from '../../assets/images/contact-image.png';
+import PhoneIcon from '../../assets/images/phone-icon.svg';
+import LocationIcon from '../../assets/images/location-icon.svg';
 import { Container } from '../layout/Container';
 import { Modal } from '../common/Modal';
 
@@ -21,22 +23,14 @@ const ContactLocation: React.FC<ContactInfo> = ({
   <div className={styles.contactInfo}>
     <h3 className={styles.locationName}>{name}</h3>
     <div className={styles.locationDetails}>
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/4bef0e5cd7e02f390d2e9f7db1558a293018a8fa7bcc39e7fb7013fff134e0a6?placeholderIfAbsent=true&apiKey=cc44f98401e848c18ff1a7327392e464"
-        alt="Location icon"
-        className={styles.icon}
-      />
+      <img src={LocationIcon} alt="Location icon" className={styles.icon} />
       <div className={styles.locationDetailsColumn}>
         <div>{street}</div>
         <div>{state}</div>
       </div>
     </div>
     <div className={styles.locationDetails}>
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f850981521c75fd74d8846051462cdd1e368de2f30ab1f9685f2d794ffc9421?placeholderIfAbsent=true&apiKey=cc44f98401e848c18ff1a7327392e464"
-        alt="Phone icon"
-        className={styles.icon}
-      />
+      <img src={PhoneIcon} alt="Phone icon" className={styles.icon} />
       <div>{phone}</div>
     </div>
   </div>

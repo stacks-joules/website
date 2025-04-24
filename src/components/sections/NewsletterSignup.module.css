@@ -102,9 +102,15 @@
   margin-left: 16px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
+  .newsletterSection {
+    padding: 40px 24px;
+    box-sizing: border-box;
+  }
+
   .newsletterContainer {
-    padding: 40px 20px;
+    padding: 40px 24px;
+    box-sizing: border-box;
   }
 
   .newsletterForm {
@@ -115,8 +121,10 @@
 
   .emailInput {
     margin-bottom: 16px;
+    width: 100%;
     padding: 12px 22px;
     border-radius: 40px;
+    box-sizing: border-box;
   }
 
   .submitButton {

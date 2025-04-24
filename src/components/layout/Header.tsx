@@ -13,7 +13,9 @@ export const Header: React.FC = () => {
         fallbackImage={backgroundImage}
         fallbackColor="#FD3ABB"
       >
-        <Logo center />
+        <div className={styles.logoContainer}>
+          <Logo center />
+        </div>
       </NeuroNoiseBackground>
     </div>
   );

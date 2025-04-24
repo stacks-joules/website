@@ -5,3 +5,10 @@
   padding: 34px 80px;
   text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 34px 0px;
+    text-align: center;
+  }
+}
