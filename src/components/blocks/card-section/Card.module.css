@@ -69,3 +69,19 @@
   text-decoration: none;
   border: none;
 }
+
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .card:last-child {
+    margin-bottom: 0px;
+  }
+
+  .cardHeader {
+    padding: 24px 0px;
+  }
+}

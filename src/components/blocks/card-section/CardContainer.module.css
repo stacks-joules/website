@@ -36,3 +36,20 @@ img {
   margin-top: 24px;
   margin-bottom: 80px;
 }
+
+@media (max-width: 768px) {
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 24px;
+  }
+  .cardContainerContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title,
+  .description {
+    width: 100%;
+  }
+}
