@@ -86,7 +86,6 @@ export const Navigation: React.FC = () => {
           </div>
           <NavLink to="/team">The Team</NavLink>
           <NavLink to="/curriculum">Curriculum</NavLink>
-          <NavLink to="/become-a-student">Become A Student</NavLink>
           <NavLink to="/employment-partnerships">
             Employment Partnerships
           </NavLink>
