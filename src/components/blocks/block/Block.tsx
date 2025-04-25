@@ -37,7 +37,7 @@ export const Block: React.FC<BlockProps> = ({
       >
         <Container>
           {topBorder && <hr />}
-          {blockTitle && <h4>{blockTitle}</h4>}
+          {blockTitle && <h4 className={styles.blockTitle}>{blockTitle}</h4>}
           {/* Set flex direction based on number of children */}
           {hasSingleChild ? (
             <div

@@ -1,9 +1,9 @@
 import React from 'react';
-
+import * as styles from './Buffer.module.css';
 interface BufferProps {
   height: string;
 }
 
-export const Buffer: React.FC<BufferProps> = ({ height }) => {
-  return <div style={{ height: height }} />;
+export const Buffer: React.FC<BufferProps> = () => {
+  return <div className={styles.buffer} />;
 };
