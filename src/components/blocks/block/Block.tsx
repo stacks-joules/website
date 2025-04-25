@@ -12,12 +12,16 @@ interface BlockProps {
   children: React.ReactNode;
   variation?: 'light' | 'dark' | undefined;
   paddingY?: string;
+  blockTitle?: string;
+  topBorder?: boolean;
 }
 
 export const Block: React.FC<BlockProps> = ({
   children,
   variation,
+  blockTitle,
   paddingY = `80px`,
+  topBorder = false,
 }) => {
   const themeClass = variation ? themes[variation] : ``;
 
@@ -26,23 +30,27 @@ export const Block: React.FC<BlockProps> = ({
   const hasSingleChild = childrenArray.length < 2;
 
   return (
-    <div
-      className={`${styles.block} ${styles[themeClass]}`}
-      style={{ paddingTop: paddingY, paddingBottom: paddingY }}
-    >
-      <Container>
-        {/* Set flex direction based on number of children */}
-        {hasSingleChild ? (
-          <div
-            className={styles.innerBlock}
-            style={{ flexDirection: `column` }}
-          >
-            {children}
-          </div>
-        ) : (
-          <div className={styles.innerBlock}>{children}</div>
-        )}
-      </Container>
-    </div>
+    <>
+      <div
+        className={`${styles.block} ${styles[themeClass]}`}
+        style={{ paddingTop: paddingY, paddingBottom: paddingY }}
+      >
+        <Container>
+          {topBorder && <hr />}
+          {blockTitle && <h4>{blockTitle}</h4>}
+          {/* Set flex direction based on number of children */}
+          {hasSingleChild ? (
+            <div
+              className={styles.innerBlock}
+              style={{ flexDirection: `column` }}
+            >
+              {children}
+            </div>
+          ) : (
+            <div className={styles.innerBlock}>{children}</div>
+          )}
+        </Container>
+      </div>
+    </>
   );
 };
