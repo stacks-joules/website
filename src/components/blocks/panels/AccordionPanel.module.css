@@ -20,6 +20,17 @@
   gap: 80px;
 }
 
+.accordionItem {
+  border-top: 1px solid #000;
+}
+
+.accordionItemHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .accordionItemTitle {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
