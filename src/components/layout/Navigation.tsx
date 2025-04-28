@@ -38,7 +38,7 @@ export const Navigation: React.FC = () => {
     >
       <Container>
         <div className={styles.navContainer}>
-          <div className={styles.leftNav}>
+          <div className={styles.wrenchbolt}>
             <NavLink to="/" className={styles.wrenchboltLogo}>
               <img
                 loading="lazy"
@@ -47,7 +47,8 @@ export const Navigation: React.FC = () => {
                 alt="Stacks + Joules Logo"
               />
             </NavLink>
-
+          </div>
+          <div className={styles.leftNav}>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/team">Meet the Team</NavLink>
             <NavLink to="/curriculum">Curriculum</NavLink>
