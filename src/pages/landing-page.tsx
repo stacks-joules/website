@@ -13,7 +13,7 @@ import CurriculumImage1 from '../assets/images/curriculum-image-1.png';
 import CurriculumImage2 from '../assets/images/curriculum-image-2.png';
 import CurriculumImage3 from '../assets/images/curriculum-image-3.png';
 import CurriculumImage4 from '../assets/images/curriculum-image-4.png';
-
+import { Wallpaper } from '../components/common/Wallpaper';
 import { ImagePanel } from '@components/blocks/panels/ImagePanel';
 import { TextPanel } from '@components/blocks/panels/TextPanel';
 import { Block } from '@components/blocks/block/Block';
@@ -150,6 +150,7 @@ const LandingPage: React.FC = () => {
         </Block>
 
         <NewsletterSignup />
+        <Wallpaper />
       </Layout>
     </div>
   );
