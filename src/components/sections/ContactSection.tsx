@@ -184,7 +184,11 @@ export const ContactSection: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="Email Address"
+                  inputMode="email"
+                  autoComplete="email"
+                  autoCapitalize="off"
+                  autoCorrect="off"
+                  placeholder="your@email.com"
                 />
               </div>
               <div className={styles.formGroup}>

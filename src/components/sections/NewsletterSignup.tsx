@@ -64,9 +64,14 @@ export const NewsletterSignup: React.FC = () => {
                 name="newsletter-email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="email@gmail.com"
+                placeholder="email@email.com"
                 className={styles.emailInput}
                 required
+                id="newsletter-email"
+                inputMode="email"
+                autoComplete="email"
+                autoCapitalize="off"
+                autoCorrect="off"
               />
             </div>
             <button
