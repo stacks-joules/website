@@ -1,5 +1,72 @@
-Button.module.css .button {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
+/* Style for the donate button */
+.button {
+  font-family: 'Inter', sans-serif !important;
+  padding: 10px 24px !important;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-align: center !important;
+  width: auto;
+  display: inline-block;
+  align-items: center;
+  gap: 10px;
+  background: var(--White, #fff);
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Caption */
+  font-size: 14px;
+  font-style: normal;
+  line-height: 120%; /* 16.8px */
+  text-transform: uppercase;
+  text-decoration: none;
+  align-self: flex-end;
+  border: 1px solid #000 !important;
+}
+
+.button:hover {
+  border-radius: 40px;
+  background: var(--White, #fff);
+}
+
+.white {
+  background-color: #fff !important;
+  color: #151515 !important;
+}
+
+.black {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.pink {
+  background-color: #fd3abb !important;
+  color: #151515 !important;
+}
+
+.pink:hover {
+  background-color: #fc03a9 !important;
+}
+
+.sky {
+  background-color: #4de5f9 !important;
+  color: #151515 !important;
+}
+
+.sky:hover {
+  background-color: #07afc5 !important;
+}
+
+.yellow {
+  background-color: #fae150 !important;
+  color: #151515 !important;
+}
+
+.yellow:hover {
+  background-color: #f7d308 !important;
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: 100%;
+  }
 }

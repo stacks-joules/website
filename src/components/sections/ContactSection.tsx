@@ -6,6 +6,7 @@ import PhoneIcon from '../../assets/images/phone-icon.svg';
 import LocationIcon from '../../assets/images/location-icon.svg';
 import { Container } from '../layout/Container';
 import { Modal } from '../common/Modal';
+import { Button } from '../common/Button';
 
 interface ContactInfo {
   name: string;
@@ -125,7 +126,7 @@ export const ContactSection: React.FC = () => {
               name="contact"
               method="POST"
               data-netlify="true"
-              netlify-honeypot="bot-field"
+              data-netlify-honeypot="bot-field"
             >
               {/* Hidden fields for Netlify */}
               <input type="hidden" name="form-name" value="contact" />
@@ -213,13 +214,13 @@ export const ContactSection: React.FC = () => {
                   placeholder="Message"
                 ></textarea>
               </div>
-              <button
+              <Button
                 type="submit"
-                className={styles.submitButton}
+                color="white"
                 disabled={formState.submitting}
               >
                 {formState.submitting ? `Submitting...` : `Submit`}
-              </button>
+              </Button>
             </form>
           </div>
         </div>

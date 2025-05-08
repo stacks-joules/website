@@ -34,12 +34,14 @@
   "dependencies": {
     "gatsby": "5.9.0",
     "gatsby-plugin-pnpm": "1.2.10",
+    "gatsby-plugin-react-helmet": "6.14.0",
     "gatsby-plugin-robots-txt": "1.8.0",
     "gatsby-plugin-sass": "6.14.0",
     "gatsby-plugin-sitemap": "6.14.0",
     "nodemailer": "6.10.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-helmet": "6.1.0",
     "sass": "1.86.0",
     "tsconfig-paths-webpack-plugin": "4.0.1"
   },

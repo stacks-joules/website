@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import * as styles from './NewsletterSignup.module.css';
 import { Container } from '../layout/Container';
 import { Modal } from '../common/Modal';
+import { Button } from '../common/Button';
 
 export const NewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(``);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -16,18 +17,18 @@ export const NewsletterSignup: React.FC = () => {
     const formData = new FormData(e.target as HTMLFormElement);
 
     // Using fetch to submit the form data
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    fetch(`/`, {
+      method: `POST`,
+      headers: { 'Content-Type': `application/x-www-form-urlencoded` },
       body: new URLSearchParams(formData as any).toString(),
     })
       .then(() => {
-        console.log('Form successfully submitted');
+        console.log(`Form successfully submitted`);
         setIsModalOpen(true);
-        setEmail('');
+        setEmail(``);
       })
       .catch((error) => {
-        console.error('Form submission error:', error);
+        console.error(`Form submission error:`, error);
       })
       .finally(() => {
         setIsSubmitting(false);
@@ -49,7 +50,7 @@ export const NewsletterSignup: React.FC = () => {
             name="newsletter-signup"
             method="POST"
             data-netlify="true"
-            netlify-honeypot="bot-field"
+            data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="newsletter-signup" />
             <div hidden>
@@ -74,13 +75,14 @@ export const NewsletterSignup: React.FC = () => {
                 autoCorrect="off"
               />
             </div>
-            <button
+            <Button
               type="submit"
+              color="black"
               className={styles.submitButton}
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Submitting...' : 'Submit'}
-            </button>
+              {isSubmitting ? `Submitting...` : `Submit`}
+            </Button>
           </form>
         </div>
       </Container>

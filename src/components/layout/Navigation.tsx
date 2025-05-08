@@ -4,6 +4,7 @@ import NavLink from '../common/NavLink';
 import wrenchboltLogo from '../../assets/images/wrenchbolt.svg';
 import backArrow from '../../assets/images/back-arrow.svg';
 import { Container } from './Container';
+import { Button } from '../common/Button';
 
 export const Navigation: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -59,12 +60,14 @@ export const Navigation: React.FC = () => {
             <NavLink to="/support-mentors">Support/Mentor</NavLink>
           </div>
           <div className={styles.rightNav}>
-            <NavLink
-              to="/donate"
-              className={`${styles.button} ${styles.donate}`}
-            >
-              Donate
-            </NavLink>
+            <Button color="pink">
+              <NavLink
+                to="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698"
+                className={styles.button}
+              >
+                Donate
+              </NavLink>
+            </Button>
           </div>
         </div>
 
@@ -91,15 +94,14 @@ export const Navigation: React.FC = () => {
             Employment Partnerships
           </NavLink>
           <div className={styles.buttonContainer}>
-            <NavLink to="/donate" className={styles.button}>
+            <NavLink to="/become-a-student" className={styles.button}>
               Become a Student
             </NavLink>
-            <NavLink
-              to="/donate"
-              className={`${styles.button} ${styles.donate}`}
-            >
-              Donate
-            </NavLink>
+            <Button color="pink">
+              <NavLink to="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698">
+                Donate
+              </NavLink>
+            </Button>
           </div>
         </div>
       </Container>

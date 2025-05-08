@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './TextPanel.module.css';
-
+import { Button } from '../../common/Button';
 interface TextPanelProps {
   caption?: string;
   title?: string;
@@ -29,8 +29,8 @@ export const TextPanel: React.FC<TextPanelProps> = ({
 
       {/* Render button only if buttonText is provided */}
       {buttonText && (
-        <a href={buttonLink} className={styles.button}>
-          {buttonText}
+        <a href={buttonLink}>
+          <Button color="white">{buttonText}</Button>
         </a>
       )}
     </div>

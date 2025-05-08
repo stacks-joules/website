@@ -84,24 +84,6 @@
   color: #4e5d78;
 }
 
-.submitButton {
-  border-radius: 40px;
-  background: var(--Gary-900, #151515);
-  padding: 15px 24px;
-  color: var(--White, #fff);
-  font-feature-settings: 'liga' off, 'clig' off;
-  /* Caption */
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  text-transform: uppercase;
-  height: 100%;
-  align-self: flex-end;
-
-  margin-left: 16px;
-}
-
 @media (max-width: 768px) {
   .newsletterSection {
     padding: 40px 24px;
@@ -125,9 +107,5 @@
     padding: 12px 22px;
     border-radius: 40px;
     box-sizing: border-box;
-  }
-
-  .submitButton {
-    width: 100%;
   }
 }

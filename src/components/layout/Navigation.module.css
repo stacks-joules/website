@@ -111,14 +111,7 @@
 
 /* Style for the donate button */
 .button {
-  background-color: #fff !important;
-  font-family: 'Inter', sans-serif !important;
-  padding: 15px 24px !important;
-  border-radius: 40px;
-  font-weight: 100;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-  text-align: center !important;
+  text-transform: capitalize !important;
   color: #151515 !important;
 }
 

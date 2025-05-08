@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Button.module.css';
+import * as styles from './Button.module.css';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -7,8 +7,7 @@ interface ButtonProps {
   className?: string;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
-  variant?: 'primary' | 'secondary';
-  size?: 'small' | 'medium' | 'large';
+  color?: 'pink' | 'white' | 'black' | 'sky' | 'yellow';
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -16,15 +15,14 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   className,
   disabled,
-  type,
-  variant,
-  size,
+  type = `button`,
+  color = `white`,
 }) => {
   return (
     <button
       type={type}
       onClick={onClick}
-      className={`${styles.button} ${styles[variant]} ${styles[size]} ${className}`}
+      className={`${styles.button} ${styles[color]} ${className}`}
       disabled={disabled}
     >
       {children}
