@@ -2,6 +2,9 @@
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     sans-serif;
   --font-secondary: 'Montagu Slab', serif;
+  --theme-color: #fd3abb;
+  --theme-color-hover: #fc03a9;
+  --theme-wrenchbolt: url('../assets/images/wrenchbolt-pink.svg');
 }
 
 body {
@@ -46,4 +49,22 @@ h4 {
   font-style: normal;
   font-weight: 600;
   line-height: 110%; /* 26.4px */
+}
+
+.theme-pink {
+  --theme-color: #fd3abb;
+  --theme-color-hover: #fc03a9;
+  --theme-wrenchbolt: url('../assets/images/wrenchbolt-pink.svg');
+}
+
+.theme-sky {
+  --theme-color: #00b4d8;
+  --theme-color-hover: #0094b2;
+  --theme-wrenchbolt: url('../assets/images/wrenchbolt-sky.svg');
+}
+
+.theme-yellow {
+  --theme-color: #ffd700;
+  --theme-color-hover: #e6c200;
+  --theme-wrenchbolt: url('../assets/images/wrenchbolt-yellow.svg');
 }

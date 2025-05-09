@@ -60,14 +60,9 @@ export const Navigation: React.FC = () => {
             <NavLink to="/support-mentors">Support/Mentor</NavLink>
           </div>
           <div className={styles.rightNav}>
-            <Button color="pink">
-              <NavLink
-                to="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698"
-                className={styles.button}
-              >
-                Donate
-              </NavLink>
-            </Button>
+            <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698">
+              <Button color="pink">Donate</Button>
+            </a>
           </div>
         </div>
 
@@ -97,11 +92,9 @@ export const Navigation: React.FC = () => {
             <NavLink to="/become-a-student" className={styles.button}>
               Become a Student
             </NavLink>
-            <Button color="pink">
-              <NavLink to="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698">
-                Donate
-              </NavLink>
-            </Button>
+            <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698">
+              <Button color="pink">Donate</Button>
+            </a>
           </div>
         </div>
       </Container>

@@ -20,10 +20,11 @@
   display: block;
   left: 0;
   bottom: 0;
-  background-color: #fd3abb;
+  background-color: var(--theme-color);
 }
 
-.navLink:hover:after {
+.navLink:hover:after,
+.navLink[aria-current='page']:after {
   width: 100%;
 }
 

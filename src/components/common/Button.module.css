@@ -21,11 +21,13 @@
   text-decoration: none;
   align-self: flex-end;
   border: 1px solid #000 !important;
+  background-color: var(--theme-color) !important;
+  cursor: pointer;
 }
 
 .button:hover {
   border-radius: 40px;
-  background: var(--White, #fff);
+  background-color: var(--theme-color-hover) !important;
 }
 
 .white {
@@ -36,33 +38,6 @@
 .black {
   background-color: #000 !important;
   color: #fff !important;
-}
-
-.pink {
-  background-color: #fd3abb !important;
-  color: #151515 !important;
-}
-
-.pink:hover {
-  background-color: #fc03a9 !important;
-}
-
-.sky {
-  background-color: #4de5f9 !important;
-  color: #151515 !important;
-}
-
-.sky:hover {
-  background-color: #07afc5 !important;
-}
-
-.yellow {
-  background-color: #fae150 !important;
-  color: #151515 !important;
-}
-
-.yellow:hover {
-  background-color: #f7d308 !important;
 }
 
 @media (max-width: 768px) {

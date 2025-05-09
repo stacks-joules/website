@@ -7,7 +7,7 @@ interface ButtonProps {
   className?: string;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
-  color?: 'pink' | 'white' | 'black' | 'sky' | 'yellow';
+  color?: 'white' | 'black';
 }
 
 export const Button: React.FC<ButtonProps> = ({

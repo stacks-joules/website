@@ -21,6 +21,6 @@
   }
 
   .logoContainer {
-    width: 60%;
+    max-width: 1440px;
   }
 }

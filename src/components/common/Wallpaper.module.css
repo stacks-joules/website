@@ -1,6 +1,6 @@
 .wallpaper {
-  background-image: url('../../assets/images/pink-wrenchbolt.svg');
-  background-color: #fd3abb;
+  background-image: var(--theme-wrenchbolt);
+  background-color: var(--theme-color);
   background-size: 50px;
   background-position: 50% 60%;
   width: 100%;

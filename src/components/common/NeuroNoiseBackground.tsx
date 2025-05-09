@@ -2,18 +2,20 @@ import React, { useEffect, useRef, useState } from 'react';
 
 interface NeuroNoiseBackgroundProps {
   children: React.ReactNode;
-  height?: number;
+  height?: string;
   width?: string;
   fallbackImage?: string;
   fallbackColor?: string;
+  color?: string;
 }
 
-export const NeuroNoiseBackground = ({
+export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
   children,
-  height = '100%',
-  width = '100%',
-  fallbackImage = 'https://example.com/fallback-bg.jpg',
-  fallbackColor = '#151515',
+  height = `100%`,
+  width = `100%`,
+  fallbackImage = `https://example.com/fallback-bg.jpg`,
+  fallbackColor = `#151515`,
+  color = `pink`,
 }) => {
   const [webGLFailed, setWebGLFailed] = useState(false);
   const canvasRef = useRef(null);
@@ -27,6 +29,12 @@ export const NeuroNoiseBackground = ({
   const pointerPositionUniformRef = useRef(null);
   const scrollProgressUniformRef = useRef(null);
   const pointerRef = useRef({ x: 0.5, y: 0.5 });
+
+  const colorMap = {
+    pink: `normalize(vec3(0.992, 0.227, 0.733))`,
+    sky: `normalize(vec3(0.302, 0.898, 0.976));`,
+    yellow: `normalize(vec3(0.980, 0.882, 0.314))`,
+  };
 
   // Vertex shader code
   const vertexShaderSource = `
@@ -78,7 +86,7 @@ export const NeuroNoiseBackground = ({
         noise += pow(noise, 8.); // Slightly reduced the exponent to soften effect
         noise = max(.0, noise - .4); // Increased threshold to reduce color area
         noise *= (1. - length(vUv - .5));
-        color = normalize(vec3(253.0/255.0, 58.0/255.0, 187.0/255.0)); // #FD3ABB
+        color = ${colorMap[color]}; // #FD3ABB
         color = color * noise;
         gl_FragColor = vec4(color, noise);
     }
@@ -92,7 +100,7 @@ export const NeuroNoiseBackground = ({
 
     if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
       console.error(
-        'An error occurred compiling the shaders: ' +
+        `An error occurred compiling the shaders: ` +
           gl.getShaderInfoLog(shader),
       );
       gl.deleteShader(shader);
@@ -106,10 +114,10 @@ export const NeuroNoiseBackground = ({
   const initWebGL = () => {
     const canvas = canvasRef.current;
     const gl =
-      canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      canvas.getContext(`webgl`) || canvas.getContext(`experimental-webgl`);
 
     if (!gl) {
-      console.error('WebGL not supported');
+      console.error(`WebGL not supported`);
       setWebGLFailed(true);
       return false;
     }
@@ -141,7 +149,7 @@ export const NeuroNoiseBackground = ({
 
     if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
       console.error(
-        'Unable to initialize the shader program: ' +
+        `Unable to initialize the shader program: ` +
           gl.getProgramInfoLog(program),
       );
       setWebGLFailed(true);
@@ -160,16 +168,16 @@ export const NeuroNoiseBackground = ({
     gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
 
     // Get attribute and uniform locations
-    positionAttributeRef.current = gl.getAttribLocation(program, 'a_position');
-    timeUniformRef.current = gl.getUniformLocation(program, 'u_time');
-    ratioUniformRef.current = gl.getUniformLocation(program, 'u_ratio');
+    positionAttributeRef.current = gl.getAttribLocation(program, `a_position`);
+    timeUniformRef.current = gl.getUniformLocation(program, `u_time`);
+    ratioUniformRef.current = gl.getUniformLocation(program, `u_ratio`);
     pointerPositionUniformRef.current = gl.getUniformLocation(
       program,
-      'u_pointer_position',
+      `u_pointer_position`,
     );
     scrollProgressUniformRef.current = gl.getUniformLocation(
       program,
-      'u_scroll_progress',
+      `u_scroll_progress`,
     );
 
     // Set initial uniform values
@@ -254,30 +262,30 @@ export const NeuroNoiseBackground = ({
   };
 
   // Function to handle shader compilation error
-  const checkShaderCompilation = (gl, shader, type) => {
-    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-      console.error(
-        `Error compiling ${type} shader:`,
-        gl.getShaderInfoLog(shader),
-      );
-      setWebGLFailed(true);
-      return false;
-    }
-    return true;
-  };
+  // const checkShaderCompilation = (gl, shader, type) => {
+  //   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+  //     console.error(
+  //       `Error compiling ${type} shader:`,
+  //       gl.getShaderInfoLog(shader),
+  //     );
+  //     setWebGLFailed(true);
+  //     return false;
+  //   }
+  //   return true;
+  // };
 
   // Function to handle program linking error
-  const checkProgramLinking = (gl, program) => {
-    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-      console.error(
-        'Error linking shader program:',
-        gl.getProgramInfoLog(program),
-      );
-      setWebGLFailed(true);
-      return false;
-    }
-    return true;
-  };
+  // const checkProgramLinking = (gl, program) => {
+  //   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  //     console.error(
+  //       'Error linking shader program:',
+  //       gl.getProgramInfoLog(program),
+  //     );
+  //     setWebGLFailed(true);
+  //     return false;
+  //   }
+  //   return true;
+  // };
 
   useEffect(() => {
     try {
@@ -290,14 +298,14 @@ export const NeuroNoiseBackground = ({
         requestRef.current = requestAnimationFrame(animate);
 
         // Add event listeners
-        window.addEventListener('mousemove', handlePointerMove);
-        window.addEventListener('touchmove', (e) =>
+        window.addEventListener(`mousemove`, handlePointerMove);
+        window.addEventListener(`touchmove`, (e) =>
           handlePointerMove(e.touches[0]),
         );
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener(`scroll`, handleScroll);
       }
     } catch (error) {
-      console.error('Error initializing WebGL:', error);
+      console.error(`Error initializing WebGL:`, error);
       setWebGLFailed(true);
     }
 
@@ -306,11 +314,11 @@ export const NeuroNoiseBackground = ({
       if (requestRef.current) {
         cancelAnimationFrame(requestRef.current);
       }
-      window.removeEventListener('mousemove', handlePointerMove);
-      window.removeEventListener('touchmove', (e) =>
+      window.removeEventListener(`mousemove`, handlePointerMove);
+      window.removeEventListener(`touchmove`, (e) =>
         handlePointerMove(e.touches[0]),
       );
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener(`scroll`, handleScroll);
     };
   }, []);
 
@@ -325,15 +333,15 @@ export const NeuroNoiseBackground = ({
     <div
       className="neuro-background-container"
       style={{
-        position: 'relative',
+        position: `relative`,
         height,
         // Apply fallback background image or gradient if WebGL failed
         ...(webGLFailed && {
           backgroundImage: fallbackImage
             ? `url(${fallbackImage})`
             : createGradientBackground(),
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundSize: `cover`,
+          backgroundPosition: `center`,
         }),
       }}
     >
@@ -342,9 +350,9 @@ export const NeuroNoiseBackground = ({
         <canvas
           ref={canvasRef}
           style={{
-            width: width,
-            height: height,
-            position: 'absolute',
+            width,
+            height,
+            position: `absolute`,
             top: 0,
             left: 0,
             zIndex: 0,
@@ -354,13 +362,13 @@ export const NeuroNoiseBackground = ({
       <div
         className="neuro-content"
         style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          position: 'relative',
+          display: `flex`,
+          justifyContent: `center`,
+          alignItems: `center`,
+          position: `relative`,
           zIndex: 1,
-          height: height,
-          width: width,
+          height,
+          width,
         }}
       >
         {children}

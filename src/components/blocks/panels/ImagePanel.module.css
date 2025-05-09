@@ -12,7 +12,7 @@
   border-radius: 12px;
 }
 .dropShadow {
-  color: #fd3abb;
+  color: var(--theme-color, #fd3abb);
   border: 1px solid #000;
   margin-top: -7px;
   box-shadow: 10px 10px;

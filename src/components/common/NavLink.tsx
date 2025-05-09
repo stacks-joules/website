@@ -10,7 +10,11 @@ interface NavLinkProps {
 
 const NavLink: React.FC<NavLinkProps> = ({ to, children, className }) => {
   return (
-    <Link to={to} className={`${styles.navLink} ${className || ''}`}>
+    <Link
+      to={to}
+      className={`${styles.navLink} ${className || ``}`}
+      activeClassName="active"
+    >
       {children}
     </Link>
   );
