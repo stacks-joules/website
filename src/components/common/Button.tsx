@@ -16,13 +16,13 @@ export const Button: React.FC<ButtonProps> = ({
   className,
   disabled,
   type = `button`,
-  color = `white`,
+  color,
 }) => {
   return (
     <button
       type={type}
       onClick={onClick}
-      className={`${styles.button} ${styles[color]} ${className}`}
+      className={`${styles.button} ${color ? styles[color] : ``} ${className}`}
       disabled={disabled}
     >
       {children}

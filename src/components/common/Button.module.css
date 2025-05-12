@@ -17,7 +17,6 @@
   font-size: 14px;
   font-style: normal;
   line-height: 120%; /* 16.8px */
-  text-transform: uppercase;
   text-decoration: none;
   align-self: flex-end;
   border: 1px solid #000 !important;
@@ -35,9 +34,21 @@
   color: #151515 !important;
 }
 
+.white:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
 .black {
   background-color: #000 !important;
   color: #fff !important;
+}
+
+.black:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
 }
 
 @media (max-width: 768px) {

@@ -17,30 +17,28 @@ const Curriculum: React.FC = () => {
           dropShadow
         />
         <AccordionPanel
-          title="Curriculum"
-          description="Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming."
           accordionItems={[
             {
-              title: 'Control Knowledge',
+              title: `Control Knowledge`,
               textItems: [
-                'Working knowledge of computerized building automation controls',
-                'Classroom training on HVAC fundamentals',
-                'Strong analytic skills',
-                'Ability to navigate graphical user interfaces for Johnson Controls, Siemens and Distech building automation systems',
-                'Ability to use temperature and relative humidity meters, data loggers, electrical volt and amp meters',
-                'Interest in strengthening industry knowledge through participation in educational opportunities & skills development classes',
+                `Working knowledge of computerized building automation controls`,
+                `Classroom training on HVAC fundamentals`,
+                `Strong analytic skills`,
+                `Ability to navigate graphical user interfaces for Johnson Controls, Siemens and Distech building automation systems`,
+                `Ability to use temperature and relative humidity meters, data loggers, electrical volt and amp meters`,
+                `Interest in strengthening industry knowledge through participation in educational opportunities & skills development classes`,
               ],
               expanded: true,
             },
             {
-              title: 'Intership Tasks & Competencies',
+              title: `Intership Tasks & Competencies`,
               textItems: [
-                'Working knowledge of computerized building automation controls',
-                'Classroom training on HVAC fundamentals',
-                'Strong analytic skills',
-                'Ability to navigate graphical user interfaces for Johnson Controls, Siemens and Distech building automation systems',
-                'Ability to use temperature and relative humidity meters, data loggers, electrical volt and amp meters',
-                'Interest in strengthening industry knowledge through participation in educational opportunities & skills development classes',
+                `Working knowledge of computerized building automation controls`,
+                `Classroom training on HVAC fundamentals`,
+                `Strong analytic skills`,
+                `Ability to navigate graphical user interfaces for Johnson Controls, Siemens and Distech building automation systems`,
+                `Ability to use temperature and relative humidity meters, data loggers, electrical volt and amp meters`,
+                `Interest in strengthening industry knowledge through participation in educational opportunities & skills development classes`,
               ],
             },
           ]}
@@ -54,29 +52,27 @@ const Curriculum: React.FC = () => {
           dropShadow
         />
         <AccordionPanel
-          title="Curriculum"
-          description="Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming."
           accordionItems={[
             {
-              title: 'Control Knowledge',
+              title: `Control Knowledge`,
               textItems: [
-                'Working knowledge of computerized building automation controls',
-                'Classroom training on HVAC fundamentals',
-                'Strong analytic skills',
-                'Ability to navigate graphical user interfaces for Johnson Controls, Siemens and Distech building automation systems',
-                'Ability to use temperature and relative humidity meters, data loggers, electrical volt and amp meters',
-                'Interest in strengthening industry knowledge through participation in educational opportunities & skills development classes',
+                `Working knowledge of computerized building automation controls`,
+                `Classroom training on HVAC fundamentals`,
+                `Strong analytic skills`,
+                `Ability to navigate graphical user interfaces for Johnson Controls, Siemens and Distech building automation systems`,
+                `Ability to use temperature and relative humidity meters, data loggers, electrical volt and amp meters`,
+                `Interest in strengthening industry knowledge through participation in educational opportunities & skills development classes`,
               ],
             },
             {
-              title: 'Intership Tasks & Competencies',
+              title: `Intership Tasks & Competencies`,
               textItems: [
-                'Working knowledge of computerized building automation controls',
-                'Classroom training on HVAC fundamentals',
-                'Strong analytic skills',
-                'Ability to navigate graphical user interfaces for Johnson Controls, Siemens and Distech building automation systems',
-                'Ability to use temperature and relative humidity meters, data loggers, electrical volt and amp meters',
-                'Interest in strengthening industry knowledge through participation in educational opportunities & skills development classes',
+                `Working knowledge of computerized building automation controls`,
+                `Classroom training on HVAC fundamentals`,
+                `Strong analytic skills`,
+                `Ability to navigate graphical user interfaces for Johnson Controls, Siemens and Distech building automation systems`,
+                `Ability to use temperature and relative humidity meters, data loggers, electrical volt and amp meters`,
+                `Interest in strengthening industry knowledge through participation in educational opportunities & skills development classes`,
               ],
             },
           ]}

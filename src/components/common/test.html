@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage Test</title>
+    <script>
+      // When the page is loaded, set the key-value pair in sessionStorage
+      window.onload = function () {
+        sessionStorage.setItem('test', 'test');
+        console.log('test key set to "test" in sessionStorage');
+
+        // Optionally, log to the console to verify
+        console.log('sessionStorage test:', sessionStorage.getItem('test'));
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Session Storage Test</h1>
+    <p>This page will set a key-value pair in sessionStorage when opened.</p>
+    <p>Check your browser's console to confirm.</p>
+  </body>
+</html>

@@ -22,14 +22,23 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
       </div>
       <p
         className={
-          styles.accordionItemText + ' ' + (isExpanded ? styles.expanded : '')
+          styles.accordionItemText + ` ` + (isExpanded ? styles.expanded : ``)
         }
       >
-        <ul>{textItems && textItems.map((item) => <li>{item}</li>)}</ul>
+        <ul>
+          {textItems &&
+            textItems.map((item, index) => (
+              <li key={index + item.slice(5)}>{item}</li>
+            ))}
+        </ul>
       </p>
     </div>
   );
 };
+
+interface AccordianPanelProps {
+  accordionItems: AccordionItemProps[];
+}
 
 export const AccordionPanel: React.FC<AccordianPanelProps> = ({
   accordionItems,

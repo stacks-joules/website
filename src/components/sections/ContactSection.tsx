@@ -25,7 +25,7 @@ const ContactLocation: React.FC<ContactInfo> = ({
     <h3 className={styles.locationName}>{name}</h3>
     <div className={styles.locationDetails}>
       <img src={LocationIcon} alt="Location icon" className={styles.icon} />
-      <div className={styles.locationDetailsColumn}>
+      <div>
         <div>{street}</div>
         <div>{state}</div>
       </div>
@@ -67,9 +67,9 @@ export const ContactSection: React.FC = () => {
     e.preventDefault();
     setFormState({ submitting: true, success: false, error: false });
 
+    // First, send data to Netlify (or you can skip this if you don't need Netlify)
     try {
-      // The form will be handled by Netlify's form handling
-      // This fetch is just to provide better UX with state updates
+      // Netlify form submission (you can remove this part if not needed)
       await fetch(`/`, {
         method: `POST`,
         headers: { 'Content-Type': `application/x-www-form-urlencoded` },
@@ -78,6 +78,9 @@ export const ContactSection: React.FC = () => {
           ...formData,
         }).toString(),
       });
+
+      // Send form data to Monday.com
+      await sendToMonday(formData);
 
       // Reset form and show success
       setFormData({
@@ -93,6 +96,37 @@ export const ContactSection: React.FC = () => {
       console.error(`Error submitting form:`, error);
       setFormState({ submitting: false, success: false, error: true });
     }
+  };
+
+  // Function to send form data to Monday.com via GraphQL
+  const sendToMonday = async (formData: any) => {
+    const apiKey = `YOUR_MONDAY_API_KEY`; // Replace with your actual Monday.com API key
+    const boardId = `YOUR_BOARD_ID`; // Replace with your actual Board ID
+
+    const query = `
+      mutation {
+        create_item (board_id: ${boardId}, item_name: "${formData.firstName} ${formData.lastName}", column_values: "{"email":"${formData.email}", "phone":"${formData.phone}", "message":"${formData.message}"}") {
+          id
+        }
+      }
+    `;
+
+    const response = await fetch(`https://api.monday.com/v2`, {
+      method: `POST`,
+      headers: {
+        Authorization: apiKey,
+        'Content-Type': `application/json`,
+      },
+      body: JSON.stringify({ query }),
+    });
+
+    const data = await response.json();
+    if (data.errors) {
+      throw new Error(
+        `Error submitting to Monday.com: ${data.errors[0].message}`,
+      );
+    }
+    console.log(`Successfully created item in Monday.com:`, data);
   };
 
   return (
@@ -137,13 +171,13 @@ export const ContactSection: React.FC = () => {
               <div className={styles.formTitle}>Get in touch</div>
 
               {formState.success && (
-                <div className={styles.successMessage}>
+                <div>
                   Thank you for your message! We will get back to you soon.
                 </div>
               )}
 
               {formState.error && (
-                <div className={styles.errorMessage}>
+                <div>
                   There was an error submitting the form. Please try again.
                 </div>
               )}
@@ -219,7 +253,7 @@ export const ContactSection: React.FC = () => {
                 color="white"
                 disabled={formState.submitting}
               >
-                {formState.submitting ? `Submitting...` : `Submit`}
+                {formState.submitting ? `SUBMITTING...` : `SUBMIT`}
               </Button>
             </form>
           </div>

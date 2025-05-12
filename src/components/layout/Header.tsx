@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as styles from './Header.module.css';
 import { NeuroNoiseBackground } from '../common/NeuroNoiseBackground';
 import { Logo } from '../common/Logo';
@@ -9,6 +9,11 @@ import { useTheme } from '../common/ThemeProvider';
 export const Header: React.FC<{ color?: string }> = () => {
   // import color from ThemeProvider
   const { theme } = useTheme();
+  const [componentTheme, setComponentTheme] = useState(theme);
+
+  useEffect(() => {
+    setComponentTheme(theme);
+  }, [theme]);
 
   return (
     <div className={styles.header}>
@@ -16,7 +21,7 @@ export const Header: React.FC<{ color?: string }> = () => {
         height={`100%`}
         fallbackImage={backgroundImage}
         fallbackColor="#FD3ABB"
-        color={theme}
+        color={componentTheme}
       >
         <Logo center />
       </NeuroNoiseBackground>

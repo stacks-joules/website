@@ -31,17 +31,17 @@ export const Card: React.FC<CardProps> = ({
     >
       {headerText && (
         <div className={styles.cardHeader}>
-          {headerText && <div className={styles.headerText}>{headerText}</div>}
+          {headerText && <div>{headerText}</div>}
         </div>
       )}
 
       {imageSrc && (
-        <div className={styles.imageContainer}>
+        <div>
           <img src={imageSrc} alt={imageAlt} />
         </div>
       )}
 
-      <div className={styles.contentContainer}>
+      <div>
         {contentTitle && (
           <div className={styles.cardContentTitle}>{contentTitle}</div>
         )}
@@ -50,11 +50,9 @@ export const Card: React.FC<CardProps> = ({
       </div>
 
       {buttonText && (
-        <div className={styles.buttonContainer}>
+        <div>
           <Link to={buttonLink ?? ``} style={{ textDecoration: `none` }}>
-            <Button variant="primary" color="white">
-              {buttonText}
-            </Button>
+            <Button color="white">{buttonText}</Button>
           </Link>
         </div>
       )}

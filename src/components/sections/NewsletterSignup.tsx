@@ -56,7 +56,7 @@ export const NewsletterSignup: React.FC = () => {
             <div hidden>
               <input name="bot-field" />
             </div>
-            <div className={styles.newsletterFormContent}>
+            <div>
               <label className={styles.emailInputLabel} htmlFor="email">
                 Email Address
               </label>
@@ -75,13 +75,8 @@ export const NewsletterSignup: React.FC = () => {
                 autoCorrect="off"
               />
             </div>
-            <Button
-              type="submit"
-              color="black"
-              className={styles.submitButton}
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? `Submitting...` : `Submit`}
+            <Button type="submit" color="black" disabled={isSubmitting}>
+              {isSubmitting ? `SUBMITTING...` : `SUBMIT`}
             </Button>
           </form>
         </div>

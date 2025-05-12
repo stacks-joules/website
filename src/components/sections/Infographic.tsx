@@ -11,7 +11,7 @@ interface InfographicCardProps {
 
 interface InfographicProps {
   title: string;
-  cards: [];
+  cards: InfographicCardProps[];
 }
 
 export const InfographicCard: React.FC<InfographicCardProps> = ({

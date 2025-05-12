@@ -32,11 +32,7 @@ export const Navigation: React.FC = () => {
   };
 
   return (
-    <nav
-      className={`${styles.desktopNavigation} ${
-        scrolled ? styles.scrolled : ``
-      }`}
-    >
+    <nav className={styles.desktopNavigation}>
       <Container>
         <div className={styles.navContainer}>
           <div className={styles.wrenchbolt}>
@@ -61,7 +57,7 @@ export const Navigation: React.FC = () => {
           </div>
           <div className={styles.rightNav}>
             <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698">
-              <Button color="pink">Donate</Button>
+              <Button>Donate</Button>
             </a>
           </div>
         </div>
@@ -90,10 +86,10 @@ export const Navigation: React.FC = () => {
           </NavLink>
           <div className={styles.buttonContainer}>
             <NavLink to="/become-a-student" className={styles.button}>
-              Become a Student
+              <Button color="white">BECOME A STUDENT</Button>
             </NavLink>
             <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698">
-              <Button color="pink">Donate</Button>
+              <Button>DONATE</Button>
             </a>
           </div>
         </div>

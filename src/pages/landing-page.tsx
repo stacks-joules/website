@@ -26,7 +26,7 @@ const LandingPage: React.FC = () => {
       imageSrc: CardOne,
       imageAlt: `see the curriculum`,
       content: `Our goal is to equip students with valuable tech skills, engaging their creativity and strengths, no matter their prior experience.`,
-      buttonText: `See the curriculum`,
+      buttonText: `SEE THE CURRICULUM`,
       buttonLink: `/`,
     },
     {
@@ -35,7 +35,7 @@ const LandingPage: React.FC = () => {
       imageSrc: CardTwo,
       imageAlt: `Explore partnerships`,
       content: `Graduates receive support through internships, job placement, and career guidance from industry professionals.`,
-      buttonText: `Explore partnerships`,
+      buttonText: `EXPLORE PARTNERSHIPS`,
       buttonLink: `/`,
     },
     {
@@ -44,7 +44,7 @@ const LandingPage: React.FC = () => {
       imageSrc: CardThree,
       imageAlt: `Make a donation`,
       content: `Your donation helps support students and furthers our nonprofit mission to provide valuable education and opportunities.`,
-      buttonText: `Donate`,
+      buttonText: `DONATE`,
       buttonLink: `/`,
     },
   ];
@@ -82,7 +82,7 @@ const LandingPage: React.FC = () => {
           <TextPanel
             title="Learn To Light It Up!"
             description="Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming."
-            buttonText="Become A Student"
+            buttonText="BECOME A STUDENT"
             buttonLink="/become-a-student"
           />
           <ImagePanel
@@ -116,25 +116,21 @@ const LandingPage: React.FC = () => {
               title: `Complete Training`,
               number: `89`,
               symbol: `%`,
-              border: false,
             },
             {
               title: `Candidates Employed`,
               number: `98`,
               symbol: `%`,
-              border: false,
             },
             {
               title: `Average Pay Rate`,
               number: `28`,
               symbol: `$`,
-              border: false,
             },
             {
               title: `In Green Tech`,
               number: `76`,
               symbol: `%`,
-              border: false,
             },
           ]}
         />
@@ -144,7 +140,7 @@ const LandingPage: React.FC = () => {
             description="We have developed our practical curriculum through continuous collaboration with BELLEDS Technologies based at MIT and Rose-Hulman Institute of Technology in Terra Haute, Indiana."
           >
             {curriculumCards.map((card) => (
-              <Card key={card.headerText} {...card} />
+              <Card key={card.contentTitle} {...card} />
             ))}
           </CardContainer>
         </Block>

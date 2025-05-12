@@ -23,9 +23,9 @@ export const TextPanel: React.FC<TextPanelProps> = ({
   return (
     <div className={`${styles.content}`}>
       {caption && <h3>{caption}</h3>}
-      {smallTitle && <h2 className={styles.smallTitle}>{smallTitle}</h2>}
+      {smallTitle && <h2>{smallTitle}</h2>}
       {title && <h1 className={styles.title}>{title}</h1>}
-      <p className={styles.description}>{description}</p>
+      <p>{description}</p>
 
       {/* Render button only if buttonText is provided */}
       {buttonText && (

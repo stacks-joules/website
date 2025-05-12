@@ -22,38 +22,40 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  // Fetch the stored theme or generate a random theme if none exists
-  const getStoredTheme = () => {
-    const storedTheme = sessionStorage.getItem(`colorTheme`);
-    if (storedTheme) {
-      return storedTheme as Theme;
-    } else {
-      const randomTheme = [`pink`, `sky`, `yellow`][
-        Math.floor(Math.random() * 3)
-      ];
-      sessionStorage.setItem(`colorTheme`, randomTheme);
-      return randomTheme;
-    }
-  };
-
-  // Set the theme immediately on load from sessionStorage
-  const [theme, setTheme] = useState<Theme>(getStoredTheme);
-
-  // Update the theme in both state and sessionStorage
-  const handleSetTheme = (newTheme: Theme) => {
-    setTheme(newTheme);
-    sessionStorage.setItem(`colorTheme`, newTheme);
-  };
+  // Local state to store the theme
+  const [theme, setTheme] = useState<Theme>(`pink`); // Default to 'pink'
 
   useEffect(() => {
-    // Apply the theme class to the root element once the theme is set
+    // This useEffect will run after the component is mounted
+    // Ensure that we are only using sessionStorage on the client side
+    const storedTheme = sessionStorage.getItem(`colorTheme`);
+    if (storedTheme) {
+      setTheme(storedTheme as Theme); // If the theme is found in sessionStorage, use it
+    } else {
+      // If no theme is found in sessionStorage, generate a random theme and save it to sessionStorage
+      const themeOptions: Theme[] = [`pink`, `sky`, `yellow`];
+      const randomTheme =
+        themeOptions[Math.floor(Math.random() * themeOptions.length)];
+      sessionStorage.setItem(`colorTheme`, randomTheme); // Save the random theme to sessionStorage
+      setTheme(randomTheme); // Set the random theme in state
+    }
+  }, []); // Empty dependency array means this effect will run only once when the component mounts
+
+  useEffect(() => {
+    // This effect applies the theme class to the root element (html) whenever the theme changes
     document.documentElement.classList.remove(
       `theme-pink`,
       `theme-sky`,
       `theme-yellow`,
     );
     document.documentElement.classList.add(`theme-${theme}`);
-  }, [theme]);
+  }, [theme]); // Runs every time the theme changes
+
+  // Update the theme in both state and sessionStorage
+  const handleSetTheme = (newTheme: Theme) => {
+    setTheme(newTheme);
+    sessionStorage.setItem(`colorTheme`, newTheme); // Save the new theme to sessionStorage
+  };
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme: handleSetTheme }}>
