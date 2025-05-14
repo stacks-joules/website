@@ -20,7 +20,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
         <h3 className={styles.accordionItemTitle}>{title}</h3>
         <PlusSymbol onClick={() => setIsExpanded(!isExpanded)} />
       </div>
-      <p
+      <div
         className={
           styles.accordionItemText + ` ` + (isExpanded ? styles.expanded : ``)
         }
@@ -31,7 +31,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
               <li key={index + item.slice(5)}>{item}</li>
             ))}
         </ul>
-      </p>
+      </div>
     </div>
   );
 };

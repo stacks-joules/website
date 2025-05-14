@@ -1,11 +1,9 @@
-import React from 'react';
-import { WarpField } from '../components/common/WarpField';
+import { Starfield } from '../components/common/StarField';
 
 export default function NotFound() {
   return (
     <main>
-      <WarpField />
-      <p>Sorry, page not found!</p>
+      <Starfield />
     </main>
   );
 }
