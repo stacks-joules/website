@@ -20,3 +20,26 @@
   padding: 1rem;
   background-color: rgba(0, 16, 32, 0.4);
 }
+
+.warpButton {
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  z-index: 9;
+  margin: 20px auto;
+  color: rgba(209, 255, 255, 1);
+  border: 2px solid;
+  padding: 1em;
+  width: 10em;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  display: inline-block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.2s;
+}
+
+.warpButton:hover {
+  box-shadow: 0 0 10px #eef, 0 0 12px #a0cdff inset;
+  text-shadow: 0 0 12px #489cfa, 0 0 5px #fff;
+}

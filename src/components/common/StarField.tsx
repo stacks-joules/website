@@ -16,7 +16,7 @@ export const Starfield: React.FC = () => {
   const starsRef = useRef<Star[]>([]);
   const imageRef = useRef<HTMLImageElement | null>(null);
   const animationRef = useRef<number | null>(null);
-  const [warpSpeed, setWarpSpeed] = useState(0);
+  const [warpSpeed, setWarpSpeed] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -56,12 +56,13 @@ export const Starfield: React.FC = () => {
 
       // Animate stars
       const animate = () => {
-        ctx.fillStyle = `#001020`;
+        ctx.fillStyle = warpSpeed ? `rgba(0, 16, 32, 0.01)` : `#001020`;
         ctx.fillRect(0, 0, width, height);
 
         starsRef.current = starsRef.current.map((star) => {
           // Move forward (closer)
-          const newZ = star.z - 5;
+          const speed = warpSpeed ? 5 : 5;
+          const newZ = star.z - speed;
 
           // Reset star if too close or gone
           if (newZ <= 0.1) {
@@ -86,7 +87,7 @@ export const Starfield: React.FC = () => {
 
           return {
             ...star,
-            opacity: star.opacity > 1 ? 1 : star.opacity + 0.001,
+            opacity: star.opacity > 1 || warpSpeed ? 1 : star.opacity + 0.001,
             z: newZ,
           };
         });
@@ -99,7 +100,7 @@ export const Starfield: React.FC = () => {
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
-  }, []);
+  }, [warpSpeed]);
 
   const createStars = (
     count: number,
@@ -110,7 +111,7 @@ export const Starfield: React.FC = () => {
       x: (Math.random() - 0.5) * width, // range: -width/2 to width/2
       y: (Math.random() - 0.5) * height, // range: -height/2 to height/2
       z: Math.random() * width, // depth: closer to 0 = closer to camera
-      opacity: 0.3,
+      opacity: 0.5,
     }));
   };
 
@@ -121,11 +122,15 @@ export const Starfield: React.FC = () => {
         <h1>404</h1>
         <p>
           You appear to have reached an uncharted area. Please check your url or
-          <p>
-            <a href="/">return to the homepage</a>
-          </p>
+          <br />
+          <a href="/">return to the homepage</a>
         </p>
-        <button onClick={() => setWarpSpeed(warpSpeed + 1)}>Warp Speed</button>
+        <div
+          className={styles.warpButton}
+          onClick={() => setWarpSpeed(!warpSpeed)}
+        >
+          {warpSpeed ? `Cruising Speed` : `Warp Speed`}
+        </div>
       </div>
     </>
   );
