@@ -48,12 +48,6 @@ export const Starfield: React.FC = () => {
       const stars = createStars(MAX_STARS, width, height);
       starsRef.current = stars;
 
-      // Draw stars
-      // stars.forEach((star) => {
-      //   ctx.beginPath();
-      //   ctx.drawImage(starImage, star.x, star.y, star.length, star.length);
-      // });
-
       // Animate stars
       const animate = () => {
         ctx.fillStyle = warpSpeed ? `rgba(0, 16, 32, 0.01)` : `#001020`;
@@ -122,8 +116,8 @@ export const Starfield: React.FC = () => {
         <h1>404</h1>
         <p>
           You appear to have reached an uncharted area. Please check your url or
-          <br />
-          <a href="/">return to the homepage</a>
+          {` `}
+          <a href="/">return to the homepage</a>.
         </p>
         <ToggleSwitch
           checked={warpSpeed}
