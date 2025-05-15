@@ -18,7 +18,10 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
     <div className={styles.accordionItem}>
       <div className={styles.accordionItemHeader}>
         <h3 className={styles.accordionItemTitle}>{title}</h3>
-        <PlusSymbol onClick={() => setIsExpanded(!isExpanded)} />
+        <PlusSymbol
+          onClick={() => setIsExpanded(!isExpanded)}
+          expanded={isExpanded}
+        />
       </div>
       <div
         className={
@@ -50,6 +53,7 @@ export const AccordionPanel: React.FC<AccordianPanelProps> = ({
           key={item.title}
           title={item.title}
           textItems={item.textItems}
+          expanded={item.expanded}
         />
       ))}
     </div>

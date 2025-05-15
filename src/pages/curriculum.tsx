@@ -63,6 +63,7 @@ const Curriculum: React.FC = () => {
                 `Ability to use temperature and relative humidity meters, data loggers, electrical volt and amp meters`,
                 `Interest in strengthening industry knowledge through participation in educational opportunities & skills development classes`,
               ],
+              expanded: true,
             },
             {
               title: `Intership Tasks & Competencies`,

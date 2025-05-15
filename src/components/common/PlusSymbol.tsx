@@ -1,76 +1,33 @@
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import * as styles from './PlusSymbol.module.css';
 
-export const PlusSymbol: React.FC<{ onClick: () => void }> = ({ onClick }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const verticalLineRef = useRef(null);
+export const PlusSymbol: React.FC<{
+  onClick: () => void;
+  expanded: boolean;
+}> = ({ onClick, expanded }) => {
+  const [isOpen, setIsOpen] = useState(expanded);
+  const verticalLineRef = useRef<HTMLSpanElement>(null);
 
-  // Handle the toggle with alternating rotations
   useEffect(() => {
     if (!verticalLineRef.current) return;
-
-    if (isOpen) {
-      // Rotate to 90 degrees when opening
-      verticalLineRef.current.style.transform = `rotate(90deg)`;
-    } else {
-      verticalLineRef.current.style.transform = `rotate(0deg)`;
-    }
+    verticalLineRef.current.style.transform = isOpen
+      ? `rotate(90deg)`
+      : `rotate(0deg)`;
   }, [isOpen]);
 
-  // CSS styles directly in the component
-  const styles = {
-    button: {
-      position: `relative`,
-      width: `40px`,
-      height: `40px`,
-      backgroundColor: `transparent`,
-      border: `none`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `center`,
-      cursor: `pointer`,
-      outline: `none`,
-    },
-    plusSymbol: {
-      position: `relative`,
-      width: `20px`,
-      height: `20px`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `center`,
-    },
-    horizontalLine: {
-      position: `absolute`,
-      width: `20px`,
-      height: `2px`,
-      backgroundColor: `#151515`,
-      borderRadius: `1px`,
-    },
-    verticalLine: {
-      position: `absolute`,
-      width: `2px`,
-      height: `20px`,
-      backgroundColor: `#151515`,
-      borderRadius: `1px`,
-      transition: `transform 0.3s ease-in-out`,
-    },
-    stateIndicator: {
-      color: `#151515`,
-    },
-  };
-
   return (
-    <div style={styles.container}>
+    <div className={styles.container}>
       <button
         onClick={() => {
           setIsOpen(!isOpen);
           onClick();
         }}
-        style={styles.button}
+        className={styles.button}
         aria-label={isOpen ? `Collapse` : `Expand`}
       >
-        <div style={styles.plusSymbol}>
-          <span style={styles.horizontalLine}></span>
-          <span ref={verticalLineRef} style={styles.verticalLine}></span>
+        <div className={styles.plusSymbol}>
+          <span className={styles.horizontalLine}></span>
+          <span ref={verticalLineRef} className={styles.verticalLine}></span>
         </div>
       </button>
     </div>

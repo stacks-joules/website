@@ -1,0 +1,42 @@
+.button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.plusSymbol {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontalLine {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #151515;
+  border-radius: 1px;
+}
+
+.verticalLine {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: #151515;
+  border-radius: 1px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.stateIndicator {
+  color: #151515;
+}
