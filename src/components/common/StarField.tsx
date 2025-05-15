@@ -64,7 +64,7 @@ export const Starfield: React.FC = () => {
               x: (Math.random() - 0.5) * width,
               y: (Math.random() - 0.5) * height,
               z: width,
-              opacity: 0.3,
+              opacity: 0.1,
             };
           }
 
@@ -81,7 +81,7 @@ export const Starfield: React.FC = () => {
 
           return {
             ...star,
-            opacity: star.opacity > 1 || warpSpeed ? 1 : star.opacity + 0.001,
+            opacity: star.opacity > 1 || warpSpeed ? 1 : star.opacity + 0.005,
             z: newZ,
           };
         });

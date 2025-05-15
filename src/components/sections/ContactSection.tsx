@@ -13,6 +13,8 @@ interface ContactInfo {
   phone: string;
   street: string;
   state: string;
+  interest: string;
+  message: string;
 }
 
 const ContactLocation: React.FC<ContactInfo> = ({
@@ -44,6 +46,7 @@ export const ContactSection: React.FC = () => {
     email: ``,
     phone: ``,
     message: ``,
+    interest: ``,
   });
 
   const [formState, setFormState] = useState({
@@ -89,6 +92,7 @@ export const ContactSection: React.FC = () => {
         email: ``,
         phone: ``,
         message: ``,
+        interest: ``,
       });
       setModalOpen(true);
       setFormState({ submitting: false, success: true, error: false });
@@ -236,6 +240,21 @@ export const ContactSection: React.FC = () => {
                   onChange={handleChange}
                   placeholder="Phone Number"
                 />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="interest">Interest</label>
+                <select
+                  className={styles.interestField}
+                  id="interest"
+                  name="interest"
+                  value={formData.interest}
+                  onChange={handleChange}
+                  placeholder="Reason for contacting"
+                >
+                  <option value="student">Student/Apply</option>
+                  <option value="hiring">Industry/Hiring</option>
+                  <option value="support">Support/Volunteer</option>
+                </select>
               </div>
               <div className={styles.formGroup}>
                 <label htmlFor="message">Message</label>

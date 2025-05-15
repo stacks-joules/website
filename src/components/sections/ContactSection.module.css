@@ -118,7 +118,8 @@
 }
 
 .formGroup input,
-.formGroup textarea {
+.formGroup textarea,
+.formGroup select {
   font-family: 'Inter', sans-serif;
   width: 100%;
   height: 48px;
@@ -149,6 +150,26 @@
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.formGroup select {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 11px 40px 11px 16px;
+  border: 1px solid white;
+  border-radius: 12px;
+  font-size: 14px;
+  color: white;
+  background-color: #17191d;
+  cursor: pointer;
+}
+
+.formGroup select option {
+  background-color: #17191d;
+  color: white;
+  font-family: 'Inter', sans-serif;
 }
 
 .nameField {

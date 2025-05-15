@@ -147,6 +147,8 @@
 @media (max-width: 768px) {
   .desktopNavigation {
     padding: 0px;
+    border-bottom: none;
+    border-top: none;
   }
 
   .desktopNav {
