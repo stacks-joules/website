@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as styles from './StarField.module.css';
 import wrenchbolt from '../../assets/images/wrenchbolt.svg';
-
+import ToggleSwitch from './ToggleSwitch';
 const MAX_STARS = 500;
 
 interface Star {
@@ -125,12 +125,10 @@ export const Starfield: React.FC = () => {
           <br />
           <a href="/">return to the homepage</a>
         </p>
-        <div
-          className={styles.warpButton}
-          onClick={() => setWarpSpeed(!warpSpeed)}
-        >
-          {warpSpeed ? `Cruising Speed` : `Warp Speed`}
-        </div>
+        <ToggleSwitch
+          checked={warpSpeed}
+          onChange={() => setWarpSpeed(!warpSpeed)}
+        />
       </div>
     </>
   );
