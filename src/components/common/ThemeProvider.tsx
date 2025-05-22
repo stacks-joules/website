@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useState,
-  useContext,
-  ReactNode,
-  useEffect,
-} from 'react';
+import React, { createContext, useState, useContext, ReactNode } from 'react';
 
 // Define the possible theme colors
 type Theme = 'pink' | 'sky' | 'yellow';
@@ -24,32 +18,6 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   // Local state to store the theme
   const [theme, setTheme] = useState<Theme>(`pink`); // Default to 'pink'
-
-  useEffect(() => {
-    // This useEffect will run after the component is mounted
-    // Ensure that we are only using sessionStorage on the client side
-    const storedTheme = sessionStorage.getItem(`colorTheme`);
-    if (storedTheme) {
-      setTheme(storedTheme as Theme); // If the theme is found in sessionStorage, use it
-    } else {
-      // If no theme is found in sessionStorage, generate a random theme and save it to sessionStorage
-      const themeOptions: Theme[] = [`pink`, `sky`, `yellow`];
-      const randomTheme =
-        themeOptions[Math.floor(Math.random() * themeOptions.length)];
-      sessionStorage.setItem(`colorTheme`, randomTheme); // Save the random theme to sessionStorage
-      setTheme(randomTheme); // Set the random theme in state
-    }
-  }, []); // Empty dependency array means this effect will run only once when the component mounts
-
-  useEffect(() => {
-    // This effect applies the theme class to the root element (html) whenever the theme changes
-    document.documentElement.classList.remove(
-      `theme-pink`,
-      `theme-sky`,
-      `theme-yellow`,
-    );
-    document.documentElement.classList.add(`theme-${theme}`);
-  }, [theme]); // Runs every time the theme changes
 
   // Update the theme in both state and sessionStorage
   const handleSetTheme = (newTheme: Theme) => {

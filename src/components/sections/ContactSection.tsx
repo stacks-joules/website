@@ -13,8 +13,6 @@ interface ContactInfo {
   phone: string;
   street: string;
   state: string;
-  interest: string;
-  message: string;
 }
 
 const ContactLocation: React.FC<ContactInfo> = ({
@@ -57,7 +55,9 @@ export const ContactSection: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({

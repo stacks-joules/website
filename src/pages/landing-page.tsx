@@ -58,9 +58,9 @@ const LandingPage: React.FC = () => {
     },
     {
       imageSrc: CurriculumImage2,
-      imageAlt: `see the curriculum`,
+      imageAlt: `See the curriculum`,
       contentTitle: `Supportive classroom`,
-      content: `Students use wireless LED lighting and Python coding to learn building automation and create games, leading to a final light show exhibition.`,
+      content: `Lots of Students use wireless LED lighting and Python coding to learn building automation and create games, leading to a final light show exhibition.`,
     },
     {
       imageSrc: CurriculumImage3,
@@ -70,7 +70,7 @@ const LandingPage: React.FC = () => {
     },
     {
       imageSrc: CurriculumImage4,
-      imageAlt: `see the curriculum`,
+      imageAlt: `See the curriculum`,
       contentTitle: `Internship & Job Placement`,
       content: `Graduates are further supported with internship and job placement assistance, as well as future career development guidance and mentorship from building automation professionals.`,
     },
