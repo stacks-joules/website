@@ -7,6 +7,7 @@ import LocationIcon from '../../assets/images/location-icon.svg';
 import { Container } from '../layout/Container';
 import { Modal } from '../common/Modal';
 import { Button } from '../common/Button';
+import { Select } from '@headlessui/react';
 
 interface ContactInfo {
   name: string;
@@ -243,7 +244,7 @@ export const ContactSection: React.FC = () => {
               </div>
               <div className={styles.formGroup}>
                 <label htmlFor="interest">Interest</label>
-                <select
+                <Select
                   className={styles.interestField}
                   id="interest"
                   name="interest"
@@ -254,7 +255,7 @@ export const ContactSection: React.FC = () => {
                   <option value="student">Student/Apply</option>
                   <option value="hiring">Industry/Hiring</option>
                   <option value="support">Support/Volunteer</option>
-                </select>
+                </Select>
               </div>
               <div className={styles.formGroup}>
                 <label htmlFor="message">Message</label>
