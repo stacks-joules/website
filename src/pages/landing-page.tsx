@@ -81,7 +81,7 @@ const LandingPage: React.FC = () => {
         <Block variation="dark">
           <TextPanel
             title="Learn To Light It Up!"
-            description="Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming."
+            description={`Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming.`}
             buttonText="BECOME A STUDENT"
             buttonLink="/become-a-student"
           />
