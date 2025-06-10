@@ -21,7 +21,7 @@ import { Block } from '@components/blocks/block/Block';
 const LandingPage: React.FC = () => {
   const cards = [
     {
-      headerText: `↳Become a student`,
+      headerText: `↳Become a Real student`,
       border: true,
       imageSrc: CardOne,
       imageAlt: `see the curriculum`,
