@@ -153,7 +153,7 @@ export const ContactSection: React.FC = () => {
                 name="New York"
                 street="175 WEST 93RD STREET #3K"
                 state="New York, NY 10001"
-                phone="+1 917 555 5555"
+                phone="+1 917 555 2222"
               />
             </div>
           </div>

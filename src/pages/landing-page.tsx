@@ -80,8 +80,8 @@ const LandingPage: React.FC = () => {
       <Layout>
         <Block variation="dark">
           <TextPanel
-            title="Learn To Light It Up!"
-            description="Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming."
+            title="Stack skills, run joules"
+            description="Stacks+Joules is on a mission to bridge the tech opportunity gap by offering a specialized curriculum in computer programming and wireless network management. We empower students to harness their creativity and strengths, regardless of prior experience, equipping them with valuable tech skills for the future."
             buttonText="BECOME A STUDENT"
             buttonLink="/become-a-student"
           />
@@ -106,7 +106,7 @@ const LandingPage: React.FC = () => {
           />
           <TextPanel
             title="Our Mission"
-            description="Stacks + Joules is passionate about bridging the tech opportunity gap by offering a specialized curriculum in computer programming."
+            description="Stacks + Joules is a nonprofit workforce development program, training overlooked populations for jobs in Building Automation. Our mission is to give more people the chance to have careers that use technology for the common good. Through high quality experiential learning, we provide students and adult learners with the skills, real-world experience, and professional networks necessary for them to master the advanced technologies that affect the way we live and work."
           />
         </Block>
         <Infographic
