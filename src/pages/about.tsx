@@ -14,7 +14,6 @@ const About: React.FC = () => {
         <ImagePanel
           imageSrc={StudentImage}
           imageAlt="Students examining an hvac component."
-          dropShadow
         />
         <MarkupPanel>
           <h1>This is my markup panel</h1>

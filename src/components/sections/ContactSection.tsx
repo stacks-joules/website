@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as styles from './ContactSection.module.css';
 import { Logo } from '../common/Logo';
 import Cityscape from '../../assets/images/contact-image.png';
@@ -7,7 +7,10 @@ import LocationIcon from '../../assets/images/location-icon.svg';
 import { Container } from '../layout/Container';
 import { Modal } from '../common/Modal';
 import { Button } from '../common/Button';
-import { Select } from '@headlessui/react';
+import { SelectInput } from '../common/SelectInput';
+
+const boardId = process.env.GATSBY_MONDAY_BOARD_ID;
+const apiKey = process.env.GATSBY_MONDAY_API_KEY;
 
 interface ContactInfo {
   name: string;
@@ -56,9 +59,7 @@ export const ContactSection: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -67,22 +68,29 @@ export const ContactSection: React.FC = () => {
     }));
   };
 
+  useEffect(() => {
+    console.log(formData);
+  }, [formData]);
+
+  useEffect(() => {
+    const path = window.location.pathname.toLowerCase();
+
+    if (path.includes(`employment-partnerships`)) {
+      setFormData((prev) => ({ ...prev, interest: `Employer` }));
+    } else if (path.includes(`become-a-student`)) {
+      setFormData((prev) => ({ ...prev, interest: `Student` }));
+    } else if (path.includes(`support-mentors`)) {
+      setFormData((prev) => ({ ...prev, interest: `Mentor` }));
+    } else {
+      setFormData((prev) => ({ ...prev, interest: `` }));
+    }
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState({ submitting: true, success: false, error: false });
 
-    // First, send data to Netlify (or you can skip this if you don't need Netlify)
     try {
-      // Netlify form submission (you can remove this part if not needed)
-      await fetch(`/`, {
-        method: `POST`,
-        headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-        body: new URLSearchParams({
-          'form-name': `contact`,
-          ...formData,
-        }).toString(),
-      });
-
       // Send form data to Monday.com
       await sendToMonday(formData);
 
@@ -105,12 +113,20 @@ export const ContactSection: React.FC = () => {
 
   // Function to send form data to Monday.com via GraphQL
   const sendToMonday = async (formData: any) => {
-    const apiKey = `YOUR_MONDAY_API_KEY`; // Replace with your actual Monday.com API key
-    const boardId = `YOUR_BOARD_ID`; // Replace with your actual Board ID
+    const columnValues = JSON.stringify({
+      lead: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    });
 
     const query = `
       mutation {
-        create_item (board_id: ${boardId}, item_name: "${formData.firstName} ${formData.lastName}", column_values: "{"email":"${formData.email}", "phone":"${formData.phone}", "message":"${formData.message}"}") {
+        create_item (
+          board_id: ${boardId}, 
+          item_name: "${formData.firstName} ${formData.lastName}", 
+          column_values: ${JSON.stringify(columnValues)}
+        ) {
           id
         }
       }
@@ -119,7 +135,7 @@ export const ContactSection: React.FC = () => {
     const response = await fetch(`https://api.monday.com/v2`, {
       method: `POST`,
       headers: {
-        Authorization: apiKey,
+        Authorization: `${apiKey}`,
         'Content-Type': `application/json`,
       },
       body: JSON.stringify({ query }),
@@ -244,18 +260,17 @@ export const ContactSection: React.FC = () => {
               </div>
               <div className={styles.formGroup}>
                 <label htmlFor="interest">Interest</label>
-                <Select
-                  className={styles.interestField}
-                  id="interest"
-                  name="interest"
-                  value={formData.interest}
+                <SelectInput
+                  choice="interest"
+                  options={[
+                    { name: `Student/Apply`, value: `Student` },
+                    { name: `Industry/Hiring`, value: `Employer` },
+                    { name: `Support/Volunteer`, value: `Mentor` },
+                    { name: `Other`, value: `Other` },
+                  ]}
+                  selectedOption={formData.interest}
                   onChange={handleChange}
-                  placeholder="Reason for contacting"
-                >
-                  <option value="student">Student/Apply</option>
-                  <option value="hiring">Industry/Hiring</option>
-                  <option value="support">Support/Volunteer</option>
-                </Select>
+                />
               </div>
               <div className={styles.formGroup}>
                 <label htmlFor="message">Message</label>
