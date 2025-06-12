@@ -9,9 +9,6 @@ import { Modal } from '../common/Modal';
 import { Button } from '../common/Button';
 import { SelectInput } from '../common/SelectInput';
 
-const boardId = process.env.GATSBY_MONDAY_BOARD_ID;
-const apiKey = process.env.GATSBY_MONDAY_API_KEY;
-
 interface ContactInfo {
   name: string;
   phone: string;
@@ -69,10 +66,6 @@ export const ContactSection: React.FC = () => {
   };
 
   useEffect(() => {
-    console.log(formData);
-  }, [formData]);
-
-  useEffect(() => {
     const path = window.location.pathname.toLowerCase();
 
     if (path.includes(`employment-partnerships`)) {
@@ -86,25 +79,48 @@ export const ContactSection: React.FC = () => {
     }
   }, []);
 
+  const getFullName = (first: string, last: string) => {
+    return `${first.trim()} ${last.trim()}`.trim();
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState({ submitting: true, success: false, error: false });
 
-    try {
-      // Send form data to Monday.com
-      await sendToMonday(formData);
+    const payload = {
+      ...formData,
+      fullName: getFullName(formData.firstName, formData.lastName),
+    };
 
-      // Reset form and show success
-      setFormData({
-        firstName: ``,
-        lastName: ``,
-        email: ``,
-        phone: ``,
-        message: ``,
-        interest: ``,
+    try {
+      const response = await fetch(`/.netlify/functions/submitForm`, {
+        method: `POST`,
+        headers: {
+          'Content-Type': `application/json`,
+        },
+        body: JSON.stringify(payload),
       });
-      setModalOpen(true);
-      setFormState({ submitting: false, success: true, error: false });
+
+      if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data?.success || data?.item?.id) {
+        setFormData({
+          firstName: ``,
+          lastName: ``,
+          email: ``,
+          phone: ``,
+          message: ``,
+          interest: ``,
+        });
+        setModalOpen(true);
+        setFormState({ submitting: false, success: true, error: false });
+      } else {
+        throw new Error(`Unexpected response from backend`);
+      }
     } catch (error) {
       console.error(`Error submitting form:`, error);
       setFormState({ submitting: false, success: false, error: true });
@@ -112,43 +128,6 @@ export const ContactSection: React.FC = () => {
   };
 
   // Function to send form data to Monday.com via GraphQL
-  const sendToMonday = async (formData: any) => {
-    const columnValues = JSON.stringify({
-      lead: `${formData.firstName} ${formData.lastName}`,
-      email: formData.email,
-      phone: formData.phone,
-      message: formData.message,
-    });
-
-    const query = `
-      mutation {
-        create_item (
-          board_id: ${boardId}, 
-          item_name: "${formData.firstName} ${formData.lastName}", 
-          column_values: ${JSON.stringify(columnValues)}
-        ) {
-          id
-        }
-      }
-    `;
-
-    const response = await fetch(`https://api.monday.com/v2`, {
-      method: `POST`,
-      headers: {
-        Authorization: `${apiKey}`,
-        'Content-Type': `application/json`,
-      },
-      body: JSON.stringify({ query }),
-    });
-
-    const data = await response.json();
-    if (data.errors) {
-      throw new Error(
-        `Error submitting to Monday.com: ${data.errors[0].message}`,
-      );
-    }
-    console.log(`Successfully created item in Monday.com:`, data);
-  };
 
   return (
     <section className={styles.contactSection}>
