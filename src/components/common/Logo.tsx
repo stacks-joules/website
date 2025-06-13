@@ -8,12 +8,9 @@ interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = ({ center }) => {
-  const [isMobile, setIsMobile] = useState(
-    window.matchMedia(`(max-width: 768px)`).matches,
-  );
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    console.log(`isMobile`, isMobile);
     const mediaQuery = window.matchMedia(`(max-width: 768px)`);
     const handleResize = () => setIsMobile(mediaQuery.matches);
 
