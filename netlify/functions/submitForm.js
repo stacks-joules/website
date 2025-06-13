@@ -25,7 +25,7 @@ exports.handler = async function (event) {
     const body = JSON.parse(event.body);
     console.log(`Parsed form data:`, body);
 
-    const { fullName, email, phone, message, interest } = body;
+    const { fullName, email, message, interest } = body;
 
     if (!fullName || !email || !message) {
       console.error(`Missing required fields in body`);
@@ -40,7 +40,7 @@ exports.handler = async function (event) {
         create_item (
           board_id: ${boardId},
           item_name: "${fullName}",
-          column_values: "{\\"email\\": \\"${email}\\", \\"phone\\": \\"${phone}\\", \\"message\\": \\"${message}\\", \\"interest\\": \\"${interest}\\"}"
+          column_values: "{\\"email\\": \\"${email}\\", \\"message\\": \\"${message}\\", \\"interest\\": \\"${interest}\\"}"
         ) {
           id
         }

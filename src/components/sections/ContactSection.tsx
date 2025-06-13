@@ -227,17 +227,6 @@ export const ContactSection: React.FC = () => {
                 />
               </div>
               <div className={styles.formGroup}>
-                <label htmlFor="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Phone Number"
-                />
-              </div>
-              <div className={styles.formGroup}>
                 <label htmlFor="interest">Interest</label>
                 <SelectInput
                   choice="interest"
