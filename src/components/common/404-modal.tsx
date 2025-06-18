@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './404-Modal.module.css';
+import * as styles from './404-modal.module.css';
 import { ToggleSwitch } from './ToggleSwitch';
 
 export const ErrorModal: React.FC<{
