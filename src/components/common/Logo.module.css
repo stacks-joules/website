@@ -24,12 +24,16 @@
   left: 51%;
   transform: translate(-50%, -50%);
   max-width: 9%;
-  pointer-events: none;
   fill: var(--theme-color);
+  cursor: pointer;
 }
 
 .center {
   margin: 0 auto;
+}
+
+.absolute {
+  position: absolute;
 }
 
 @media (max-width: 768px) {

@@ -5,9 +5,15 @@ import MobileLogo from '../../assets/images/mobile-logo-pink.svg';
 
 interface LogoProps {
   center?: boolean;
+  handleClick?: () => void;
+  absolute?: boolean;
 }
 
-export const Logo: React.FC<LogoProps> = ({ center }) => {
+export const Logo: React.FC<LogoProps> = ({
+  center,
+  handleClick,
+  absolute,
+}) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -18,7 +24,9 @@ export const Logo: React.FC<LogoProps> = ({ center }) => {
     return () => mediaQuery.removeEventListener(`change`, handleResize);
   }, []);
 
-  const logoClass = `${styles.logo} ${center ? styles.center : ``}`;
+  const logoClass = `${styles.logo} ${center ? styles.center : ``} ${
+    absolute ? styles.absolute : ``
+  }`;
 
   return (
     <div className={logoClass}>
@@ -35,6 +43,7 @@ export const Logo: React.FC<LogoProps> = ({ center }) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={styles.plusLogo}
+          onClick={handleClick}
         >
           <path
             id="+"
