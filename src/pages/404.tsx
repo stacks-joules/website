@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Starfield } from '../components/common/StarField';
-import { ErrorModal } from '../components/common/404-Modal';
+import { ErrorModal } from '../components/common/404-modal';
 
 export default function NotFound() {
   const [warpSpeed, setWarpSpeed] = useState(false);
