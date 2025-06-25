@@ -9,36 +9,57 @@ import { Card } from '../components/blocks/card-section/Card';
 
 import conway from '../assets/images/conway.png';
 import spooner from '../assets/images/spooner.png';
-import TeamImage1 from '../assets/images/plus-logo.svg';
-
+import TeamImage1 from '../assets/images/fran.peral.png';
+import TeamImage2 from '../assets/images/diana.vargas.png';
+import TeamImage3 from '../assets/images/armitina.smith.png';
+import TeamImage4 from '../assets/images/david.sepulveda.png';
+import TeamImage5 from '../assets/images/thomas.henry.png';
+import TeamImage6 from '../assets/images/amoret.moore.png';
 const teamCards = [
   {
     imageSrc: TeamImage1,
-    imageAlt: `Students at work`,
-    contentTitle: `Hands on learning`,
-    headerText: `Employee 4`,
-    content: `Students use wireless LED lighting and Python coding to learn building automation and create games, leading to a final light show exhibition.`,
+    imageAlt: `Fran Peral`,
+    contentTitle: `Lead Facilitator`,
+    headerText: `Fran Peral`,
+    content: `Fran is our first employee and a graduate of the program.`,
   },
   {
-    imageSrc: TeamImage1,
-    imageAlt: `See the curriculum`,
-    headerText: `Employee 4`,
-    contentTitle: `Supportive classroom`,
-    content: `Lots of Students use wireless LED lighting and Python coding to learn building automation and create games, leading to a final light show exhibition.`,
+    imageSrc: TeamImage2,
+    imageAlt: `Diana Vargas`,
+    contentTitle: `Facilitator`,
+    headerText: `Diana Vargas`,
+    content: `Diana is a graduate of the program and was taught by Fran.`,
   },
   {
-    imageSrc: TeamImage1,
-    imageAlt: `On-site experience`,
-    headerText: `Employee 4`,
-    contentTitle: `On-site experience`,
-    content: `Facility tours led by industry professionals expose students to real work environments open opportunities to connect with potential employers and mentors.`,
+    imageSrc: TeamImage3,
+    imageAlt: `Armitina Smith`,
+    contentTitle: `Associate Facilitator`,
+    headerText: `Armitina Smith`,
+    content: `Tina is a graduate of our first All-Womens cohort. And she was taught by Fran and`,
+  },
+];
+
+const teamCards2 = [
+  {
+    imageSrc: TeamImage4,
+    imageAlt: `David Sepulveda`,
+    contentTitle: `Associate Facilitator`,
+    headerText: `David Sepulveda`,
+    content: `David is a graduate of the program and was taught by Jon.`,
   },
   {
-    imageSrc: TeamImage1,
-    imageAlt: `See the curriculum`,
-    headerText: `Employee 4`,
-    contentTitle: `On-site experience`,
-    content: `Graduates are further supported with internship and job placement assistance, as well as future career development guidance and mentorship from building automation professionals.`,
+    imageSrc: TeamImage5,
+    imageAlt: `Thomas Henry`,
+    contentTitle: `Education Director`,
+    headerText: `Thomas Henry`,
+    content: `Thomas is a graduate of the program and was taught by David.`,
+  },
+  {
+    imageSrc: TeamImage6,
+    imageAlt: `Amoret Moore`,
+    contentTitle: `Associate Facilitator`,
+    headerText: `Amoret Moore`,
+    content: `Amoret is a graduate of the program and was taught by Fran.`,
   },
 ];
 
@@ -81,9 +102,12 @@ As a faculty coach, he has supported schools and teachers from across the countr
           ))}
         </CardContainer>
       </Block>
-      <Block>
-        <TextPanel title="The Team" description="The Team" />
-        <ImagePanel imageSrc={spooner} imageAlt="Picture of Jon Spooner" />
+      <Block variation="light">
+        <CardContainer>
+          {teamCards2.map((card) => (
+            <Card key={card.contentTitle} {...card} />
+          ))}
+        </CardContainer>
       </Block>
     </Layout>
   );
