@@ -4,6 +4,7 @@ import { SectionHeader } from '../components/layout/SectionHeader';
 import { Block } from '../components/blocks/block/Block';
 import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
+import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
 
 import floatwrenchbolt from '../assets/images/floatwrenchbolt.png';
 import spooner from '../assets/images/spooner.png';
@@ -18,7 +19,16 @@ const About: React.FC = () => {
           imageAlt="Picture of 3d Stacks+Joules logo"
           dropShadow
         />
-        <TextPanel description="Stacks+Joules is a 501c3 nonprofit (EIN 82-2358571) project-based learning program in computer programming and wireless network management. Our specialized curriculum engages young peoples’ creativity to supercharge their strengths as learners and get them on the fast-track to valuable technology skills—regardless of prior experience or training." />
+        <MarkupPanel>
+          <p>
+            <b>Stacks+Joules</b> is a 501c3 nonprofit (EIN 82-2358571)
+            project-based learning program in computer programming and wireless
+            network management. Our specialized curriculum engages young
+            peoples’ creativity to supercharge their strengths as learners and
+            get them on the fast-track to valuable technology skills—regardless
+            of prior experience or training.
+          </p>
+        </MarkupPanel>
       </Block>
       <Block variation="light">
         <TextPanel

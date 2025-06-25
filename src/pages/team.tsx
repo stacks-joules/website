@@ -4,9 +4,43 @@ import { SectionHeader } from '../components/layout/SectionHeader';
 import { Block } from '../components/blocks/block/Block';
 import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
+import { CardContainer } from '../components/blocks/card-section/CardContainer';
+import { Card } from '../components/blocks/card-section/Card';
 
 import conway from '../assets/images/conway.png';
 import spooner from '../assets/images/spooner.png';
+import TeamImage1 from '../assets/images/plus-logo.svg';
+
+const teamCards = [
+  {
+    imageSrc: TeamImage1,
+    imageAlt: `Students at work`,
+    contentTitle: `Hands on learning`,
+    headerText: `Employee 4`,
+    content: `Students use wireless LED lighting and Python coding to learn building automation and create games, leading to a final light show exhibition.`,
+  },
+  {
+    imageSrc: TeamImage1,
+    imageAlt: `See the curriculum`,
+    headerText: `Employee 4`,
+    contentTitle: `Supportive classroom`,
+    content: `Lots of Students use wireless LED lighting and Python coding to learn building automation and create games, leading to a final light show exhibition.`,
+  },
+  {
+    imageSrc: TeamImage1,
+    imageAlt: `On-site experience`,
+    headerText: `Employee 4`,
+    contentTitle: `On-site experience`,
+    content: `Facility tours led by industry professionals expose students to real work environments open opportunities to connect with potential employers and mentors.`,
+  },
+  {
+    imageSrc: TeamImage1,
+    imageAlt: `See the curriculum`,
+    headerText: `Employee 4`,
+    contentTitle: `On-site experience`,
+    content: `Graduates are further supported with internship and job placement assistance, as well as future career development guidance and mentorship from building automation professionals.`,
+  },
+];
 
 const Team: React.FC = () => {
   return (
@@ -40,9 +74,12 @@ As a faculty coach, he has supported schools and teachers from across the countr
           dropShadow
         />
       </Block>
-      <Block variation="dark">
-        <TextPanel title="The Team" description="The Team" />
-        <ImagePanel imageSrc={conway} imageAlt="Picture of Jon Spooner" />
+      <Block variation="light">
+        <CardContainer>
+          {teamCards.map((card) => (
+            <Card key={card.contentTitle} {...card} />
+          ))}
+        </CardContainer>
       </Block>
       <Block>
         <TextPanel title="The Team" description="The Team" />
