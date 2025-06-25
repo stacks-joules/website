@@ -84,5 +84,8 @@
     "typescript": "5.0.4",
     "vite-tsconfig-paths": "4.2.0",
     "vitest": "0.31.0"
-  }
+  },
+  "overrides": {
+  "path-to-regexp": "^1.7.0"
+}
 }
