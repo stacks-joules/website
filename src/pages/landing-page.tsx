@@ -82,7 +82,7 @@ const LandingPage: React.FC = () => {
           <TextPanel
             title="Stack skills, run joules"
             description="Stacks+Joules is on a mission to bridge the tech opportunity gap by offering a specialized curriculum in computer programming and wireless network management. We empower students to harness their creativity and strengths, regardless of prior experience, equipping them with valuable tech skills for the future."
-            buttonText="BECOME A STUDENT"
+            buttonText="BECOME A TRAINEE"
             buttonLink="/become-a-student"
           />
           <ImagePanel
