@@ -114,6 +114,73 @@ const Curriculum: React.FC = () => {
           ]}
         />
       </Block>
+      <Block
+        blockTitle="↳Low voltage wiring & Niagara Workbench"
+        paddingY="0px"
+        topBorder
+      >
+        <ImagePanel
+          imageSrc={CurriculumImage}
+          imageAlt="Focus 1 Image"
+          dropShadow
+        />
+        <AccordionPanel
+          accordionItems={[
+            {
+              title: `Lesson Objectives`,
+              textItems: [
+                `Learners will do some resume building before being introduced to Niagara and daily report protocol.`,
+                `Learners will start working on Niagara labs to develop knowledge of BAS software`,
+                `Learners will do a wiring activity to demonstrate their understanding of Ohm’s law and how electricity travels.`,
+                `Learners will participate in a wire stripping competition to build and practice wiring skills.`,
+                `Learners will work with their Durst Project Groups to prepare their presentations and make progress with their Niagara labs.`,
+                `Learners will be provided with an overview of air handling units to gain a deeper understanding of facility operations, continue work with Durst Project Groups and continue Niagara Labs`,
+                `Learners will continue building their resumes, further their work in their Durst Project Groups, and make progress with Niagara labs.`,
+                `Learners will work in groups to present their Durst Project Groups research findings to add to our collective understanding of how the Sven Durst Residential Tower (and other buildings like it) functions and continue making progress on Niagara labs.`,
+                `Learners will take some time to work on LinkedIn Profiles and Resume Building so they can be successful when seeking work in the BAS field`,
+                `Learners will draw a wiring diagram to demonstrate their understanding of electrical currents and wiring.`,
+                `Learners will work in groups to analyze a wiring diagram so they can use it in a wiring simulation activity and will select their job fair group for the final presentation.`,
+                `Learners will conclude the final labs in Niagara workbench and begin working in their job fair groups for the final presentation.`,
+                `Learner presentations, graduation ceremony and networking event`,
+              ],
+              expanded: true,
+            },
+            {
+              title: `Assessments/Projects`,
+              textItems: [
+                `Professional Practice: resume building`,
+                `Professional practice: thank you emails to class visitors`,
+                `Daily reports`,
+                `Niagara Workbench Labs`,
+                `Low Voltage Wiring activity`,
+                `Wire stripping competition`,
+                `Wiresheets in Niagara`,
+                `One-on-one assessments using Communication Skills rubric`,
+                `Group research project: Durst trip project presentations`,
+                `Professional practice: updating LinkedInprofiles`,
+                `Wiring diagrams`,
+                `Professional Practice: mock interviews`,
+                `Networking event project: Group Presentations`,
+              ],
+            },
+            {
+              title: `Skills`,
+              textItems: [
+                `Resume building`,
+                `Professional email writing`,
+                `Building wire sheets using Niagara workbench`,
+                `Simulating models using Niagara`,
+                `Job interview skills`,
+                `Wiring`,
+                `Wire stripping`,
+                `Ability to assess air handling units`,
+                `Presentation and public speaking skills`,
+                `Networking for success`,
+              ],
+            },
+          ]}
+        />
+      </Block>
       <Buffer height="80px" />
     </Layout>
   );
