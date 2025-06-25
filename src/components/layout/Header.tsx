@@ -17,10 +17,6 @@ export const Header: React.FC<{ color?: string }> = () => {
     setComponentTheme(theme);
   }, [theme]);
 
-  useEffect(() => {
-    console.log(`showStars`, showStars);
-  }, [showStars]);
-
   if (showStars) {
     return (
       <div className={styles.header}>

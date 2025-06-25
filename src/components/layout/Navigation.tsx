@@ -89,7 +89,7 @@ export const Navigation: React.FC = () => {
               <Button color="white">BECOME A STUDENT</Button>
             </NavLink>
             <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698">
-              <Button>DONATE</Button>
+              <Button>Donate</Button>
             </a>
           </div>
         </div>

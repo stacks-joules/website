@@ -11,7 +11,7 @@
   align-items: center;
   gap: 10px;
   background: var(--White, #fff);
-  color: #000;
+  color: #151515;
   font-feature-settings: 'liga' off, 'clig' off;
   /* Caption */
   font-size: 14px;
@@ -25,8 +25,11 @@
 }
 
 .button:hover {
-  border-radius: 40px;
-  background-color: var(--theme-color-hover) !important;
+  color: var(--theme-color) !important;
+  background-color: #151515 !important;
+  border: 2px solid var(--theme-color) !important;
+  font-weight: 700 !important;
+  padding: 10px 23px !important;
 }
 
 .white {
