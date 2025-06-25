@@ -49,6 +49,10 @@
   margin-bottom: -16px;
 }
 
+.cardImage {
+  border-radius: 12px;
+}
+
 .button {
   background-color: #fff;
   align-items: center;

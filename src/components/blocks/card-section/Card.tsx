@@ -37,7 +37,7 @@ export const Card: React.FC<CardProps> = ({
 
       {imageSrc && (
         <div>
-          <img src={imageSrc} alt={imageAlt} />
+          <img src={imageSrc} alt={imageAlt} className={styles.cardImage} />
         </div>
       )}
 
