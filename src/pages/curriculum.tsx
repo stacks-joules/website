@@ -1,7 +1,9 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { SectionHeader } from '../components/layout/SectionHeader';
-import CurriculumImage from '../assets/images/curriculum-page-1.png';
+import LightCurriculumImage from '../assets/images/light-curriculum.png';
+import HVACCurriculumImage from '../assets/images/curriculum-page-1.png';
+import WiringCurriculumImage from '../assets/images/wiring-curriculum.png';
 import { ImagePanel } from '@components/blocks/panels/ImagePanel';
 import { AccordionPanel } from '@components/blocks/panels/AccordionPanel';
 import { Block } from '@components/blocks/block/Block';
@@ -12,24 +14,24 @@ const Curriculum: React.FC = () => {
       <SectionHeader>Curriculum</SectionHeader>
       <Block blockTitle="↳Python & Lighting Controls" paddingY="0px">
         <ImagePanel
-          imageSrc={CurriculumImage}
+          imageSrc={LightCurriculumImage}
           imageAlt="Python & Lighting Image"
           dropShadow
         />
         <AccordionPanel
           accordionItems={[
             {
-              title: `Lesson Objectives`,
+              title: `Learning Objectives`,
               textItems: [
-                `Learners will use Python to write their first piece of code for controlling LED lights.`,
-                `Learners will build upon their understanding of Python to write new code using basic lighting control strategies.`,
-                `Learners will develop their skills using Python to control lighting including use of tools (watt meter, heat meter, and various light bulbs).`,
-                `Learners will build upon their understanding of lighting controls and will be introduced to the criteria for the unit project.`,
-                `Learners will review key concepts around lighting controls and LCA certification as well as work on the light show unit project.`,
-                `Learners will begin the process of obtaining LCA certification and prepare their light show unit project presentations.`,
-                `Learners will review coding and lighting concepts from previous lessons, and continue work on the light show unit project.`,
-                `Learners will participate in S+J Communication Self Assessment and light show unit project presentations.`,
-                `Learners will present their light show unit project.`,
+                `Write first lines of Python code to control LED lights.`,
+                `Expand Python knowledge by programming basic lighting control strategies.`,
+                `Use Python with tools like watt meters, heat meters, and various light bulbs to control lighting.`,
+                `Build on understanding of lighting controls and get introduced to unit project criteria.`,
+                `Review core lighting control concepts and LCA certification topics while advancing the light show unit project.`,
+                `Begin the LCA certification process and prepare to present the light show unit project.`,
+                `Revisit key coding and lighting concepts while continuing work on the light show unit project.`,
+                `Complete the S+J Communication Self-Assessment and present the light show unit project.`,
+                `Present the completed light show unit project.`,
               ],
               expanded: true,
             },
@@ -66,23 +68,23 @@ const Curriculum: React.FC = () => {
         topBorder
       >
         <ImagePanel
-          imageSrc={CurriculumImage}
+          imageSrc={HVACCurriculumImage}
           imageAlt="Focus 1 Image"
           dropShadow
         />
         <AccordionPanel
           accordionItems={[
             {
-              title: `Lesson Objectives`,
+              title: `Learning Objectives`,
               textItems: [
-                `Learners will be introduced to HVAC by exploring the concept of heat transfer, the refrigeration cycle, and what EPA certification means in this industry.`,
-                `Learners will review the refrigeration cycle from the previous lesson and gain further insight into obtaining EPA certification.`,
-                `Learners will spend class time reviewing key concepts in HVAC, work in groups to present their findings, and prep for EPA certification`,
-                `Learners will spend class time reviewing key concepts in HVAC, prep for EPA certification, and work on LinkedIn and jobsearch prep.`,
-                `Learners will be introduced to the concept of recovery in a refrigeration system and will continue studying for EPA certification`,
-                `Learners take the EPA 608 exam`,
-                `Learners are introduced to heat pumps, boiler systems and cooling tower systems and prepare for EPA 608 retesting (if needed)`,
-                `Learners will review what they learned about heat pumps, boiler systems, and cooling tower systems and prepare for EPA 608 retesting (if needed)`,
+                `Explore the concept of heat transfer, the refrigeration cycle, and the role of EPA certification in the HVAC industry.`,
+                `Review the refrigeration cycle and gain deeper insight into obtaining EPA certification.`,
+                `Review key HVAC concepts, collaborate in groups to present findings, and prepare for EPA certification.`,
+                `Continue HVAC concept review, prepare for EPA certification, and work on LinkedIn and job search readiness.`,
+                `Learn about recovery in refrigeration systems and continue EPA certification prep.`,
+                `Take the EPA 608 exam.`,
+                `Get introduced to heat pumps, boiler systems, and cooling tower systems while preparing for potential EPA 608 retesting.`,
+                `Review heat pumps, boiler systems, and cooling tower systems in preparation for EPA 608 retesting (if needed).`,
               ],
               expanded: true,
             },
@@ -120,28 +122,26 @@ const Curriculum: React.FC = () => {
         topBorder
       >
         <ImagePanel
-          imageSrc={CurriculumImage}
+          imageSrc={WiringCurriculumImage}
           imageAlt="Focus 1 Image"
           dropShadow
         />
         <AccordionPanel
           accordionItems={[
             {
-              title: `Lesson Objectives`,
+              title: `Learning Objectives`,
               textItems: [
-                `Learners will do some resume building before being introduced to Niagara and daily report protocol.`,
-                `Learners will start working on Niagara labs to develop knowledge of BAS software`,
-                `Learners will do a wiring activity to demonstrate their understanding of Ohm’s law and how electricity travels.`,
-                `Learners will participate in a wire stripping competition to build and practice wiring skills.`,
-                `Learners will work with their Durst Project Groups to prepare their presentations and make progress with their Niagara labs.`,
-                `Learners will be provided with an overview of air handling units to gain a deeper understanding of facility operations, continue work with Durst Project Groups and continue Niagara Labs`,
-                `Learners will continue building their resumes, further their work in their Durst Project Groups, and make progress with Niagara labs.`,
-                `Learners will work in groups to present their Durst Project Groups research findings to add to our collective understanding of how the Sven Durst Residential Tower (and other buildings like it) functions and continue making progress on Niagara labs.`,
-                `Learners will take some time to work on LinkedIn Profiles and Resume Building so they can be successful when seeking work in the BAS field`,
-                `Learners will draw a wiring diagram to demonstrate their understanding of electrical currents and wiring.`,
-                `Learners will work in groups to analyze a wiring diagram so they can use it in a wiring simulation activity and will select their job fair group for the final presentation.`,
-                `Learners will conclude the final labs in Niagara workbench and begin working in their job fair groups for the final presentation.`,
-                `Learner presentations, graduation ceremony and networking event`,
+                `Develop and polish a professional resume tailored to the building automation industry.`,
+                `Begin working on Niagara labs to develop knowledge of BAS software.`,
+                `Complete a wiring and multimeter activity to demonstrate understanding of Ohm’s law. `,
+                `Participate in a wire stripping competition to build and practice wiring skills.`,
+                `Collaborate with Durst Project Groups to prepare presentations.`,
+                `Receive an overview of air handling units to gain deeper understanding of facility operations.`,
+                `Present Durst Project Group research findings to deepen collective understanding of the Sven Durst Residential Tower (and similar buildings).`,
+                `Work on their LinkedIn profiles to support success in the BAS job market.`,
+                `Draw a wiring diagram to demonstrate understanding of electrical currents and wiring.`,
+                `Conclude final labs in Niagara Workbench.`,
+                `Present final projects, participate in the graduation ceremony, and engage in a networking event.`,
               ],
               expanded: true,
             },
