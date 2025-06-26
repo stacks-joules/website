@@ -8,6 +8,7 @@ import { ImagePanel } from '@components/blocks/panels/ImagePanel';
 import { AccordionPanel } from '@components/blocks/panels/AccordionPanel';
 import { Block } from '@components/blocks/block/Block';
 import { Buffer } from '@components/common/Buffer';
+
 const Curriculum: React.FC = () => {
   return (
     <Layout>
