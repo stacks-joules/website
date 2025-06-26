@@ -5,8 +5,7 @@ import { Block } from '../components/blocks/block/Block';
 import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
-
-import floatwrenchbolt from '../assets/images/floatwrenchbolt.png';
+import aboutstacks1 from '../assets/images/aboutstacks1.png';
 import spooner from '../assets/images/spooner.png';
 
 const About: React.FC = () => {
@@ -15,7 +14,7 @@ const About: React.FC = () => {
       <SectionHeader>About</SectionHeader>
       <Block variation="dark">
         <ImagePanel
-          imageSrc={floatwrenchbolt}
+          imageSrc={aboutstacks1}
           imageAlt="Picture of 3d Stacks+Joules logo"
           dropShadow
         />
@@ -44,10 +43,7 @@ const About: React.FC = () => {
       </Block>
       <Block variation="dark">
         <TextPanel title="The Team" description="The Team" />
-        <ImagePanel
-          imageSrc={floatwrenchbolt}
-          imageAlt="Picture of Jon Spooner"
-        />
+        <ImagePanel imageSrc={aboutstacks1} imageAlt="Picture of Jon Spooner" />
       </Block>
     </Layout>
   );
