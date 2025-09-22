@@ -10,6 +10,11 @@ const config: GatsbyConfig = {
     description: `Stacks+Joules is a nonprofit project-based learning program`,
     siteUrl: `https://stacksandjoules.org`, // Required for sitemap
     author: `Stacks+Joules`,
+    ogImage: `/og-image.png`,
+    ogType: `website`,
+    ogTitle: `Stacks+Joules`,
+    ogDescription: `Welcome to Stacks + Joules. Bridging the tech opportunity gap with a specialized curriculum in computer programming for building automation controls.`,
+    twitterUsername: `@StacksAndJoules`,
   },
   plugins: [
     `gatsby-plugin-pnpm`,
