@@ -10,6 +10,8 @@ export const Navigation: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const donationLink = `https://giving.classy.org/campaign/700902/donate`;
+
   // Handle scroll events
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +49,7 @@ export const Navigation: React.FC = () => {
           </div>
           <div className={styles.leftNav}>
             <NavLink to="/about">About</NavLink>
-            <NavLink to="/team">Meet the Team</NavLink>
+            <NavLink to="/team">Our Team</NavLink>
             <NavLink to="/curriculum">Curriculum</NavLink>
             <NavLink to="/become-a-student">Become A Student</NavLink>
             <NavLink to="/employment-partnerships">
@@ -56,7 +58,7 @@ export const Navigation: React.FC = () => {
             <NavLink to="/support-mentors">Support/Mentor</NavLink>
           </div>
           <div className={styles.rightNav}>
-            <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698">
+            <a href={donationLink}>
               <Button>Donate</Button>
             </a>
           </div>
@@ -79,7 +81,7 @@ export const Navigation: React.FC = () => {
           <div onClick={() => setMenuOpen(false)}>
             <NavLink to="/">Home</NavLink>
           </div>
-          <NavLink to="/team">The Team</NavLink>
+          <NavLink to="/team">Our Team</NavLink>
           <NavLink to="/curriculum">Curriculum</NavLink>
           <NavLink to="/employment-partnerships">
             Employment Partnerships
@@ -88,7 +90,7 @@ export const Navigation: React.FC = () => {
             <NavLink to="/become-a-student" className={styles.button}>
               <Button color="white">BECOME A STUDENT</Button>
             </NavLink>
-            <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=EWURTCSUVJVRL&source=url&ssrt=1746457691698">
+            <a href={donationLink}>
               <Button>Donate</Button>
             </a>
           </div>

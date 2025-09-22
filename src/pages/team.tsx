@@ -66,7 +66,7 @@ const teamCards2 = [
 const Team: React.FC = () => {
   return (
     <Layout>
-      <SectionHeader>Meet The Team</SectionHeader>
+      <SectionHeader>Our Team</SectionHeader>
       <Block variation="dark">
         <ImagePanel
           imageSrc={conway}
