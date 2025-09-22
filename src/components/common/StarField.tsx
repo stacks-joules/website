@@ -15,12 +15,52 @@ export const Starfield: React.FC<{
   children?: React.ReactNode;
   warpSpeed?: boolean;
   position?: CSSProperties['position'];
-}> = ({ children, warpSpeed = false, position = `absolute` }) => {
+  /** Optional tint color for the wrenchbolt icon (e.g. '#6cf', 'gold', 'rgb(255,0,0)') */
+  iconColor?: string;
+}> = ({ children, warpSpeed = false, position = `absolute`, iconColor }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const starsRef = useRef<Star[]>([]);
   const imageRef = useRef<HTMLImageElement | null>(null);
+  const tintedCanvasRef = useRef<HTMLCanvasElement | null>(null); // NEW
   const animationRef = useRef<number | null>(null);
 
+  // Helper: (re)build the tinted canvas using the current image + color
+  const rebuildTintedCanvas = (color?: string) => {
+    const img = imageRef.current;
+    if (!img) return;
+
+    // If no color provided, clear tinted canvas so we fall back to the original
+    if (!color) {
+      tintedCanvasRef.current = null;
+      return;
+    }
+
+    const w = img.naturalWidth || img.width;
+    const h = img.naturalHeight || img.height;
+    if (w === 0 || h === 0) return;
+
+    const off = document.createElement(`canvas`);
+    off.width = w;
+    off.height = h;
+    const offCtx = off.getContext(`2d`);
+    if (!offCtx) return;
+
+    // 1) Draw the original image
+    offCtx.clearRect(0, 0, w, h);
+    offCtx.drawImage(img, 0, 0, w, h);
+
+    // 2) Use source-in to keep the image's alpha but replace its color
+    offCtx.globalCompositeOperation = `source-in`;
+    offCtx.fillStyle = color;
+    offCtx.fillRect(0, 0, w, h);
+
+    // 3) Reset composite op just in case
+    offCtx.globalCompositeOperation = `source-over`;
+
+    tintedCanvasRef.current = off;
+  };
+
+  // Load the base image once
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -32,6 +72,9 @@ export const Starfield: React.FC<{
     starImage.src = wrenchbolt;
     starImage.onload = () => {
       imageRef.current = starImage;
+
+      // Build initial tinted canvas (if color provided)
+      rebuildTintedCanvas(iconColor);
 
       // Initialize stars once
       const stars = createStars(MAX_STARS);
@@ -56,6 +99,11 @@ export const Starfield: React.FC<{
         ctx.fillStyle = warpSpeed ? `rgba(0, 16, 32, 0.01)` : `#001020`;
         ctx.fillRect(0, 0, width, height);
 
+        const sourceBitmap =
+          iconColor && tintedCanvasRef.current
+            ? tintedCanvasRef.current
+            : imageRef.current;
+
         starsRef.current = starsRef.current.map((star) => {
           const speed = warpSpeed ? 5 : 5;
           const newZ = star.z - speed;
@@ -74,9 +122,10 @@ export const Starfield: React.FC<{
           const screenY = centerY + star.y * scale;
           const size = scale * 10;
 
-          if (imageRef.current) {
+          if (sourceBitmap) {
             ctx.globalAlpha = star.opacity;
-            ctx.drawImage(imageRef.current, screenX, screenY, size, size);
+            ctx.drawImage(sourceBitmap, screenX, screenY, size, size);
+            ctx.globalAlpha = 1; // reset
           }
 
           return {
@@ -95,7 +144,14 @@ export const Starfield: React.FC<{
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
-  }, [warpSpeed]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [warpSpeed]); // keep same deps as before
+
+  // Rebuild tinted canvas whenever iconColor changes (after image is loaded)
+  useEffect(() => {
+    if (imageRef.current) rebuildTintedCanvas(iconColor);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [iconColor]);
 
   const createStars = (count: number): Star[] => {
     const canvas = canvasRef.current;

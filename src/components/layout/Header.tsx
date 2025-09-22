@@ -20,7 +20,7 @@ export const Header: React.FC<{ color?: string }> = () => {
   if (showStars) {
     return (
       <div className={styles.header}>
-        <Starfield position="relative">
+        <Starfield position="relative" iconColor="#fd3abb">
           <Logo center absolute handleClick={() => setShowStars(!showStars)} />
         </Starfield>
       </div>
