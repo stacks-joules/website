@@ -51,7 +51,7 @@
 }
 
 .accordionItemText.expanded {
-  max-height: 500px; /* Set a large enough value to accommodate your content */
+  max-height: 1000px; /* Set a large enough value to accommodate your content */
   opacity: 1;
 }
 
