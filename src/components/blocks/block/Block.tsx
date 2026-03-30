@@ -25,10 +25,6 @@ export const Block: React.FC<BlockProps> = ({
 }) => {
   const themeClass = variation ? themes[variation] : ``;
 
-  // Check if children is an array and has less than 2 items
-  const childrenArray = React.Children.toArray(children);
-  const hasSingleChild = childrenArray.length < 2;
-
   return (
     <>
       <div
@@ -38,17 +34,7 @@ export const Block: React.FC<BlockProps> = ({
         <Container>
           {topBorder && <hr />}
           {blockTitle && <h4 className={styles.blockTitle}>{blockTitle}</h4>}
-          {/* Set flex direction based on number of children */}
-          {hasSingleChild ? (
-            <div
-              className={styles.innerBlock}
-              style={{ flexDirection: `column` }}
-            >
-              {children}
-            </div>
-          ) : (
-            <div className={styles.innerBlock}>{children}</div>
-          )}
+          <div className={styles.innerBlock}>{children}</div>
         </Container>
       </div>
     </>
