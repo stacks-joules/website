@@ -1,13 +1,54 @@
 import React from 'react';
-import EmploymentPartnerships from '../components/EmploymentPartnerships';
 import Layout from '../components/layout/Layout';
+import { SectionHeader } from '../components/layout/SectionHeader';
+import { Block } from '../components/blocks/block/Block';
+import { TextPanel } from '../components/blocks/panels/TextPanel';
+import { ImagePanel } from '../components/blocks/panels/ImagePanel';
+import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
+import CardTwo from '../assets/images/card-2.png';
+import TeamImage from '../assets/images/team.png';
 
-const BecomeAStudent: React.FC = () => {
+const EmploymentPartnerships: React.FC = () => {
   return (
     <Layout>
-      <EmploymentPartnerships />
+      <SectionHeader>Employment Partnerships</SectionHeader>
+      <Block variation="dark">
+        <ImagePanel
+          imageSrc={CardTwo}
+          imageAlt="Students working with building automation equipment"
+          dropShadow
+        />
+        <MarkupPanel>
+          <p>
+            <b>Stacks+Joules</b> partners with leading employers in building
+            automation to connect our graduates with real career opportunities.
+            Our employment partnerships ensure that students transition from
+            training into meaningful, well-paying jobs in the growing smart
+            building industry.
+          </p>
+        </MarkupPanel>
+      </Block>
+      <Block variation="light">
+        <TextPanel
+          title="How It Works"
+          description="Industry partners work directly with our program — hosting facility tours, mentoring students, conducting mock interviews, and hiring graduates into entry-level building automation roles. Our graduates arrive job-ready with Python coding skills, EPA 608 certification, Niagara Workbench experience, and hands-on low-voltage wiring training."
+        />
+        <ImagePanel
+          imageSrc={TeamImage}
+          imageAlt="Stacks+Joules team and industry partners"
+          dropShadow
+        />
+      </Block>
+      <Block variation="dark">
+        <TextPanel
+          title="Become a Partner"
+          description="We're always looking for forward-thinking companies in building automation, HVAC, and smart building technology to join our network. Partners gain access to a pipeline of trained, motivated talent ready to contribute from day one."
+          buttonText="GET IN TOUCH"
+          buttonLink="/support-mentors"
+        />
+      </Block>
     </Layout>
   );
 };
 
-export default BecomeAStudent;
+export default EmploymentPartnerships;

@@ -81,11 +81,13 @@ export const Navigation: React.FC = () => {
           <div onClick={() => setMenuOpen(false)}>
             <NavLink to="/">Home</NavLink>
           </div>
+          <NavLink to="/about">About</NavLink>
           <NavLink to="/team">Our Team</NavLink>
           <NavLink to="/curriculum">Curriculum</NavLink>
           <NavLink to="/employment-partnerships">
             Employment Partnerships
           </NavLink>
+          <NavLink to="/support-mentors">Support/Mentor</NavLink>
           <div className={styles.buttonContainer}>
             <NavLink to="/become-a-student" className={styles.button}>
               <Button color="white">BECOME A STUDENT</Button>

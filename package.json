@@ -86,6 +86,9 @@
     "vitest": "0.31.0"
   },
   "overrides": {
-  "path-to-regexp": "^1.7.0"
+  "path-to-regexp": "0.1.12",
+  "express": {
+    "path-to-regexp": "0.1.12"
+  }
 }
 }

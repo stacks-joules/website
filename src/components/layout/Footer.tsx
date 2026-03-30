@@ -5,7 +5,7 @@ import { Container } from './Container';
 export const Footer: React.FC = () => {
   return (
     <div className={styles.footer}>
-      <Container>Stacks and Joules © 2025</Container>
+      <Container>Stacks and Joules © {new Date().getFullYear()}</Container>
     </div>
   );
 };
