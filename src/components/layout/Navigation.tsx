@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import * as styles from './Navigation.module.css';
 import NavLink from '../common/NavLink';
-import wrenchboltLogo from '../../assets/images/wrenchbolt.svg';
-import backArrow from '../../assets/images/back-arrow.svg';
+import wrenchboltLogoImport from '../../assets/images/wrenchbolt.svg';
+import backArrowImport from '../../assets/images/back-arrow.svg';
 import { Container } from './Container';
 import { Button } from '../common/Button';
+
+const wrenchboltLogo =
+  typeof wrenchboltLogoImport === `string`
+    ? wrenchboltLogoImport
+    : (wrenchboltLogoImport as any).src;
+const backArrow =
+  typeof backArrowImport === `string`
+    ? backArrowImport
+    : (backArrowImport as any).src;
 
 export const Navigation: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);

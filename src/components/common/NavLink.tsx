@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import * as styles from './NavLink.module.css';
 
 interface NavLinkProps {
@@ -9,14 +8,18 @@ interface NavLinkProps {
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ to, children, className }) => {
+  const isActive =
+    typeof window !== `undefined` &&
+    (window.location.pathname === to || window.location.pathname === `${to}/`);
+
   return (
-    <Link
-      to={to}
+    <a
+      href={to}
       className={`${styles.navLink} ${className || ``}`}
-      activeClassName="active"
+      aria-current={isActive ? `page` : undefined}
     >
       {children}
-    </Link>
+    </a>
   );
 };
 

@@ -1,13 +1,7 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "target": "es6",
-    "module": "esnext",
-    "moduleResolution": "node",
     "jsx": "react-jsx",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
@@ -19,5 +13,5 @@
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "public", ".cache"]
+  "exclude": ["node_modules", "dist", ".astro"]
 }

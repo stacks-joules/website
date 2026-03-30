@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import * as styles from './Card.module.css';
 import { Button } from '../../common/Button';
+
 interface CardProps {
   border?: boolean;
   headerText?: string;
@@ -51,9 +51,9 @@ export const Card: React.FC<CardProps> = ({
 
       {buttonText && (
         <div>
-          <Link to={buttonLink ?? ``} style={{ textDecoration: `none` }}>
+          <a href={buttonLink ?? ``} style={{ textDecoration: `none` }}>
             <Button color="white">{buttonText}</Button>
-          </Link>
+          </a>
         </div>
       )}
     </div>

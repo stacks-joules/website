@@ -1,0 +1,60 @@
+---
+import '../styles/fonts.css';
+import '../styles/global.css';
+import { siteMetadata } from '../data/site';
+import { HeaderIsland } from '../components/layout/HeaderIsland';
+import { Navigation } from '../components/layout/Navigation';
+import { ContactSection } from '../components/sections/ContactSection';
+import { Footer } from '../components/layout/Footer';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = siteMetadata.title,
+  description = siteMetadata.description,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={siteMetadata.ogTitle} />
+    <meta property="og:description" content={siteMetadata.ogDescription} />
+    <meta property="og:type" content={siteMetadata.ogType} />
+    <meta property="og:image" content={siteMetadata.ogImage} />
+    <meta property="og:url" content={siteMetadata.siteUrl} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={siteMetadata.twitterUsername} />
+    <meta name="twitter:title" content={siteMetadata.ogTitle} />
+    <meta name="twitter:description" content={siteMetadata.ogDescription} />
+
+    <!-- Font preload -->
+    <link
+      rel="preload"
+      href="/fonts/inter-latin-100-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <HeaderIsland client:load />
+    <Navigation client:load />
+    <main>
+      <slot />
+    </main>
+    <ContactSection client:visible />
+    <Footer />
+  </body>
+</html>

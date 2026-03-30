@@ -1,6 +1,13 @@
-import React, { useEffect, useRef, CSSProperties } from 'react';
+import React, { useEffect, useRef } from 'react';
+import type { CSSProperties } from 'react';
 import * as styles from './StarField.module.css';
-import wrenchbolt from '../../assets/images/wrenchbolt.svg';
+import wrenchboltImport from '../../assets/images/wrenchbolt.svg';
+
+// Astro/Vite image imports return {src: string} objects; handle both formats
+const wrenchbolt =
+  typeof wrenchboltImport === `string`
+    ? wrenchboltImport
+    : (wrenchboltImport as any).src;
 
 const MAX_STARS = 500;
 
