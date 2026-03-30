@@ -91,14 +91,14 @@ const teamCards2 = [
       dropShadow
     />
   </Block>
-  <Block variation="light">
+  <Block variation="light" singleColumn>
     <CardContainer>
       {teamCards.map((card) => (
         <Card key={card.contentTitle} {...card} />
       ))}
     </CardContainer>
   </Block>
-  <Block variation="light">
+  <Block variation="light" singleColumn>
     <CardContainer>
       {teamCards2.map((card) => (
         <Card key={card.contentTitle} {...card} />

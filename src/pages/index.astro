@@ -98,7 +98,7 @@ const infographicCards = [
       dropShadow
     />
   </Block>
-  <Block variation="light">
+  <Block variation="light" singleColumn>
     <CardContainer>
       {cards.map((card) => (
         <Card key={card.headerText} {...card} />
@@ -120,7 +120,7 @@ const infographicCards = [
     title="↳ Student Success"
     cards={infographicCards}
   />
-  <Block variation="light" paddingY="0px">
+  <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
       title="↳ Curriculum"
       description="We have developed our practical curriculum through continuous collaboration with BELLEDS Technologies based at MIT and Rose-Hulman Institute of Technology in Terra Haute, Indiana."

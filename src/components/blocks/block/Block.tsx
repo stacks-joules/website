@@ -14,6 +14,7 @@ interface BlockProps {
   paddingY?: string;
   blockTitle?: string;
   topBorder?: boolean;
+  singleColumn?: boolean;
 }
 
 export const Block: React.FC<BlockProps> = ({
@@ -22,8 +23,12 @@ export const Block: React.FC<BlockProps> = ({
   blockTitle,
   paddingY = `80px`,
   topBorder = false,
+  singleColumn = false,
 }) => {
   const themeClass = variation ? themes[variation] : ``;
+  const layoutClass = singleColumn
+    ? styles.innerBlockColumn
+    : styles.innerBlock;
 
   return (
     <>
@@ -34,7 +39,7 @@ export const Block: React.FC<BlockProps> = ({
         <Container>
           {topBorder && <hr />}
           {blockTitle && <h4 className={styles.blockTitle}>{blockTitle}</h4>}
-          <div className={styles.innerBlock}>{children}</div>
+          <div className={layoutClass}>{children}</div>
         </Container>
       </div>
     </>

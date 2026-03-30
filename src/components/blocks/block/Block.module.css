@@ -29,6 +29,12 @@
   justify-content: space-between;
 }
 
+.innerBlockColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media (max-width: 768px) {
   .block {
     padding: 0px !important;
