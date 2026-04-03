@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { SectionHeader } from '../components/layout/SectionHeader';
 import { Block } from '../components/blocks/block/Block';
 import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
+import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 ---
 
 <Layout
@@ -21,10 +22,19 @@ import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
       <h3>How is the program funded?</h3>
       <p>Stacks+Joules is funded through grants and partnerships, including support from NYSERDA. There is no cost to students — no tuition, no income share agreement, and no fees of any kind.</p>
     </MarkupPanel>
+  <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
   </Block>
 
   <Block variation="light">
-      <div></div>
+      <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
     <MarkupPanel>
       <h2>Eligibility</h2>
       <h3>Who can apply?</h3>
@@ -56,10 +66,19 @@ import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
       <h3>What cities does Stacks+Joules currently operate in?</h3>
       <p>Stacks+Joules currently runs programs in New York City and Charlotte, NC. The Charlotte program launched its first cohort in March 2026.</p>
     </MarkupPanel>
+  <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
   </Block>
 
   <Block variation="light">
-      <div></div>
+      <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
     <MarkupPanel>
       <h2>What You'll Learn</h2>
       <h3>What skills does the program teach?</h3>

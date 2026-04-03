@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import { SectionHeader } from '../components/layout/SectionHeader';
 import { Block } from '../components/blocks/block/Block';
 import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
+import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 ---
 
 <Layout
@@ -23,5 +24,10 @@ import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
       <p>Charlotte is one of the strongest building automation markets in the country. Honeywell, Trane Technologies, and Siemens all have major operations in the region. The program is completely free — no tuition, no fees, no income share agreements.</p>
       <p><a href="/charlotte-building-automation-training">Learn more about the Charlotte program →</a></p>
     </MarkupPanel>
+  <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
   </Block>
 </Layout>

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { SectionHeader } from '../components/layout/SectionHeader';
 import { Block } from '../components/blocks/block/Block';
 import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
+import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 ---
 
 <Layout
@@ -15,10 +16,19 @@ import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
     <MarkupPanel>
       <p>New York City has nearly one million buildings. Most of them run on automated systems that control heating, cooling, lighting, and ventilation. Someone has to install those systems, program them, and keep them running. Right now, there aren't enough people who know how. That's the gap Stacks+Joules exists to fill.</p>
     </MarkupPanel>
+  <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
   </Block>
 
   <Block variation="light">
-      <div></div>
+      <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
     <MarkupPanel>
       <h2>What the NYC Program Covers</h2>
       <p>Stacks+Joules runs a free, 14-week building automation training program in New York City at Henry Street Settlement on the Lower East Side. The program is open to anyone ages 18–24. No prior experience required. No tuition. No catch.</p>
@@ -44,10 +54,19 @@ import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
       <p>The industry was already short-staffed before LL97. The average BAS technician in the U.S. is in their mid-50s. Retirements are accelerating. New York City's building stock is massive and aging. The math is straightforward: too many buildings, not enough trained people, and a law that says the work has to get done.</p>
       <p>This isn't a pitch. It's arithmetic.</p>
     </MarkupPanel>
+  <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
   </Block>
 
   <Block variation="light">
-      <div></div>
+      <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
     <MarkupPanel>
       <h2>Who's Hiring in New York City</h2>
       <p>Stacks+Joules graduates in NYC have gone to work for employers including:</p>
@@ -67,10 +86,19 @@ import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
       <h2>What the Money Looks Like in NYC</h2>
       <p>Entry-level BAS technicians in New York City start at $28–32 per hour. That's $58,000–$66,000 a year before overtime. Mid-career technicians with 3–5 years of experience earn $35–50 per hour. Senior engineers and project managers make $50–70+ per hour.</p>
     </MarkupPanel>
+  <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
   </Block>
 
   <Block variation="light">
-      <div></div>
+      <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
     <MarkupPanel>
       <h2>What Makes This Different</h2>
       <p>The program was built by people who work in building automation — not by a workforce development committee. The curriculum tracks to what NYC BAS employers tell us they need. The instructors have field experience. The employer partnerships are real, not aspirational.</p>
@@ -84,5 +112,10 @@ import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
       <p>Stacks+Joules is a 501(c)(3) nonprofit. The New York City program is completely free for accepted students. If you're 18–24 and ready to learn a skilled trade that pays well and has a future in New York City, apply now.</p>
       <p><a href="https://www.henrystreet.org/bast" target="_blank" rel="noopener noreferrer">Apply at henrystreet.org/bast →</a></p>
     </MarkupPanel>
+  <ImagePanel
+      imageSrc="https://migrate-astro--stacksjoules.netlify.app/_astro/student-photo-1.C5ij5Y6D.png"
+      imageAlt="Stacks+Joules student"
+      dropShadow
+    />
   </Block>
 </Layout>
