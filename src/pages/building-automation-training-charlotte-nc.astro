@@ -1,0 +1,27 @@
+---
+// Duplicate URL — canonical is /charlotte-building-automation-training
+// Add to astro.config.mjs: redirects: { '/building-automation-training-charlotte-nc': '/charlotte-building-automation-training' }
+import Layout from '../layouts/Layout.astro';
+import { SectionHeader } from '../components/layout/SectionHeader';
+import { Block } from '../components/blocks/block/Block';
+import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
+---
+
+<Layout
+  title="Building Automation Training in Charlotte, NC | Stacks+Joules"
+  description="Free 14-week BAS training program launching in Charlotte, NC. First cohort March 2026. No experience required. In partnership with Goodwill."
+>
+  <head slot="head">
+    <link rel="canonical" href="/charlotte-building-automation-training" />
+  </head>
+
+  <SectionHeader>Building Automation Training in Charlotte, NC</SectionHeader>
+
+  <Block variation="dark">
+    <MarkupPanel>
+      <p>Stacks+Joules is launching a free, 14-week building automation training program in Charlotte, NC — the first of its kind in the market. The first cohort launches March 30, 2026, in partnership with Goodwill.</p>
+      <p>Charlotte is one of the strongest building automation markets in the country. Honeywell, Trane Technologies, and Siemens all have major operations in the region. The program is completely free — no tuition, no fees, no income share agreements.</p>
+      <p><a href="/charlotte-building-automation-training">Learn more about the Charlotte program →</a></p>
+    </MarkupPanel>
+  </Block>
+</Layout>

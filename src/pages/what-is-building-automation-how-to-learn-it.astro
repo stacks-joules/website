@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SectionHeader } from '../components/layout/SectionHeader';
+import { Block } from '../components/blocks/block/Block';
+import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
+---
+
+<Layout
+  title="What Is Building Automation — and How Do You Learn It? | Stacks+Joules"
+  description="Building automation is the technology that makes modern buildings run efficiently. Here's what it does, what the jobs look like, and how to actually learn it."
+>
+  <SectionHeader>What Is Building Automation — and How Do You Learn It?</SectionHeader>
+
+  <Block variation="dark">
+    <MarkupPanel>
+      <p>Building automation is the technology that makes modern buildings run efficiently. It's the system that adjusts your office's temperature without someone touching a thermostat, that dims lights when a room is empty, that alerts a technician before an HVAC unit fails.</p>
+      <p>And it's one of the fastest-growing skilled career fields in the country.</p>
+    </MarkupPanel>
+  </Block>
+
+  <Block variation="light">
+    <MarkupPanel>
+      <h2>What Building Automation Actually Does</h2>
+      <p>A BAS (building automation system) is a network of sensors, controllers, and software that monitors and manages a building's mechanical and electrical systems:</p>
+      <p><strong>HVAC</strong> — Reads temperature sensors, occupancy data, and outdoor conditions and adjusts heating and cooling accordingly.</p>
+      <p><strong>Lighting</strong> — Adjusts brightness based on time of day, occupancy, daylight levels, and scheduled programming.</p>
+      <p><strong>Air quality and ventilation</strong> — CO₂ sensors, humidity monitors, and fresh air systems all feed into the BAS.</p>
+      <p><strong>Energy monitoring</strong> — Tracks energy consumption at a granular level, flagging waste and informing efficiency decisions.</p>
+      <p><strong>Integration</strong> — In large commercial buildings, the BAS integrates with fire systems, security, access control, elevators, and more. Niagara N4 is the most widely used integration platform.</p>
+    </MarkupPanel>
+  </Block>
+
+  <Block variation="dark">
+    <MarkupPanel>
+      <h2>What Building Automation Professionals Do</h2>
+      <p><strong>Field technicians</strong> install and maintain physical hardware — sensors, dampers, controllers, wiring. They troubleshoot systems and work with low-voltage electrical systems.</p>
+      <p><strong>Programmers and commissioning technicians</strong> work at the software layer — configuring Niagara or similar platforms, testing systems against specifications.</p>
+      <p><strong>Energy analysts</strong> use building data to identify performance issues and model efficiency improvements. This role is growing fast as FDD tools become standard.</p>
+    </MarkupPanel>
+  </Block>
+
+  <Block variation="light">
+    <MarkupPanel>
+      <h2>The Skills You Need to Learn</h2>
+      <p><strong>Electrical and mechanical basics</strong> — Low-voltage wiring, how HVAC systems work, how to read schematics.</p>
+      <p><strong>Controls logic</strong> — How to think about sequences of operation: if the temperature exceeds X, trigger Y.</p>
+      <p><strong>Networking and IT</strong> — Basic network literacy — subnets, IP addressing, BACnet and Modbus protocols. People with tech backgrounds have a natural edge here.</p>
+      <p><strong>Platform software</strong> — Niagara N4 (from Tridium/Honeywell) is the dominant platform. Other platforms include Distech, Automated Logic, Johnson Controls, and Siemens.</p>
+      <p><strong>Documentation</strong> — Bad documentation costs contractors real money. Documenting your work clearly is valued more than most people expect.</p>
+    </MarkupPanel>
+  </Block>
+
+  <Block variation="dark">
+    <MarkupPanel>
+      <h2>How to Actually Learn It</h2>
+      <h3>Free, Structured, Employment-Focused: Stacks+Joules</h3>
+      <p>The most direct path for people starting from zero is Stacks+Joules in New York City. The 14-week curriculum covers Python for building systems, LCA EE101 certification, HVAC and air handling, Niagara N4, low-voltage wiring, networking, EPA 608, and professional development.</p>
+      <p>Training uses real equipment — actual controllers, sensors, dampers, and building management systems. The Henry Street Settlement building on the Lower East Side is a living lab. After training: paid internship. After internship: job placement support. Free, ages 18–24.</p>
+      <h3>Vendor Training Programs</h3>
+      <p>Siemens, Trane, Johnson Controls, and Automated Logic run platform-specific programs. Valuable for deepening expertise but require existing BAS foundation first.</p>
+      <h3>Community College Programs</h3>
+      <p>Some community colleges offer HVAC/building technology programs that touch on BAS. Quality varies — research what local employers think before enrolling.</p>
+      <h3>On-the-Job Learning</h3>
+      <p>Starting at an HVAC company and migrating into controls over time. This works but is slow and unstructured.</p>
+    </MarkupPanel>
+  </Block>
+
+  <Block variation="light">
+    <MarkupPanel>
+      <h2>Why Building Automation Is Worth Pursuing</h2>
+      <p>This isn't a pitch. It's arithmetic. Local Law 97 requires large NYC buildings to cut emissions significantly. The existing BAS workforce is aging. A motivated person who gets real BAS training in 2025 or 2026 is entering a market where the demand is structural — not cyclical.</p>
+      <p><a href="https://www.henrystreet.org/bast" target="_blank" rel="noopener noreferrer">Apply at henrystreet.org/bast — free program, ages 18–24 in NYC →</a></p>
+    </MarkupPanel>
+  </Block>
+</Layout>
