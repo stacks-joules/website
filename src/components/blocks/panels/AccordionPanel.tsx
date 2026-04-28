@@ -21,14 +21,11 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
       <div
         className={styles.accordionItemHeader}
         onClick={toggle}
-        style={{ cursor: 'pointer' }}
+        style={{ cursor: `pointer` }}
       >
         <h3 className={styles.accordionItemTitle}>{title}</h3>
         <div onClick={(e) => e.stopPropagation()}>
-          <PlusSymbol
-            onClick={toggle}
-            expanded={isExpanded}
-          />
+          <PlusSymbol onClick={toggle} expanded={isExpanded} />
         </div>
       </div>
       <div
