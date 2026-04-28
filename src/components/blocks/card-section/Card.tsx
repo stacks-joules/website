@@ -39,7 +39,13 @@ export const Card: React.FC<CardProps> = ({
 
       {imageSrc && (
         <div>
-          <img src={imageSrc} alt={imageAlt} className={styles.cardImage} />
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            loading="lazy"
+            decoding="async"
+            className={styles.cardImage}
+          />
         </div>
       )}
 
