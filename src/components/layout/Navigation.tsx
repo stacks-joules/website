@@ -4,8 +4,8 @@ import NavLink from '../common/NavLink';
 import { Container } from './Container';
 import { Button } from '../common/Button';
 
-const wrenchboltLogo = '/images/wrenchbolt.svg';
-const backArrow = '/images/back-arrow.svg';
+const wrenchboltLogo = `/images/wrenchbolt.svg`;
+const backArrow = `/images/back-arrow.svg`;
 export const Navigation: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

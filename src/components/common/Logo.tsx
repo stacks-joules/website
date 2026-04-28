@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as styles from './Logo.module.css';
-const StacksLogo = '/images/stacks-logo.png';
-const MobileLogo = '/images/mobile-logo-pink.svg';
+const StacksLogo = `/images/stacks-logo.png`;
+const MobileLogo = `/images/mobile-logo-pink.svg`;
 interface LogoProps {
   center?: boolean;
   handleClick?: () => void;
