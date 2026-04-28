@@ -99,8 +99,8 @@ const infographicCards = [
   </Block>
   <Block variation="light" singleColumn>
     <CardContainer>
-      {cards.map((card) => (
-        <Card key={card.headerText} {...card} />
+      {cards.map(({ headerText, ...rest }) => (
+        <Card key={headerText} headerText={headerText} {...rest} />
       ))}
     </CardContainer>
   </Block>
@@ -124,8 +124,8 @@ const infographicCards = [
       title="↳ Curriculum"
       description="We have developed our practical curriculum through continuous collaboration with BELLEDS Technologies based at MIT and Rose-Hulman Institute of Technology in Terra Haute, Indiana."
     >
-      {curriculumCards.map((card) => (
-        <Card key={card.contentTitle} {...card} />
+      {curriculumCards.map(({ contentTitle, ...rest }) => (
+        <Card key={contentTitle} contentTitle={contentTitle} {...rest} />
       ))}
     </CardContainer>
   </Block>

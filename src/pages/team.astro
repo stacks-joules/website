@@ -92,15 +92,15 @@ const teamCards2 = [
   </Block>
   <Block variation="light" singleColumn>
     <CardContainer>
-      {teamCards.map((card) => (
-        <Card key={card.contentTitle} {...card} />
+      {teamCards.map(({ contentTitle, ...rest }) => (
+        <Card key={contentTitle} contentTitle={contentTitle} {...rest} />
       ))}
     </CardContainer>
   </Block>
   <Block variation="light" singleColumn>
     <CardContainer>
-      {teamCards2.map((card) => (
-        <Card key={card.contentTitle} {...card} />
+      {teamCards2.map(({ contentTitle, ...rest }) => (
+        <Card key={contentTitle} contentTitle={contentTitle} {...rest} />
       ))}
     </CardContainer>
   </Block>

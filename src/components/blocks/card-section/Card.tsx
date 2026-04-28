@@ -3,6 +3,8 @@ import * as styles from './Card.module.css';
 import { Button } from '../../common/Button';
 
 interface CardProps {
+  /** React reserved key — declared explicitly so TS allows it via spread */
+  key?: string;
   border?: boolean;
   headerText?: string;
   imageSrc?: string;
