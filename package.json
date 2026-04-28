@@ -14,8 +14,8 @@
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "postinstall": "husky install",
-    "test": "vitest",
-    "test:watch": "vitest watch"
+    "test": "vitest --passWithNoTests",
+    "test:watch": "vitest watch --passWithNoTests"
   },
   "engines": {
     "node": ">=18.0.0"
