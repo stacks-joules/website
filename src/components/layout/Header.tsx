@@ -6,7 +6,7 @@ import { Logo } from '../common/Logo';
 import { useTheme } from '../common/ThemeProvider';
 import { Starfield } from '@components/common/StarField';
 
-const backgroundImage = '/images/background-pink.png';
+const backgroundImage = `/images/background-pink.png`;
 export const Header: React.FC<{ color?: string }> = () => {
   // import color from ThemeProvider
   const { theme } = useTheme();

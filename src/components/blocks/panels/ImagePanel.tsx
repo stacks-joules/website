@@ -17,7 +17,7 @@ export const ImagePanel: React.FC<ImagePanelProps> = ({
       <img
         src={imageSrc}
         alt={imageAlt}
-        className={`${styles.image} ${dropShadow ? styles.dropShadow : ''}`}
+        className={`${styles.image} ${dropShadow ? styles.dropShadow : ``}`}
       />
     </div>
   );

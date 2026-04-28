@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import type { CSSProperties } from 'react';
 import * as styles from './StarField.module.css';
-const wrenchbolt = '/images/wrenchbolt.svg';
+const wrenchbolt = `/images/wrenchbolt.svg`;
 const MAX_STARS = 500;
 
 interface Star {
