@@ -11,9 +11,8 @@
 # testing
 /coverage
 
-# gatsby
+# gatsby (legacy — kept for branch hygiene)
 .cache/
-public/
 
 # production
 /build
