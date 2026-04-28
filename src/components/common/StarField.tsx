@@ -167,13 +167,13 @@ export const Starfield: React.FC<{
   };
 
   return (
-    <>
+    <div style={{ position: `relative`, width: `100%`, height: `100%` }}>
       <canvas
         className={styles.canvas}
         ref={canvasRef}
         style={{ position, top: 0, left: 0, width: `100%`, height: `100%` }}
       />
       {children}
-    </>
+    </div>
   );
 };
