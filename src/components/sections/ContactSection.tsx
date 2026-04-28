@@ -1,27 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import * as styles from './ContactSection.module.css';
 import { Logo } from '../common/Logo';
-import CityscapeImport from '../../assets/images/contact-image.png';
-import PhoneIconImport from '../../assets/images/phone-icon.svg';
-import LocationIconImport from '../../assets/images/location-icon.svg';
 import { Container } from '../layout/Container';
 import { Modal } from '../common/Modal';
 import { Button } from '../common/Button';
 import { SelectInput } from '../common/SelectInput';
 
-const Cityscape =
-  typeof CityscapeImport === `string`
-    ? CityscapeImport
-    : (CityscapeImport as any).src;
-const PhoneIcon =
-  typeof PhoneIconImport === `string`
-    ? PhoneIconImport
-    : (PhoneIconImport as any).src;
-const LocationIcon =
-  typeof LocationIconImport === `string`
-    ? LocationIconImport
-    : (LocationIconImport as any).src;
-
+const Cityscape = '/images/contact-image.png';
+const PhoneIcon = '/images/phone-icon.svg';
+const LocationIcon = '/images/location-icon.svg';
 interface ContactInfo {
   name: string;
   phone: string;

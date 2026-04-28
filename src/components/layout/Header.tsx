@@ -2,17 +2,11 @@ import React, { useEffect, useState } from 'react';
 import * as styles from './Header.module.css';
 import { NeuroNoiseBackground } from '../common/NeuroNoiseBackground';
 import { Logo } from '../common/Logo';
-import backgroundImageImport from '../../assets/images/background-pink.png';
 // Add an interface for the Logo component props
 import { useTheme } from '../common/ThemeProvider';
 import { Starfield } from '@components/common/StarField';
 
-// Astro/Vite image imports return {src: string} objects; handle both formats
-const backgroundImage =
-  typeof backgroundImageImport === `string`
-    ? backgroundImageImport
-    : (backgroundImageImport as any).src;
-
+const backgroundImage = '/images/background-pink.png';
 export const Header: React.FC<{ color?: string }> = () => {
   // import color from ThemeProvider
   const { theme } = useTheme();
