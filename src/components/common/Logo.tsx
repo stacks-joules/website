@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as styles from './Logo.module.css';
-import StacksLogoImport from '../../assets/images/stacks-logo.png';
-import MobileLogoImport from '../../assets/images/mobile-logo-pink.svg';
-
-// Astro/Vite image imports return {src: string} objects; handle both formats
-const StacksLogo =
-  typeof StacksLogoImport === `string`
-    ? StacksLogoImport
-    : (StacksLogoImport as any).src;
-const MobileLogo =
-  typeof MobileLogoImport === `string`
-    ? MobileLogoImport
-    : (MobileLogoImport as any).src;
-
+const StacksLogo = '/images/stacks-logo.png';
+const MobileLogo = '/images/mobile-logo-pink.svg';
 interface LogoProps {
   center?: boolean;
   handleClick?: () => void;

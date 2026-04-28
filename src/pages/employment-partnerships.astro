@@ -5,15 +5,15 @@ import { Block } from '../components/blocks/block/Block';
 import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
-import CardTwo from '../assets/images/card-2.png';
-import TeamImage from '../assets/images/team.png';
+const CardTwo = '/images/card-2.png';
+const TeamImage = '/images/team.png';
 ---
 
 <Layout title="Employment Partnerships | Stacks+Joules">
   <SectionHeader>Employment Partnerships</SectionHeader>
   <Block variation="dark">
     <ImagePanel
-      imageSrc={CardTwo.src}
+      imageSrc={CardTwo}
       imageAlt="Students working with building automation equipment"
       dropShadow
     />
@@ -33,7 +33,7 @@ import TeamImage from '../assets/images/team.png';
       description="Industry partners work directly with our program — hosting facility tours, mentoring students, conducting mock interviews, and hiring graduates into entry-level building automation roles. Our graduates arrive job-ready with Python coding skills, EPA 608 certification, Niagara Workbench experience, and hands-on low-voltage wiring training."
     />
     <ImagePanel
-      imageSrc={TeamImage.src}
+      imageSrc={TeamImage}
       imageAlt="Stacks+Joules team and industry partners"
       dropShadow
     />

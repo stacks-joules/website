@@ -3,7 +3,7 @@ export const siteMetadata = {
   description: `Stacks+Joules is a nonprofit project-based learning program in computer programming and wireless network management for building automation.`,
   siteUrl: `https://www.stacksandjoules.org`,
   author: `Stacks+Joules`,
-  ogImage: `/og-image.png`,
+  ogImage: `/images/og-image.png`,
   ogType: `website`,
   ogTitle: `Stacks+Joules`,
   ogDescription: `Welcome to Stacks + Joules. Bridging the tech opportunity gap with a specialized curriculum in computer programming for building automation controls.`,

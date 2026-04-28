@@ -4,13 +4,13 @@ import { Block } from '../components/blocks/block/Block';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 import { PaypalPanel } from '../components/blocks/panels/PaypalPanel';
 import { SectionHeader } from '../components/layout/SectionHeader';
-import donateImage from '../assets/images/donate-image.png';
+const donateImage = '/images/donate-image.png';
 ---
 
 <Layout title="Donate | Stacks+Joules">
   <SectionHeader>Make a donation</SectionHeader>
   <Block>
-    <ImagePanel imageSrc={donateImage.src} imageAlt="Donate" />
+    <ImagePanel imageSrc={donateImage} imageAlt="Donate" />
     <PaypalPanel />
   </Block>
 </Layout>

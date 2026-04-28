@@ -5,16 +5,16 @@ import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 import { AccordionPanel } from '../components/blocks/panels/AccordionPanel';
 import { Block } from '../components/blocks/block/Block';
 import { Buffer } from '../components/common/Buffer';
-import LightCurriculumImage from '../assets/images/light-curriculum.png';
-import HVACCurriculumImage from '../assets/images/curriculum-page-1.png';
-import WiringCurriculumImage from '../assets/images/wiring-curriculum.png';
+const LightCurriculumImage = '/images/light-curriculum.png';
+const HVACCurriculumImage = '/images/curriculum-page-1.png';
+const WiringCurriculumImage = '/images/wiring-curriculum.png';
 ---
 
 <Layout title="Curriculum | Stacks+Joules">
   <SectionHeader>Curriculum</SectionHeader>
   <Block blockTitle="↳Python & Lighting Controls" paddingY="0px">
     <ImagePanel
-      imageSrc={LightCurriculumImage.src}
+      imageSrc={LightCurriculumImage}
       imageAlt="Python & Lighting Image"
       dropShadow
     />
@@ -69,7 +69,7 @@ import WiringCurriculumImage from '../assets/images/wiring-curriculum.png';
     topBorder
   >
     <ImagePanel
-      imageSrc={HVACCurriculumImage.src}
+      imageSrc={HVACCurriculumImage}
       imageAlt="Focus 1 Image"
       dropShadow
     />
@@ -124,7 +124,7 @@ import WiringCurriculumImage from '../assets/images/wiring-curriculum.png';
     topBorder
   >
     <ImagePanel
-      imageSrc={WiringCurriculumImage.src}
+      imageSrc={WiringCurriculumImage}
       imageAlt="Focus 1 Image"
       dropShadow
     />

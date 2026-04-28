@@ -9,21 +9,20 @@ import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { Block } from '../components/blocks/block/Block';
 
-import StudentImage from '../assets/images/student-photo-1.png';
-import TeamImage from '../assets/images/team.png';
-import CardOne from '../assets/images/card-1.png';
-import CardTwo from '../assets/images/card-2.png';
-import CardThree from '../assets/images/card-3.png';
-import CurriculumImage1 from '../assets/images/curriculum-image-1.png';
-import CurriculumImage2 from '../assets/images/curriculum-image-2.png';
-import CurriculumImage3 from '../assets/images/curriculum-image-3.png';
-import CurriculumImage4 from '../assets/images/curriculum-image-4.png';
-
+const StudentImage = '/images/student-photo-1.png';
+const TeamImage = '/images/team.png';
+const CardOne = '/images/card-1.png';
+const CardTwo = '/images/card-2.png';
+const CardThree = '/images/card-3.png';
+const CurriculumImage1 = '/images/curriculum-image-1.png';
+const CurriculumImage2 = '/images/curriculum-image-2.png';
+const CurriculumImage3 = '/images/curriculum-image-3.png';
+const CurriculumImage4 = '/images/curriculum-image-4.png';
 const cards = [
   {
     headerText: '↳Become a student',
     border: true,
-    imageSrc: CardOne.src,
+    imageSrc: CardOne,
     imageAlt: 'see the curriculum',
     content: 'Our goal is to equip students with valuable tech skills, engaging their creativity and strengths, no matter their prior experience.',
     buttonText: 'SEE THE CURRICULUM',
@@ -32,7 +31,7 @@ const cards = [
   {
     headerText: '↳Employment partnerships',
     border: true,
-    imageSrc: CardTwo.src,
+    imageSrc: CardTwo,
     imageAlt: 'Explore partnerships',
     content: 'Graduates receive support through internships, job placement, and career guidance from industry professionals.',
     buttonText: 'EXPLORE PARTNERSHIPS',
@@ -41,7 +40,7 @@ const cards = [
   {
     headerText: '↳Make a donation',
     border: true,
-    imageSrc: CardThree.src,
+    imageSrc: CardThree,
     imageAlt: 'Make a donation',
     content: 'Your donation helps support students and furthers our nonprofit mission to provide valuable education and opportunities.',
     buttonText: 'DONATE',
@@ -51,25 +50,25 @@ const cards = [
 
 const curriculumCards = [
   {
-    imageSrc: CurriculumImage1.src,
+    imageSrc: CurriculumImage1,
     imageAlt: 'Students at work',
     contentTitle: 'Hands on learning',
     content: 'Students use wireless LED lighting and Python coding to learn building automation and create games, leading to a final light show exhibition.',
   },
   {
-    imageSrc: CurriculumImage2.src,
+    imageSrc: CurriculumImage2,
     imageAlt: 'See the curriculum',
     contentTitle: 'Supportive classroom',
     content: 'Lots of Students use wireless LED lighting and Python coding to learn building automation and create games, leading to a final light show exhibition.',
   },
   {
-    imageSrc: CurriculumImage3.src,
+    imageSrc: CurriculumImage3,
     imageAlt: 'On-site experience',
     contentTitle: 'On-site experience',
     content: 'Facility tours led by industry professionals expose students to real work environments open opportunities to connect with potential employers and mentors.',
   },
   {
-    imageSrc: CurriculumImage4.src,
+    imageSrc: CurriculumImage4,
     imageAlt: 'See the curriculum',
     contentTitle: 'Internship & Job Placement',
     content: 'Graduates are further supported with internship and job placement assistance, as well as future career development guidance and mentorship from building automation professionals.',
@@ -93,7 +92,7 @@ const infographicCards = [
       buttonLink="/become-a-student"
     />
     <ImagePanel
-      imageSrc={StudentImage.src}
+      imageSrc={StudentImage}
       imageAlt="Students examining an hvac component."
       dropShadow
     />
@@ -107,7 +106,7 @@ const infographicCards = [
   </Block>
   <Block variation="dark">
     <ImagePanel
-      imageSrc={TeamImage.src}
+      imageSrc={TeamImage}
       imageAlt="Staff and students posing for a photo."
       dropShadow
     />
