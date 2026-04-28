@@ -14,14 +14,22 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   expanded = false,
 }) => {
   const [isExpanded, setIsExpanded] = useState(expanded);
+  const toggle = () => setIsExpanded(!isExpanded);
+
   return (
     <div className={styles.accordionItem}>
-      <div className={styles.accordionItemHeader}>
+      <div
+        className={styles.accordionItemHeader}
+        onClick={toggle}
+        style={{ cursor: 'pointer' }}
+      >
         <h3 className={styles.accordionItemTitle}>{title}</h3>
-        <PlusSymbol
-          onClick={() => setIsExpanded(!isExpanded)}
-          expanded={isExpanded}
-        />
+        <div onClick={(e) => e.stopPropagation()}>
+          <PlusSymbol
+            onClick={toggle}
+            expanded={isExpanded}
+          />
+        </div>
       </div>
       <div
         className={
