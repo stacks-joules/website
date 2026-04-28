@@ -5,6 +5,10 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.stacksandjoules.org',
   integrations: [react(), sitemap()],
+  redirects: {
+    '/building-automation-training-charlotte-nc':
+      '/charlotte-building-automation-training',
+  },
   vite: {
     resolve: {
       alias: {
