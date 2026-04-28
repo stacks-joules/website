@@ -1,0 +1,673 @@
+[2026-04-01T21:10:03.254Z] [error] Failed to load resource: the server responded with a status of 404 ()
+[2026-04-01T21:10:03.608Z] [error] Failed to load resource: the server responded with a status of 404 ()
+[2026-04-01T21:10:03.628Z] [error] Failed to load resource: the server responded with a status of 404 ()
+[2026-04-01T21:10:03.629Z] [error] Failed to load resource: the server responded with a status of 404 ()
+[2026-04-01T21:10:03.671Z] [error] Failed to load resource: the server responded with a status of 404 ()
+[2026-04-01T21:10:03.802Z] [error] Failed to load resource: the server responded with a status of 404 ()
+[2026-04-01T21:10:03.802Z] [error] Failed to load resource: the server responded with a status of 404 ()
+[2026-04-01T21:10:03.838Z] [error] WebGL not supported
+[2026-04-01T21:10:03.935Z] [error] Failed to load resource: the server responded with a status of 404 ()
+[2026-04-01T21:11:45.590Z] [debug] [vite] connecting...
+[2026-04-01T21:11:45.620Z] [debug] [vite] connected.
+[2026-04-01T21:11:45.964Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-01T21:11:46.008Z] [error] Warning: Prop `%s` did not match. Server: %s Client: %s%s aria-current "null" "page" 
+    at a
+    at NavLink (http://localhost:4322/src/components/common/NavLink.tsx:19:20)
+    at div
+    at div
+    at div
+    at Container (http://localhost:4322/src/components/layout/Container.tsx:19:29)
+    at nav
+    at Navigation (http://localhost:4322/src/components/layout/Navigation.tsx:29:35)
+[2026-04-01T21:11:46.043Z] [error] WebGL not supported
+[2026-04-01T21:13:01.889Z] [debug] [vite] connecting...
+[2026-04-01T21:13:01.968Z] [debug] [vite] connected.
+[2026-04-01T21:13:01.980Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-01T21:13:02.007Z] [error] Warning: Prop `%s` did not match. Server: %s Client: %s%s aria-current "null" "page" 
+    at a
+    at NavLink (http://localhost:4322/src/components/common/NavLink.tsx:19:20)
+    at div
+    at div
+    at div
+    at Container (http://localhost:4322/src/components/layout/Container.tsx:19:29)
+    at nav
+    at Navigation (http://localhost:4322/src/components/layout/Navigation.tsx:29:35)
+[2026-04-01T21:13:02.009Z] [error] WebGL not supported
+[2026-04-01T21:13:31.799Z] [debug] [vite] connecting...
+[2026-04-01T21:13:31.842Z] [debug] [vite] connected.
+[2026-04-01T21:13:31.846Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-01T21:13:32.215Z] [error] Warning: Prop `%s` did not match. Server: %s Client: %s%s aria-current "null" "page" 
+    at a
+    at NavLink (http://localhost:4322/src/components/common/NavLink.tsx:19:20)
+    at div
+    at div
+    at div
+    at Container (http://localhost:4322/src/components/layout/Container.tsx:19:29)
+    at nav
+    at Navigation (http://localhost:4322/src/components/layout/Navigation.tsx:29:35)
+[2026-04-01T21:13:32.334Z] [error] WebGL not supported
+[2026-04-01T21:13:35.380Z] [debug] [vite] connecting...
+[2026-04-01T21:13:35.414Z] [debug] [vite] connected.
+[2026-04-01T21:13:35.418Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-01T21:13:35.438Z] [error] Warning: Prop `%s` did not match. Server: %s Client: %s%s aria-current "null" "page" 
+    at a
+    at NavLink (http://localhost:4322/src/components/common/NavLink.tsx:19:20)
+    at div
+    at div
+    at div
+    at Container (http://localhost:4322/src/components/layout/Container.tsx:19:29)
+    at nav
+    at Navigation (http://localhost:4322/src/components/layout/Navigation.tsx:29:35)
+[2026-04-01T21:13:35.464Z] [error] WebGL not supported
+[2026-04-01T21:13:39.313Z] [debug] [vite] connecting...
+[2026-04-01T21:13:39.347Z] [debug] [vite] connected.
+[2026-04-01T21:13:39.355Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-01T21:13:39.393Z] [error] Warning: Prop `%s` did not match. Server: %s Client: %s%s aria-current "null" "page" 
+    at a
+    at NavLink (http://localhost:4322/src/components/common/NavLink.tsx:19:20)
+    at div
+    at div
+    at div
+    at Container (http://localhost:4322/src/components/layout/Container.tsx:19:29)
+    at nav
+    at Navigation (http://localhost:4322/src/components/layout/Navigation.tsx:29:35)
+[2026-04-01T21:13:39.647Z] [error] WebGL not supported
+[2026-04-01T21:13:44.585Z] [debug] [vite] connecting...
+[2026-04-01T21:13:44.642Z] [debug] [vite] connected.
+[2026-04-01T21:13:44.648Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-01T21:13:44.668Z] [error] Warning: Prop `%s` did not match. Server: %s Client: %s%s aria-current "null" "page" 
+    at a
+    at NavLink (http://localhost:4322/src/components/common/NavLink.tsx:19:20)
+    at div
+    at div
+    at div
+    at Container (http://localhost:4322/src/components/layout/Container.tsx:19:29)
+    at nav
+    at Navigation (http://localhost:4322/src/components/layout/Navigation.tsx:29:35)
+[2026-04-01T21:13:44.677Z] [error] WebGL not supported
+[2026-04-01T21:13:56.020Z] [debug] [vite] connecting...
+[2026-04-01T21:13:56.085Z] [debug] [vite] connected.
+[2026-04-01T21:13:56.100Z] [info] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[2026-04-01T21:13:56.126Z] [error] Warning: Prop `%s` did not match. Server: %s Client: %s%s aria-current "null" "page" 
+    at a
+    at NavLink (http://localhost:4322/src/components/common/NavLink.tsx:19:20)
+    at div
+    at div
+    at div
+    at Container (http://localhost:4322/src/components/layout/Container.tsx:19:29)
+    at nav
+    at Navigation (http://localhost:4322/src/components/layout/Navigation.tsx:29:35)
+[2026-04-01T21:13:56.137Z] [error] WebGL not supported
+[2026-04-01T21:14:17.932Z] [log] [vite] server connection lost. Polling for restart...
+[2026-04-01T21:14:17.932Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:18.935Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:19.939Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:20.943Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:21.948Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:22.952Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:23.956Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:24.959Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:25.964Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:26.968Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:27.974Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:28.976Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:29.981Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:30.984Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:31.989Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:32.992Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:33.995Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:34.998Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:36.001Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:37.004Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:38.009Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:39.012Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:40.017Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:41.021Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:42.025Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:43.029Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:44.032Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:45.036Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:46.041Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:47.046Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:48.050Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:49.054Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:50.061Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:51.070Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:52.075Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:53.082Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:54.090Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:55.096Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:56.104Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:57.110Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:58.119Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:14:59.126Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:00.132Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:01.140Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:02.148Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:03.155Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:04.166Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:05.174Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:06.182Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:07.197Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:08.208Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:09.217Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:10.230Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:11.242Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:12.256Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:13.266Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:14.290Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:15.313Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:16.339Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:17.356Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:18.372Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:19.386Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:20.414Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:21.440Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:22.472Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:23.488Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:24.499Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:25.532Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:26.549Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:27.570Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:28.589Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:29.622Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:30.655Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:31.747Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:32.794Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:33.823Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:34.848Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:35.897Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:36.980Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:38.063Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:39.130Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:40.233Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:41.306Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:42.440Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:43.581Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:44.640Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:49.240Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:53.780Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:15:56.197Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:01.723Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:07.368Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:10.005Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:12.840Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:18.446Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:22.164Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:26.746Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:30.897Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:35.930Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:39.523Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:43.189Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:46.340Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:48.823Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:54.272Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:16:56.852Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:00.738Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:03.004Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:05.040Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:08.389Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:13.589Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:15.706Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:20.180Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:23.847Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:26.397Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:30.364Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:33.730Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:38.496Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:41.413Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:46.388Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:50.471Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:17:56.288Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:00.217Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:03.997Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:07.947Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:12.123Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:15.423Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:18.056Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:23.547Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:28.528Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:31.866Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:36.155Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:41.455Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:46.413Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:52.172Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:18:55.655Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:00.422Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:05.189Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:09.046Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:14.338Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:20.206Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:22.849Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:26.080Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:31.839Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:37.380Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:39.956Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:44.004Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:48.471Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:51.488Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:19:55.675Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:00.187Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:03.208Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:06.417Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:10.539Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:15.139Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:17.789Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:22.571Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:25.133Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:30.655Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:35.211Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:40.822Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:44.697Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:47.491Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:51.589Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:20:57.441Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:00.114Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:04.922Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:10.071Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:13.630Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:16.505Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:19.171Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:22.805Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:28.204Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:30.495Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:34.188Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:39.495Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:43.421Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:46.995Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:50.418Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:53.072Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:21:57.696Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:01.946Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:06.947Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:11.638Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:16.289Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:20.283Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:25.672Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:30.037Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:32.695Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:36.718Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:40.779Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:46.330Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:52.254Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:22:58.263Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:03.104Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:07.663Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:11.118Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:14.322Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:19.880Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:23.271Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:26.588Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:29.145Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:34.162Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:37.045Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:42.138Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:45.272Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:46.276Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:47.282Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:48.287Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:49.291Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:50.298Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:51.306Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:52.321Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:53.338Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:54.370Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:55.411Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:56.555Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:57.871Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:23:59.379Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:00.748Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:02.711Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:07.588Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:11.387Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:16.755Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:19.871Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:23.230Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:26.795Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:29.279Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:34.646Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:39.086Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:41.104Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:46.254Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:50.568Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:55.497Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:24:57.800Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:02.718Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:07.480Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:11.283Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:14.688Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:18.107Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:21.667Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:25.087Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:28.562Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:33.424Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:38.704Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:42.012Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:46.528Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:51.578Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:25:57.062Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:02.220Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:04.444Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:09.888Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:11.933Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:14.791Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:19.254Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:23.545Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:27.070Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:30.836Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:36.413Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:41.456Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:45.295Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:47.311Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:49.490Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:26:54.902Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:00.428Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:05.828Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:11.128Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:13.828Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:19.120Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:23.403Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:26.771Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:32.428Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:36.808Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:38.821Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:41.234Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:44.616Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:49.537Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:55.344Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:27:59.965Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:04.036Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:07.136Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:10.554Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:15.633Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:17.702Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:21.628Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:26.690Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:30.537Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:36.245Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:39.435Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:43.004Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:48.078Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:52.473Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:56.245Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:28:58.486Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:02.086Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:07.603Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:11.270Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:14.143Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:18.645Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:20.952Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:25.060Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:28.857Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:31.081Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:33.661Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:38.177Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:40.469Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:46.090Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:47.094Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:48.098Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:49.102Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:50.107Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:51.110Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:52.117Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:53.127Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:54.144Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:55.168Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:56.190Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:57.318Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:58.569Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:29:59.959Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:02.171Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:04.716Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:08.420Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:12.394Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:17.370Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:21.444Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:26.220Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:31.861Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:37.037Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:39.844Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:45.552Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:48.570Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:50.689Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:52.861Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:30:58.519Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:02.777Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:04.861Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:08.416Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:13.245Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:16.670Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:21.845Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:27.587Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:31.003Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:33.110Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:36.886Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:41.572Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:46.452Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:47.456Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:48.460Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:49.463Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:50.469Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:51.473Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:52.482Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:53.496Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:54.511Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:55.537Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:56.577Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:57.653Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:31:58.959Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:00.394Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:02.345Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:05.770Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:09.344Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:13.331Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:17.022Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:22.453Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:24.527Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:29.185Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:32.027Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:35.702Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:38.203Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:43.853Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:49.786Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:52.644Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:57.677Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:32:59.836Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:02.477Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:05.997Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:11.953Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:15.602Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:19.727Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:24.919Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:27.352Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:30.244Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:33.586Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:38.492Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:44.336Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:47.018Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:48.022Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:49.026Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:50.031Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:51.035Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:52.041Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:53.050Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:54.064Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:55.075Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:56.117Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:57.171Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:58.242Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:33:59.327Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:00.593Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:01.952Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:04.969Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:08.039Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:13.519Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:17.952Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:21.976Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:24.611Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:28.761Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:33.977Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:36.931Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:42.185Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:47.302Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:51.526Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:54.802Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:34:59.077Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:02.918Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:07.586Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:13.085Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:15.885Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:19.619Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:24.202Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:29.552Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:34.289Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:39.451Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:42.552Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:47.902Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:48.907Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:49.911Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:50.916Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:51.923Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:52.929Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:53.937Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:54.947Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:55.967Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:56.988Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:58.039Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:35:59.093Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:00.301Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:01.467Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:03.318Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:06.459Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:10.252Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:13.985Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:19.768Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:25.510Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:29.677Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:34.288Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:39.242Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:44.877Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:48.909Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:53.677Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:36:58.435Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:01.078Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:04.226Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:07.501Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:10.693Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:15.625Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:17.771Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:22.252Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:27.611Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:30.109Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:35.018Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:40.944Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:43.535Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:46.402Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:50.985Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:53.175Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:37:56.009Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:00.359Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:02.602Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:05.710Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:11.340Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:17.293Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:19.835Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:23.843Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:29.176Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:33.743Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:39.652Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:44.118Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:46.819Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:50.552Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:54.774Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:38:59.835Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:03.868Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:08.909Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:12.402Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:15.757Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:20.802Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:24.602Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:28.526Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:33.642Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:39.007Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:41.292Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:43.359Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:46.785Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:50.158Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:39:55.759Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:01.132Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:05.410Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:08.762Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:11.385Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:14.409Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:19.007Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:22.642Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:27.821Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:32.551Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:36.623Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:38.751Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:41.792Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:46.001Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:48.501Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:54.492Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:40:58.601Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:00.891Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:05.342Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:08.200Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:11.001Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:16.200Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:19.024Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:24.075Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:26.267Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:32.200Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:35.842Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:37.975Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:41.533Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:46.108Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:50.575Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:53.226Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:41:58.692Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:03.776Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:07.759Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:11.325Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:13.508Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:18.990Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:22.351Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:25.642Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:28.451Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:33.859Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:37.151Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:42.116Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:46.027Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:49.377Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:53.998Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:42:59.295Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:02.270Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:04.728Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:06.937Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:10.687Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:14.779Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:18.145Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:20.812Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:26.362Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:29.546Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:35.088Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:37.554Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:42.012Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:45.395Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:49.721Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:43:54.712Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:00.229Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:05.823Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:11.262Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:16.470Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:21.461Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:27.038Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:29.638Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:33.071Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:37.762Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:39.861Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:42.111Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:47.354Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:53.288Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+[2026-04-01T21:44:57.268Z] [error] WebSocket connection to 'ws://localhost:4322/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED

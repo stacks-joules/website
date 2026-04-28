@@ -1,0 +1,1 @@
+const t="_button_kxzp7_2",e="_white_kxzp7_35",o="_black_kxzp7_46",_={button:t,white:e,black:o},n=Object.freeze(Object.defineProperty({__proto__:null,black:o,button:t,default:_,white:e},Symbol.toStringTag,{value:"Module"}));export{t as b,n as s};
