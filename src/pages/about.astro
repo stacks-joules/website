@@ -4,44 +4,164 @@ import { SectionHeader } from '../components/layout/SectionHeader';
 import { Block } from '../components/blocks/block/Block';
 import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
-import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
-const aboutstacks1 = '/images/aboutstacks1.png';
-const spooner = '/images/spooner.png';
+import { CardContainer } from '../components/blocks/card-section/CardContainer';
+import { Card } from '../components/blocks/card-section/Card';
+import { Infographic } from '../components/sections/Infographic';
+import { TransparencyBadges } from '../components/sections/TransparencyBadges';
+
+const AboutImage = '/images/aboutstacks1.png';
+const TeamImage = '/images/team.png';
+const ConwayImage = '/images/conway.png';
+const LightCurriculumImage = '/images/light-curriculum.png';
+const CurriculumImage4 = '/images/curriculum-image-4.png';
+const CardThree = '/images/card-3.png';
+
+const pathwayStepCards = [
+  {
+    imageSrc: LightCurriculumImage,
+    imageAlt: 'Foundational training in BAS concepts.',
+    contentTitle: '1. Foundational Training',
+    content:
+      'Twelve weeks of fundamentals - electricity, HVAC, networking, controls logic. Designed for people entering the field, not for people already in it.',
+  },
+  {
+    imageSrc: CurriculumImage4,
+    imageAlt: 'Paid internship at a partner organization.',
+    contentTitle: '2. Paid Internship',
+    content:
+      'A paid internship at one of our hiring partners. You work on real systems. Employers see how you operate. You see if the work is for you.',
+  },
+  {
+    imageSrc: CardThree,
+    imageAlt: 'A Stacks+Joules graduate at full-time work.',
+    contentTitle: '3. Full-Time Employment',
+    content:
+      "A clear path to full-time work with our employer network. Graduates move into roles like BAS technician, controls installer, or junior programmer - with senior techs who already know the curriculum they came through.",
+  },
+];
+
+const infographicCards = [
+  { title: 'Graduates Placed', number: '143', symbol: '' },
+  { title: 'Industry Certifications', number: '500', symbol: '+' },
+  { title: 'Placed in Green Tech', number: '76', symbol: '%' },
+  { title: 'NYC Companies Hiring', number: '20', symbol: '' },
+];
 ---
 
 <Layout title="About | Stacks+Joules">
   <SectionHeader>About</SectionHeader>
+
   <Block variation="dark">
     <ImagePanel
-      imageSrc={aboutstacks1}
-      imageAlt="Picture of 3d Stacks+Joules logo"
+      imageSrc={AboutImage}
+      imageAlt="Stacks+Joules logo and team."
       dropShadow
     />
-    <MarkupPanel>
-      <p>
-        <b>Stacks+Joules</b> is a 501c3 nonprofit (EIN 82-2358571)
-        project-based learning program in computer programming and wireless
-        network management. Our specialized curriculum engages young
-        peoples' creativity to supercharge their strengths as learners and
-        get them on the fast-track to valuable technology skills—regardless
-        of prior experience or training.
-      </p>
-    </MarkupPanel>
-  </Block>
-  <Block variation="light">
     <TextPanel
-      caption="Co-Founder and Chief Technology Officer"
-      smallTitle="Jonathan Spooner"
-      description="Jonathan brings a trove of experience in technology, innovation and marketing to the Stacks + Joules team. Having led innovation teams at Intersection (a division of Alphabet) and launching multiple high-tech businesses he has a wide breadth of knowledge. His entrepreneurial passion has led him to plan, budget, oversee and lead all sizes of businesses across the span of his career. A lifelong DJ having played multiple gigs around the globe he also co-founded the internet's first DJ mix site. Jonathan speaks frequently on emerging technology innovation, and his insight has been featured in the New York Times, Ad Age, Fast Company, The Motley Fool and the Wall Street Journal, among others. "
+      smallTitle="Bridging the tech opportunity gap."
+      description="Stacks+Joules is a 501(c)(3) nonprofit training overlooked populations for careers in Building Automation - the technology that runs modern buildings. We don't run classes. We run a pipeline: twelve weeks of training, a paid internship, and a clear path to work with our employer partners."
+    />
+  </Block>
+
+  <Block variation="light" paddingY="0px" singleColumn>
+    <CardContainer
+      title="↳ How It Works"
+      description="Three stages. From Training to Internship to Full-Time Employment. Each one designed with our hiring partners. Every step puts you closer to a real job site."
+    >
+      {pathwayStepCards.map(({ contentTitle, ...rest }) => (
+        <Card key={contentTitle} contentTitle={contentTitle} {...rest} />
+      ))}
+    </CardContainer>
+  </Block>
+
+  <Block variation="dark">
+    <TextPanel
+      smallTitle="Not traditional classroom education."
+      description="No lectures. No theory disconnected from practice. We train on the same controllers, sensors, and software our graduates will use the day they get hired. By the time you walk onto a job site, you've already done the work."
     />
     <ImagePanel
-      imageSrc={spooner}
-      imageAlt="Picture of Jonathan Spooner"
+      imageSrc={TeamImage}
+      imageAlt="The Stacks+Joules team and trainees."
       dropShadow
     />
   </Block>
+
+  <Infographic title="↳ Our Impact" cards={infographicCards} />
+
   <Block variation="dark">
-    <TextPanel title="The Team" description="The Team" />
-    <ImagePanel imageSrc={aboutstacks1} imageAlt="Picture of Jon Spooner" />
+    <ImagePanel
+      imageSrc={ConwayImage}
+      imageAlt="Co-founder J Michael Conway."
+      dropShadow
+    />
+    <TextPanel
+      smallTitle="Meet the team."
+      description="Stacks+Joules was founded by educators and technologists who got tired of training programs that don't lead to jobs. Today, every instructor here came through the program first."
+      buttonText="MEET THE TEAM"
+      buttonLink="/team"
+    />
+  </Block>
+
+  <a id="accountability"></a>
+  <Block variation="light" singleColumn>
+    <div class="accountability-block">
+      <div class="accountability-block__eyebrow">↳ Accountability</div>
+      <h2 class="accountability-block__title">Transparency you can verify.</h2>
+      <p class="accountability-block__body">
+        Stacks+Joules is a 501(c)(3) nonprofit (EIN 82-2358571). Our most
+        recent Form 990 and annual report are public, and we're rated by the
+        leading independent nonprofit evaluators.
+      </p>
+      <TransparencyBadges variant="full" />
+      <p class="accountability-block__links">
+        <a href="#">Form 990 (PDF)</a> · <a href="#">Annual Report</a> ·
+        <a href="#">Board of Directors</a>
+      </p>
+    </div>
   </Block>
 </Layout>
+
+<style>
+  .accountability-block {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .accountability-block__eyebrow {
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+  .accountability-block__title {
+    color: #000;
+    font-family: 'Montagu Slab', serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.76px;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+  }
+  .accountability-block__body {
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 720px;
+    margin: 0 0 32px;
+  }
+  .accountability-block__links {
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  .accountability-block__links a {
+    color: #000;
+    text-decoration: underline;
+  }
+</style>

@@ -4,46 +4,155 @@ import { SectionHeader } from '../components/layout/SectionHeader';
 import { Block } from '../components/blocks/block/Block';
 import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
-import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
+import { CardContainer } from '../components/blocks/card-section/CardContainer';
+import { Card } from '../components/blocks/card-section/Card';
+import { Infographic } from '../components/sections/Infographic';
+import { EmployerGrid } from '../components/sections/EmployerGrid';
+
 const CardTwo = '/images/card-2.png';
+const WiringImage = '/images/wiring-curriculum.png';
 const TeamImage = '/images/team.png';
+
+const pipelineCards = [
+  {
+    headerText: '↳1. Hire Once',
+    border: true,
+    content:
+      'Stacks+Joules graduates arrive pre-trained on real BAS systems. They understand wiring, controllers, Niagara, safety protocols, and documentation. You\'re not starting from zero.',
+  },
+  {
+    headerText: '↳2. Train',
+    border: true,
+    content:
+      'Pair them with a senior tech. Our mentorship model isn\'t "follow someone around" - it\'s a defined progression from supervised work to independent projects, with milestone check-ins.',
+  },
+  {
+    headerText: '↳3. Mentor & Multiply',
+    border: true,
+    content:
+      'As they grow, your Stacks+Joules hires become mentors themselves. Each mentor trains the next cohort faster. Your training costs go down. Time-to-billable shrinks. The pipeline feeds itself.',
+  },
+];
+
+const valueCards = [
+  {
+    headerText: '↳For Controls Contractors',
+    border: true,
+    content:
+      'Job-ready technicians who understand industry workflows and safety protocols. Reduced onboarding time and lower training costs per new hire. Fewer callbacks and rework. Access to a growing talent pool in a competitive hiring market.',
+  },
+  {
+    headerText: '↳For Building Owners',
+    border: true,
+    content:
+      'More reliable building operations with skilled technicians maintaining systems. Lower operating costs and improved energy efficiency through proper system management. Stronger internal knowledge retention. Reduced dependency on external contractors for routine maintenance.',
+  },
+];
+
+const partnerStats = [
+  { title: 'Stacks+Joules Hires at TEC Systems', number: '30', symbol: '+' },
+  { title: 'Retention Rate at TEC', number: '90', symbol: '%' },
+  { title: 'Months to Full ROI (Year 3)', number: '8', symbol: '' },
+  { title: 'BAS Partner Companies', number: '20', symbol: '' },
+];
+
+const employers = [
+  'Alberio',
+  'Automated Logic',
+  'Bosch',
+  'Climatec',
+  'ConEd',
+  'Distech Controls',
+  'Distinctive Windows',
+  'Dual Fuel',
+  'Johnson Controls',
+  'Mr Air NYC',
+  'RGSB',
+  'Richards Heating & Plumbing',
+  'Richmar Controls & Service Company',
+  'SB Building Solutions',
+  'Soulful Synergy',
+  'Stratco Property Group',
+  'T.M. Bier and Associates',
+  'TEC Systems',
+  'Trane',
+  'Walker Hotels Tribeca',
+];
+
+const ahmedDescription =
+  "Ahmed walked in with no BAS experience. TEC Systems hired him three months after graduation. By month 11 he was 100% billable and had met ROI - versus 18-24 months for a typical non-Stacks+Joules hire.\n\nThree years later, he's a Senior Commissioning Technician. TEC's newest Stacks+Joules hires now hit full ROI in 8 months - because Ahmed is the one training them.\n\n\"With Stacks+Joules, we can confidently bid on any project - we know where to find talent.\"\n- Colin Gumbs, COO, TEC Systems";
 ---
 
 <Layout title="Employment Partnerships | Stacks+Joules">
   <SectionHeader>Employment Partnerships</SectionHeader>
+
   <Block variation="dark">
     <ImagePanel
       imageSrc={CardTwo}
-      imageAlt="Students working with building automation equipment"
+      imageAlt="Stacks+Joules graduates and partner technicians on the job."
       dropShadow
     />
-    <MarkupPanel>
-      <p>
-        <b>Stacks+Joules</b> partners with leading employers in building
-        automation to connect our graduates with real career opportunities.
-        Our employment partnerships ensure that students transition from
-        training into meaningful, well-paying jobs in the growing smart
-        building industry.
-      </p>
-    </MarkupPanel>
-  </Block>
-  <Block variation="light">
     <TextPanel
-      title="How It Works"
-      description="Industry partners work directly with our program — hosting facility tours, mentoring students, conducting mock interviews, and hiring graduates into entry-level building automation roles. Our graduates arrive job-ready with Python coding skills, EPA 608 certification, Niagara Workbench experience, and hands-on low-voltage wiring training."
+      smallTitle="A workforce pipeline designed with employers, not around them."
+      description="Our graduates arrive on day one knowing wiring, controllers, Niagara, safety, and documentation. Your senior techs spend less time onboarding and more time billable. At TEC Systems, the time-to-full-ROI for a Stacks+Joules hire dropped from 11 months to 8."
+    />
+  </Block>
+
+  <Block variation="light" paddingY="0px" singleColumn>
+    <CardContainer
+      title="↳ How the Pipeline Works"
+      description="Hire pre-trained talent. Develop them with structured mentorship. Watch them become the next generation of mentors. The pipeline compounds."
+    >
+      {pipelineCards.map(({ headerText, ...rest }) => (
+        <Card key={headerText} headerText={headerText} {...rest} />
+      ))}
+    </CardContainer>
+  </Block>
+
+  <Block variation="dark">
+    <ImagePanel
+      imageSrc={WiringImage}
+      imageAlt="Ahmed working on a building automation panel at TEC Systems."
+      dropShadow
+    />
+    <TextPanel
+      caption="↳ Case Study: TEC Systems"
+      smallTitle="From trainee to trainer in three years."
+      description={ahmedDescription}
+    />
+  </Block>
+
+  <Infographic title="↳ By the Numbers" cards={partnerStats} />
+
+  <Block variation="dark" paddingY="0px" singleColumn>
+    <CardContainer
+      title="↳ Who Benefits"
+      description="Different roles, same pipeline. Whether you install controls or operate the buildings they run in, Stacks+Joules graduates compound the value of every senior hire on your team."
+    >
+      {valueCards.map(({ headerText, ...rest }) => (
+        <Card key={headerText} headerText={headerText} {...rest} />
+      ))}
+    </CardContainer>
+  </Block>
+
+  <EmployerGrid
+    title="↳ Where Our Graduates Work"
+    description="In NYC we've placed graduates at 20 leading BAS companies, including:"
+    employers={employers}
+  />
+
+  <Block variation="dark">
+    <TextPanel
+      caption="↳ Let's build the future together."
+      smallTitle="Real Buildings. Real Training. Real Solutions."
+      description="Talk to us about hiring from the next cohort. We'll walk you through what onboarding looks like, what your senior techs need to do, and how fast you can expect ROI."
+      buttonText="GET IN TOUCH"
+      buttonLink="/support-mentors"
     />
     <ImagePanel
       imageSrc={TeamImage}
-      imageAlt="Stacks+Joules team and industry partners"
+      imageAlt="The Stacks+Joules team and partner technicians."
       dropShadow
-    />
-  </Block>
-  <Block variation="dark" singleColumn>
-    <TextPanel
-      title="Become a Partner"
-      description="We're always looking for forward-thinking companies in building automation, HVAC, and smart building technology to join our network. Partners gain access to a pipeline of trained, motivated talent ready to contribute from day one."
-      buttonText="GET IN TOUCH"
-      buttonLink="/support-mentors"
     />
   </Block>
 </Layout>

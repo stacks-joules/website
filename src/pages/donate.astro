@@ -1,16 +1,67 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Block } from '../components/blocks/block/Block';
+import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 import { PaypalPanel } from '../components/blocks/panels/PaypalPanel';
 import { SectionHeader } from '../components/layout/SectionHeader';
+import { Infographic } from '../components/sections/Infographic';
+import { TransparencyBadges } from '../components/sections/TransparencyBadges';
+
 const donateImage = '/images/donate-image.png';
+const TeamImage = '/images/team.png';
+
+const infographicCards = [
+  { title: 'Average Starting Pay', number: '$28', symbol: '/hr' },
+  { title: 'Graduates Placed', number: '143', symbol: '' },
+  { title: 'Placed in Green Tech', number: '76', symbol: '%' },
+  { title: 'Industry Certifications', number: '500', symbol: '+' },
+];
 ---
 
 <Layout title="Donate | Stacks+Joules">
   <SectionHeader>Make a donation</SectionHeader>
+
+  <Block variation="dark">
+    <ImagePanel
+      imageSrc={TeamImage}
+      imageAlt="Stacks+Joules trainees and team."
+      dropShadow
+    />
+    <TextPanel
+      caption="↳ Support Stacks+Joules"
+      smallTitle="We're not just filling jobs. We're building a pipeline that feeds the entire ecosystem."
+      description="Your gift funds the equipment, certifications, and coaching that move overlooked talent into building automation careers. Every dollar helps train the next graduate - and graduates come back to train the cohort after that. Stacks+Joules is a 501(c)(3) nonprofit; your gift is tax-deductible. EIN 82-2358571."
+    />
+  </Block>
+
+  <Infographic title="↳ What Your Gift Funds" cards={infographicCards} />
+
+  <Block variation="light" singleColumn>
+    <div class="badge-strip">
+      <div class="badge-strip__title">↳ Accountability &amp; Transparency</div>
+      <TransparencyBadges variant="full" />
+    </div>
+  </Block>
+
   <Block>
     <ImagePanel imageSrc={donateImage} imageAlt="Donate" />
     <PaypalPanel />
   </Block>
 </Layout>
+
+<style>
+  .badge-strip {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .badge-strip__title {
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 32px;
+  }
+</style>

@@ -1,8 +1,95 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { SectionHeader } from '../components/layout/SectionHeader';
+import { Block } from '../components/blocks/block/Block';
+import { TextPanel } from '../components/blocks/panels/TextPanel';
+import { ImagePanel } from '../components/blocks/panels/ImagePanel';
+import { CardContainer } from '../components/blocks/card-section/CardContainer';
+import { Card } from '../components/blocks/card-section/Card';
+
+const TeamImage = '/images/team.png';
+const ContactImage = '/images/contact-image.png';
+const StudentImage = '/images/student-photo-1.png';
+
+const supportCards = [
+  {
+    headerText: '↳Mentor a Trainee',
+    border: true,
+    content:
+      'Industry professionals who give time to current trainees - facility tours, mock interviews, and on-the-job coaching. The most valuable hour a Stacks+Joules trainee gets is often with someone already doing the work.',
+    buttonText: 'GET INVOLVED',
+    buttonLink: '/support-mentors#contact',
+  },
+  {
+    headerText: '↳Volunteer',
+    border: true,
+    content:
+      'Help us run the program. We need volunteers for admissions outreach, alumni events, networking nights, and administrative support. Skills welcome; willingness essential.',
+    buttonText: 'VOLUNTEER',
+    buttonLink: '/support-mentors#contact',
+  },
+  {
+    headerText: '↳Sponsor a Cohort',
+    border: true,
+    content:
+      'Fund a full cohort through training and into paid internships. You get hiring access, brand recognition, and a clear line from your dollars to a specific group of graduates.',
+    buttonText: 'SPONSOR',
+    buttonLink: '/donate',
+  },
+];
 ---
 
-<Layout title="Support/Mentors | Stacks+Joules">
-  <SectionHeader>Support/Mentors</SectionHeader>
+<Layout title="Support / Mentor | Stacks+Joules">
+  <SectionHeader>Support / Mentor</SectionHeader>
+
+  <Block variation="dark">
+    <ImagePanel
+      imageSrc={TeamImage}
+      imageAlt="Stacks+Joules trainees and mentors."
+      dropShadow
+    />
+    <TextPanel
+      smallTitle="Help build the pipeline."
+      description="Stacks+Joules turns a hiring problem into a growth strategy - but only because industry mentors, volunteers, and sponsors make it possible. Every trainee we place is the result of a network of people who showed up."
+    />
+  </Block>
+
+  <Block variation="light" paddingY="0px" singleColumn>
+    <CardContainer
+      title="↳ Three Ways to Engage"
+      description="Pick the one that fits your time, your role, and your reach."
+    >
+      {supportCards.map(({ headerText, ...rest }) => (
+        <Card key={headerText} headerText={headerText} {...rest} />
+      ))}
+    </CardContainer>
+  </Block>
+
+  <Block variation="dark">
+    <TextPanel
+      smallTitle="Why mentorship matters."
+      description={"Ahmed went from Stacks+Joules trainee to Senior Commissioning Technician at TEC Systems in three years - and is now mentoring the next cohort coming through. That's not an accident. It's the model.\n\nEach mentor trains the next cohort faster. The first hire at a partner company typically takes 11 months to reach full ROI. With a Stacks+Joules mentor in place, that drops to 8 months. The pipeline compounds."}
+    />
+    <ImagePanel
+      imageSrc={ContactImage}
+      imageAlt="Mentors and trainees collaborating."
+      dropShadow
+    />
+  </Block>
+
+  <a id="contact"></a>
+  <Block variation="dark">
+    <ImagePanel
+      imageSrc={StudentImage}
+      imageAlt="A Stacks+Joules graduate."
+      dropShadow
+    />
+    <TextPanel
+      caption="↳ Get in touch."
+      smallTitle="Let's build the future together."
+      description={"Tell us what you have to offer - time, expertise, hiring slots, or funding - and we'll match you to the highest-impact opportunity.\n\nEmail: jon.spooner@stacksandjoules.org\nPhone: 718 781 0141"}
+      buttonText="GET IN TOUCH"
+      buttonLink="mailto:jon.spooner@stacksandjoules.org"
+    />
+  </Block>
 </Layout>

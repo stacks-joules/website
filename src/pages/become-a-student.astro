@@ -1,41 +1,137 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { SectionHeader } from '../components/layout/SectionHeader';
-import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { Block } from '../components/blocks/block/Block';
+import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
-import { MarkupPanel } from '../components/blocks/panels/MarkupPanel';
+import { CardContainer } from '../components/blocks/card-section/CardContainer';
+import { Card } from '../components/blocks/card-section/Card';
+
 const BecomeAStudentImage = '/images/become-a-student.png';
+const LightCurriculumImage = '/images/light-curriculum.png';
+const WiringImage = '/images/wiring-curriculum.png';
+const StudentImage = '/images/student-photo-1.png';
+const CurriculumImage1 = '/images/curriculum-image-1.png';
+const CurriculumImage4 = '/images/curriculum-image-4.png';
+const CardThree = '/images/card-3.png';
+
+const pathwayStepCards = [
+  {
+    imageSrc: CurriculumImage1,
+    imageAlt: 'Foundational training in BAS concepts.',
+    contentTitle: '1. Foundational Training',
+    content:
+      'Twelve weeks of fundamentals - electricity, HVAC, networking, controls logic. Designed for people entering the field, not for people already in it.',
+  },
+  {
+    imageSrc: CurriculumImage4,
+    imageAlt: 'Paid internship at a partner organization.',
+    contentTitle: '2. Paid Internship',
+    content:
+      'A paid internship at one of our hiring partners. You work on real systems. Employers see how you operate. You see if the work is for you.',
+  },
+  {
+    imageSrc: CardThree,
+    imageAlt: 'A Stacks+Joules graduate at full-time work.',
+    contentTitle: '3. Full-Time Employment',
+    content:
+      "A clear path to full-time work with our employer network. Graduates move into roles like BAS technician, controls installer, or junior programmer - with senior techs who already know the curriculum they came through.",
+  },
+];
+
+const careerRoleCards = [
+  {
+    headerText: '↳BAS Technician',
+    border: true,
+    content: 'Install, maintain, and troubleshoot building control systems.',
+  },
+  {
+    headerText: '↳Controls Installer',
+    border: true,
+    content: 'Execute field installation and wiring of control devices.',
+  },
+  {
+    headerText: '↳Junior Programmer',
+    border: true,
+    content: 'Support system programming and commissioning work.',
+  },
+];
 ---
 
 <Layout title="Become a Student | Stacks+Joules">
   <SectionHeader>Become a Student</SectionHeader>
+
   <Block variation="dark">
     <ImagePanel
       imageSrc={BecomeAStudentImage}
-      imageAlt="Become a Student"
+      imageAlt="A Stacks+Joules trainee."
       dropShadow
     />
-    <MarkupPanel>
-      <p>
-        <b>Stacks+Joules</b> is a 501c3 nonprofit (EIN 82-2358571)
-        project-based learning program in computer programming and wireless
-        network management. Our specialized curriculum engages young
-        peoples' creativity to supercharge their strengths as learners and
-        get them on the fast-track to valuable technology skills—regardless
-        of prior experience or training.
-      </p>
-    </MarkupPanel>
-  </Block>
-  <Block variation="light">
     <TextPanel
-      caption="Co-Founder and Chief Technology Officer"
-      smallTitle="Jonathan Spooner"
-      description="Jonathan brings a trove of experience in technology, innovation and marketing to the Stacks + Joules team. Having led innovation teams at Intersection (a division of Alphabet) and launching multiple high-tech businesses he has a wide breadth of knowledge. His entrepreneurial passion has led him to plan, budget, oversee and lead all sizes of businesses across the span of his career. A lifelong DJ having played multiple gigs around the globe he also co-founded the internet's first DJ mix site. Jonathan speaks frequently on emerging technology innovation, and his insight has been featured in the New York Times, Ad Age, Fast Company, The Motley Fool and the Wall Street Journal, among others. "
+      smallTitle="Your path into Building Automation starts here."
+      description="No prior experience required. Twelve weeks of hands-on training. A paid internship. A clear path into Building Automation. Everything you need to start a career in the technology that runs modern buildings."
+      buttonText="TRAIN WITH US"
+      buttonLink="/support-mentors"
+    />
+  </Block>
+
+  <Block variation="light" paddingY="0px" singleColumn>
+    <CardContainer
+      title="↳ How It Works"
+      description="Three stages. From Training to Internship to Full-Time Employment. Each one designed with our hiring partners. Every step puts you closer to a real job site."
+    >
+      {pathwayStepCards.map(({ contentTitle, ...rest }) => (
+        <Card key={contentTitle} contentTitle={contentTitle} {...rest} />
+      ))}
+    </CardContainer>
+  </Block>
+
+  <Block variation="dark">
+    <TextPanel
+      smallTitle="What you'll learn."
+      description={"We start with fundamentals and build to job readiness:\n\n• Electricity, HVAC principles, and refrigeration cycle\n• Python coding and lighting controls (LCA certification)\n• EPA 608 certification\n• Low-voltage wiring and Niagara Workbench\n• Safety protocols, documentation, and professional communication\n\nTraining includes work with actual controllers, sensors, dampers, and building management systems. You'll troubleshoot live systems - not simulations - preparing you for the realities of the job site."}
     />
     <ImagePanel
-      imageSrc={BecomeAStudentImage}
-      imageAlt="Picture of Jonathan Spooner"
+      imageSrc={LightCurriculumImage}
+      imageAlt="Trainees working with lighting controls."
+      dropShadow
+    />
+  </Block>
+
+  <Block variation="light" paddingY="0px" singleColumn>
+    <CardContainer
+      title="↳ Careers You'll Qualify For"
+      description="You graduate qualified for entry-level BAS roles. From there, the ladder goes up to technician → commissioning → engineering → energy management."
+    >
+      {careerRoleCards.map(({ headerText, ...rest }) => (
+        <Card key={headerText} headerText={headerText} {...rest} />
+      ))}
+    </CardContainer>
+  </Block>
+
+  <Block variation="dark">
+    <ImagePanel
+      imageSrc={WiringImage}
+      imageAlt="A trainee working on a building automation panel."
+      dropShadow
+    />
+    <TextPanel
+      smallTitle="From trainee to trainer."
+      description={"Ahmed walked in with no building automation experience. TEC Systems hired him three months after graduation. Three years later, he was a Senior Commissioning Technician. Now he trains the next cohort coming through TEC.\n\nAdvancement isn't a single ladder. Technicians specialize in commissioning, move into engineering, or focus on energy management and analytics. Each path builds on the foundation you got at Stacks+Joules."}
+    />
+  </Block>
+
+  <Block variation="dark">
+    <TextPanel
+      caption="↳ Ready to apply?"
+      smallTitle="Twelve weeks. Real systems. A real career."
+      description="Three cohorts a year. 25 students per class. Get in touch and we'll walk you through eligibility, what to expect, and the next start date."
+      buttonText="GET IN TOUCH"
+      buttonLink="/support-mentors"
+    />
+    <ImagePanel
+      imageSrc={StudentImage}
+      imageAlt="A Stacks+Joules graduate."
       dropShadow
     />
   </Block>

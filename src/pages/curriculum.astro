@@ -4,14 +4,73 @@ import { SectionHeader } from '../components/layout/SectionHeader';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 import { AccordionPanel } from '../components/blocks/panels/AccordionPanel';
 import { Block } from '../components/blocks/block/Block';
+import { TextPanel } from '../components/blocks/panels/TextPanel';
+import { CardContainer } from '../components/blocks/card-section/CardContainer';
+import { Card } from '../components/blocks/card-section/Card';
 import { Buffer } from '../components/common/Buffer';
 const LightCurriculumImage = '/images/light-curriculum.png';
 const HVACCurriculumImage = '/images/curriculum-page-1.png';
 const WiringCurriculumImage = '/images/wiring-curriculum.png';
+const CurriculumImage1 = '/images/curriculum-image-1.png';
+const CurriculumImage2 = '/images/curriculum-image-2.png';
+const CurriculumImage3 = '/images/curriculum-image-3.png';
+
+const overviewCards = [
+  {
+    headerText: '↳No Prior Experience Required',
+    border: true,
+    imageSrc: CurriculumImage1,
+    imageAlt: 'Trainees learning fundamentals.',
+    content:
+      'We start with fundamentals - electricity, HVAC principles, networking basics, and controls logic. The curriculum is designed for learners entering the field, not just those already in it.',
+  },
+  {
+    headerText: '↳Hands-On with Real Equipment',
+    border: true,
+    imageSrc: CurriculumImage2,
+    imageAlt: 'Hands-on training with controllers and sensors.',
+    content:
+      'Training includes work with actual controllers, sensors, dampers, and building management systems. Learners troubleshoot live systems, not simulations - preparing them for the realities of the job site.',
+  },
+  {
+    headerText: '↳Safety and Documentation Focus',
+    border: true,
+    imageSrc: CurriculumImage3,
+    imageAlt: 'Safety and documentation training.',
+    content:
+      'Beyond technical skills, we emphasize workplace safety protocols, proper documentation practices, and clear communication - skills that reduce risk and improve project outcomes.',
+  },
+];
 ---
 
 <Layout title="Curriculum | Stacks+Joules">
   <SectionHeader>Curriculum</SectionHeader>
+
+  <Block variation="dark">
+    <TextPanel
+      smallTitle="Training Built on Real Systems."
+      description="We train on the same equipment our graduates use on the job. Same controllers. Same software. Same wiring. Every cohort ends with final projects presented to people who hire for these jobs. By graduation, you've already done the work."
+    />
+    <ImagePanel
+      imageSrc={WiringCurriculumImage}
+      imageAlt="Trainees working on a real BAS panel."
+      dropShadow
+    />
+  </Block>
+
+  <Block variation="light" paddingY="0px" singleColumn>
+    <CardContainer
+      title="↳ The Three Pillars"
+      description="Developed with BELLEDS Technologies at MIT and Rose-Hulman Institute of Technology. Twelve weeks. Three certifications. Real systems from day one."
+    >
+      {overviewCards.map(({ headerText, ...rest }) => (
+        <Card key={headerText} headerText={headerText} {...rest} />
+      ))}
+    </CardContainer>
+  </Block>
+
+  <Buffer height="40px" />
+
   <Block blockTitle="↳Python & Lighting Controls" paddingY="0px">
     <ImagePanel
       imageSrc={LightCurriculumImage}
@@ -31,7 +90,7 @@ const WiringCurriculumImage = '/images/wiring-curriculum.png';
             'Review core lighting control concepts and LCA certification topics while advancing the light show unit project.',
             'Begin the LCA certification process and prepare to present the light show unit project.',
             'Revisit key coding and lighting concepts while continuing work on the light show unit project.',
-            'Complete the S+J Communication Self-Assessment and present the light show unit project.',
+            'Complete the Stacks+Joules Communication Self-Assessment and present the light show unit project.',
             'Present the completed light show unit project.',
           ],
           expanded: true,
