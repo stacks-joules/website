@@ -131,7 +131,7 @@
 
 .rightNav .donate,
 .donate {
-  background-color: #fd3abb !important;
+  background-color: var(--theme-color, #fd3abb) !important;
   color: #151515 !important;
   /* Figma nav Donate: Inter SemiBold 18 / py 15 */
   font-size: 18px !important;
@@ -143,7 +143,7 @@
 }
 
 .donate:hover {
-  background-color: #e535a7;
+  background-color: var(--theme-color-hover, #e535a7);
 }
 
 /* Hide underlines for logo and donate button */

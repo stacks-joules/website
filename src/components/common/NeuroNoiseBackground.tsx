@@ -32,10 +32,11 @@ export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
   const pointerRef = useRef({ x: 0.5, y: 0.5 });
 
   const colorMap = {
-    pink: `normalize(vec3(0.992, 0.227, 0.733))`,
-    sky: `normalize(vec3(0.302, 0.898, 0.976));`,
-    yellow: `normalize(vec3(0.980, 0.882, 0.314))`,
+    pink: `normalize(vec3(0.992, 0.227, 0.733))`, // #FD3ABB
+    sky: `normalize(vec3(0.302, 0.898, 0.976))`, // #4DE5F9
+    yellow: `normalize(vec3(0.980, 0.882, 0.314))`, // #FAE150
   };
+  const glslColor = colorMap[color] ?? colorMap.pink;
 
   // Vertex shader code
   const vertexShaderSource = `
@@ -87,7 +88,7 @@ export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
         noise += pow(noise, 8.); // Slightly reduced the exponent to soften effect
         noise = max(.0, noise - .4); // Increased threshold to reduce color area
         noise *= (1. - length(vUv - .5));
-        color = ${colorMap[color]}; // #FD3ABB
+        color = ${glslColor};
         color = color * noise;
         gl_FragColor = vec4(color, noise);
     }
@@ -321,7 +322,9 @@ export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
       );
       window.removeEventListener(`scroll`, handleScroll);
     };
-  }, []);
+    // Re-init when the theme color changes: the accent is baked into the
+    // fragment shader source, so a new color needs a shader recompile.
+  }, [color]);
 
   // Helper to create a CSS linear gradient as fallback
   const createGradientBackground = () => {

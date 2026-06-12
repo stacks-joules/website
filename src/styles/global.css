@@ -70,14 +70,16 @@ h4 {
 }
 
 .theme-sky {
-  --theme-color: #00b4d8;
-  --theme-color-hover: #0094b2;
+  /* Matches the Neuro Noise shader + Figma cyan */
+  --theme-color: #4de5f9;
+  --theme-color-hover: #2cc8dd;
   --theme-wrenchbolt: url('/images/wrenchbolt-sky.svg');
 }
 
 .theme-yellow {
-  --theme-color: #ffd700;
-  --theme-color-hover: #e6c200;
+  /* Matches the Neuro Noise shader + Figma yellow */
+  --theme-color: #fae150;
+  --theme-color-hover: #e6c72e;
   --theme-wrenchbolt: url('/images/wrenchbolt-yellow.svg');
 }
 

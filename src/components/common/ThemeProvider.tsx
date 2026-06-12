@@ -1,8 +1,10 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 import type { ReactNode } from 'react';
 
 // Define the possible theme colors
 type Theme = 'pink' | 'sky' | 'yellow';
+
+const THEMES: Theme[] = [`pink`, `sky`, `yellow`];
 
 // Define the context types
 interface ThemeContextType {
@@ -13,17 +15,41 @@ interface ThemeContextType {
 // Create the context with default values
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+/**
+ * Reads the theme resolved by the inline color-roll script in Layout.astro
+ * (which sets data-theme on <html> before first paint). Falls back to pink
+ * during SSR or if the script didn't run.
+ */
+const readDocumentTheme = (): Theme => {
+  if (typeof document !== `undefined`) {
+    const t = document.documentElement.dataset.theme as Theme | undefined;
+    if (t && THEMES.includes(t)) return t;
+  }
+  return `pink`;
+};
+
 // Provider component
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  // Local state to store the theme
-  const [theme, setTheme] = useState<Theme>(`pink`); // Default to 'pink'
+  // SSR renders pink; the real theme is synced from <html data-theme> after
+  // mount so server and client markup match (no hydration mismatch).
+  const [theme, setTheme] = useState<Theme>(`pink`);
 
-  // Update the theme in both state and sessionStorage
+  useEffect(() => {
+    setTheme(readDocumentTheme());
+  }, []);
+
+  // Update the theme in state and keep the <html> class/data attribute in
+  // sync so CSS variables (--theme-color etc.) follow along.
   const handleSetTheme = (newTheme: Theme) => {
     setTheme(newTheme);
-    sessionStorage.setItem(`colorTheme`, newTheme); // Save the new theme to sessionStorage
+    if (typeof document !== `undefined`) {
+      const el = document.documentElement;
+      el.classList.remove(`theme-pink`, `theme-sky`, `theme-yellow`);
+      el.classList.add(`theme-${newTheme}`);
+      el.dataset.theme = newTheme;
+    }
   };
 
   return (

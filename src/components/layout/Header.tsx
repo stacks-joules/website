@@ -7,6 +7,14 @@ import { useTheme } from '../common/ThemeProvider';
 import { Starfield } from '@components/common/StarField';
 
 const backgroundImage = `/images/background-pink.png`;
+
+// Accent hex per theme — keep in sync with .theme-* in global.css
+const themeHex: Record<string, string> = {
+  pink: `#FD3ABB`,
+  sky: `#4DE5F9`,
+  yellow: `#FAE150`,
+};
+
 export const Header: React.FC<{ color?: string }> = () => {
   // import color from ThemeProvider
   const { theme } = useTheme();
@@ -17,16 +25,18 @@ export const Header: React.FC<{ color?: string }> = () => {
     setComponentTheme(theme);
   }, [theme]);
 
+  const accent = themeHex[componentTheme] ?? themeHex.pink;
+
   return (
     <div className={styles.header}>
       <div className={styles.background}>
         {showStars ? (
-          <Starfield position="absolute" iconColor="#fd3abb" />
+          <Starfield position="absolute" iconColor={accent} />
         ) : (
           <NeuroNoiseBackground
             height={`100%`}
             fallbackImage={backgroundImage}
-            fallbackColor="#FD3ABB"
+            fallbackColor={accent}
             color={componentTheme}
           />
         )}

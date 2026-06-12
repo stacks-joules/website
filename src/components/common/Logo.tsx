@@ -22,11 +22,7 @@ export const Logo: React.FC<LogoProps> = ({
 
   return (
     <div className={logoClass}>
-      <img
-        src={StacksLogo}
-        alt="Stacks Logo"
-        className={styles.logoImage}
-      />
+      <img src={StacksLogo} alt="Stacks Logo" className={styles.logoImage} />
       <svg
         width="114"
         height="101"
@@ -37,6 +33,19 @@ export const Logo: React.FC<LogoProps> = ({
         onClick={handleClick}
         onMouseEnter={onPlusEnter}
         onMouseLeave={onPlusLeave}
+        role={handleClick ? `button` : undefined}
+        tabIndex={handleClick ? 0 : undefined}
+        aria-label={handleClick ? `A little surprise` : undefined}
+        onKeyDown={
+          handleClick
+            ? (e) => {
+                if (e.key === `Enter` || e.key === ` `) {
+                  e.preventDefault();
+                  handleClick();
+                }
+              }
+            : undefined
+        }
       >
         <path
           id="+"
