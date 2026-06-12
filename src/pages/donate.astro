@@ -72,7 +72,13 @@ const infographicCards = [
     margin-bottom: 32px;
   }
   .badge-strip__title::before {
-    content: '↳';
+    content: '';
+    display: inline-block;
+    width: 0.62em;
+    height: 0.62em;
+    background-color: currentColor;
+    -webkit-mask: var(--arrow-mask) no-repeat center / contain;
+    mask: var(--arrow-mask) no-repeat center / contain;
     margin-right: var(--arrow-gap);
   }
 </style>

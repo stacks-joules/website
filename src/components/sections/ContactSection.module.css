@@ -90,6 +90,12 @@
   line-height: 1.2;
 }
 
+/* Auto-detected or explicit tel links stay white, not iOS blue */
+.locationDetails a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .icon {
   width: 20px;
   height: 20px;

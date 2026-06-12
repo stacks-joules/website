@@ -37,6 +37,14 @@
   margin: 0 auto;
 }
 
+/* Whole logo toggles starfield/plasma on click */
+.clickable {
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
 .absolute {
   position: absolute;
   top: 50%;

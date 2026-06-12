@@ -26,7 +26,13 @@
 }
 
 .infographicTitle > div::before {
-  content: '↳';
+  content: '';
+  display: inline-block;
+  width: 0.62em;
+  height: 0.62em;
+  background-color: currentColor;
+  -webkit-mask: var(--arrow-mask) no-repeat center / contain;
+  mask: var(--arrow-mask) no-repeat center / contain;
   margin-right: var(--arrow-gap);
 }
 
@@ -73,8 +79,13 @@
 @media (max-width: 768px) {
   /* Mobile gutters (parent Block strips its padding on mobile) */
   .infographicContainer {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 40px 24px 0;
+  }
+
+  /* Tighter rhythm: less air around the stats grid on mobile */
+  .infographicCardContainer {
+    padding-top: 40px;
+    padding-bottom: 8px;
   }
 
   /* Figma mobile: stats in a 2x2 grid */
@@ -85,15 +96,16 @@
 
   .infographicCard {
     flex: 0 0 calc(50% - 12px);
+    min-width: 0;
   }
 
   /* Smaller stat type so the 2x2 grid holds (Figma mobile) */
   .infographicCardStat {
-    font-size: 64px;
+    font-size: 54px;
   }
 
   .infographicCardStat span {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .infographicCardTitle {

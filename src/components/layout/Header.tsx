@@ -41,11 +41,9 @@ export const Header: React.FC<{ color?: string }> = () => {
           />
         )}
       </div>
-      <Logo
-        center
-        onPlusEnter={() => setShowStars(true)}
-        onPlusLeave={() => setShowStars(false)}
-      />
+      {/* Click the logo to toggle starfield <-> plasma (hover was
+          impossible to trigger on touch devices) */}
+      <Logo center handleClick={() => setShowStars((s) => !s)} />
     </div>
   );
 };

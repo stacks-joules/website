@@ -18,10 +18,12 @@ export const Logo: React.FC<LogoProps> = ({
 }) => {
   const logoClass = `${styles.logo} ${center ? styles.center : ``} ${
     absolute ? styles.absolute : ``
-  }`;
+  } ${handleClick ? styles.clickable : ``}`;
 
   return (
-    <div className={logoClass}>
+    /* Whole wordmark is the click target — hover/plus-only was too
+       fiddly on touch devices */
+    <div className={logoClass} onClick={handleClick}>
       <img src={StacksLogo} alt="Stacks Logo" className={styles.logoImage} />
       <svg
         width="114"
@@ -30,7 +32,6 @@ export const Logo: React.FC<LogoProps> = ({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={styles.plusLogo}
-        onClick={handleClick}
         onMouseEnter={onPlusEnter}
         onMouseLeave={onPlusLeave}
         role={handleClick ? `button` : undefined}
