@@ -51,9 +51,7 @@ export const Navigation: React.FC = () => {
             <NavLink to="/team">Our Team</NavLink>
             <NavLink to="/curriculum">Curriculum</NavLink>
             <NavLink to="/become-a-student">Train With Us</NavLink>
-            <NavLink to="/employment-partnerships">
-              Hire Our Graduates
-            </NavLink>
+            <NavLink to="/employment-partnerships">Hire Our Graduates</NavLink>
             <NavLink to="/support-mentors">Support the Pipeline</NavLink>
           </div>
           <div className={styles.rightNav}>
@@ -83,9 +81,7 @@ export const Navigation: React.FC = () => {
           <NavLink to="/about">About</NavLink>
           <NavLink to="/team">Our Team</NavLink>
           <NavLink to="/curriculum">Curriculum</NavLink>
-          <NavLink to="/employment-partnerships">
-            Hire Our Graduates
-          </NavLink>
+          <NavLink to="/employment-partnerships">Hire Our Graduates</NavLink>
           <NavLink to="/support-mentors">Support the Pipeline</NavLink>
           <div className={styles.buttonContainer}>
             <NavLink to="#contact" className={styles.button}>

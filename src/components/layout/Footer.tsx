@@ -16,8 +16,8 @@ export const Footer: React.FC = () => {
         <div className={styles.divider} />
         <div className={styles.bottomRow}>
           <span className={styles.copyright}>
-            Stacks and Joules © {new Date().getFullYear()} · 501(c)(3) ·
-            EIN 82-2358571
+            Stacks and Joules © {new Date().getFullYear()} · 501(c)(3) · EIN
+            82-2358571
           </span>
           <a href="/about#accountability" className={styles.financialsLink}>
             Financials

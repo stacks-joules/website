@@ -133,7 +133,9 @@ export const ContactSection: React.FC = () => {
   // with the logo-sprite tunnel, tinted to the active accent. three.js is
   // only fetched on first click via dynamic import.
   const handlePlusClick = () => {
-    void import(`../../lib/logoTunnel`).then((m) => m.openLogoTunnel());
+    import(`../../lib/logoTunnel`)
+      .then((m) => m.openLogoTunnel())
+      .catch((err) => console.error(`Failed to load logo tunnel:`, err));
   };
 
   return (

@@ -324,6 +324,9 @@ export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
     };
     // Re-init when the theme color changes: the accent is baked into the
     // fragment shader source, so a new color needs a shader recompile.
+    // animate/initWebGL are stable module-pattern functions; including them
+    // would re-init every render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color]);
 
   // Helper to create a CSS linear gradient as fallback

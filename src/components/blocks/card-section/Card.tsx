@@ -48,7 +48,9 @@ export const Card: React.FC<CardProps> = ({
             loading="lazy"
             decoding="async"
             className={styles.cardImage}
-            style={imagePosition ? { objectPosition: imagePosition } : undefined}
+            style={
+              imagePosition ? { objectPosition: imagePosition } : undefined
+            }
           />
         </div>
       )}

@@ -6,18 +6,20 @@ interface TransparencyBadgesProps {
 }
 
 const badges = [
-  { name: 'Charity Navigator', subtitle: 'Four-Star Rating' },
-  { name: 'Candid', subtitle: 'Platinum Transparency 2026' },
-  { name: 'ImpactMatters', subtitle: 'Impact Rated Nonprofit' },
-  { name: 'Catalogue for Philanthropy', subtitle: 'One of the Best' },
+  { name: `Charity Navigator`, subtitle: `Four-Star Rating` },
+  { name: `Candid`, subtitle: `Platinum Transparency 2026` },
+  { name: `ImpactMatters`, subtitle: `Impact Rated Nonprofit` },
+  { name: `Catalogue for Philanthropy`, subtitle: `One of the Best` },
 ];
 
 // Placeholder badge boxes. Swap each <li> for an <img src="/images/badge-..."> when actual badge files arrive.
 export const TransparencyBadges: React.FC<TransparencyBadgesProps> = ({
-  variant = 'full',
+  variant = `full`,
 }) => {
   const rowClass =
-    variant === 'compact' ? `${styles.row} ${styles.rowCompact}` : `${styles.row} ${styles.rowFull}`;
+    variant === `compact`
+      ? `${styles.row} ${styles.rowCompact}`
+      : `${styles.row} ${styles.rowFull}`;
 
   return (
     <ul className={rowClass}>

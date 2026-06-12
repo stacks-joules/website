@@ -55,6 +55,7 @@
         "project": "."
       }
     },
+    "import/ignore": ["node_modules/three"],
     "react": {
       "version": "detect"
     }
