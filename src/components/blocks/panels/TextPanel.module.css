@@ -16,29 +16,19 @@
   margin-top: 0;
 }
 
-.button {
-  width: auto;
-  display: inline-block;
-  padding: 12px 24px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 40px;
-  background: var(--White, #fff);
-  color: #000;
-  font-feature-settings: 'liga' off, 'clig' off;
-  /* Caption */
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%; /* 16.8px */
-  text-transform: uppercase;
-  text-decoration: none;
+/* ↳ eyebrow arrow on the caption */
+.content h3::before {
+  content: '↳';
+  margin-right: var(--arrow-gap);
 }
 
-.button:hover {
-  border-radius: 40px;
-  background: var(--White, #fff);
+/* Body Large token: Inter 20px / line-height 1.2 / letter-spacing 0.1px,
+   80% opacity per Figma dark-section body text */
+.content p {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {

@@ -20,26 +20,43 @@
 }
 
 .contactTitle {
-  color: #323b4b;
-  font-size: 32px;
-  font-weight: 700;
-  margin-top: 16px;
+  /* Figma: wordmark flush-left on the 80px gutter, full column width (620),
+     16px gap to the description below */
+  margin-top: 0;
   margin-bottom: 16px;
+  width: 100%;
+}
+
+/* Override the Logo component's centered, inset default inside the footer */
+.contactTitle > div {
+  width: 100%;
+  margin: 0;
 }
 
 .contactDescription {
+  /* Figma Body Large @ 80% */
   font-family: 'Inter', sans-serif;
   color: white;
+  opacity: 0.8;
   font-size: 20px;
   font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
   margin-bottom: 27px;
 }
 
 .imageContainer {
+  /* Figma: 620 x 269, object-cover */
   position: relative;
   width: 100%;
-  height: 240px;
+  height: 269px;
   margin-bottom: 27px;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .locationContainer {
@@ -61,6 +78,7 @@
 }
 
 .locationDetails {
+  /* Figma Caption: Inter SemiBold 14, uppercase */
   text-transform: uppercase;
   display: flex;
   align-items: flex-start;
@@ -68,6 +86,8 @@
   margin-bottom: 14px;
   color: white;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .icon {
@@ -83,11 +103,12 @@
 }
 
 .formTitle {
+  /* Figma "Title" token: Inter SemiBold 24, 32px gap to the form */
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: 'Inter', sans-serif;
   color: white;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 32px;
 }
@@ -110,16 +131,21 @@
 }
 
 .formGroup label {
+  /* Figma Caption: Inter SemiBold 14 uppercase, 8px gap to field */
   display: block;
   color: white;
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
   margin-bottom: 8px;
 }
 
 .formGroup input,
 .formGroup textarea {
-  font-family: 'Inter', sans-serif;
+  /* Figma Web Input Field: #17191d fill, 0.5px white@60% border,
+     4px radius, 48px tall, 11px/16px padding, Manrope 14 */
+  font-family: 'Manrope', 'Inter', sans-serif;
   width: 100%;
   height: 48px;
   box-sizing: border-box;
@@ -127,28 +153,22 @@
   align-items: center;
   gap: 10px;
   align-self: stretch;
-  border: 1px solid white;
-  border-radius: 12px;
+  border: 0.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
   font-size: 14px;
+  line-height: 1.45;
   color: white;
   background-color: #17191d;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #57595b;
 }
 
 .formGroup textarea {
   height: 120px;
   resize: vertical;
-}
-
-.submitButton {
-  background-color: #fff;
-  color: black;
-  border: none;
-  border-radius: 56px;
-  padding: 15px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 
 .formGroup select option {
@@ -173,7 +193,9 @@
   }
 
   .imageContainer {
-    margin-bottom: 0px;
+    /* Figma mobile: NYC photo runs edge to edge */
+    margin: 0 -20px;
+    width: calc(100% + 40px);
   }
 
   .locationContainer {

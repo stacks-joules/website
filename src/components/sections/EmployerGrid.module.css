@@ -1,25 +1,33 @@
+/* Figma section rhythm: 80 above hairline, hairline, 28, eyebrow; 80 below */
 .gridContainer {
   width: 100%;
   box-sizing: border-box;
   padding-top: 80px;
-  padding-bottom: 24px;
+  padding-bottom: 80px;
 }
 
 .gridContent {
   border-top: 1px solid #8c8c8c;
-  border-bottom: 1px solid #8c8c8c;
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
-  padding-bottom: 80px;
+  padding-top: 28px;
+  padding-bottom: 0;
 }
 
 .gridTitle {
+  /* Identical to CardContainer section titles */
   color: #000;
   font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
   font-size: 24px;
+  font-style: normal;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 120%;
+}
+
+.gridTitle::before {
+  content: '↳';
+  margin-right: var(--arrow-gap);
 }
 
 .gridDescription {

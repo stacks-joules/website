@@ -49,12 +49,23 @@
 .newsletterForm {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
+  align-items: flex-end; /* button lines up with the input, not the label */
+  gap: 16px;
   max-width: 635px;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 40px;
+}
+
+/* The label + input group takes the remaining width */
+.newsletterForm > div:not([hidden]) {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Submit matches the input's 47px height so the row reads level */
+.newsletterForm button {
+  padding: 14px 24px !important;
 }
 
 .emailInputLabel {
@@ -74,7 +85,8 @@
   border-radius: 12px;
   border: 1px solid #d0d0d0;
   background: var(--White, #fff);
-  width: 145%;
+  width: 100%;
+  box-sizing: border-box;
   font-weight: 300;
   padding: 14px 24px 14px;
   line-height: 120%;

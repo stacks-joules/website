@@ -9,40 +9,41 @@ import { Wallpaper } from '../components/common/Wallpaper';
 import { ImagePanel } from '../components/blocks/panels/ImagePanel';
 import { TextPanel } from '../components/blocks/panels/TextPanel';
 import { Block } from '../components/blocks/block/Block';
+import { donationLink } from '../data/site';
 
 const StudentImage = '/images/student-photo-1.png';
-const TeamImage = '/images/team.png';
+const TeamImage = '/images/home-mission.jpg';
 const WiringImage = '/images/wiring-curriculum.png';
-const DonateImage = '/images/donate-image.png';
+const DonateImage = '/images/home-donate.jpg';
 const CardOne = '/images/card-1.png';
-const CardTwo = '/images/card-2.png';
-const CardThree = '/images/card-3.png';
+const CardTwo = '/images/home-employer.jpg';
+const CardThree = '/images/home-howitworks-3.jpg';
 const CurriculumImage1 = '/images/curriculum-image-1.png';
-const CurriculumImage2 = '/images/curriculum-image-2.png';
+const CurriculumImage2 = '/images/home-handson.jpg';
 const CurriculumImage3 = '/images/curriculum-image-3.png';
-const CurriculumImage4 = '/images/curriculum-image-4.png';
-const LightCurriculumImage = '/images/light-curriculum.png';
+const CurriculumImage4 = '/images/home-howitworks-2.jpg';
+const LightCurriculumImage = '/images/home-howitworks-1.jpg';
 
 const pathwayCards = [
   {
-    headerText: '↳For Learners',
+    headerText: 'For Learners',
     border: true,
     imageSrc: CardOne,
     imageAlt: 'A Stacks+Joules trainee learning building automation.',
     content:
       "Train for a career in Building Automation. No tuition. No prior experience required. Twelve weeks of hands-on training, three industry certifications, a paid internship, and a clear path to full-time employment.",
     buttonText: 'TRAIN WITH US',
-    buttonLink: '/become-a-student',
+    buttonLink: '#contact',
   },
   {
-    headerText: '↳For Employers',
+    headerText: 'For Employers',
     border: true,
     imageSrc: CardTwo,
     imageAlt: 'A Stacks+Joules graduate working on a building automation panel.',
     content:
-      "Hire pre-trained BAS talent. Our graduates arrive certified in EPA 608, Niagara, and LCA - and they know wiring, controllers, safety, and documentation before day one.",
+      "Hire pre-trained BAS talent. Our graduates arrive certified in EPA 608, Niagara, and LCA. They know wiring, controllers, safety, and documentation before day one.",
     buttonText: 'HIRE OUR GRADUATES',
-    buttonLink: '/employment-partnerships',
+    buttonLink: '#contact',
   },
 ];
 
@@ -52,7 +53,7 @@ const pathwayStepCards = [
     imageAlt: 'Foundational training in BAS concepts.',
     contentTitle: '1. Foundational Training',
     content:
-      'Twelve weeks of fundamentals - electricity, HVAC, networking, controls logic. Designed for people entering the field, not for people already in it.',
+      'Twelve weeks of fundamentals: electricity, HVAC, networking, controls logic. Designed for people entering the field, not for people already in it.',
   },
   {
     imageSrc: CurriculumImage4,
@@ -63,33 +64,30 @@ const pathwayStepCards = [
   },
   {
     imageSrc: CardThree,
-    imageAlt: 'A Stacks+Joules graduate at full-time work.',
+    imageAlt: 'A Stacks+Joules graduate shaking hands with an employer.',
     contentTitle: '3. Full-Time Employment',
     content:
-      "A clear path to full-time work with our employer network. Graduates move into roles like BAS technician, controls installer, or junior programmer - with senior techs who already know the curriculum they came through.",
+      "A clear path to full-time work with our employer network. Graduates move into roles like BAS technician, controls installer, or junior programmer, with senior techs who already know the curriculum they came through.",
   },
 ];
 
 const curriculumCards = [
   {
-    headerText: '↳No Prior Experience Required',
-    border: true,
+    contentTitle: 'No Prior Experience Required',
     imageSrc: CurriculumImage1,
     imageAlt: 'Trainees learning fundamentals.',
     content:
-      'We start with fundamentals - electricity, HVAC principles, networking basics, and controls logic. The curriculum is designed for learners entering the field, not just those already in it.',
+      'We start with fundamentals: electricity, HVAC principles, networking basics, and controls logic. The curriculum is designed for learners entering the field, not just those already in it.',
   },
   {
-    headerText: '↳Hands-On with Real Equipment',
-    border: true,
+    contentTitle: 'Hands-On with Real Equipment',
     imageSrc: CurriculumImage2,
     imageAlt: 'Hands-on training with controllers and sensors.',
     content:
-      'Training includes work with actual controllers, sensors, dampers, and building management systems. Learners troubleshoot live systems, not simulations - preparing them for the realities of the job site.',
+      'Training includes work with actual controllers, sensors, dampers, and building management systems. Learners troubleshoot live systems - not simulations - preparing them for the realities of the job site.',
   },
   {
-    headerText: '↳Safety and Documentation Focus',
-    border: true,
+    contentTitle: 'Workplace Skills',
     imageSrc: CurriculumImage3,
     imageAlt: 'Safety and documentation training.',
     content:
@@ -101,7 +99,7 @@ const infographicCards = [
   { title: 'Graduates Hired', number: '98', symbol: '%' },
   { title: 'Average Starting Pay', number: '$28', symbol: '/hr' },
   { title: 'Placed in Green Tech', number: '76', symbol: '%' },
-  { title: 'NYC Companies Hiring', number: '20', symbol: '' },
+  { title: 'Employer Partners', number: '20', symbol: '+' },
 ];
 
 const employers = [
@@ -128,7 +126,7 @@ const employers = [
 ];
 
 const ahmedDescription =
-  "Ahmed walked in with no building automation experience. TEC Systems hired him three months after graduation. Three years later, he was a Senior Commissioning Technician. Now he trains the next Stacks+Joules cohort coming through TEC.\n\n\"With Stacks+Joules, we can confidently bid on any project - we know where to find talent.\"\n- Colin Gumbs, COO, TEC Systems";
+  "Ahmed walked in with no building automation experience. TEC Systems hired him three months after graduation. Three years later, he was a Senior Commissioning Technician. Now he trains the next Stacks+Joules cohort coming through TEC.\n\n\"With Stacks+Joules, we can confidently bid on any project. We know where to find talent.\"\n- Colin Gumbs, COO, TEC Systems";
 ---
 
 <Layout>
@@ -138,7 +136,7 @@ const ahmedDescription =
       title="Your career in Building Automation starts here."
       description="Twelve weeks of hands-on training. Three industry certifications - EPA 608, Niagara, and LCA. A paid internship and a clear path into Building Automation. No prior experience required."
       buttonText="TRAIN WITH US"
-      buttonLink="/become-a-student"
+      buttonLink="#contact"
     />
     <ImagePanel
       imageSrc={StudentImage}
@@ -164,15 +162,15 @@ const ahmedDescription =
       dropShadow
     />
     <TextPanel
-      smallTitle="Bridging the tech opportunity gap."
-      description="Hundreds of thousands of unfilled BAS jobs. Every commercial building runs on automation that needs people to install, maintain, and upgrade it. As buildings get smarter and experienced techs retire, employers need a stronger talent pipeline. Stacks+Joules trains overlooked populations for those jobs. We don't run a classroom - we run a pipeline from no prior experience to a paid internship by week thirteen."
+      title="Bridging the tech opportunity gap."
+      description="BAS/controls roles are facing a documented skilled labor shortage, especially in HVAC controls and systems integration. Every commercial building runs on automation that needs people to install, maintain, and upgrade it. As buildings get smarter and experienced techs retire, employers need a stronger talent pipeline. Stacks+Joules trains overlooked populations for those jobs. We don't run a classroom - we run a pipeline from no prior experience to a paid internship by week thirteen."
     />
   </Block>
 
   <!-- 4. Pathway diagram (How It Works) -->
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
-      title="↳ How It Works"
+      title="How It Works"
       description="Three stages. From Training to Internship to Full-Time Employment. Each one designed with our hiring partners. Every step puts you closer to a real job site."
     >
       {pathwayStepCards.map(({ contentTitle, ...rest }) => (
@@ -182,16 +180,16 @@ const ahmedDescription =
   </Block>
 
   <!-- 5. Impact stats -->
-  <Infographic title="↳ Our Impact" cards={infographicCards} />
+  <Infographic title="Our Impact" cards={infographicCards} />
 
   <!-- 6. Curriculum -->
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
-      title="↳ Training Built on Real Systems"
+      title="Training Built on Real Systems"
       description="We train on the same equipment our graduates use on the job. Same tools. Same terminology. Same wiring. By graduation, you've already done the work."
     >
-      {curriculumCards.map(({ headerText, ...rest }) => (
-        <Card key={headerText} headerText={headerText} {...rest} />
+      {curriculumCards.map(({ contentTitle, ...rest }) => (
+        <Card key={contentTitle} contentTitle={contentTitle} {...rest} />
       ))}
     </CardContainer>
   </Block>
@@ -204,17 +202,15 @@ const ahmedDescription =
       dropShadow
     />
     <TextPanel
-      caption="↳ Case Study"
+      caption="Case Study"
       smallTitle="From trainee to trainer in three years."
       description={ahmedDescription}
-      buttonText="READ THE CASE STUDY"
-      buttonLink="/employment-partnerships"
     />
   </Block>
 
   <!-- 8. Employer wordmark grid -->
   <EmployerGrid
-    title="↳ Where Our Graduates Work"
+    title="Where Our Graduates Work"
     description="Our graduates have been placed with 20 leading NYC building automation companies:"
     employers={employers}
   />
@@ -222,11 +218,11 @@ const ahmedDescription =
   <!-- 9. Donate CTA -->
   <Block variation="dark">
     <TextPanel
-      caption="↳ Support Stacks+Joules"
+      caption="Support Stacks+Joules"
       smallTitle="We're not just filling jobs. We're building a pipeline that feeds the entire ecosystem."
       description="Fund a trainee. A building runs better. A career begins. The pipeline grows. Every gift helps train the next graduate - and graduates come back to train the cohort after that."
       buttonText="DONATE"
-      buttonLink="/donate"
+      buttonLink={donationLink}
     />
     <ImagePanel
       imageSrc={DonateImage}

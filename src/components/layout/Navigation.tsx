@@ -3,14 +3,13 @@ import * as styles from './Navigation.module.css';
 import NavLink from '../common/NavLink';
 import { Container } from './Container';
 import { Button } from '../common/Button';
+import { donationLink } from '../../data/site';
 
 const wrenchboltLogo = `/images/wrenchbolt.svg`;
 const backArrow = `/images/back-arrow.svg`;
 export const Navigation: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  const donationLink = `https://giving.classy.org/campaign/700902/donate`;
 
   // Handle scroll events
   useEffect(() => {
@@ -51,15 +50,15 @@ export const Navigation: React.FC = () => {
             <NavLink to="/about">About</NavLink>
             <NavLink to="/team">Our Team</NavLink>
             <NavLink to="/curriculum">Curriculum</NavLink>
-            <NavLink to="/become-a-student">Become A Student</NavLink>
+            <NavLink to="/become-a-student">Train With Us</NavLink>
             <NavLink to="/employment-partnerships">
-              Employment Partnerships
+              Hire Our Graduates
             </NavLink>
-            <NavLink to="/support-mentors">Support/Mentor</NavLink>
+            <NavLink to="/support-mentors">Support the Pipeline</NavLink>
           </div>
           <div className={styles.rightNav}>
             <a href={donationLink}>
-              <Button>Donate</Button>
+              <Button className={styles.donate}>Donate</Button>
             </a>
           </div>
         </div>
@@ -85,12 +84,12 @@ export const Navigation: React.FC = () => {
           <NavLink to="/team">Our Team</NavLink>
           <NavLink to="/curriculum">Curriculum</NavLink>
           <NavLink to="/employment-partnerships">
-            Employment Partnerships
+            Hire Our Graduates
           </NavLink>
-          <NavLink to="/support-mentors">Support/Mentor</NavLink>
+          <NavLink to="/support-mentors">Support the Pipeline</NavLink>
           <div className={styles.buttonContainer}>
-            <NavLink to="/become-a-student" className={styles.button}>
-              <Button color="white">BECOME A STUDENT</Button>
+            <NavLink to="#contact" className={styles.button}>
+              <Button color="white">TRAIN WITH US</Button>
             </NavLink>
             <a href={donationLink}>
               <Button>Donate</Button>

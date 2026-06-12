@@ -6,12 +6,16 @@ interface LogoProps {
   center?: boolean;
   handleClick?: () => void;
   absolute?: boolean;
+  onPlusEnter?: () => void;
+  onPlusLeave?: () => void;
 }
 
 export const Logo: React.FC<LogoProps> = ({
   center,
   handleClick,
   absolute,
+  onPlusEnter,
+  onPlusLeave,
 }) => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -43,6 +47,8 @@ export const Logo: React.FC<LogoProps> = ({
           xmlns="http://www.w3.org/2000/svg"
           className={styles.plusLogo}
           onClick={handleClick}
+          onMouseEnter={onPlusEnter}
+          onMouseLeave={onPlusLeave}
         >
           <path
             id="+"

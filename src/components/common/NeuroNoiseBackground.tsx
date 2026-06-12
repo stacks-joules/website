@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 interface NeuroNoiseBackgroundProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   height?: string;
   width?: string;
   fallbackImage?: string;

@@ -130,7 +130,7 @@ export const ContactSection: React.FC = () => {
   // Function to send form data to Monday.com via GraphQL
 
   return (
-    <section className={styles.contactSection}>
+    <section id="contact" className={styles.contactSection}>
       <Container>
         <div className={styles.contactContent}>
           <div className={styles.leftContent}>

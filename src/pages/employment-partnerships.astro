@@ -9,25 +9,25 @@ import { Card } from '../components/blocks/card-section/Card';
 import { Infographic } from '../components/sections/Infographic';
 import { EmployerGrid } from '../components/sections/EmployerGrid';
 
-const CardTwo = '/images/card-2.png';
+const CardTwo = '/images/employer-hero.jpg';
 const WiringImage = '/images/wiring-curriculum.png';
 const TeamImage = '/images/team.png';
 
 const pipelineCards = [
   {
-    headerText: '↳1. Hire Once',
+    headerText: '1. Hire Once',
     border: true,
     content:
       'Stacks+Joules graduates arrive pre-trained on real BAS systems. They understand wiring, controllers, Niagara, safety protocols, and documentation. You\'re not starting from zero.',
   },
   {
-    headerText: '↳2. Train',
+    headerText: '2. Train',
     border: true,
     content:
       'Pair them with a senior tech. Our mentorship model isn\'t "follow someone around" - it\'s a defined progression from supervised work to independent projects, with milestone check-ins.',
   },
   {
-    headerText: '↳3. Mentor & Multiply',
+    headerText: '3. Mentor & Multiply',
     border: true,
     content:
       'As they grow, your Stacks+Joules hires become mentors themselves. Each mentor trains the next cohort faster. Your training costs go down. Time-to-billable shrinks. The pipeline feeds itself.',
@@ -36,13 +36,13 @@ const pipelineCards = [
 
 const valueCards = [
   {
-    headerText: '↳For Controls Contractors',
+    headerText: 'For Controls Contractors',
     border: true,
     content:
       'Job-ready technicians who understand industry workflows and safety protocols. Reduced onboarding time and lower training costs per new hire. Fewer callbacks and rework. Access to a growing talent pool in a competitive hiring market.',
   },
   {
-    headerText: '↳For Building Owners',
+    headerText: 'For Building Owners',
     border: true,
     content:
       'More reliable building operations with skilled technicians maintaining systems. Lower operating costs and improved energy efficiency through proper system management. Stronger internal knowledge retention. Reduced dependency on external contractors for routine maintenance.',
@@ -80,11 +80,11 @@ const employers = [
 ];
 
 const ahmedDescription =
-  "Ahmed walked in with no BAS experience. TEC Systems hired him three months after graduation. By month 11 he was 100% billable and had met ROI - versus 18-24 months for a typical non-Stacks+Joules hire.\n\nThree years later, he's a Senior Commissioning Technician. TEC's newest Stacks+Joules hires now hit full ROI in 8 months - because Ahmed is the one training them.\n\n\"With Stacks+Joules, we can confidently bid on any project - we know where to find talent.\"\n- Colin Gumbs, COO, TEC Systems";
+  "Ahmed walked in with no BAS experience. TEC Systems hired him three months after graduation. By month 11 he was 100% billable and had met ROI - versus 18-24 months for a typical non-Stacks+Joules hire.\n\nThree years later, he's a Senior Commissioning Technician. TEC's newest Stacks+Joules hires now hit full ROI in 8 months, because Ahmed is the one training them.\n\n\"With Stacks+Joules, we can confidently bid on any project. We know where to find talent.\"\n- Colin Gumbs, COO, TEC Systems";
 ---
 
-<Layout title="Employment Partnerships | Stacks+Joules">
-  <SectionHeader>Employment Partnerships</SectionHeader>
+<Layout title="Hire Our Graduates | Stacks+Joules">
+  <SectionHeader>Hire Our Graduates</SectionHeader>
 
   <Block variation="dark">
     <ImagePanel
@@ -100,7 +100,7 @@ const ahmedDescription =
 
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
-      title="↳ How the Pipeline Works"
+      title="How the Pipeline Works"
       description="Hire pre-trained talent. Develop them with structured mentorship. Watch them become the next generation of mentors. The pipeline compounds."
     >
       {pipelineCards.map(({ headerText, ...rest }) => (
@@ -116,17 +116,17 @@ const ahmedDescription =
       dropShadow
     />
     <TextPanel
-      caption="↳ Case Study: TEC Systems"
+      caption="Case Study: TEC Systems"
       smallTitle="From trainee to trainer in three years."
       description={ahmedDescription}
     />
   </Block>
 
-  <Infographic title="↳ By the Numbers" cards={partnerStats} />
+  <Infographic title="By the Numbers" cards={partnerStats} />
 
   <Block variation="dark" paddingY="0px" singleColumn>
     <CardContainer
-      title="↳ Who Benefits"
+      title="Who Benefits"
       description="Different roles, same pipeline. Whether you install controls or operate the buildings they run in, Stacks+Joules graduates compound the value of every senior hire on your team."
     >
       {valueCards.map(({ headerText, ...rest }) => (
@@ -136,18 +136,18 @@ const ahmedDescription =
   </Block>
 
   <EmployerGrid
-    title="↳ Where Our Graduates Work"
+    title="Where Our Graduates Work"
     description="In NYC we've placed graduates at 20 leading BAS companies, including:"
     employers={employers}
   />
 
   <Block variation="dark">
     <TextPanel
-      caption="↳ Let's build the future together."
+      caption="Let's build the future together."
       smallTitle="Real Buildings. Real Training. Real Solutions."
       description="Talk to us about hiring from the next cohort. We'll walk you through what onboarding looks like, what your senior techs need to do, and how fast you can expect ROI."
       buttonText="GET IN TOUCH"
-      buttonLink="/support-mentors"
+      buttonLink="#contact"
     />
     <ImagePanel
       imageSrc={TeamImage}

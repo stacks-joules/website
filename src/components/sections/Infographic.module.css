@@ -6,20 +6,28 @@
 }
 
 .infographicContent {
+  /* Figma: hairline above header only — the next section brings its own */
   border-top: 1px solid #8c8c8c;
-  border-bottom: 1px solid #8c8c8c;
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
-  padding-bottom: 80px;
+  padding-top: 28px;
+  padding-bottom: 0;
 }
 
 .infographicTitle {
+  /* Identical to CardContainer section titles */
   color: #000;
   font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
   font-size: 24px;
+  font-style: normal;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 120%;
+}
+
+.infographicTitle > div::before {
+  content: '↳';
+  margin-right: var(--arrow-gap);
 }
 
 .infographicCardContainer {
@@ -63,7 +71,27 @@
 }
 
 @media (max-width: 768px) {
+  /* Figma mobile: stats in a 2x2 grid */
   .infographicCardContainer {
     flex-wrap: wrap;
+    gap: 32px 24px;
+  }
+
+  .infographicCard {
+    flex: 0 0 calc(50% - 12px);
+  }
+
+  /* Smaller stat type so the 2x2 grid holds (Figma mobile) */
+  .infographicCardStat {
+    font-size: 64px;
+  }
+
+  .infographicCardStat span {
+    font-size: 22px;
+  }
+
+  .infographicCardTitle {
+    font-size: 13px;
+    text-align: center;
   }
 }

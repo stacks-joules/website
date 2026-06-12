@@ -9,12 +9,12 @@ import { Card } from '../components/blocks/card-section/Card';
 import { Infographic } from '../components/sections/Infographic';
 import { TransparencyBadges } from '../components/sections/TransparencyBadges';
 
-const AboutImage = '/images/aboutstacks1.png';
-const TeamImage = '/images/team.png';
-const ConwayImage = '/images/conway.png';
-const LightCurriculumImage = '/images/light-curriculum.png';
-const CurriculumImage4 = '/images/curriculum-image-4.png';
-const CardThree = '/images/card-3.png';
+const AboutImage = '/images/about-hero.jpg';
+const TeamImage = '/images/about-classroom.jpg';
+const ConwayImage = '/images/about-team.jpg';
+const LightCurriculumImage = '/images/about-howitworks-1.jpg';
+const CurriculumImage4 = '/images/about-howitworks-2.jpg';
+const CardThree = '/images/about-howitworks-3.jpg';
 
 const pathwayStepCards = [
   {
@@ -22,7 +22,7 @@ const pathwayStepCards = [
     imageAlt: 'Foundational training in BAS concepts.',
     contentTitle: '1. Foundational Training',
     content:
-      'Twelve weeks of fundamentals - electricity, HVAC, networking, controls logic. Designed for people entering the field, not for people already in it.',
+      'Twelve weeks of fundamentals: electricity, HVAC, networking, controls logic. Designed for people entering the field, not for people already in it.',
   },
   {
     imageSrc: CurriculumImage4,
@@ -33,10 +33,10 @@ const pathwayStepCards = [
   },
   {
     imageSrc: CardThree,
-    imageAlt: 'A Stacks+Joules graduate at full-time work.',
+    imageAlt: 'A Stacks+Joules graduate shaking hands with an employer.',
     contentTitle: '3. Full-Time Employment',
     content:
-      "A clear path to full-time work with our employer network. Graduates move into roles like BAS technician, controls installer, or junior programmer - with senior techs who already know the curriculum they came through.",
+      "A clear path to full-time work with our employer network. Graduates move into roles like BAS technician, controls installer, or junior programmer, with senior techs who already know the curriculum they came through.",
   },
 ];
 
@@ -44,7 +44,7 @@ const infographicCards = [
   { title: 'Graduates Placed', number: '143', symbol: '' },
   { title: 'Industry Certifications', number: '500', symbol: '+' },
   { title: 'Placed in Green Tech', number: '76', symbol: '%' },
-  { title: 'NYC Companies Hiring', number: '20', symbol: '' },
+  { title: 'Employer Partners', number: '20', symbol: '+' },
 ];
 ---
 
@@ -58,14 +58,14 @@ const infographicCards = [
       dropShadow
     />
     <TextPanel
-      smallTitle="Bridging the tech opportunity gap."
+      title="Bridging the tech opportunity gap."
       description="Stacks+Joules is a 501(c)(3) nonprofit training overlooked populations for careers in Building Automation - the technology that runs modern buildings. We don't run classes. We run a pipeline: twelve weeks of training, a paid internship, and a clear path to work with our employer partners."
     />
   </Block>
 
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
-      title="↳ How It Works"
+      title="How It Works"
       description="Three stages. From Training to Internship to Full-Time Employment. Each one designed with our hiring partners. Every step puts you closer to a real job site."
     >
       {pathwayStepCards.map(({ contentTitle, ...rest }) => (
@@ -86,7 +86,7 @@ const infographicCards = [
     />
   </Block>
 
-  <Infographic title="↳ Our Impact" cards={infographicCards} />
+  <Infographic title="Our Impact" cards={infographicCards} />
 
   <Block variation="dark">
     <ImagePanel
@@ -105,7 +105,7 @@ const infographicCards = [
   <a id="accountability"></a>
   <Block variation="light" singleColumn>
     <div class="accountability-block">
-      <div class="accountability-block__eyebrow">↳ Accountability</div>
+      <div class="accountability-block__eyebrow">Accountability</div>
       <h2 class="accountability-block__title">Transparency you can verify.</h2>
       <p class="accountability-block__body">
         Stacks+Joules is a 501(c)(3) nonprofit (EIN 82-2358571). Our most
@@ -135,6 +135,10 @@ const infographicCards = [
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 12px;
+  }
+  .accountability-block__eyebrow::before {
+    content: '↳';
+    margin-right: var(--arrow-gap);
   }
   .accountability-block__title {
     color: #000;

@@ -9,6 +9,8 @@ interface CardProps {
   headerText?: string;
   imageSrc?: string;
   imageAlt?: string;
+  /** CSS object-position for the image crop, e.g. '50% 30%' */
+  imagePosition?: string;
   contentTitle?: string;
   content: string;
   buttonText?: string;
@@ -20,6 +22,7 @@ export const Card: React.FC<CardProps> = ({
   headerText,
   imageSrc,
   imageAlt,
+  imagePosition,
   contentTitle,
   content,
   buttonText,
@@ -38,18 +41,19 @@ export const Card: React.FC<CardProps> = ({
       )}
 
       {imageSrc && (
-        <div>
+        <div className={styles.cardImageWrap}>
           <img
             src={imageSrc}
             alt={imageAlt}
             loading="lazy"
             decoding="async"
             className={styles.cardImage}
+            style={imagePosition ? { objectPosition: imagePosition } : undefined}
           />
         </div>
       )}
 
-      <div>
+      <div className={styles.cardContentBlock}>
         {contentTitle && (
           <div className={styles.cardContentTitle}>{contentTitle}</div>
         )}
@@ -58,7 +62,7 @@ export const Card: React.FC<CardProps> = ({
       </div>
 
       {buttonText && (
-        <div>
+        <div className={styles.cardButtonWrap}>
           <a href={buttonLink ?? ``} style={{ textDecoration: `none` }}>
             <Button color="white">{buttonText}</Button>
           </a>

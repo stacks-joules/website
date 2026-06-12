@@ -11,30 +11,28 @@ import { Buffer } from '../components/common/Buffer';
 const LightCurriculumImage = '/images/light-curriculum.png';
 const HVACCurriculumImage = '/images/curriculum-page-1.png';
 const WiringCurriculumImage = '/images/wiring-curriculum.png';
+const LowVoltageImage = '/images/curr-lowvoltage.jpg';
 const CurriculumImage1 = '/images/curriculum-image-1.png';
-const CurriculumImage2 = '/images/curriculum-image-2.png';
+const CurriculumImage2 = '/images/curr-handson.jpg';
 const CurriculumImage3 = '/images/curriculum-image-3.png';
 
 const overviewCards = [
   {
-    headerText: '↳No Prior Experience Required',
-    border: true,
+    contentTitle: 'No Prior Experience Required',
     imageSrc: CurriculumImage1,
     imageAlt: 'Trainees learning fundamentals.',
     content:
-      'We start with fundamentals - electricity, HVAC principles, networking basics, and controls logic. The curriculum is designed for learners entering the field, not just those already in it.',
+      'We start with fundamentals: electricity, HVAC principles, networking basics, and controls logic. The curriculum is designed for learners entering the field, not just those already in it.',
   },
   {
-    headerText: '↳Hands-On with Real Equipment',
-    border: true,
+    contentTitle: 'Hands-On with Real Equipment',
     imageSrc: CurriculumImage2,
     imageAlt: 'Hands-on training with controllers and sensors.',
     content:
-      'Training includes work with actual controllers, sensors, dampers, and building management systems. Learners troubleshoot live systems, not simulations - preparing them for the realities of the job site.',
+      'Training includes work with actual controllers, sensors, dampers, and building management systems. Learners troubleshoot live systems - not simulations - preparing them for the realities of the job site.',
   },
   {
-    headerText: '↳Safety and Documentation Focus',
-    border: true,
+    contentTitle: 'Safety and Documentation Focus',
     imageSrc: CurriculumImage3,
     imageAlt: 'Safety and documentation training.',
     content:
@@ -48,7 +46,7 @@ const overviewCards = [
 
   <Block variation="dark">
     <TextPanel
-      smallTitle="Training Built on Real Systems."
+      title="Training Built on Real Systems."
       description="We train on the same equipment our graduates use on the job. Same controllers. Same software. Same wiring. Every cohort ends with final projects presented to people who hire for these jobs. By graduation, you've already done the work."
     />
     <ImagePanel
@@ -60,18 +58,18 @@ const overviewCards = [
 
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
-      title="↳ The Three Pillars"
+      title="The Three Pillars"
       description="Developed with BELLEDS Technologies at MIT and Rose-Hulman Institute of Technology. Twelve weeks. Three certifications. Real systems from day one."
     >
-      {overviewCards.map(({ headerText, ...rest }) => (
-        <Card key={headerText} headerText={headerText} {...rest} />
+      {overviewCards.map(({ contentTitle, ...rest }) => (
+        <Card key={contentTitle} contentTitle={contentTitle} {...rest} />
       ))}
     </CardContainer>
   </Block>
 
   <Buffer height="40px" />
 
-  <Block blockTitle="↳Python & Lighting Controls" paddingY="0px">
+  <Block blockTitle="Python & Lighting Controls" paddingY="0px">
     <ImagePanel
       imageSrc={LightCurriculumImage}
       imageAlt="Python & Lighting Image"
@@ -123,7 +121,7 @@ const overviewCards = [
   </Block>
   <Buffer height="80px" />
   <Block
-    blockTitle="↳HVAC and EPA 608 Certification"
+    blockTitle="HVAC and EPA 608 Certification"
     paddingY="0px"
     topBorder
   >
@@ -178,13 +176,13 @@ const overviewCards = [
     />
   </Block>
   <Block
-    blockTitle="↳Low voltage wiring & Niagara Workbench"
+    blockTitle="Low voltage wiring & Niagara Workbench"
     paddingY="0px"
     topBorder
   >
     <ImagePanel
-      imageSrc={WiringCurriculumImage}
-      imageAlt="Focus 1 Image"
+      imageSrc={LowVoltageImage}
+      imageAlt="Trainee working on low-voltage wiring and Niagara Workbench."
       dropShadow
     />
     <AccordionPanel

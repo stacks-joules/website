@@ -36,10 +36,15 @@
   justify-content: space-between;
 }
 
+.blockTitle::before {
+  content: '↳';
+  margin-right: var(--arrow-gap);
+}
+
 @media (max-width: 768px) {
   .block {
     padding: 0px !important;
-    min-width: 392px;
+    min-width: 0; /* was 392px — caused horizontal scroll on small phones */
   }
   .blockTitle {
     margin-left: 24px;

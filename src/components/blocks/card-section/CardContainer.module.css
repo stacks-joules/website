@@ -3,13 +3,15 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-  background-color: #f6f6f6;
+  /* Inherit the parent Block's theme (light or dark) */
+  background-color: transparent;
 }
 
 .cardContainerContent {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: stretch; /* equal-height cards so buttons bottom-align */
   gap: 24px;
 }
 
@@ -21,7 +23,7 @@ img {
 
 .title,
 .description {
-  color: var(--Black, #000);
+  color: inherit; /* follows Block theme: dark text on light, white on dark */
   font-feature-settings: 'liga' off, 'clig' off;
   /* Title */
   font-family: Inter;
@@ -31,10 +33,28 @@ img {
   line-height: 120%;
 }
 
+/* Figma section header: 80px above hairline, hairline, 28px, eyebrow */
+.title {
+  border-top: 1px solid #8c8c8c;
+  padding-top: 28px;
+  margin-top: 80px;
+}
+
+/* Figma: 80px below the cards before the next section (only for titled
+   sections — untitled ones sit in Blocks that carry their own padding) */
+.withHeader {
+  padding-bottom: 80px;
+}
+
 .description {
   width: 75%;
   margin-top: 24px;
   margin-bottom: 80px;
+}
+
+.title::before {
+  content: '↳';
+  margin-right: var(--arrow-gap);
 }
 
 @media (max-width: 768px) {

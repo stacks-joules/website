@@ -5,6 +5,17 @@
   --theme-color: #fd3abb;
   --theme-color-hover: #fc03a9;
   --theme-wrenchbolt: url('/images/wrenchbolt-pink.svg');
+
+  /* Gap between the ↳ eyebrow arrow and its label */
+  --arrow-gap: 0.1em;
+
+  /* Figma design tokens */
+  --magenta: #fd3abb;
+  --white: #ffffff;
+  --gray-900: #151515;
+  --black: #000000;
+  --text-gray: #57595b;
+  --newsprint: #f6f6f6;
 }
 
 body {
@@ -15,11 +26,12 @@ body {
 }
 
 h1 {
+  /* Figma "Headline 1" token: Montagu Slab Bold 62 / lh 100% */
   font-family: 'Montagu Slab', serif;
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
-  font-size: 48px;
+  font-size: 62px;
 }
 
 h2 {
@@ -48,7 +60,7 @@ h4 {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 110%; /* 26.4px */
+  line-height: 120%; /* Title token */
 }
 
 .theme-pink {

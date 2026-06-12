@@ -17,26 +17,25 @@ export const Header: React.FC<{ color?: string }> = () => {
     setComponentTheme(theme);
   }, [theme]);
 
-  if (showStars) {
-    return (
-      <div className={styles.header}>
-        <Starfield position="relative" iconColor="#fd3abb">
-          <Logo center absolute handleClick={() => setShowStars(!showStars)} />
-        </Starfield>
-      </div>
-    );
-  }
-
   return (
     <div className={styles.header}>
-      <NeuroNoiseBackground
-        height={`100%`}
-        fallbackImage={backgroundImage}
-        fallbackColor="#FD3ABB"
-        color={componentTheme}
-      >
-        <Logo center handleClick={() => setShowStars(!showStars)} />
-      </NeuroNoiseBackground>
+      <div className={styles.background}>
+        {showStars ? (
+          <Starfield position="absolute" iconColor="#fd3abb" />
+        ) : (
+          <NeuroNoiseBackground
+            height={`100%`}
+            fallbackImage={backgroundImage}
+            fallbackColor="#FD3ABB"
+            color={componentTheme}
+          />
+        )}
+      </div>
+      <Logo
+        center
+        onPlusEnter={() => setShowStars(true)}
+        onPlusLeave={() => setShowStars(false)}
+      />
     </div>
   );
 };

@@ -1,21 +1,22 @@
 .imageContainer {
   flex: 0 1 auto; /* Don't grow, can shrink, use auto basis */
   min-width: 300px;
-  max-width: 560px; /* Match the image width */
+  max-width: 578px; /* Match the Figma image width */
   width: 47%;
 }
 
 .image {
   width: 100%; /* Make image take full width of container */
-  max-width: 581px;
+  max-width: 578px;
   height: auto;
   border-radius: 12px;
 }
 .dropShadow {
+  /* Figma: 3px black border, pink panel offset ~+10x/+8y behind image */
   color: var(--theme-color, #fd3abb);
-  border: 1px solid #000;
+  border: 3px solid #000;
   margin-top: -7px;
-  box-shadow: 10px 10px;
+  box-shadow: 10px 8px;
 }
 
 @media (max-width: 768px) {

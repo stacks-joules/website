@@ -1,7 +1,8 @@
 .logo {
   position: relative;
-  max-width: 80%;
-  width: auto;
+  z-index: 1;
+  width: min(1280px, calc(100% - 160px));
+  margin: 0 auto;
 }
 
 .logo img {
@@ -40,7 +41,10 @@
 }
 
 @media (max-width: 768px) {
+  /* Figma mobile bar: compact wordmark on the right */
   .logo {
-    max-width: 100%;
+    width: 190px;
+    max-width: calc(100% - 72px);
+    margin: 0;
   }
 }

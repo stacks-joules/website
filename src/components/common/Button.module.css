@@ -1,7 +1,7 @@
 /* Style for the donate button */
 .button {
   font-family: 'Inter', sans-serif !important;
-  padding: 10px 24px !important;
+  padding: 12px 24px !important; /* Figma Button: px 24 / py 12 */
   border-radius: 40px;
   font-weight: 600;
   transition: background-color 0.3s ease;
@@ -25,11 +25,12 @@
 }
 
 .button:hover {
+  /* Color-only hover — border width, padding, and weight stay identical
+     so the button never shifts */
   color: var(--theme-color) !important;
   background-color: #151515 !important;
-  border: 2px solid var(--theme-color) !important;
-  font-weight: 700 !important;
-  padding: 10px 23px !important;
+  border-color: var(--theme-color) !important;
+  box-shadow: inset 0 0 0 1px var(--theme-color);
 }
 
 .white {

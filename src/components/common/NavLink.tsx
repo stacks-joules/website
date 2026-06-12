@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as styles from './NavLink.module.css';
 
 interface NavLinkProps {
@@ -8,9 +8,14 @@ interface NavLinkProps {
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ to, children, className }) => {
-  const isActive =
-    typeof window !== `undefined` &&
-    (window.location.pathname === to || window.location.pathname === `${to}/`);
+  // Computed after mount: hydration ignores attribute mismatches, so an
+  // inline render-time check never makes it into the DOM.
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    setIsActive(path === to || path === `${to}/`);
+  }, [to]);
 
   return (
     <a

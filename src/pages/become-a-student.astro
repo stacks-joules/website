@@ -13,7 +13,7 @@ const WiringImage = '/images/wiring-curriculum.png';
 const StudentImage = '/images/student-photo-1.png';
 const CurriculumImage1 = '/images/curriculum-image-1.png';
 const CurriculumImage4 = '/images/curriculum-image-4.png';
-const CardThree = '/images/card-3.png';
+const CardThree = '/images/student-fulltime.jpg';
 
 const pathwayStepCards = [
   {
@@ -21,7 +21,7 @@ const pathwayStepCards = [
     imageAlt: 'Foundational training in BAS concepts.',
     contentTitle: '1. Foundational Training',
     content:
-      'Twelve weeks of fundamentals - electricity, HVAC, networking, controls logic. Designed for people entering the field, not for people already in it.',
+      'Twelve weeks of fundamentals: electricity, HVAC, networking, controls logic. Designed for people entering the field, not for people already in it.',
   },
   {
     imageSrc: CurriculumImage4,
@@ -35,31 +35,31 @@ const pathwayStepCards = [
     imageAlt: 'A Stacks+Joules graduate at full-time work.',
     contentTitle: '3. Full-Time Employment',
     content:
-      "A clear path to full-time work with our employer network. Graduates move into roles like BAS technician, controls installer, or junior programmer - with senior techs who already know the curriculum they came through.",
+      "A clear path to full-time work with our employer network. Graduates move into roles like BAS technician, controls installer, or junior programmer, with senior techs who already know the curriculum they came through.",
   },
 ];
 
 const careerRoleCards = [
   {
-    headerText: '↳BAS Technician',
+    headerText: 'BAS Technician',
     border: true,
     content: 'Install, maintain, and troubleshoot building control systems.',
   },
   {
-    headerText: '↳Controls Installer',
+    headerText: 'Controls Installer',
     border: true,
     content: 'Execute field installation and wiring of control devices.',
   },
   {
-    headerText: '↳Junior Programmer',
+    headerText: 'Junior Programmer',
     border: true,
     content: 'Support system programming and commissioning work.',
   },
 ];
 ---
 
-<Layout title="Become a Student | Stacks+Joules">
-  <SectionHeader>Become a Student</SectionHeader>
+<Layout title="Train With Us | Stacks+Joules">
+  <SectionHeader>Train With Us</SectionHeader>
 
   <Block variation="dark">
     <ImagePanel
@@ -68,16 +68,16 @@ const careerRoleCards = [
       dropShadow
     />
     <TextPanel
-      smallTitle="Your path into Building Automation starts here."
+      title="Your path into Building Automation starts here."
       description="No prior experience required. Twelve weeks of hands-on training. A paid internship. A clear path into Building Automation. Everything you need to start a career in the technology that runs modern buildings."
       buttonText="TRAIN WITH US"
-      buttonLink="/support-mentors"
+      buttonLink="#contact"
     />
   </Block>
 
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
-      title="↳ How It Works"
+      title="How It Works"
       description="Three stages. From Training to Internship to Full-Time Employment. Each one designed with our hiring partners. Every step puts you closer to a real job site."
     >
       {pathwayStepCards.map(({ contentTitle, ...rest }) => (
@@ -100,7 +100,7 @@ const careerRoleCards = [
 
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
-      title="↳ Careers You'll Qualify For"
+      title="Careers You'll Qualify For"
       description="You graduate qualified for entry-level BAS roles. From there, the ladder goes up to technician → commissioning → engineering → energy management."
     >
       {careerRoleCards.map(({ headerText, ...rest }) => (
@@ -123,11 +123,11 @@ const careerRoleCards = [
 
   <Block variation="dark">
     <TextPanel
-      caption="↳ Ready to apply?"
+      caption="Ready to apply?"
       smallTitle="Twelve weeks. Real systems. A real career."
       description="Three cohorts a year. 25 students per class. Get in touch and we'll walk you through eligibility, what to expect, and the next start date."
       buttonText="GET IN TOUCH"
-      buttonLink="/support-mentors"
+      buttonLink="#contact"
     />
     <ImagePanel
       imageSrc={StudentImage}

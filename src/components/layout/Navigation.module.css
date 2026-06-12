@@ -1,5 +1,6 @@
 .desktopNavigation {
-  padding: 10px 80px;
+  /* Figma Nav Bar: px 80 / py 20 (total height 90 incl. 50px row) */
+  padding: 20px 80px;
   background-color: #0a0b0d;
   min-width: 320px;
   position: relative;
@@ -15,6 +16,9 @@
   display: flex;
   align-items: center;
   min-width: 320px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   position: relative;
   justify-content: space-between;
   gap: 1.5rem;
@@ -24,7 +28,13 @@
 .rightNav {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 24px; /* Figma list-items gap */
+}
+
+/* Figma: logo + links sit together on the left; Donate alone on the right */
+.leftNav {
+  flex: 1 1 auto;
+  justify-content: flex-start;
 }
 
 .rightNav {
@@ -119,9 +129,17 @@
   display: none !important;
 }
 
+.rightNav .donate,
 .donate {
   background-color: #fd3abb !important;
   color: #151515 !important;
+  /* Figma nav Donate: Inter SemiBold 18 / py 15 */
+  font-size: 18px !important;
+  letter-spacing: -0.09px;
+}
+
+.rightNav .donate {
+  padding: 15px 24px !important;
 }
 
 .donate:hover {
@@ -160,10 +178,17 @@
   }
 
   .hamburger {
+    /* Centered in the 64px mobile bar */
     display: flex;
     position: fixed;
-    top: 32px;
-    left: 24px;
+    top: 20px;
+    left: 16px;
+    width: 28px;
+    height: 24px;
+  }
+
+  .hamburger span {
+    height: 3px;
   }
 
   .navLinks {
