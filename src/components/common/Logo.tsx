@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import * as styles from './Logo.module.css';
 const StacksLogo = `/images/stacks-logo.png`;
-const MobileLogo = `/images/mobile-logo-pink.svg`;
 interface LogoProps {
   center?: boolean;
   handleClick?: () => void;
@@ -17,17 +16,6 @@ export const Logo: React.FC<LogoProps> = ({
   onPlusEnter,
   onPlusLeave,
 }) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(`(max-width: 768px)`);
-    const handleResize = () => setIsMobile(mediaQuery.matches);
-
-    handleResize(); // set initial state — was only updating on resize
-    mediaQuery.addEventListener(`change`, handleResize);
-    return () => mediaQuery.removeEventListener(`change`, handleResize);
-  }, []);
-
   const logoClass = `${styles.logo} ${center ? styles.center : ``} ${
     absolute ? styles.absolute : ``
   }`;
@@ -35,28 +23,26 @@ export const Logo: React.FC<LogoProps> = ({
   return (
     <div className={logoClass}>
       <img
-        src={isMobile ? MobileLogo : StacksLogo}
+        src={StacksLogo}
         alt="Stacks Logo"
         className={styles.logoImage}
       />
-      {!isMobile && (
-        <svg
-          width="114"
-          height="101"
-          viewBox="0 0 114 101"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={styles.plusLogo}
-          onClick={handleClick}
-          onMouseEnter={onPlusEnter}
-          onMouseLeave={onPlusLeave}
-        >
-          <path
-            id="+"
-            d="M40.9437 36.6264V0H72.6549V36.6264H114V64.3736H73.0563V101H41.3451V64.3736H0V36.6264H40.9437Z"
-          />
-        </svg>
-      )}
+      <svg
+        width="114"
+        height="101"
+        viewBox="0 0 114 101"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={styles.plusLogo}
+        onClick={handleClick}
+        onMouseEnter={onPlusEnter}
+        onMouseLeave={onPlusLeave}
+      >
+        <path
+          id="+"
+          d="M40.9437 36.6264V0H72.6549V36.6264H114V64.3736H73.0563V101H41.3451V64.3736H0V36.6264H40.9437Z"
+        />
+      </svg>
     </div>
   );
 };
