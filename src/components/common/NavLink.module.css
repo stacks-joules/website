@@ -40,6 +40,9 @@ a.wrenchboltLogo:after {
     text-align: left;
     font-family: 'Montagu Slab', serif;
     padding: 32px 0;
+    /* Shrink to the label so the active/hover underline only spans the
+       word, not the full menu width */
+    width: fit-content;
 
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: 'Montagu Slab';
@@ -49,5 +52,10 @@ a.wrenchboltLogo:after {
     line-height: 110%; /* 24.2px */
     letter-spacing: -0.44px;
     text-transform: uppercase;
+  }
+
+  .navLink:after {
+    /* Keep the 6px text-to-underline gap despite the 32px tap padding */
+    bottom: 26px;
   }
 }

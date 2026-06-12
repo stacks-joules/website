@@ -188,10 +188,11 @@
     font-size: 16px;
   }
 
-  /* Figma mobile footer: compact wordmark, left-aligned */
+  /* Mobile footer: wordmark spans the same width as the NYC photo below */
   .contactTitle {
-    margin: 0 0 16px;
-    max-width: 200px;
+    margin: 0 -20px 16px;
+    width: calc(100% + 40px);
+    max-width: none;
   }
 
   .contactTitle > div {
