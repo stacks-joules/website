@@ -71,6 +71,12 @@
 }
 
 @media (max-width: 768px) {
+  /* Mobile gutters (parent Block strips its padding on mobile) */
+  .infographicContainer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   /* Figma mobile: stats in a 2x2 grid */
   .infographicCardContainer {
     flex-wrap: wrap;

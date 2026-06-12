@@ -41,10 +41,16 @@
 }
 
 @media (max-width: 768px) {
-  /* Figma mobile bar: compact wordmark on the right */
+  /* Figma mobile header: stacked wordmark at 92px tall, centered */
   .logo {
-    width: 190px;
+    width: auto;
     max-width: calc(100% - 72px);
     margin: 0;
+  }
+
+  .logo .logoImage {
+    /* 20% taller than the 24px hamburger */
+    height: 29px;
+    width: auto;
   }
 }

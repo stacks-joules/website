@@ -59,6 +59,10 @@
 }
 
 @media (max-width: 768px) {
+  /* Mobile gutters (parent Block strips its padding on mobile) */
+  .gridContainer {
+    padding: 40px 24px;
+  }
   .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px 16px;

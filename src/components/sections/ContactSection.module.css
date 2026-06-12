@@ -188,8 +188,15 @@
     font-size: 16px;
   }
 
+  /* Figma mobile footer: compact wordmark, left-aligned */
   .contactTitle {
-    margin: 0 auto;
+    margin: 0 0 16px;
+    max-width: 200px;
+  }
+
+  .contactTitle > div {
+    width: 100%;
+    max-width: 100%;
   }
 
   .imageContainer {

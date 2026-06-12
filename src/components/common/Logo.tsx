@@ -23,6 +23,7 @@ export const Logo: React.FC<LogoProps> = ({
     const mediaQuery = window.matchMedia(`(max-width: 768px)`);
     const handleResize = () => setIsMobile(mediaQuery.matches);
 
+    handleResize(); // set initial state — was only updating on resize
     mediaQuery.addEventListener(`change`, handleResize);
     return () => mediaQuery.removeEventListener(`change`, handleResize);
   }, []);

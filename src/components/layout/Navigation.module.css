@@ -178,11 +178,11 @@
   }
 
   .hamburger {
-    /* Centered in the 64px mobile bar */
+    /* Figma mobile header: hamburger at 21px left / 30px top */
     display: flex;
     position: fixed;
-    top: 20px;
-    left: 16px;
+    top: 30px;
+    left: 21px;
     width: 28px;
     height: 24px;
   }
