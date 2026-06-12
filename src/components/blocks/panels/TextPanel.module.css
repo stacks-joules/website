@@ -20,8 +20,9 @@
 .content h3::before {
   content: '';
   display: inline-block;
-  width: 0.62em;
-  height: 0.62em;
+  width: 0.74em;
+  height: 0.74em;
+  vertical-align: 0.04em;
   background-color: currentColor;
   -webkit-mask: var(--arrow-mask) no-repeat center / contain;
   mask: var(--arrow-mask) no-repeat center / contain;

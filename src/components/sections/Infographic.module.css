@@ -28,8 +28,9 @@
 .infographicTitle > div::before {
   content: '';
   display: inline-block;
-  width: 0.62em;
-  height: 0.62em;
+  width: 0.74em;
+  height: 0.74em;
+  vertical-align: 0.04em;
   background-color: currentColor;
   -webkit-mask: var(--arrow-mask) no-repeat center / contain;
   mask: var(--arrow-mask) no-repeat center / contain;
@@ -82,10 +83,10 @@
     padding: 40px 24px 0;
   }
 
-  /* Tighter rhythm: less air around the stats grid on mobile */
+  /* Tighter rhythm on mobile, but keep section-level whitespace below */
   .infographicCardContainer {
     padding-top: 40px;
-    padding-bottom: 8px;
+    padding-bottom: 40px;
   }
 
   /* Figma mobile: stats in a 2x2 grid */
