@@ -27,6 +27,10 @@
   max-width: 9%;
   fill: var(--theme-color);
   cursor: pointer;
+  /* No focus ring / tap highlight when clicked */
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .center {
