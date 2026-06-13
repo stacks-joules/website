@@ -56,6 +56,49 @@ const careerRoleCards = [
     content: 'Support system programming and commissioning work.',
   },
 ];
+
+const careerGuideCards = [
+  {
+    headerText: '↳ What is building automation?',
+    border: true,
+    imageSrc: '/images/card-1.png',
+    imageAlt: 'What is building automation',
+    content:
+      'A clear breakdown of what a building automation system is, what the jobs look like, and how to learn it from zero.',
+    buttonText: 'READ MORE',
+    buttonLink: '/what-is-building-automation-how-to-learn-it',
+  },
+  {
+    headerText: '↳ No experience? No problem.',
+    border: true,
+    imageSrc: '/images/card-2.png',
+    imageAlt: 'Can you get a BAS job with no experience',
+    content:
+      'What it really takes to land your first BAS job — and why structured preparation beats prior experience.',
+    buttonText: 'READ MORE',
+    buttonLink: '/can-you-get-a-bas-job-with-no-experience',
+  },
+  {
+    headerText: '↳ Salary & training path',
+    border: true,
+    imageSrc: '/images/card-3.png',
+    imageAlt: 'Controls technician salary and training path',
+    content:
+      'What controls technicians earn and the step-by-step path from trainee to in-demand professional.',
+    buttonText: 'READ MORE',
+    buttonLink: '/controls-technician-salary-training-path',
+  },
+  {
+    headerText: '↳ Getting into BAS in NYC',
+    border: true,
+    imageSrc: '/images/student-photo-1.png',
+    imageAlt: 'How to get into building automation in NYC',
+    content:
+      'The local roadmap: the training, certifications, and employers hiring building automation talent right now.',
+    buttonText: 'READ MORE',
+    buttonLink: '/how-to-get-into-building-automation-nyc',
+  },
+];
 ---
 
 <Layout title="Train With Us | Stacks+Joules">
@@ -104,6 +147,17 @@ const careerRoleCards = [
       description="You graduate qualified for entry-level BAS roles. From there, the ladder goes up to technician → commissioning → engineering → energy management."
     >
       {careerRoleCards.map(({ headerText, ...rest }) => (
+        <Card key={headerText} headerText={headerText} {...rest} />
+      ))}
+    </CardContainer>
+  </Block>
+
+  <Block variation="light" paddingY="0px" singleColumn>
+    <CardContainer
+      title="Is a career in building automation right for you?"
+      description="New to BAS? These guides explain what the work actually is, what it pays, and how to break in — no experience required."
+    >
+      {careerGuideCards.map(({ headerText, ...rest }) => (
         <Card key={headerText} headerText={headerText} {...rest} />
       ))}
     </CardContainer>
