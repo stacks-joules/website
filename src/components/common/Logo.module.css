@@ -27,30 +27,10 @@
   max-width: 9%;
   fill: var(--theme-color);
   cursor: pointer;
-  /* No focus ring / tap highlight when clicked */
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
 }
 
 .center {
   margin: 0 auto;
-}
-
-/* Whole logo toggles starfield/plasma on click (rendered as a <button>) */
-.clickable {
-  cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-  touch-action: manipulation;
-  /* reset button chrome */
-  background: none;
-  border: none;
-  padding: 0;
-  display: block;
-  appearance: none;
-  -webkit-appearance: none;
 }
 
 .absolute {

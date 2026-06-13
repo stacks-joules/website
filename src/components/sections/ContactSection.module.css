@@ -27,8 +27,10 @@
   width: 100%;
 }
 
-/* Override the Logo component's centered, inset default inside the footer */
-.contactTitle > div {
+/* Override the Logo component's centered, inset default inside the footer.
+   The logo renders as a <button> when clickable, so match both. */
+.contactTitle > div,
+.contactTitle > button {
   width: 100%;
   margin: 0;
 }
@@ -201,7 +203,8 @@
     max-width: none;
   }
 
-  .contactTitle > div {
+  .contactTitle > div,
+  .contactTitle > button {
     width: 100%;
     max-width: 100%;
   }

@@ -18,10 +18,10 @@ export const Logo: React.FC<LogoProps> = ({
 }) => {
   const logoClass = `${styles.logo} ${center ? styles.center : ``} ${
     absolute ? styles.absolute : ``
-  } ${handleClick ? styles.clickable : ``}`;
+  }`;
 
-  const inner = (
-    <>
+  return (
+    <div className={logoClass}>
       <img src={StacksLogo} alt="Stacks Logo" className={styles.logoImage} />
       <svg
         width="114"
@@ -30,31 +30,28 @@ export const Logo: React.FC<LogoProps> = ({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={styles.plusLogo}
+        onClick={handleClick}
         onMouseEnter={onPlusEnter}
         onMouseLeave={onPlusLeave}
+        role={handleClick ? `button` : undefined}
+        tabIndex={handleClick ? 0 : undefined}
+        aria-label={handleClick ? `A little surprise` : undefined}
+        onKeyDown={
+          handleClick
+            ? (e) => {
+                if (e.key === `Enter` || e.key === ` `) {
+                  e.preventDefault();
+                  handleClick();
+                }
+              }
+            : undefined
+        }
       >
         <path
           id="+"
           d="M40.9437 36.6264V0H72.6549V36.6264H114V64.3736H73.0563V101H41.3451V64.3736H0V36.6264H40.9437Z"
         />
       </svg>
-    </>
+    </div>
   );
-
-  /* When clickable, render a real <button> — universally tappable on
-     touch devices, keyboard-accessible for free. */
-  if (handleClick) {
-    return (
-      <button
-        type="button"
-        className={logoClass}
-        onClick={handleClick}
-        aria-label="A little surprise"
-      >
-        {inner}
-      </button>
-    );
-  }
-
-  return <div className={logoClass}>{inner}</div>;
 };

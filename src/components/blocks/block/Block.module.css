@@ -37,14 +37,7 @@
 }
 
 .blockTitle::before {
-  content: '';
-  display: inline-block;
-  width: 0.74em;
-  height: 0.74em;
-  vertical-align: 0.12em;
-  background-color: currentColor;
-  -webkit-mask: var(--arrow-mask) no-repeat center / contain;
-  mask: var(--arrow-mask) no-repeat center / contain;
+  content: '↳';
   margin-right: var(--arrow-gap);
 }
 

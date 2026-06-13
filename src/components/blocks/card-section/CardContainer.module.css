@@ -53,14 +53,7 @@ img {
 }
 
 .title::before {
-  content: '';
-  display: inline-block;
-  width: 0.74em;
-  height: 0.74em;
-  vertical-align: 0.12em;
-  background-color: currentColor;
-  -webkit-mask: var(--arrow-mask) no-repeat center / contain;
-  mask: var(--arrow-mask) no-repeat center / contain;
+  content: '↳';
   margin-right: var(--arrow-gap);
 }
 
@@ -69,20 +62,6 @@ img {
     display: flex;
     flex-direction: column;
     padding: 40px 24px;
-  }
-
-  /* Tighter section-header rhythm on mobile */
-  .title {
-    margin-top: 24px;
-    padding-top: 24px;
-  }
-
-  .description {
-    margin-bottom: 40px;
-  }
-
-  .withHeader {
-    padding-bottom: 24px;
   }
   .cardContainerContent {
     display: flex;

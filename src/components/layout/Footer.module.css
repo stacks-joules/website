@@ -38,12 +38,6 @@
   color: #ccc;
 }
 
-/* iOS auto-detects the EIN as a phone number — keep it footer-colored */
-.copyright a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .financialsLink {
   color: #fff;
   text-decoration: none;
