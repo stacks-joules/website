@@ -18,7 +18,14 @@
 
 /* ↳ eyebrow arrow on the caption */
 .content h3::before {
-  content: '↳';
+  content: '';
+  display: inline-block;
+  width: 0.74em;
+  height: 0.74em;
+  vertical-align: 0.12em;
+  background-color: currentColor;
+  -webkit-mask: var(--arrow-mask) no-repeat center / contain;
+  mask: var(--arrow-mask) no-repeat center / contain;
   margin-right: var(--arrow-gap);
 }
 

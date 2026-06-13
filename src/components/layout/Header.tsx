@@ -27,6 +27,23 @@ export const Header: React.FC<{ color?: string }> = () => {
 
   const accent = themeHex[componentTheme] ?? themeHex.pink;
 
+  const toggleStars = () => setShowStars((s) => !s);
+
+  // Trigger differs by device: hover-capable (desktop) toggles on mouseover;
+  // touch (mobile) toggles on tap. The (hover: hover) guard keeps the two
+  // from double-firing on either device.
+  const isHoverCapable = () =>
+    typeof window !== `undefined` &&
+    window.matchMedia(`(hover: hover)`).matches;
+
+  const handleLogoMouseEnter = () => {
+    if (isHoverCapable()) toggleStars();
+  };
+
+  const handleLogoClick = () => {
+    if (!isHoverCapable()) toggleStars();
+  };
+
   return (
     <div className={styles.header}>
       <div className={styles.background}>
@@ -41,10 +58,11 @@ export const Header: React.FC<{ color?: string }> = () => {
           />
         )}
       </div>
+      {/* Toggle starfield <-> plasma: hover on desktop, tap on mobile */}
       <Logo
         center
-        onPlusEnter={() => setShowStars(true)}
-        onPlusLeave={() => setShowStars(false)}
+        handleClick={handleLogoClick}
+        handleMouseEnter={handleLogoMouseEnter}
       />
     </div>
   );

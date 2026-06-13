@@ -129,9 +129,9 @@ export const ContactSection: React.FC = () => {
 
   // Function to send form data to Monday.com via GraphQL
 
-  // Easter egg: clicking the plus in the footer logo takes over the page
-  // with the logo-sprite tunnel, tinted to the active accent. three.js is
-  // only fetched on first click via dynamic import.
+  // Easter egg: clicking the footer logo takes over the page with the
+  // logo-sprite tunnel, tinted to the active accent. three.js is only
+  // fetched on first click via dynamic import. Click-only on all devices.
   const handlePlusClick = () => {
     import(`../../lib/logoTunnel`)
       .then((m) => m.openLogoTunnel())

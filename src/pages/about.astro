@@ -126,6 +126,14 @@ const infographicCards = [
     width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
+    box-sizing: border-box;
+  }
+
+  /* Mobile gutters (parent Block strips its padding on mobile) */
+  @media (max-width: 768px) {
+    .accountability-block {
+      padding: 40px 24px;
+    }
   }
   .accountability-block__eyebrow {
     color: #000;
@@ -137,7 +145,14 @@ const infographicCards = [
     margin-bottom: 12px;
   }
   .accountability-block__eyebrow::before {
-    content: '↳';
+    content: '';
+    display: inline-block;
+    width: 0.74em;
+    height: 0.74em;
+    vertical-align: 0.12em;
+    background-color: currentColor;
+    -webkit-mask: var(--arrow-mask) no-repeat center / contain;
+    mask: var(--arrow-mask) no-repeat center / contain;
     margin-right: var(--arrow-gap);
   }
   .accountability-block__title {
