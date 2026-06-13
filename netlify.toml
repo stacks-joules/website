@@ -5,3 +5,11 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+# Fonts are content-stable and referenced by fixed filenames, so cache them
+# hard. Keeps the browser from re-fetching/revalidating fonts on every
+# navigation (a source of flicker). Bump the filename if a font's bytes change.
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

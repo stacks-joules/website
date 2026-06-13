@@ -6,6 +6,7 @@ import { HeaderIsland } from '../components/layout/HeaderIsland';
 import { Navigation } from '../components/layout/Navigation';
 import { ContactSection } from '../components/sections/ContactSection';
 import { Footer } from '../components/layout/Footer';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title?: string;
@@ -64,6 +65,10 @@ const {
       crossorigin="anonymous"
     />
 
+    <!-- Client-side routing: swap pages without a full reload, so links
+         don't flash white and fonts/state persist between navigations. -->
+    <ClientRouter />
+
     <!-- Global color roll: pink/sky/yellow on a worldwide 5-minute UTC clock.
          Runs inline before first paint to avoid FOUC. No backend, no storage:
          the color is a pure function of time, so every visitor on Earth sees
@@ -116,6 +121,7 @@ const {
           return p[((slot % 3) + 3) % 3];
         }
 
+        function applyTheme() {
         var theme = null;
         try {
           var q = new URLSearchParams(location.search).get('color');
@@ -140,6 +146,11 @@ const {
         el.classList.remove('theme-pink', 'theme-sky', 'theme-yellow');
         el.classList.add('theme-' + theme);
         el.dataset.theme = theme;
+        }
+        applyTheme();
+        // Re-apply after each client-side navigation (ClientRouter swaps the
+        // document, which would otherwise drop the runtime theme class).
+        document.addEventListener('astro:after-swap', applyTheme);
       })();
     </script>
   </head>
