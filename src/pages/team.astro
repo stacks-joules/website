@@ -58,6 +58,9 @@ const teamCards2 = [
   {
     imageSrc: TeamImage6,
     imageAlt: 'Amoret Moore',
+    // Face fills the square, so the default top-anchored crop clips her jaw.
+    // Nudge the crop window down so her whole face stays in frame.
+    imagePosition: '50% 45%',
     contentTitle: 'Associate Facilitator',
     headerText: 'Amoret Moore',
     content: 'Amoret is a graduate of the program and was taught by Fran.',
