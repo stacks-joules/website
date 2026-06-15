@@ -39,7 +39,10 @@
     object-fit: cover;
   }
   .dropShadow {
+    /* Figma mobile: photos run full bleed with a single full-width accent
+       row below, matching the 8px height of the desktop drop shadow offset */
     border: none;
+    border-bottom: 8px solid var(--theme-color, #fd3abb);
     margin-top: 0;
     box-shadow: none;
   }
