@@ -42,8 +42,9 @@ const pathwayStepCards = [
 
 const infographicCards = [
   { title: 'Graduates Placed', number: '143', symbol: '' },
-  { title: 'Industry Certifications', number: '500', symbol: '+' },
-  { title: 'Placed in Green Tech', number: '76', symbol: '%' },
+  { title: 'Placement Rate', number: '89', symbol: '%' },
+  { title: 'Starting Pay', number: '$24–27', symbol: '/hr' },
+  { title: 'Employer Partners', number: '20', symbol: '' },
   { title: 'Employer Partners', number: '20', symbol: '+' },
 ];
 ---
@@ -106,16 +107,23 @@ const infographicCards = [
   <Block variation="light" singleColumn>
     <div class="accountability-block">
       <div class="accountability-block__eyebrow">Accountability</div>
-      <h2 class="accountability-block__title">Transparency you can verify.</h2>
+      <h2 class="accountability-block__title">Our commitment to transparency.</h2>
       <p class="accountability-block__body">
-        Stacks+Joules is a 501(c)(3) nonprofit (EIN 82-2358571). Our most
-        recent Form 990 and annual report are public, and we're rated by the
-        leading independent nonprofit evaluators.
+        Stacks+Joules is a 501(c)(3) nonprofit (EIN 82-2358571), rated by the
+        leading independent nonprofit evaluators. Our Form 990, annual report,
+        and board roster will be published here. To request them in the
+        meantime, email <a href="mailto:info@stacksandjoules.org"
+          >info@stacksandjoules.org</a
+        >.
       </p>
       <TransparencyBadges variant="full" />
       <p class="accountability-block__links">
-        <a href="#">Form 990 (PDF)</a> · <a href="#">Annual Report</a> ·
-        <a href="#">Board of Directors</a>
+        <span class="accountability-block__pending">Form 990 — coming soon</span
+        > · <span class="accountability-block__pending"
+          >Annual Report — coming soon</span
+        > · <span class="accountability-block__pending"
+          >Board of Directors — coming soon</span
+        >
       </p>
     </div>
   </Block>
@@ -182,5 +190,10 @@ const infographicCards = [
   .accountability-block__links a {
     color: #000;
     text-decoration: underline;
+  }
+  .accountability-block__pending {
+    color: #888;
+    font-style: italic;
+    cursor: default;
   }
 </style>
