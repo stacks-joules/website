@@ -69,17 +69,20 @@ const {
          don't flash white and fonts/state persist between navigations. -->
     <ClientRouter />
 
-    <!-- Global color roll: pink/sky/yellow on a worldwide 5-minute UTC clock.
+    <!-- Global color roll: pink/sky/yellow on a worldwide 30-second UTC clock.
          Runs inline before first paint to avoid FOUC. No backend, no storage:
          the color is a pure function of time, so every visitor on Earth sees
-         the same color in the same 5-min slot, and it never repeats
-         back-to-back. Static fallback (no JS / crawlers) is pink via :root.
-         QA override: ?color=pink|sky|yellow (blue/cyan alias to sky),
-         sticky for the tab via sessionStorage; ?color=clock clears it. -->
+         the same color in the same 30s slot, and it never repeats
+         back-to-back. The slot is short enough that navigating between pages
+         usually lands in a new slot, so the accent visibly rolls as you browse
+         (the color is recomputed on each navigation). Static fallback (no JS /
+         crawlers) is pink via :root. QA override: ?color=pink|sky|yellow
+         (blue/cyan alias to sky), sticky for the tab via sessionStorage;
+         ?color=clock clears it. -->
     <script is:inline>
       (function () {
         var COLORS = ['pink', 'sky', 'yellow'];
-        var SLOT_MS = 5 * 60 * 1000;
+        var SLOT_MS = 30 * 1000;
 
         // mulberry32 PRNG — deterministic for a given seed on every client
         function rng(seed) {

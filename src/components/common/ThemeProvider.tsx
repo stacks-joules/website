@@ -37,7 +37,19 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   const [theme, setTheme] = useState<Theme>(`pink`);
 
   useEffect(() => {
-    setTheme(readDocumentTheme());
+    const sync = () => setTheme(readDocumentTheme());
+    // Initial read also covers the swap that may have just remounted us.
+    sync();
+    // ClientRouter swaps the document on navigation; the inline color-roll
+    // script in Layout.astro updates <html data-theme> on astro:after-swap.
+    // Re-read it here so JS-driven accents (header plasma shader, starfield)
+    // repaint to the rolled color instead of keeping the mount-time value.
+    document.addEventListener(`astro:after-swap`, sync);
+    document.addEventListener(`astro:page-load`, sync);
+    return () => {
+      document.removeEventListener(`astro:after-swap`, sync);
+      document.removeEventListener(`astro:page-load`, sync);
+    };
   }, []);
 
   // Update the theme in state and keep the <html> class/data attribute in
