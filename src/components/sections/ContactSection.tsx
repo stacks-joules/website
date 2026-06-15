@@ -6,7 +6,7 @@ import { Modal } from '../common/Modal';
 import { Button } from '../common/Button';
 import { SelectInput } from '../common/SelectInput';
 
-const Cityscape = `/images/contact-image.png`;
+const Cityscape = `/images/contact-image.webp`;
 const PhoneIcon = `/images/phone-icon.svg`;
 const LocationIcon = `/images/location-icon.svg`;
 interface ContactInfo {

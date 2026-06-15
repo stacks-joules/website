@@ -11,7 +11,7 @@
  */
 import * as THREE from 'three';
 
-const TEXTURE_URL = `/images/logo-tunnel-sprite.png`;
+const TEXTURE_URL = `/images/logo-tunnel-sprite.webp`;
 const LOOP_SECONDS = 60; // one seamless lap of the closed curve
 
 // Geometry params verbatim from the pen

@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './Logo.module.css';
-const StacksLogo = `/images/stacks-logo.png`;
+const StacksLogo = `/images/stacks-logo.webp`;
 interface LogoProps {
   center?: boolean;
   handleClick?: () => void;

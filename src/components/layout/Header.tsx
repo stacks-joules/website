@@ -6,7 +6,7 @@ import { Logo } from '../common/Logo';
 import { useTheme } from '../common/ThemeProvider';
 import { Starfield } from '@components/common/StarField';
 
-const backgroundImage = `/images/background-pink.png`;
+const backgroundImage = `/images/background-pink.webp`;
 
 // Accent hex per theme — keep in sync with .theme-* in global.css
 const themeHex: Record<string, string> = {
