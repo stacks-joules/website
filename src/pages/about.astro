@@ -107,22 +107,26 @@ const infographicCards = [
   <Block variation="light" singleColumn>
     <div class="accountability-block">
       <div class="accountability-block__eyebrow">Accountability</div>
-      <h2 class="accountability-block__title">Our commitment to transparency.</h2>
+      <h2 class="accountability-block__title">Transparency you can verify.</h2>
       <p class="accountability-block__body">
         Stacks+Joules is a 501(c)(3) nonprofit (EIN 82-2358571), rated by the
-        leading independent nonprofit evaluators. Our Form 990, annual report,
-        and board roster will be published here. To request them in the
-        meantime, email <a href="mailto:info@stacksandjoules.org"
-          >info@stacksandjoules.org</a
+        leading independent nonprofit evaluators. Our Form 990 filings are
+        public - and list our officers and board - so anyone can see exactly how
+        the organization is run and funded. We don't publish a separate annual
+        report; the 990 serves as our annual financial disclosure. Questions?
+        Email <a href="mailto:info@stacksandjoules.org">info@stacksandjoules.org</a
         >.
       </p>
       <TransparencyBadges variant="full" />
       <p class="accountability-block__links">
-        <span class="accountability-block__pending">Form 990 — coming soon</span
-        > · <span class="accountability-block__pending"
-          >Annual Report — coming soon</span
-        > · <span class="accountability-block__pending"
-          >Board of Directors — coming soon</span
+        <a
+          href="https://projects.propublica.org/nonprofits/organizations/822358571"
+          target="_blank"
+          rel="noopener">Form 990 filings (2017–2025)</a
+        > · <a
+          href="https://www.charitynavigator.org/ein/822358571"
+          target="_blank"
+          rel="noopener">Charity Navigator rating</a
         >
       </p>
     </div>
@@ -190,10 +194,5 @@ const infographicCards = [
   .accountability-block__links a {
     color: #000;
     text-decoration: underline;
-  }
-  .accountability-block__pending {
-    color: #888;
-    font-style: italic;
-    cursor: default;
   }
 </style>
