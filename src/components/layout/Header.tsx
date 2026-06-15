@@ -6,7 +6,13 @@ import { Logo } from '../common/Logo';
 import { useTheme } from '../common/ThemeProvider';
 import { Starfield } from '@components/common/StarField';
 
-const backgroundImage = `/images/background-pink.webp`;
+// Static header background per theme — used as the fallback when the WebGL
+// plasma is skipped (mobile / reduced-motion). Mirrors the accent.
+const backgroundByTheme: Record<string, string> = {
+  pink: `/images/background-pink.webp`,
+  sky: `/images/background-blue.webp`,
+  yellow: `/images/background-yellow.webp`,
+};
 
 // Accent hex per theme — keep in sync with .theme-* in global.css
 const themeHex: Record<string, string> = {
@@ -26,6 +32,8 @@ export const Header: React.FC<{ color?: string }> = () => {
   }, [theme]);
 
   const accent = themeHex[componentTheme] ?? themeHex.pink;
+  const backgroundImage =
+    backgroundByTheme[componentTheme] ?? backgroundByTheme.pink;
 
   const toggleStars = () => setShowStars((s) => !s);
 
