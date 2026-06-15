@@ -14,7 +14,7 @@ export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
   children,
   height = `100%`,
   width = `100%`,
-  fallbackImage = `https://example.com/fallback-bg.jpg`,
+  fallbackImage = ``,
   fallbackColor = `#151515`,
   color = `pink`,
 }) => {
@@ -290,29 +290,59 @@ export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
   // };
 
   useEffect(() => {
-    try {
-      // Setup canvas and WebGL
-      const success = initWebGL();
-
-      // Only start animation if WebGL initialization succeeded
-      if (success !== false) {
-        // Start animation loop
-        requestRef.current = requestAnimationFrame(animate);
-
-        // Add event listeners
-        window.addEventListener(`mousemove`, handlePointerMove);
-        window.addEventListener(`touchmove`, (e) =>
-          handlePointerMove(e.touches[0]),
-        );
-        window.addEventListener(`scroll`, handleScroll);
-      }
-    } catch (error) {
-      console.error(`Error initializing WebGL:`, error);
+    // Skip the expensive WebGL animation where it's pure cost: small screens
+    // (also the Lighthouse mobile target) and users who prefer reduced motion.
+    // Falls back to the static header background instead.
+    const prefersReducedMotion = window.matchMedia(
+      `(prefers-reduced-motion: reduce)`,
+    ).matches;
+    const isSmallScreen = window.matchMedia(`(max-width: 768px)`).matches;
+    if (prefersReducedMotion || isSmallScreen) {
       setWebGLFailed(true);
+      return;
+    }
+
+    const start = () => {
+      try {
+        // Setup canvas and WebGL
+        const success = initWebGL();
+
+        // Only start animation if WebGL initialization succeeded
+        if (success !== false) {
+          // Start animation loop
+          requestRef.current = requestAnimationFrame(animate);
+
+          // Add event listeners
+          window.addEventListener(`mousemove`, handlePointerMove);
+          window.addEventListener(`touchmove`, (e) =>
+            handlePointerMove(e.touches[0]),
+          );
+          window.addEventListener(`scroll`, handleScroll);
+        }
+      } catch (error) {
+        console.error(`Error initializing WebGL:`, error);
+        setWebGLFailed(true);
+      }
+    };
+
+    // Defer shader compilation off the critical path so it doesn't block
+    // initial interactivity (TBT). Runs when the main thread is idle.
+    let idleId;
+    if (typeof window.requestIdleCallback === `function`) {
+      idleId = window.requestIdleCallback(start, { timeout: 2000 });
+    } else {
+      idleId = window.setTimeout(start, 200);
     }
 
     // Cleanup
     return () => {
+      if (idleId) {
+        if (typeof window.cancelIdleCallback === `function`) {
+          window.cancelIdleCallback(idleId);
+        } else {
+          window.clearTimeout(idleId);
+        }
+      }
       if (requestRef.current) {
         cancelAnimationFrame(requestRef.current);
       }
