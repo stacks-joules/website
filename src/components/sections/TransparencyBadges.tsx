@@ -5,14 +5,23 @@ interface TransparencyBadgesProps {
   variant?: 'full' | 'compact';
 }
 
+// Only badges Stacks+Joules actually holds, each linking to its public,
+// verifiable profile. (Dropped the placeholder ImpactMatters — discontinued
+// after Charity Navigator acquired it in 2020 — and Catalogue for Philanthropy,
+// which is a DC-region program, not relevant to a NYC nonprofit.)
 const badges = [
-  { name: `Charity Navigator`, subtitle: `Four-Star Rating` },
-  { name: `Candid`, subtitle: `Platinum Transparency 2026` },
-  { name: `ImpactMatters`, subtitle: `Impact Rated Nonprofit` },
-  { name: `Catalogue for Philanthropy`, subtitle: `One of the Best` },
+  {
+    name: `Charity Navigator`,
+    subtitle: `Three-Star Rating`,
+    href: `https://www.charitynavigator.org/ein/822358571`,
+  },
+  {
+    name: `Candid`,
+    subtitle: `Gold Transparency 2026`,
+    href: `https://www.guidestar.org/profile/82-2358571`,
+  },
 ];
 
-// Placeholder badge boxes. Swap each <li> for an <img src="/images/badge-..."> when actual badge files arrive.
 export const TransparencyBadges: React.FC<TransparencyBadgesProps> = ({
   variant = `full`,
 }) => {
@@ -25,8 +34,15 @@ export const TransparencyBadges: React.FC<TransparencyBadgesProps> = ({
     <ul className={rowClass}>
       {badges.map((b) => (
         <li key={b.name} className={styles.badge}>
-          <strong>{b.name}</strong>
-          <span>{b.subtitle}</span>
+          <a
+            href={b.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${b.name} — ${b.subtitle} (opens in a new tab)`}
+          >
+            <strong>{b.name}</strong>
+            <span>{b.subtitle}</span>
+          </a>
         </li>
       ))}
     </ul>
