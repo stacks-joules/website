@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build && mkdir -p .cache && echo '{}' > .cache/imageCdnEncryptionConfig.json"
+  command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
 
