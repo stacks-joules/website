@@ -148,7 +148,10 @@ const ahmedDescription =
     />
   </Block>
 
-  <!-- 2. Dual pathway cards (For Learners / For Employers) -->
+  <!-- 2. Impact stats -->
+  <Infographic title="Our Impact" cards={infographicCards} />
+
+  <!-- 3. Dual pathway cards (For Learners / For Employers) -->
   <Block variation="light" singleColumn>
     <CardContainer>
       {pathwayCards.map(({ headerText, ...rest }) => (
@@ -157,7 +160,7 @@ const ahmedDescription =
     </CardContainer>
   </Block>
 
-  <!-- 3. Mission -->
+  <!-- 4. Mission -->
   <Block variation="dark">
     <ImagePanel
       imageSrc={TeamImage}
@@ -171,7 +174,7 @@ const ahmedDescription =
     />
   </Block>
 
-  <!-- 4. Pathway diagram (How It Works) -->
+  <!-- 5. Pathway diagram (How It Works) -->
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
       title="How It Works"
@@ -182,9 +185,6 @@ const ahmedDescription =
       ))}
     </CardContainer>
   </Block>
-
-  <!-- 5. Impact stats -->
-  <Infographic title="Our Impact" cards={infographicCards} />
 
   <!-- 6. Curriculum -->
   <Block variation="light" paddingY="0px" singleColumn>
