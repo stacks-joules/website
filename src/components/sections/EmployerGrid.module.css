@@ -62,7 +62,7 @@
   padding: 0;
 }
 
-/* Each logo sits on its own white card */
+/* Transparent cell: logo sits directly on the section background */
 .card {
   position: relative;
   display: flex;
@@ -72,22 +72,22 @@
   width: 100%;
   aspect-ratio: 16 / 10;
   padding: 18px 22px;
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
+  background: transparent;
+  border: 0;
   cursor: default;
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    border-color 0.18s ease;
+  border-radius: 8px;
+  transition: transform 0.18s ease;
 }
 
 .card:hover,
 .card:focus-visible {
   transform: translateY(-3px);
-  border-color: #d0d0d0;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
   outline: none;
+}
+
+/* Keyboard focus ring only (no white box on mouse hover) */
+.card:focus-visible {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
 }
 
 /* Stacked gray + color logos that crossfade on hover */
