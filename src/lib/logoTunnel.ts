@@ -185,6 +185,9 @@ function onKeyDown(e: KeyboardEvent): void {
 export function openLogoTunnel(): void {
   if (isOpen) return;
   if (window.matchMedia(`(prefers-reduced-motion: reduce)`).matches) return;
+  // ClientRouter swaps <body> on navigation, leaving `overlay` pointing at a
+  // detached node. Rebuild against the live document if it's gone or orphaned.
+  if (overlay && !overlay.isConnected) teardown();
   if (!overlay) buildScene();
   if (!overlay) return;
 
@@ -213,4 +216,38 @@ export function closeLogoTunnel(): void {
   overlay.style.display = `none`;
   document.body.style.overflow = ``;
   if (previousFocus) previousFocus.focus();
+}
+
+/**
+ * Dispose the scene and reset module state. ClientRouter discards the old
+ * <body> on every client-side navigation, so the overlay we appended to it
+ * becomes detached. We tear down on astro:before-swap so the next click
+ * rebuilds cleanly against the new document — and release the WebGL context
+ * instead of leaking one per navigation.
+ */
+function teardown(): void {
+  if (isOpen) {
+    cancelAnimationFrame(rafId);
+    document.removeEventListener(`keydown`, onKeyDown);
+    window.removeEventListener(`resize`, resize);
+    document.body.style.overflow = ``;
+  }
+  isOpen = false;
+  if (renderer) {
+    renderer.dispose();
+    renderer.forceContextLoss();
+  }
+  overlay?.remove();
+  overlay = null;
+  renderer = null;
+  scene = null;
+  camera = null;
+  curve = null;
+  glows = null;
+  previousFocus = null;
+}
+
+// Registered once when the module is first dynamically imported.
+if (typeof document !== `undefined`) {
+  document.addEventListener(`astro:before-swap`, teardown);
 }
