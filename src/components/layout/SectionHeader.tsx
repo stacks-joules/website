@@ -8,7 +8,9 @@ interface SectionHeaderProps {
 export const SectionHeader: React.FC<SectionHeaderProps> = ({ children }) => {
   return (
     <div className={styles.sectionHeader}>
-      <Container>{children} </Container>
+      <Container>
+        <h1 className={styles.heading}>{children}</h1>
+      </Container>
     </div>
   );
 };

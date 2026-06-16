@@ -17,6 +17,10 @@ const {
   title = siteMetadata.title,
   description = siteMetadata.description,
 } = Astro.props;
+
+// Canonical, per-page absolute URL (from astro.config `site`). Drives both the
+// canonical link and og:url so social cards point at the page, not the root.
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <!doctype html>
@@ -28,19 +32,25 @@ const {
     <meta name="format-detection" content="telephone=no" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicons: SVG (theme-adaptive) for modern browsers, .ico fallback for
+         Safari/older browsers and the automatic /favicon.ico request. -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content={siteMetadata.ogTitle} />
-    <meta property="og:description" content={siteMetadata.ogDescription} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:type" content={siteMetadata.ogType} />
     <meta property="og:image" content={siteMetadata.ogImage} />
-    <meta property="og:url" content={siteMetadata.siteUrl} />
+    <meta property="og:url" content={canonicalUrl} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content={siteMetadata.twitterUsername} />
-    <meta name="twitter:title" content={siteMetadata.ogTitle} />
-    <meta name="twitter:description" content={siteMetadata.ogDescription} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
 
     <!-- Preload the fonts that render above the fold (prevents FOUT/shift) -->
     <link

@@ -2,7 +2,17 @@ import React, { useEffect, useRef } from 'react';
 import type { CSSProperties } from 'react';
 import * as styles from './StarField.module.css';
 const wrenchbolt = `/images/wrenchbolt.svg`;
-const MAX_STARS = 500;
+
+// Device-aware particle count. 500 draws/frame is fine on desktop but tanks
+// mobile TBT under CPU throttling, so scale down on phones / low-core devices.
+function getStarCount(): number {
+  if (typeof window === `undefined`) return 300;
+  const w = window.innerWidth;
+  const cores = navigator.hardwareConcurrency || 4;
+  if (w < 768 || cores <= 4) return 120; // phones / low-core
+  if (w < 1200) return 250; // tablets / small laptops
+  return 500; // desktop
+}
 
 interface Star {
   x: number;
@@ -68,6 +78,19 @@ export const Starfield: React.FC<{
     const ctx = canvas.getContext(`2d`);
     if (!ctx) return;
 
+    // Users who asked the OS to reduce motion get a single static frame.
+    const reduceMotion =
+      typeof window !== `undefined` &&
+      window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;
+
+    // Cap to 30fps on phones (0 = uncapped on tablet/desktop). Halves
+    // per-second draw work with no visible quality loss on a slow starfield.
+    const frameMs =
+      typeof window !== `undefined` && window.innerWidth < 768 ? 1000 / 30 : 0;
+    let lastTs = 0;
+
+    let io: IntersectionObserver | null = null;
+
     const starImage = new Image();
     starImage.src = wrenchbolt;
     starImage.onload = () => {
@@ -76,11 +99,12 @@ export const Starfield: React.FC<{
       // Build initial tinted canvas (if color provided)
       rebuildTintedCanvas(iconColor);
 
-      // Initialize stars once
-      const stars = createStars(MAX_STARS);
-      starsRef.current = stars;
+      // Initialize stars once (device-aware count)
+      starsRef.current = createStars(getStarCount());
 
-      const animate = () => {
+      // One frame of work. Does NOT schedule the next frame itself, so it can
+      // be called standalone (reduced-motion) or from the rAF loop.
+      const drawFrame = () => {
         const displayWidth = canvas.clientWidth;
         const displayHeight = canvas.clientHeight;
 
@@ -134,15 +158,49 @@ export const Starfield: React.FC<{
             z: newZ,
           };
         });
-
-        animationRef.current = requestAnimationFrame(animate);
       };
 
-      animate();
+      const loop = (ts: number) => {
+        animationRef.current = requestAnimationFrame(loop);
+        if (frameMs && ts - lastTs < frameMs) return; // skip to hit 30fps
+        lastTs = ts;
+        drawFrame();
+      };
+
+      // Reduced motion: paint once, never start the loop.
+      if (reduceMotion) {
+        drawFrame();
+        return;
+      }
+
+      const start = () => {
+        if (animationRef.current == null) {
+          animationRef.current = requestAnimationFrame(loop);
+        }
+      };
+      const stop = () => {
+        if (animationRef.current != null) {
+          cancelAnimationFrame(animationRef.current);
+          animationRef.current = null;
+        }
+      };
+
+      // Only animate while the hero canvas is on screen; pause once scrolled
+      // past. Initial observe fires synchronously, so this also starts it.
+      io = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) start();
+          else stop();
+        },
+        { threshold: 0 },
+      );
+      io.observe(canvas);
     };
 
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
+      animationRef.current = null;
+      if (io) io.disconnect();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [warpSpeed]); // keep same deps as before

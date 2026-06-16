@@ -10,6 +10,17 @@
   position: sticky;
 }
 
+/* The page-name band is the page's <h1>. Inherit every typographic property
+   from .sectionHeader so the heading looks identical to the old <div> and the
+   global h1 token (62px) doesn't take over. */
+.heading {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
 @media (max-width: 768px) {
   /* Figma mobile page band */
   .sectionHeader {

@@ -7,17 +7,38 @@
   width: 47%;
 }
 
+/* Full "Headline 1" typography lives on the class (not just the h1 element) so
+   the headline looks identical whether it renders as <h1> or <h2> (titleAs). */
 .title {
   margin-top: 0;
+  font-family: 'Montagu Slab', serif;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 100%;
+  letter-spacing: normal;
+  text-transform: uppercase;
 }
 
 .content h2,
-.content h3 {
+.content .caption {
   margin-top: 0;
 }
 
+/* Eyebrow label. Styled identically to the old <h3> but rendered as a <p>, so
+   it no longer puts an h3 directly above the h2 headline (heading-order a11y
+   fix). Selector is .content .caption so it outranks the .content p body rule. */
+.content .caption {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
 /* ↳ eyebrow arrow on the caption */
-.content h3::before {
+.content .caption::before {
   content: '';
   display: inline-block;
   width: 0.74em;
