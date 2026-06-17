@@ -26,10 +26,10 @@ const pathwayStepCards = [
   },
   {
     imageSrc: CurriculumImage4,
-    imageAlt: 'Paid internship at a partner organization.',
-    contentTitle: '2. Paid Internship',
+    imageAlt: 'Onboarding with a partner employer.',
+    contentTitle: '2. Employer Onboarding',
     content:
-      'A paid internship at one of our hiring partners. You work on real systems. Employers see how you operate. You see if the work is for you.',
+      'An onboarding pipeline at one of our hiring partners. You shadow senior technicians on real systems. Employers see how you operate. You see if the work is for you.',
   },
   {
     imageSrc: CardThree,
@@ -63,14 +63,14 @@ const infographicCards = [
     <TextPanel
       titleAs="h2"
       title="Bridging the tech opportunity gap."
-      description="Stacks+Joules is a 501(c)(3) nonprofit training overlooked populations for careers in Building Automation - the technology that runs modern buildings. We don't run classes. We run a pipeline: fourteen weeks of training, a paid internship, and a clear path to work with our employer partners."
+      description="Stacks+Joules is a 501(c)(3) nonprofit training overlooked populations for careers in Building Automation - the technology that runs modern buildings. We don't run classes. We run a pipeline: fourteen weeks of training, onboarding with a partner employer, and a clear path to work with our employer partners."
     />
   </Block>
 
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
       title="How It Works"
-      description="Three stages. From Training to Internship to Full-Time Employment. Each one designed with our hiring partners. Every step puts you closer to a real job site."
+      description="Three stages. From Training to Onboarding to Full-Time Employment. Each one designed with our hiring partners. Every step puts you closer to a real job site."
     >
       {pathwayStepCards.map(({ contentTitle, ...rest }) => (
         <Card key={contentTitle} contentTitle={contentTitle} {...rest} />

@@ -25,10 +25,10 @@ const pathwayStepCards = [
   },
   {
     imageSrc: CurriculumImage4,
-    imageAlt: 'Paid internship at a partner organization.',
-    contentTitle: '2. Paid Internship',
+    imageAlt: 'Onboarding with a partner employer.',
+    contentTitle: '2. Employer Onboarding',
     content:
-      'A paid internship at one of our hiring partners. You work on real systems. Employers see how you operate. You see if the work is for you.',
+      'An onboarding pipeline at one of our hiring partners. You shadow senior technicians on real systems. Employers see how you operate. You see if the work is for you.',
   },
   {
     imageSrc: CardThree,
@@ -103,7 +103,7 @@ const careerGuideCards = [
 
 <Layout
   title="Train With Us | Stacks+Joules"
-  description="Train with Stacks+Joules: fourteen weeks of hands-on building automation training, a paid internship, and a clear path into a real career - no experience or tuition required."
+  description="Train with Stacks+Joules: fourteen weeks of hands-on building automation training, an onboarding pipeline with a partner employer, and a clear path into a real career - no experience or tuition required."
 >
   <SectionHeader>Train With Us</SectionHeader>
 
@@ -116,7 +116,7 @@ const careerGuideCards = [
     <TextPanel
       titleAs="h2"
       title="Your path into Building Automation starts here."
-      description="No prior experience required. Fourteen weeks of hands-on training. A paid internship. A clear path into Building Automation. Everything you need to start a career in the technology that runs modern buildings."
+      description="No prior experience required. Fourteen weeks of hands-on training. A pipeline into a partner employer. A clear path into Building Automation. Everything you need to start a career in the technology that runs modern buildings."
       buttonText="TRAIN WITH US"
       buttonLink="#contact"
     />
@@ -125,7 +125,7 @@ const careerGuideCards = [
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
       title="How It Works"
-      description="Three stages. From Training to Internship to Full-Time Employment. Each one designed with our hiring partners. Every step puts you closer to a real job site."
+      description="Three stages. From Training to Onboarding to Full-Time Employment. Each one designed with our hiring partners. Every step puts you closer to a real job site."
     >
       {pathwayStepCards.map(({ contentTitle, ...rest }) => (
         <Card key={contentTitle} contentTitle={contentTitle} {...rest} />
