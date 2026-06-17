@@ -209,10 +209,17 @@ const ahmedDescription =
     employers={employers}
   />
 
+  <!-- Divider: centered hairline between employer grid and mission.
+       Lives in its own zero-padding block so it sits exactly between the
+       two sections' 80px gaps (one-off for this spot, not site-wide). -->
+  <Block variation="light" paddingY="0px" singleColumn>
+    <hr style="width:100%;margin:0;border:none;height:1px;background-color:#8c8c8c;" />
+  </Block>
+
   <!-- ===== ACT 3 — SUPPORTER: why it matters -> the ask ===== -->
 
   <!-- 8. Mission (the systemic vision that converts funders) -->
-  <Block variation="light" topBorder>
+  <Block variation="light">
     <ImagePanel
       imageSrc={TeamImage}
       imageAlt="The Stacks+Joules team."
