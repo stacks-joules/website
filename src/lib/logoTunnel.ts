@@ -22,6 +22,20 @@ const OPTS = {
   radiusSegments: 20,
 } as const;
 
+// Deterministic PRNG (mulberry32) so the tunnel's vertical scatter is the
+// same shape on every open, instead of rolling a new — sometimes ugly — path.
+const SCATTER_SEED = 0x5f3759df;
+function seededRandom(seed: number): () => number {
+  let a = seed >>> 0;
+  return () => {
+    a |= 0;
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 const PATH_POINTS: ReadonlyArray<readonly [number, number]> = [
   [935, 0],
   [1100, 125],
@@ -117,12 +131,13 @@ function buildScene(): void {
     depthWrite: false,
   });
 
+  const rand = seededRandom(SCATTER_SEED);
   const points = PATH_POINTS.map(([x, z]) =>
-    new THREE.Vector3(x, (Math.random() - 0.3) * 500, z).multiplyScalar(
-      OPTS.scale,
-    ),
+    new THREE.Vector3(x, (rand() - 0.5) * 180, z).multiplyScalar(OPTS.scale),
   );
-  curve = new THREE.CatmullRomCurve3(points, true, `catmullrom`, 0.3);
+  // `centripetal` avoids the cusps/whip-turns that plain catmullrom produces
+  // at sharp, unevenly-spaced corners — much smoother to fly through.
+  curve = new THREE.CatmullRomCurve3(points, true, `centripetal`);
 
   const frames = curve.computeFrenetFrames(OPTS.segments, true);
   for (let i = 0; i < OPTS.segments; i++) {
@@ -172,7 +187,7 @@ function render(now: number): void {
   rafId = requestAnimationFrame(render);
   const progress = ((now - startTime) / 1000 / LOOP_SECONDS) % 1;
   const p1 = curve.getPointAt(progress);
-  const p2 = curve.getPointAt((progress + 0.05) % 1);
+  const p2 = curve.getPointAt((progress + 0.12) % 1);
   camera.position.copy(p1);
   camera.lookAt(p2);
   renderer.render(scene, camera);
