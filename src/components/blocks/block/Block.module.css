@@ -7,6 +7,15 @@
   width: 100%;
 }
 
+/* topBorder divider: site hairline, matches section-title rule */
+.block hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #8c8c8c;
+  margin: 0 0 28px 0;
+}
+
 .lightTheme {
   background-color: #f6f6f6;
   color: var(--gray-900);
