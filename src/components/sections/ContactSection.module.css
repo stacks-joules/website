@@ -239,6 +239,12 @@
     max-width: 100%;
   }
 
+  /* Align the tagline's left edge with the full-bleed wordmark above it
+     (keeps the right gutter so the text doesn't touch the screen edge) */
+  .contactDescription {
+    margin-left: -20px;
+  }
+
   .imageContainer {
     /* Figma mobile: NYC photo runs edge to edge */
     margin: 0 -20px;

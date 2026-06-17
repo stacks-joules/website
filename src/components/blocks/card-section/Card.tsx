@@ -7,6 +7,9 @@ interface CardProps {
   key?: string;
   border?: boolean;
   headerText?: string;
+  /** Reserve two lines of header height so images align across a card row
+   *  even when some titles wrap and others don't. */
+  clampHeader?: boolean;
   imageSrc?: string;
   imageAlt?: string;
   /** CSS object-position for the image crop, e.g. '50% 30%' */
@@ -20,6 +23,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({
   border,
   headerText,
+  clampHeader,
   imageSrc,
   imageAlt,
   imagePosition,
@@ -35,7 +39,10 @@ export const Card: React.FC<CardProps> = ({
       }`}
     >
       {headerText && (
-        <div className={styles.cardHeader}>
+        <div
+          className={styles.cardHeader}
+          style={clampHeader ? { minHeight: `2.4em` } : undefined}
+        >
           {headerText && <div>{headerText}</div>}
         </div>
       )}
