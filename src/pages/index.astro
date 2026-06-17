@@ -151,7 +151,9 @@ const ahmedDescription =
   <!-- 2. Impact stats -->
   <Infographic title="Our Impact" cards={infographicCards} />
 
-  <!-- 3. Dual pathway cards (For Learners / For Employers) -->
+  <!-- ===== ACT 1 — STUDENT: promise -> path -> proof ===== -->
+
+  <!-- 3. Audience router (For Learners / For Employers) -->
   <Block variation="light" singleColumn>
     <CardContainer>
       {pathwayCards.map(({ headerText, ...rest }) => (
@@ -160,21 +162,7 @@ const ahmedDescription =
     </CardContainer>
   </Block>
 
-  <!-- 4. Mission -->
-  <Block variation="dark">
-    <ImagePanel
-      imageSrc={TeamImage}
-      imageAlt="The Stacks+Joules team."
-      dropShadow
-    />
-    <TextPanel
-      titleAs="h2"
-      title="Bridging the tech opportunity gap."
-      description="BAS/controls roles are facing a documented skilled labor shortage, especially in HVAC controls and systems integration. Every commercial building runs on automation that needs people to install, maintain, and upgrade it. As buildings get smarter and experienced techs retire, employers need a stronger talent pipeline. Stacks+Joules trains overlooked populations for those jobs. We don't run a classroom - we run a pipeline that takes someone from no prior experience to an onboarding placement with a partner employer in fourteen weeks."
-    />
-  </Block>
-
-  <!-- 5. Pathway diagram (How It Works) -->
+  <!-- 4. How It Works (the student's path) -->
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
       title="How It Works"
@@ -186,7 +174,7 @@ const ahmedDescription =
     </CardContainer>
   </Block>
 
-  <!-- 6. Curriculum -->
+  <!-- 5. Curriculum (what the training is) -->
   <Block variation="light" paddingY="0px" singleColumn>
     <CardContainer
       title="Training Built on Real Systems"
@@ -198,7 +186,7 @@ const ahmedDescription =
     </CardContainer>
   </Block>
 
-  <!-- 7. Case study / Ahmed -->
+  <!-- 6. Case study / Ahmed (proof the path works -> bridge to employers) -->
   <Block variation="dark">
     <ImagePanel
       imageSrc={WiringImage}
@@ -212,12 +200,30 @@ const ahmedDescription =
     />
   </Block>
 
-  <!-- 8. Employer wordmark grid -->
+  <!-- ===== ACT 2 — EMPLOYER: the talent and who trusts it ===== -->
+
+  <!-- 7. Employer wordmark grid -->
   <EmployerGrid
     title="Where Our Graduates Work"
     description="Our graduates are a major part of the Building Automation workforce. Trusted by employers including:"
     employers={employers}
   />
+
+  <!-- ===== ACT 3 — SUPPORTER: why it matters -> the ask ===== -->
+
+  <!-- 8. Mission (the systemic vision that converts funders) -->
+  <Block variation="dark">
+    <ImagePanel
+      imageSrc={TeamImage}
+      imageAlt="The Stacks+Joules team."
+      dropShadow
+    />
+    <TextPanel
+      titleAs="h2"
+      title="Bridging the tech opportunity gap."
+      description="BAS/controls roles are facing a documented skilled labor shortage, especially in HVAC controls and systems integration. Every commercial building runs on automation that needs people to install, maintain, and upgrade it. As buildings get smarter and experienced techs retire, employers need a stronger talent pipeline. Stacks+Joules trains overlooked populations for those jobs. We don't run a classroom - we run a pipeline that takes someone from no prior experience to an onboarding placement with a partner employer in fourteen weeks."
+    />
+  </Block>
 
   <!-- 9. Donate CTA -->
   <Block variation="dark">
