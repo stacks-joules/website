@@ -173,7 +173,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
     <main>
       <slot />
     </main>
-    <ContactSection client:visible />
+    <ContactSection client:load />
     <Footer />
   </body>
 </html>
