@@ -22,21 +22,42 @@ const overviewCards = [
     imageSrc: CurriculumImage1,
     imageAlt: 'Trainees learning fundamentals.',
     content:
-      'We start with fundamentals: electricity, HVAC principles, networking basics, and controls logic. The curriculum is designed for learners entering the field, not just those already in it.',
+      'Day one starts at the fundamentals - electricity, HVAC principles, networking, and controls logic - so learners with no technical background keep pace from the first week.',
   },
   {
     contentTitle: 'Hands-On with Real Equipment',
     imageSrc: CurriculumImage2,
     imageAlt: 'Hands-on training with controllers and sensors.',
     content:
-      'Training includes work with actual controllers, sensors, dampers, and building management systems. Learners troubleshoot live systems - not simulations - preparing them for the realities of the job site.',
+      'Every module runs on production hardware: live controllers, sensors, dampers, and building management systems. Learners troubleshoot real faults, never simulations.',
   },
   {
     contentTitle: 'Safety and Documentation Focus',
     imageSrc: CurriculumImage3,
     imageAlt: 'Safety and documentation training.',
     content:
-      'Beyond technical skills, we emphasize workplace safety protocols, proper documentation practices, and clear communication - skills that reduce risk and improve project outcomes.',
+      'Alongside the technical work, learners drill the habits the job demands - safety protocols, clean documentation, and the communication that keeps a project on track.',
+  },
+];
+
+const graduateCards = [
+  {
+    headerText: 'EPA 608 Certification',
+    border: true,
+    content:
+      'The federal credential for handling refrigerants - a baseline requirement across HVAC and controls roles.',
+  },
+  {
+    headerText: 'LCA Certification',
+    border: true,
+    content:
+      'The Lighting Controls Association credential, earned through the Python-driven light-show project.',
+  },
+  {
+    headerText: 'Niagara N4',
+    border: true,
+    content:
+      'Working proficiency in the Niagara Framework, the platform that runs a huge share of commercial buildings.',
   },
 ];
 ---
@@ -51,7 +72,7 @@ const overviewCards = [
     <TextPanel
       titleAs="h2"
       title="Training Built on Real Systems."
-      description="We train on the same equipment our graduates use on the job. Same controllers. Same software. Same wiring. Every cohort ends with final projects presented to people who hire for these jobs. By graduation, you've already done the work."
+      description="Same controllers, same software, same wiring our graduates touch on the job. Every cohort closes by presenting final projects to the people who hire for these roles - so by graduation, the work is already on your resume."
     />
     <ImagePanel
       imageSrc={WiringCurriculumImage}
@@ -246,4 +267,32 @@ const overviewCards = [
     />
   </Block>
   <Buffer height="80px" />
+
+  <!-- Contributions: what graduates walk away with -->
+  <Block variation="light" paddingY="0px" singleColumn>
+    <CardContainer
+      title="What You Graduate With"
+      description="Fourteen weeks in, you leave with three industry certifications, a portfolio of real projects, and the hands-on hours employers look for."
+    >
+      {graduateCards.map(({ headerText, ...rest }) => (
+        <Card key={headerText} headerText={headerText} {...rest} />
+      ))}
+    </CardContainer>
+  </Block>
+
+  <!-- Closing CTA -->
+  <Block variation="dark">
+    <TextPanel
+      caption="Ready to start?"
+      smallTitle="Three certifications. One pipeline. A real career."
+      description="See the next cohort schedule and what it takes to enroll - get in touch and we'll walk you through it."
+      buttonText="GET IN TOUCH"
+      buttonLink="#contact"
+    />
+    <ImagePanel
+      imageSrc={WiringCurriculumImage}
+      imageAlt="A Stacks+Joules trainee on a real building automation panel."
+      dropShadow
+    />
+  </Block>
 </Layout>
