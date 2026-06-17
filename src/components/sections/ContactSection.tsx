@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import * as styles from './ContactSection.module.css';
 import { Logo } from '../common/Logo';
 import { Container } from '../layout/Container';
@@ -54,6 +54,8 @@ export const ContactSection: React.FC = () => {
     error: false,
   });
   const [modalOpen, setModalOpen] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -77,6 +79,43 @@ export const ContactSection: React.FC = () => {
     } else {
       setFormData((prev) => ({ ...prev, interest: `` }));
     }
+  }, []);
+
+  // In-page "Get in touch" / #contact CTAs land on the top of the footer by
+  // default — the logo and blurb. On mobile that buries the form below the
+  // fold, so scroll straight to the form instead. On every device, flicker
+  // the form's "Get in touch" title in the active accent on arrival.
+  useEffect(() => {
+    const flickerTitle = () => {
+      const el = titleRef.current;
+      if (!el) return;
+      // Drop then re-add across two frames so the animation restarts cleanly
+      // on repeat clicks (a same-frame re-add wouldn't replay it).
+      el.classList.remove(styles.flicker);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => el.classList.add(styles.flicker));
+      });
+    };
+
+    const handleClick = (e: MouseEvent) => {
+      const anchor = (e.target as HTMLElement)?.closest?.(
+        `a[href$="#contact"]`,
+      );
+      if (!anchor) return;
+
+      const isMobile = window.matchMedia(`(max-width: 768px)`).matches;
+      const dest = isMobile
+        ? formRef.current
+        : document.getElementById(`contact`);
+      if (!dest) return;
+
+      e.preventDefault();
+      dest.scrollIntoView({ behavior: `smooth`, block: `start` });
+      flickerTitle();
+    };
+
+    document.addEventListener(`click`, handleClick);
+    return () => document.removeEventListener(`click`, handleClick);
   }, []);
 
   const getFullName = (first: string, last: string) => {
@@ -164,6 +203,7 @@ export const ContactSection: React.FC = () => {
           </div>
           <div className={styles.rightContent}>
             <form
+              ref={formRef}
               className={styles.contactForm}
               onSubmit={handleSubmit}
               name="contact"
@@ -177,7 +217,9 @@ export const ContactSection: React.FC = () => {
                 <input name="bot-field" />
               </div>
 
-              <div className={styles.formTitle}>Get in touch</div>
+              <div ref={titleRef} className={styles.formTitle}>
+                Get in touch
+              </div>
 
               {formState.success && (
                 <div>

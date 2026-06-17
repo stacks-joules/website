@@ -104,6 +104,13 @@
     margin-bottom: 0px;
   }
 
+  /* Stacked cards: drop the top-rule hairline (it reads as a divider between
+     items on mobile). Desktop keeps it as the per-column eyebrow rule. */
+  .card.border {
+    border-top: none;
+    padding-top: 0;
+  }
+
   .cardHeader {
     padding: 0; /* flex gap provides the Figma-spec spacing on mobile */
   }

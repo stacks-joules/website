@@ -121,6 +121,36 @@
   margin-bottom: 32px;
 }
 
+/* Strobe the title between white and the active accent when a "Get in touch"
+   CTA jumps the reader here. Reverts to white once the animation ends. */
+.flicker {
+  animation: flickerAccent 0.8s steps(1, end) 1;
+}
+
+@keyframes flickerAccent {
+  0%,
+  20%,
+  40%,
+  60%,
+  80% {
+    color: var(--theme-color, #fd3abb);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90%,
+  100% {
+    color: white;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flicker {
+    animation: none;
+  }
+}
+
 .formRow {
   display: flex;
   gap: 20px;
@@ -228,6 +258,11 @@
   .rightContent,
   .contactForm {
     max-width: 100%;
+  }
+
+  /* Clear the fixed hamburger when a CTA scrolls the form to the top */
+  .contactForm {
+    scroll-margin-top: 72px;
   }
 
   .locationContainer {
