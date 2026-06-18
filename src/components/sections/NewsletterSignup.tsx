@@ -41,7 +41,7 @@ export const NewsletterSignup: React.FC = () => {
         <div className={styles.newsletterContainer}>
           <div className={styles.newsletterTitle}>Get The Newsletter</div>
           <p className={styles.newsletterDescription}>
-            An every-so-often email recapping the efforts of the Stacks + Joules
+            An every-so-often email recapping the efforts of the Stacks+Joules
             team.
           </p>
           <form
@@ -88,7 +88,7 @@ export const NewsletterSignup: React.FC = () => {
       >
         <p>
           You will receive an email shortly with the latest news and updates
-          from the Stacks + Joules team.
+          from the Stacks+Joules team.
         </p>
       </Modal>
     </section>

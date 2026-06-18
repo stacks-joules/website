@@ -21,8 +21,8 @@ export const ImagePanel: React.FC<ImagePanelProps> = ({
   // Above-the-fold hero: load eagerly with a high fetch priority for LCP.
   // Spread keeps fetchPriority out of literal JSX (eslint react/no-unknown-property).
   const loadProps = priority
-    ? { loading: `eager`, fetchPriority: `high` }
-    : { loading: `lazy` };
+    ? ({ loading: `eager`, fetchPriority: `high` } as const)
+    : ({ loading: `lazy` } as const);
   return (
     <div className={styles.imageContainer}>
       <img

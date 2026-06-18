@@ -42,7 +42,7 @@ export const Navigation: React.FC = () => {
                 loading="lazy"
                 src={wrenchboltLogo}
                 className={styles.logo}
-                alt="Stacks + Joules Logo"
+                alt="Stacks+Joules Logo"
               />
             </NavLink>
           </div>

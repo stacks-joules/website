@@ -21,6 +21,9 @@ const {
 // Canonical, per-page absolute URL (from astro.config `site`). Drives both the
 // canonical link and og:url so social cards point at the page, not the root.
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+// og:image / twitter:image must be ABSOLUTE URLs, or social platforms
+// (Facebook, LinkedIn, Slack, iMessage, X) won't render the preview image.
+const ogImageUrl = new URL(siteMetadata.ogImage, Astro.site).href;
 ---
 
 <!doctype html>
@@ -43,7 +46,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={siteMetadata.ogType} />
-    <meta property="og:image" content={siteMetadata.ogImage} />
+    <meta property="og:image" content={ogImageUrl} />
     <meta property="og:url" content={canonicalUrl} />
 
     <!-- Twitter -->
@@ -51,6 +54,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="twitter:site" content={siteMetadata.twitterUsername} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- Preload the fonts that render above the fold (prevents FOUT/shift) -->
     <link

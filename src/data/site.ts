@@ -12,6 +12,6 @@ export const siteMetadata = {
   ogImage: `/images/og-image.png`,
   ogType: `website`,
   ogTitle: `Stacks+Joules`,
-  ogDescription: `Welcome to Stacks + Joules. Bridging the tech opportunity gap with a specialized curriculum in computer programming for building automation controls.`,
+  ogDescription: `Welcome to Stacks+Joules. Bridging the tech opportunity gap with a specialized curriculum in computer programming for building automation controls.`,
   twitterUsername: `@StacksAndJoules`,
 };

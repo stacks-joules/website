@@ -10,7 +10,7 @@ export const ErrorModal: React.FC<{
     <div className={styles.overlay}>
       <h1>404</h1>
       <p>
-        You appear to have reached an uncharted area. Please check your url or
+        You appear to have reached an uncharted area. Please check your URL or
         {` `}
         <a href="/">return to the homepage</a>.
       </p>
