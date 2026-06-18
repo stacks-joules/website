@@ -24,6 +24,27 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 // og:image / twitter:image must be ABSOLUTE URLs, or social platforms
 // (Facebook, LinkedIn, Slack, iMessage, X) won't render the preview image.
 const ogImageUrl = new URL(siteMetadata.ogImage, Astro.site).href;
+
+// Sitewide Organization structured data (JSON-LD). Helps search engines build
+// a knowledge panel and link the verified nonprofit profiles.
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  name: siteMetadata.title,
+  legalName: 'Stacks and Joules Inc.',
+  url: siteMetadata.siteUrl,
+  logo: new URL('/images/stacks-logo.webp', Astro.site).href,
+  image: ogImageUrl,
+  email: 'info@stacksandjoules.org',
+  description:
+    'Stacks+Joules is a 501(c)(3) nonprofit that provides free, hands-on building automation systems (BAS) training, with an onboarding pipeline into partner employers.',
+  sameAs: [
+    'https://www.charitynavigator.org/ein/822358571',
+    'https://www.guidestar.org/profile/82-2358571',
+    'https://projects.propublica.org/nonprofits/organizations/822358571',
+    'https://twitter.com/StacksAndJoules',
+  ],
+};
 ---
 
 <!doctype html>
@@ -55,6 +76,14 @@ const ogImageUrl = new URL(siteMetadata.ogImage, Astro.site).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Structured data: sitewide organization -->
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(orgSchema)}
+    />
+    <slot name="head" />
 
     <!-- Preload the fonts that render above the fold (prevents FOUT/shift) -->
     <link

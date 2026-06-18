@@ -38,7 +38,7 @@ export const Block: React.FC<BlockProps> = ({
       >
         <Container>
           {topBorder && <hr />}
-          {blockTitle && <h4 className={styles.blockTitle}>{blockTitle}</h4>}
+          {blockTitle && <h2 className={styles.blockTitle}>{blockTitle}</h2>}
           <div className={layoutClass}>{children}</div>
         </Container>
       </div>
