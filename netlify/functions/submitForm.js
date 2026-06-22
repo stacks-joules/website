@@ -25,7 +25,8 @@ exports.handler = async function (event) {
     const body = JSON.parse(event.body);
     console.log(`Parsed form data:`, body);
 
-    const { fullName, email, message, interest } = body;
+    const { fullName, firstName, lastName, email, phone, message, interest } =
+      body;
 
     if (!fullName || !email || !message) {
       console.error(`Missing required fields in body`);
@@ -35,12 +36,21 @@ exports.handler = async function (event) {
       };
     }
 
+    const columnValues = JSON.stringify({
+      firstName,
+      lastName,
+      email,
+      phone,
+      message,
+      interest,
+    });
+
     const query = `
-      mutation {
+      mutation ($boardId: ID!, $itemName: String!, $columnValues: JSON!) {
         create_item (
-          board_id: ${boardId},
-          item_name: "${fullName}",
-          column_values: "{\\"email\\": \\"${email}\\", \\"message\\": \\"${message}\\", \\"interest\\": \\"${interest}\\"}"
+          board_id: $boardId,
+          item_name: $itemName,
+          column_values: $columnValues
         ) {
           id
         }
@@ -53,7 +63,14 @@ exports.handler = async function (event) {
         Authorization: apiKey,
         'Content-Type': `application/json`,
       },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({
+        query,
+        variables: {
+          boardId,
+          itemName: fullName,
+          columnValues,
+        },
+      }),
     });
 
     const data = await response.json();
