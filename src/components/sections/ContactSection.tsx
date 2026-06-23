@@ -7,21 +7,14 @@ import { Button } from '../common/Button';
 import { SelectInput } from '../common/SelectInput';
 
 const Cityscape = `/images/contact-image.webp`;
-const PhoneIcon = `/images/phone-icon.svg`;
 const LocationIcon = `/images/location-icon.svg`;
 interface ContactInfo {
   name: string;
-  phone: string;
   street: string;
   state: string;
 }
 
-const ContactLocation: React.FC<ContactInfo> = ({
-  name,
-  street,
-  state,
-  phone,
-}) => (
+const ContactLocation: React.FC<ContactInfo> = ({ name, street, state }) => (
   <div className={styles.contactInfo}>
     <h3 className={styles.locationName}>{name}</h3>
     <div className={styles.locationDetails}>
@@ -30,10 +23,6 @@ const ContactLocation: React.FC<ContactInfo> = ({
         <div>{street}</div>
         <div>{state}</div>
       </div>
-    </div>
-    <div className={styles.locationDetails}>
-      <img src={PhoneIcon} alt="Phone icon" className={styles.icon} />
-      <div>{phone}</div>
     </div>
   </div>
 );
@@ -197,7 +186,6 @@ export const ContactSection: React.FC = () => {
                 name="New York"
                 street="175 WEST 93RD STREET #3K"
                 state="New York, NY 10025"
-                phone="+1 718 781 0141"
               />
             </div>
           </div>
