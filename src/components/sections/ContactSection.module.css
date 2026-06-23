@@ -3,6 +3,7 @@
   padding: 80px;
   width: 100%;
   box-sizing: border-box;
+  scroll-margin-top: 96px;
 }
 
 .contactContent {
