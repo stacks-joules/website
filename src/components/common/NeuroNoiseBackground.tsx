@@ -263,31 +263,12 @@ export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
     glRef.current.uniform1f(scrollProgressUniformRef.current, scrollProgress);
   };
 
-  // Function to handle shader compilation error
-  // const checkShaderCompilation = (gl, shader, type) => {
-  //   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-  //     console.error(
-  //       `Error compiling ${type} shader:`,
-  //       gl.getShaderInfoLog(shader),
-  //     );
-  //     setWebGLFailed(true);
-  //     return false;
-  //   }
-  //   return true;
-  // };
-
-  // Function to handle program linking error
-  // const checkProgramLinking = (gl, program) => {
-  //   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  //     console.error(
-  //       'Error linking shader program:',
-  //       gl.getProgramInfoLog(program),
-  //     );
-  //     setWebGLFailed(true);
-  //     return false;
-  //   }
-  //   return true;
-  // };
+  // Touch variant of handlePointerMove. Must be a stable named reference so
+  // removeEventListener actually detaches it on cleanup (an inline arrow
+  // passed to both add and remove would never match).
+  const handleTouchMove = (e) => {
+    handlePointerMove(e.touches[0]);
+  };
 
   useEffect(() => {
     // Skip the expensive WebGL animation where it's pure cost: small screens
@@ -314,9 +295,7 @@ export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
 
           // Add event listeners
           window.addEventListener(`mousemove`, handlePointerMove);
-          window.addEventListener(`touchmove`, (e) =>
-            handlePointerMove(e.touches[0]),
-          );
+          window.addEventListener(`touchmove`, handleTouchMove);
           window.addEventListener(`scroll`, handleScroll);
         }
       } catch (error) {
@@ -347,9 +326,7 @@ export const NeuroNoiseBackground: React.FC<NeuroNoiseBackgroundProps> = ({
         cancelAnimationFrame(requestRef.current);
       }
       window.removeEventListener(`mousemove`, handlePointerMove);
-      window.removeEventListener(`touchmove`, (e) =>
-        handlePointerMove(e.touches[0]),
-      );
+      window.removeEventListener(`touchmove`, handleTouchMove);
       window.removeEventListener(`scroll`, handleScroll);
     };
     // Re-init when the theme color changes: the accent is baked into the
