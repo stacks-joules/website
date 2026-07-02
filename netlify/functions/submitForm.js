@@ -63,21 +63,27 @@ exports.handler = async function (event) {
       };
     }
 
-    const columnValues = JSON.stringify({
-      firstName,
-      lastName,
-      email,
-      phone,
-      message,
-      interest,
-    });
+    // Keys must be the board's actual column IDs (New Leads board):
+    // lead_email = Email, lead_phone = Phone, long_text = Message,
+    // color_mkqhwqz4 = Type (status). First/last name live in the item name.
+    const columns = {
+      lead_email: { email, text: email },
+      long_text: message,
+    };
+    if (phone) columns.lead_phone = phone;
+    if (interest) columns.color_mkqhwqz4 = { label: interest };
 
+    const columnValues = JSON.stringify(columns);
+
+    // create_labels_if_missing lets the Type status column accept a label
+    // (Student/Employer/Mentor/Other) that doesn't exist on the board yet.
     const query = `
       mutation ($boardId: ID!, $itemName: String!, $columnValues: JSON!) {
         create_item (
           board_id: $boardId,
           item_name: $itemName,
-          column_values: $columnValues
+          column_values: $columnValues,
+          create_labels_if_missing: true
         ) {
           id
         }
