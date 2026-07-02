@@ -8,27 +8,32 @@ export const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState(``);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setHasError(false);
 
-    // Create form data object for submission
     const formData = new FormData(e.target as HTMLFormElement);
 
-    // Using fetch to submit the form data
+    // Netlify Forms endpoint: POST the URL-encoded fields to any page path.
     fetch(`/`, {
       method: `POST`,
       headers: { 'Content-Type': `application/x-www-form-urlencoded` },
       body: new URLSearchParams(formData as any).toString(),
     })
-      .then(() => {
-        console.log(`Form successfully submitted`);
+      .then((response) => {
+        // fetch resolves on 4xx/5xx too — only a 2xx is a real signup.
+        if (!response.ok) {
+          throw new Error(`Request failed: ${response.status}`);
+        }
         setIsModalOpen(true);
         setEmail(``);
       })
       .catch((error) => {
         console.error(`Form submission error:`, error);
+        setHasError(true);
       })
       .finally(() => {
         setIsSubmitting(false);
@@ -56,8 +61,16 @@ export const NewsletterSignup: React.FC = () => {
             <div hidden>
               <input name="bot-field" />
             </div>
+            {hasError && (
+              <div role="alert">
+                There was an error signing you up. Please try again.
+              </div>
+            )}
             <div>
-              <label className={styles.emailInputLabel} htmlFor="email">
+              <label
+                className={styles.emailInputLabel}
+                htmlFor="newsletter-email"
+              >
                 Email Address
               </label>
               <input
