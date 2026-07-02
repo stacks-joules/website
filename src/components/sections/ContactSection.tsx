@@ -115,8 +115,16 @@ export const ContactSection: React.FC = () => {
     e.preventDefault();
     setFormState({ submitting: true, success: false, error: false });
 
+    // Forward the honeypot value so the function can reject bot fills;
+    // real users leave the hidden field empty.
+    const botField =
+      formRef.current?.querySelector<HTMLInputElement>(
+        `input[name="bot-field"]`,
+      )?.value ?? ``;
+
     const payload = {
       ...formData,
+      'bot-field': botField,
       fullName: getFullName(formData.firstName, formData.lastName),
     };
 
@@ -154,8 +162,6 @@ export const ContactSection: React.FC = () => {
       setFormState({ submitting: false, success: false, error: true });
     }
   };
-
-  // Function to send form data to Monday.com via GraphQL
 
   // Easter egg: clicking the footer logo takes over the page with the
   // logo-sprite tunnel, tinted to the active accent. three.js is only

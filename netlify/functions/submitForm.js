@@ -1,6 +1,23 @@
 const boardId = process.env.MONDAY_BOARD_ID;
 const apiKey = process.env.MONDAY_API_KEY;
 
+// Field length caps: keep junk/abuse out of the Monday board.
+const LIMITS = {
+  fullName: 200,
+  firstName: 100,
+  lastName: 100,
+  email: 254,
+  phone: 30,
+  message: 5000,
+  interest: 50,
+};
+
+const tooLong = (body) =>
+  Object.entries(LIMITS).some(
+    ([field, max]) =>
+      typeof body[field] === `string` && body[field].length > max,
+  );
+
 exports.handler = async function (event) {
   if (event.httpMethod !== `POST`) {
     return {
@@ -9,30 +26,40 @@ exports.handler = async function (event) {
     };
   }
 
-  const fetch = (...args) =>
-    import(`node-fetch`).then(({ default: fetch }) => fetch(...args));
-
   try {
-    // Check environment variables
     if (!boardId || !apiKey) {
       console.error(`Missing environment variables`);
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: `Server misconfiguration (env vars)` }),
+        body: JSON.stringify({ error: `Server misconfiguration` }),
       };
     }
 
     const body = JSON.parse(event.body);
-    console.log(`Parsed form data:`, body);
+
+    // Honeypot: real users never fill this hidden field.
+    if (body[`bot-field`]) {
+      // Pretend success so bots don't adapt.
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ success: true }),
+      };
+    }
 
     const { fullName, firstName, lastName, email, phone, message, interest } =
       body;
 
     if (!fullName || !email || !message) {
-      console.error(`Missing required fields in body`);
       return {
         statusCode: 400,
         body: JSON.stringify({ error: `Missing required fields` }),
+      };
+    }
+
+    if (tooLong(body) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: `Invalid field values` }),
       };
     }
 
@@ -74,15 +101,17 @@ exports.handler = async function (event) {
     });
 
     const data = await response.json();
-    console.log(`Monday.com API response:`, data);
 
     if (data.errors) {
+      // Full detail stays in function logs; client gets a generic message.
       console.error(`Monday.com returned errors:`, data.errors);
       return {
-        statusCode: 500,
-        body: JSON.stringify({ error: data.errors }),
+        statusCode: 502,
+        body: JSON.stringify({ error: `Upstream error — please try again` }),
       };
     }
+
+    console.log(`Contact form item created:`, data.data.create_item.id);
 
     return {
       statusCode: 200,
@@ -92,7 +121,7 @@ exports.handler = async function (event) {
     console.error(`Function error:`, error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
+      body: JSON.stringify({ error: `Something went wrong` }),
     };
   }
 };
