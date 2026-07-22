@@ -1,13 +1,21 @@
-const boardId = process.env.MONDAY_BOARD_ID;
-const apiKey = process.env.MONDAY_API_KEY;
+const baseId = process.env.AIRTABLE_BASE_ID;
+const tableId = process.env.AIRTABLE_CONTACT_TABLE_ID;
+const apiToken = process.env.AIRTABLE_TOKEN;
 
-// Field length caps: keep junk/abuse out of the Monday board.
+// The frontend still sends the Monday-era interest values; map them to the
+// Airtable "Interest" single-select option labels.
+const INTEREST_MAP = {
+  Student: `student`,
+  Employer: `industry/hiring`,
+  Mentor: `support/volunteer`,
+  Other: `other`,
+};
+
+// Field length caps: keep junk/abuse out of the Airtable base.
 const LIMITS = {
-  fullName: 200,
   firstName: 100,
   lastName: 100,
   email: 254,
-  phone: 30,
   message: 5000,
   interest: 50,
 };
@@ -27,7 +35,7 @@ exports.handler = async function (event) {
   }
 
   try {
-    if (!boardId || !apiKey) {
+    if (!baseId || !tableId || !apiToken) {
       console.error(`Missing environment variables`);
       return {
         statusCode: 500,
@@ -46,10 +54,9 @@ exports.handler = async function (event) {
       };
     }
 
-    const { fullName, firstName, lastName, email, phone, message, interest } =
-      body;
+    const { firstName, lastName, email, message, interest } = body;
 
-    if (!fullName || !email || !message) {
+    if (!firstName || !lastName || !email || !message) {
       return {
         statusCode: 400,
         body: JSON.stringify({ error: `Missing required fields` }),
@@ -63,65 +70,46 @@ exports.handler = async function (event) {
       };
     }
 
-    // Keys must be the board's actual column IDs (New Leads board):
-    // lead_email = Email, lead_phone = Phone, long_text = Message,
-    // color_mkqhwqz4 = Type (status). First/last name live in the item name.
-    const columns = {
-      lead_email: { email, text: email },
-      long_text: message,
+    const fields = {
+      'First Name': firstName,
+      'Last Name': lastName,
+      Email: email,
+      Message: message,
     };
-    if (phone) columns.lead_phone = phone;
-    if (interest) columns.color_mkqhwqz4 = { label: interest };
+    if (interest && INTEREST_MAP[interest]) {
+      // Interest is a Multiple Select field in Airtable — it requires an
+      // array of option values, not a bare string.
+      fields.Interest = [INTEREST_MAP[interest]];
+    }
 
-    const columnValues = JSON.stringify(columns);
-
-    // create_labels_if_missing lets the Type status column accept a label
-    // (Student/Employer/Mentor/Other) that doesn't exist on the board yet.
-    const query = `
-      mutation ($boardId: ID!, $itemName: String!, $columnValues: JSON!) {
-        create_item (
-          board_id: $boardId,
-          item_name: $itemName,
-          column_values: $columnValues,
-          create_labels_if_missing: true
-        ) {
-          id
-        }
-      }
-    `;
-
-    const response = await fetch(`https://api.monday.com/v2`, {
-      method: `POST`,
-      headers: {
-        Authorization: apiKey,
-        'Content-Type': `application/json`,
-      },
-      body: JSON.stringify({
-        query,
-        variables: {
-          boardId,
-          itemName: fullName,
-          columnValues,
+    const response = await fetch(
+      `https://api.airtable.com/v0/${baseId}/${tableId}`,
+      {
+        method: `POST`,
+        headers: {
+          Authorization: `Bearer ${apiToken}`,
+          'Content-Type': `application/json`,
         },
-      }),
-    });
+        body: JSON.stringify({ fields }),
+      },
+    );
 
     const data = await response.json();
 
-    if (data.errors) {
+    if (!response.ok) {
       // Full detail stays in function logs; client gets a generic message.
-      console.error(`Monday.com returned errors:`, data.errors);
+      console.error(`Airtable returned an error:`, data.error);
       return {
         statusCode: 502,
         body: JSON.stringify({ error: `Upstream error — please try again` }),
       };
     }
 
-    console.log(`Contact form item created:`, data.data.create_item.id);
+    console.log(`Contact form record created:`, data.id);
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ success: true, item: data.data.create_item }),
+      body: JSON.stringify({ success: true, item: data }),
     };
   } catch (error) {
     console.error(`Function error:`, error);

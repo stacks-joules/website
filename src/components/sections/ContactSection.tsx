@@ -32,7 +32,6 @@ export const ContactSection: React.FC = () => {
     firstName: ``,
     lastName: ``,
     email: ``,
-    phone: ``,
     message: ``,
     interest: ``,
   });
@@ -107,10 +106,6 @@ export const ContactSection: React.FC = () => {
     return () => document.removeEventListener(`click`, handleClick);
   }, []);
 
-  const getFullName = (first: string, last: string) => {
-    return `${first.trim()} ${last.trim()}`.trim();
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState({ submitting: true, success: false, error: false });
@@ -125,7 +120,6 @@ export const ContactSection: React.FC = () => {
     const payload = {
       ...formData,
       'bot-field': botField,
-      fullName: getFullName(formData.firstName, formData.lastName),
     };
 
     try {
@@ -148,7 +142,6 @@ export const ContactSection: React.FC = () => {
           firstName: ``,
           lastName: ``,
           email: ``,
-          phone: ``,
           message: ``,
           interest: ``,
         });
