@@ -1,8 +1,106 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import '../styles/fonts.css';
+import '../styles/global.css';
 import { NotFoundIsland } from '../components/common/NotFoundIsland';
+import { ClientRouter } from 'astro:transitions';
 ---
 
-<Layout title="404 | Stacks+Joules">
-  <NotFoundIsland client:load />
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 | Stacks+Joules</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <ClientRouter />
+
+    <!-- Same global color-roll clock as Layout.astro, duplicated here since
+         this page intentionally skips Layout (fullscreen takeover — no
+         header/nav/contact/footer chrome). Keep in sync with Layout.astro. -->
+    <script is:inline>
+      (function () {
+        var COLORS = ['pink', 'sky', 'yellow'];
+        var SLOT_MS = 30 * 1000;
+
+        function rng(seed) {
+          return function () {
+            seed |= 0;
+            seed = (seed + 0x6d2b79f5) | 0;
+            var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+            t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+            return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+          };
+        }
+
+        function basePerm(block) {
+          var a = COLORS.slice();
+          var r = rng(block);
+          for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(r() * (i + 1));
+            var t = a[i];
+            a[i] = a[j];
+            a[j] = t;
+          }
+          return a;
+        }
+
+        function themeForSlot(slot) {
+          var block = Math.floor(slot / 3);
+          var p = basePerm(block);
+          if (p[0] === basePerm(block - 1)[2]) {
+            var t = p[0];
+            p[0] = p[1];
+            p[1] = t;
+          }
+          return p[((slot % 3) + 3) % 3];
+        }
+
+        function applyTheme() {
+        var theme = null;
+        try {
+          var q = new URLSearchParams(location.search).get('color');
+          var alias = { blue: 'sky', cyan: 'sky' };
+          if (q) q = alias[q] || q;
+          if (q === 'clock') {
+            sessionStorage.removeItem('sjColorOverride');
+          } else if (q && COLORS.indexOf(q) > -1) {
+            sessionStorage.setItem('sjColorOverride', q);
+            theme = q;
+          } else {
+            var stored = sessionStorage.getItem('sjColorOverride');
+            if (stored && COLORS.indexOf(stored) > -1) theme = stored;
+          }
+        } catch (e) {
+          /* sessionStorage unavailable — clock still works */
+        }
+
+        if (!theme) theme = themeForSlot(Math.floor(Date.now() / SLOT_MS));
+
+        var el = document.documentElement;
+        el.classList.remove('theme-pink', 'theme-sky', 'theme-yellow');
+        el.classList.add('theme-' + theme);
+        el.dataset.theme = theme;
+        }
+        applyTheme();
+        document.addEventListener('astro:after-swap', applyTheme);
+      })();
+    </script>
+  </head>
+  <body>
+    <main>
+      <NotFoundIsland client:load />
+    </main>
+  </body>
+</html>
+
+<style>
+  /* Starfield/ErrorModal are both absolutely positioned inside NotFoundIsland,
+     so main needs an explicit (not percentage) height for their height:100%
+     chains to resolve — otherwise the canvas collapses to 0 height. */
+  main {
+    height: 100vh;
+  }
+</style>

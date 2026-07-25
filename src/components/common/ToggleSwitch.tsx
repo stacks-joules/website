@@ -16,12 +16,12 @@ export const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
 }) => {
   return (
     <div className={styles.toggleWrapper}>
-      <span className={styles.label}>{onLabel}</span>
+      <span className={styles.label}>{offLabel}</span>
       <label className={styles.toggleSwitch}>
         <input type="checkbox" checked={checked} onChange={onChange} />
         <span className={styles.slider}></span>
       </label>
-      <span className={styles.label}>{offLabel}</span>
+      <span className={styles.label}>{onLabel}</span>
     </div>
   );
 };
