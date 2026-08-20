@@ -33,3 +33,8 @@ from = "/sharing/student-video"
 to = "https://www.youtube.com/watch?v=Th8G0smQsRo&t=1s"
 status = 302
 force = true
+[[redirects]]
+from = "/sharing/student-video2"
+to = "https://www.youtube.com/watch?v=Th8G0smQsRo&t=1s"
+status = 302
+force = true
