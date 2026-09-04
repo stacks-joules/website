@@ -4,7 +4,7 @@
   functions = "netlify/functions"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "22"
 
 # Security headers for every page. All assets (scripts, styles, fonts,
 # images) are self-hosted and external references are plain links, so a
