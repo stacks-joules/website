@@ -1,5 +1,5 @@
 /** Single source of truth for the donation campaign URL */
-export const donationLink = `https://giving.gofundme.com/campaign/700902/donate`;
+export const donationLink = `https://givebutter.com/stacks-joules-0fixlb`;
 
 /** In-page anchor for the Get in Touch form (rendered on every page) */
 export const contactAnchor = `#contact`;
