@@ -66,7 +66,12 @@ exports.handler = async function (event) {
       };
     }
 
-    console.log(`Newsletter contact created:`, data.data && data.data.id);
+    // The create endpoint returns the contact directly; list endpoints wrap
+    // results in `data`. Handle both shapes.
+    const contactId = (data && data.id) || (data.data && data.data.id);
+    console.log(
+      `Newsletter contact created: id=${contactId} status=${response.status} keys=${Object.keys(data || {}).join(`,`)}`,
+    );
 
     return {
       statusCode: 200,
