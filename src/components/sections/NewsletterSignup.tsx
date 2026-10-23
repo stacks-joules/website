@@ -15,13 +15,18 @@ export const NewsletterSignup: React.FC = () => {
     setIsSubmitting(true);
     setHasError(false);
 
-    const formData = new FormData(e.target as HTMLFormElement);
+    // Forward the honeypot value so the function can reject bot fills;
+    // real users leave the hidden field empty.
+    const form = e.target as HTMLFormElement;
+    const botField =
+      form.querySelector<HTMLInputElement>(`input[name="bot-field"]`)?.value ??
+      ``;
 
-    // Netlify Forms endpoint: POST the URL-encoded fields to any page path.
-    fetch(`/`, {
+    // Creates a Givebutter contact tagged "newsletter" via our function.
+    fetch(`/.netlify/functions/subscribeNewsletter`, {
       method: `POST`,
-      headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-      body: new URLSearchParams(formData as any).toString(),
+      headers: { 'Content-Type': `application/json` },
+      body: JSON.stringify({ email, 'bot-field': botField }),
     })
       .then((response) => {
         // fetch resolves on 4xx/5xx too — only a 2xx is a real signup.
@@ -53,11 +58,7 @@ export const NewsletterSignup: React.FC = () => {
             onSubmit={handleSubmit}
             className={styles.newsletterForm}
             name="newsletter-signup"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="newsletter-signup" />
             <div hidden>
               <input name="bot-field" />
             </div>
